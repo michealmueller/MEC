@@ -133,7 +133,7 @@
                                                 <span class="d-flex align-self-center g-mr-12">
                                                     <i class="hs-admin-shift-right"></i>
                                                 </span>
-                                <span class="media-body align-self-center">Login</span>
+                                <span class="media-body align-self-center">Login <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
                             </a>
                         </li>
                         <!--<li class="nav-item g-mx-25--lg">
