@@ -136,14 +136,14 @@
                                 <span class="media-body align-self-center">Login <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
                             </a>
                         </li>
-                        <!--<li class="nav-item g-mx-25--lg">
+                        <li class="nav-item g-mx-25--lg">
                             <a class="nav-link media g-color-lightred-v2--hover g-py-5 g-px-20" href="{{ route('register') }}">
                                             <span class="d-flex align-self-center g-mr-12">
 
                                             </span>
                                 <span class="media-body align-self-center">Register</span>
                             </a>
-                        </li>-->
+                        </li>
                     </ul>
             @endif
             <!-- End Search -->
