@@ -141,7 +141,7 @@
                                             <span class="d-flex align-self-center g-mr-12">
 
                                             </span>
-                                <span class="media-body align-self-center">Register</span>
+                                <span class="media-body align-self-center">Register <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
                             </a>
                         </li>
                     </ul>
