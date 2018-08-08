@@ -24,11 +24,21 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $comments
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereComments($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereStartTime($value)
+ * @property string|null $backgroundColor
+ * @property string|null $textColor
+ * @property string|null $borderColor
+ * @property int|null $allDay
+ * @property string|null $brief_url
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereAllDay($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereBackgroundColor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereBorderColor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereBriefUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereTextColor($value)
  */
 class Event extends Model
 {
     //
-    protected $fillable = ['title','start_date','end_date', 'start_time', 'comments'];
+    protected $fillable = ['title','start_date','end_date', 'brief_url', 'comments', 'creator'];
 
     protected $table = 'events';
 

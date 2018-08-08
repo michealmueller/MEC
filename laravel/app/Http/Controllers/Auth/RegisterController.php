@@ -14,6 +14,7 @@ use App\Http\Controllers\RssController as Rss;
 class RegisterController extends Controller
 {
     private $rss;
+    private $data;
     /*
     |--------------------------------------------------------------------------
     | Register Controller

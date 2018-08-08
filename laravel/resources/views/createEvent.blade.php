@@ -15,41 +15,32 @@
 
             <form class="g-py-15" method="post">
                 {{ csrf_field() }}
-                <div class="mb-2">
-                    <div class="form-group input-group">
+                <div class="mb-12">
+                    <div class="row mb-6">
                         <input class="form-control text-center " name="title" type="text" placeholder="Event Name">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="form-group input-group">
-                        <div class="mb-2">
+                    <div class="row mb-6">
+                        <div class="mb-3 pull-left">
                             <label for="start_date">Start Date:</label>
-                            <input class="form-control text-center " name="start_date" type="datetime-local" placeholder="Start Date">
+                            <input class="form-control text-center " name="start_date" type="datetime-local">
                         </div>
-                        <div class="mb-2">
+                        <div class="mb-3 pull-right">
                             <label for="start_date ">End Date:</label>
-                            <input class="form-control text-center " name="end_date" type="datetime-local" placeholder="End Date">
+                            <input class="form-control text-center " name="end_date" type="datetime-local" >
                         </div>
                     </div>
                 </div>
-                <!--<div class="row">
-                    <div class="form-group input-group">
-                        <div class="mb-2">
-                            <label for="start_date">Start Time:</label>
-                            <input class="form-control text-center " name="start_time" type="time" placeholder="Start Time">
-                        </div>
-                    </div>
-                </div>-->
-                <div class="row">
-                    <div class="form-group input-group">
-                        <div class="mb-2">
-                            <label for="comments ">Comments: <small>try to keep this limited.</small></label><br>
-                            <textarea class="form-control text-center" cols="40" name="comments" ></textarea>
-                        </div>
-                    </div>
+                <div class="mb-12 row">
+                    <label for="start_date ">Mission Brief:</label>
+                    <input class="form-control text-center" type="url" name="brief" placeholder="GCloud Document URL">
                 </div>
-
-                <button class="btn btn-md btn-block u-btn-primary rounded-0 g-py-15 mb-5" type="submit">Create Event!</button>
+                <div class="row mb-12">
+                    <label for="comments ">Description:</label><br>
+                    <textarea class="form-control text-center"  name="comments" rows="15" ></textarea>
+                </div>
+                <div class="g-pa-25--md">
+                    <button class="btn btn-md btn-block u-btn-primary rounded-0 g-py-15 mb-5" type="submit">Create Event!</button>
+                </div>
             </form>
         </div>
     </section>

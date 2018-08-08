@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="events" createEmptyFolders="true" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" serverName="events" createEmptyFolders="true">
     <serverData>
       <paths name="Citizen Warefare">
         <serverdata>
@@ -21,9 +21,11 @@
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/laravel/.env" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>

@@ -20,6 +20,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereDeletedAt($value)
  */
 class Rss extends Model
 {

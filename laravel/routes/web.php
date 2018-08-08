@@ -23,5 +23,13 @@ Route::group(['middleware'=>'auth'], function() {
 
     Route::get('/create-event', 'EventController@newEvent');
     Route::post('/create-event', 'EventController@createEvent');
+
+    Route::get('/edit/event/{id}', 'EventController@editEvent')->name('edit');
+    Route::post('/edit/event/{id}', 'EventController@updateEvent')->name('update');
 });
+Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
+
+
+
+//event view routes.
 

@@ -29,6 +29,7 @@ class EventController extends Controller
         $this->data = [
             'feeddata' => $this->rss->fetch(3),
             'timezonedata' => self::getTimeZone(),
+            'eventData' => self::getEventInfo(),
         ];
     }
 
@@ -46,6 +47,8 @@ class EventController extends Controller
             foreach ($data as $key => $value) {
                 //create carbon object with timezone information so that it can be converted to the users TZ
                 //time that is stored in DB is converted from user time to UTC so we need to take it from UTC to user TZ
+
+                //dd($this->data);
                 $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
                 $start_date = Carbon::parse($value->start_date)->setTimezone('UTC');
                 $end_date = Carbon::parse($value->end_date)->setTimezone('UTC');
@@ -61,10 +64,10 @@ class EventController extends Controller
                     new \DateTime($end_date),
                     '',
                     [
-                    'timezone'=>'local',
-                        'backgroundColor'=>$value->backgroundColor,
-                        'textColor'=>$value->color,
-                        'color'=>''
+                        'backgroundColor' => $value->backgroundColor,
+                        'textColor' => $value->color,
+                        'color' => '',
+                        'url' => '/view/event/'.$value->id,
                     ]
                 );
             }
@@ -72,6 +75,45 @@ class EventController extends Controller
         $calendar = Calendar::addEvents($events);
 
         return view('welcome')->with(['calendar'=>$calendar, 'data'=>$this->data]);
+    }
+
+    public function viewEvent($eventId)
+    {
+        $this->data['user'] = Auth::user();
+        $eventSingle = Event::whereId($eventId)->get();
+
+        return view('viewEvent')->with(['data'=> $this->data, 'eventData'=>$eventSingle[0]]);
+    }
+
+    public function editEvent($eventId)
+    {
+        $this->data['user'] = Auth::user();
+        $eventSingle = Event::whereId($eventId)->get();
+        //dd($eventSingle[0]);
+        return view('editEvent')->with([
+            'data' => $this->data,
+            'eventData'=>$eventSingle[0]
+        ]);
+    }
+
+    public function updateEvent(Request $request, $eventID)
+    {
+        $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
+        $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
+        $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
+
+        $event = new Event;
+        $event->exists = true;
+        $event->id = $eventID;
+        $event->title = $request->title;
+        $event->start_date = $start_date->setTimezone('UTC');
+        $event->end_date = $end_date->setTimezone('UTC');
+        $event->brief_url = $request->brief;
+        $event->comments = $request->comments;
+
+        $event->update();
+
+        return redirect('/view/event/'.$eventID);
     }
 
     public function newEvent(){
@@ -84,15 +126,15 @@ class EventController extends Controller
         //get the users timezone and convert it to UTC then save to DB.
         $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
-
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
 
         $event = new Event;
         $event->title = $request->title;
         $event->start_date = $start_date->setTimezone('UTC');
         $event->end_date = $end_date->setTimezone('UTC');
+        $event->brief_url = $request->brief;
         $event->comments = $request->comments;
-
+        $event->creator = Auth::id();
         $save = $event->save();
 
         if($save) {
@@ -101,6 +143,12 @@ class EventController extends Controller
         }
 
         return back();
+    }
+
+    public function getEventInfo()
+    {
+        $eventData = Event::all();
+        return $eventData;
     }
 
     private function getTimeZone()
@@ -112,7 +160,9 @@ class EventController extends Controller
         if($query && $query['status'] == 'success') {
           return $query;
         } else {
-          echo 'Unable to get location';
+          $query['timezone'] = 'America/New_York';
+
+          return $query;
         }
     }
 

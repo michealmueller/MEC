@@ -7,7 +7,7 @@
  */
 ?>
 
-    <section class="g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_3--after g-flex-centered g-py-25" style="background-image: url('assets/images/ollisar.jpg');">
+    <section class="g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_3--after g-flex-centered g-py-25" style="background-image: url('/assets/images/ollisar.jpg');">
         <div class="container g-bg-cover__inner">
             <div class="row">
                 <div class="col-md-5 align-self-center g-overflow-hidden g-mb-30 g-mb-0--md">
