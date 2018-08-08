@@ -69,7 +69,6 @@ class ProfileController extends Controller
         //general info update
         $updated = DB::table('users')->update([
             'org_name'=>$request->org_name,
-            'timezone'=>$request->timezone,
         ]);
 
 
