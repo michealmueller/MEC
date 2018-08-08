@@ -85,7 +85,6 @@ class ProfileController extends Controller
 
             $user->avatar = $avatarName;
             $user->org_name = $request->org_name;
-            $user->timezone = $request->timezone;
             $user->save();
         }
 

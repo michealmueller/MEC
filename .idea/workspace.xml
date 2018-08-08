@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,16 +48,17 @@
     <session id="1567710746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -68,7 +68,7 @@
           <entry key="events" value="5" />
           <entry key="gitignore" value="3" />
           <entry key="js" value="4" />
-          <entry key="php" value="130" />
+          <entry key="php" value="131" />
           <entry key="rnc" value="3" />
           <entry key="rsses" value="1" />
           <entry key="sql" value="3" />
@@ -84,7 +84,7 @@
           <entry key="Database Element" value="8" />
           <entry key="Git file" value="3" />
           <entry key="JavaScript" value="4" />
-          <entry key="PHP" value="82" />
+          <entry key="PHP" value="83" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RNG Compact" value="3" />
           <entry key="Scratch" value="3" />
@@ -96,20 +96,20 @@
           <entry key="css" value="177" />
           <entry key="env" value="74" />
           <entry key="gitignore" value="15" />
-          <entry key="php" value="11582" />
+          <entry key="php" value="11585" />
           <entry key="sql" value="17" />
-          <entry key="txt" value="583" />
+          <entry key="txt" value="639" />
           <entry key="vmoptions" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="74" />
-          <entry key="Blade" value="4718" />
+          <entry key="Blade" value="4719" />
           <entry key="CSS" value="177" />
           <entry key="Git file" value="15" />
-          <entry key="PHP" value="6864" />
-          <entry key="PLAIN_TEXT" value="590" />
+          <entry key="PHP" value="6866" />
+          <entry key="PLAIN_TEXT" value="646" />
           <entry key="Scratch" value="54" />
         </counts>
       </usages-collector>
@@ -122,7 +122,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.74141634">
+    <splitter split-orientation="vertical" split-proportion="0.888412">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.57154214">
           <split-first>
@@ -176,7 +176,7 @@
                 <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="697">
-                      <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+                      <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
                     </state>
                   </provider>
                 </entry>
@@ -193,8 +193,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="408">
-                      <caret line="138" column="24" lean-forward="true" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+                    <state relative-caret-position="425">
+                      <caret line="139" column="127" lean-forward="true" selection-start-line="139" selection-start-column="127" selection-end-line="139" selection-end-column="127" />
                     </state>
                   </provider>
                 </entry>
@@ -206,8 +206,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1700">
-                      <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+                    <state relative-caret-position="366">
+                      <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
                       <folding>
                         <element signature="e#40#58#0#PHP" expanded="true" />
                       </folding>
@@ -215,41 +215,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-                      <folding>
-                        <element signature="e#45#58#0#PHP" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="153">
-                      <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="731">
-                      <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="272">
-                      <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+                    <state relative-caret-position="527">
+                      <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
                     </state>
                   </provider>
                 </entry>
@@ -366,7 +336,6 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/auth/login.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/phpstorm64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/laravel/app/Listeners/NewUserListener.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
         <option value="$PROJECT_DIR$/public_html/vendor/jstimezone/jstz.js" />
         <option value="$PROJECT_DIR$/laravel/vendor/nikic/php-parser/test_old/run.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php" />
@@ -407,6 +376,7 @@
         <option value="$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
         <option value="$PROJECT_DIR$/laravel/.gitignore" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
       </list>
     </option>
   </component>
@@ -438,6 +408,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -492,12 +463,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;login&#9;null&#9;null&#10;regi&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;.env&#9;FILE&#9;file://D:/Work Projects/Event/laravel/.env&#10;Even&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;unify&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css&#10;profile&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/profile.blade.php&#10;master&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;register&#9;null&#9;null&#10;cal&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/calendar/fullcalendar.css&#10;unif&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-globals.css&#10;un&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css&#10;router&#9;FILE&#9;file://D:/Work Projects/Event/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;reg&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;rss&#9;null&#9;null&#10;footer&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/footer.blade.php&#10;welc&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work Projects/Event/laravel/routes/web.php&#10;modern&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/modern-business.css&#10;full&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/calendar/fullcalendar.css&#10;even&#9;null&#9;null&#10;modern-b&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/modern-business.css&#10;Eventcontroller&#9;null&#9;null&#10;profile.blade&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="profile&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/ProfileController.php&#10;nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;login&#9;null&#9;null&#10;regi&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;.env&#9;FILE&#9;file://D:/Work Projects/Event/laravel/.env&#10;Even&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;unify&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css&#10;master&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;register&#9;null&#9;null&#10;cal&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/calendar/fullcalendar.css&#10;unif&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-globals.css&#10;un&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css&#10;router&#9;FILE&#9;file://D:/Work Projects/Event/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;reg&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;rss&#9;null&#9;null&#10;footer&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/footer.blade.php&#10;welc&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work Projects/Event/laravel/routes/web.php&#10;modern&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/modern-business.css&#10;full&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/calendar/fullcalendar.css&#10;even&#9;null&#9;null&#10;modern-b&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/modern-business.css&#10;Eventcontroller&#9;null&#9;null&#10;profile.blade&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/laravel/vendor/maddhatter/laravel-fullcalendar/src/views/script.blade.php&#10;D:/Work Projects/Event/laravel/vendor/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -547,7 +517,8 @@
       <workItem from="1533582519350" duration="4913000" />
       <workItem from="1533646296614" duration="22354000" />
       <workItem from="1533730422744" duration="7671000" />
-      <workItem from="1533738260217" duration="56000" />
+      <workItem from="1533738260217" duration="1360000" />
+      <workItem from="1533766108038" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="removed column from DB that was not needed, updated activation email and added sendgrid to application.">
       <created>1533598459180</created>
@@ -570,17 +541,31 @@
       <option name="project" value="LOCAL" />
       <updated>1533737283802</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="minor change, readded registration link to nav bar">
+      <created>1533738350975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1533738350975</updated>
+    </task>
+    <task id="LOCAL-00005" summary="minor change, readded registration link to nav bar">
+      <created>1533738414659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1533738414659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96106000" />
+    <option name="totallyTimeSpent" value="97480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1418919" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14308426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -614,7 +599,8 @@
     <MESSAGE value="removed column from DB that was not needed, updated activation email and added sendgrid to application." />
     <MESSAGE value="Quality of life changes &#10;updated flow&#10; added the ability to view the event with description information&#10; added ability to edit and delete events&#10; edit and delete menu is only visible to the creator when logged in" />
     <MESSAGE value="Minor change to make sure future updates do not break.&#10;unignored 2 files so that data would be availible." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor change to make sure future updates do not break.&#10;unignored 2 files so that data would be availible." />
+    <MESSAGE value="minor change, readded registration link to nav bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor change, readded registration link to nav bar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/rsses">
@@ -642,13 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -834,6 +813,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -869,44 +876,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#45#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -924,21 +904,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/events/table/events">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -952,17 +918,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/events/table/events">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="138" column="24" lean-forward="true" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+        <state relative-caret-position="425">
+          <caret line="139" column="127" lean-forward="true" selection-start-line="139" selection-start-column="127" selection-end-line="139" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
         </state>
       </provider>
     </entry>
