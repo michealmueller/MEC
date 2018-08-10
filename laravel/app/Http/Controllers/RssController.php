@@ -19,8 +19,14 @@ class RssController extends Controller implements ShouldQueue
 
     private $rsi;
     private $inn;
+    private $feeds;
+
     public function __construct()
     {
+        $this->feeds = [
+            'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
+            'inn' => 'http://imperialnews.network/category/blog/feed/',
+        ];
     }
 
     /**
@@ -54,27 +60,62 @@ class RssController extends Controller implements ShouldQueue
     public function store()
     {
         //TODO::move this to Laravel cron later.
-        $rsi_url = 'https://robertsspaceindustries.com/comm-link/rss';
-        $inn_url = 'http://imperialnews.network/category/blog/feed/';
-        try {
-            $this->inn = Feed::loadRss($inn_url);
-        } catch (FeedException $e) {
-        }
+        $Feed = new Feed;
+        foreach($this->feeds as $rss) {
+            $feedData = $Feed->load($rss)->toArray();
 
-        foreach($this->inn->item as $post){
-            $data = DB::table('rsses')->where('rss_title',$post->title)->get();
-            if($data->count() <= 0){
-                //if the title does not exist add to DB
-                //fix date first then add
-                $postDate = Carbon::parse($post->pubDate);
-                $feed[] = DB::table('rsses')->insert([
-                    'rss_title' => $post->title,
-                    'rss_link' => $post->link,
-                    'rss_pubDate' => $postDate,
-                    'created_at' => Carbon::now(),
-                    ]);
+            if (isset($feedData)) {
+                foreach ($feedData['item'] as $post) {
+                    if (DB::table('rsses')->where('rss_title', $post['title'])->count() <= 0) {
+                        //if the title does not exist add to DB
+                        //fix date first then add
+                        $postDate = Carbon::parse($post['pubDate']);
+
+                        //adjust content
+                        $post['contentExerpt'] = self::getExerpt($post['content:encoded']);
+
+                        $feed[] = DB::table('rsses')->insert([
+                            'rss_feed' => $feedData['title'],
+                            'rss_feedImage' => $feedData['image']['url'],
+                            'rss_title' => $post['title'],
+                            'rss_link' => $post['link'],
+                            'rss_pubDate' => $postDate,
+                            'rss_content' => $post['content:encoded'],
+                            'rss_contentExerpt' => $post['contentExerpt'],
+                            'created_at' => Carbon::now(),
+                        ]);
+                    }
+                }
             }
         }
+    }
+
+    public function getExerpt($data)
+    {
+        //
+        $dataExerpt = self::grabSentences($data);
+        return $dataExerpt;
+    }
+
+    public function grabSentences($body, $sentencesToDisplay = 2) {
+        $nakedBody = preg_replace('/\s+/',' ',strip_tags($body));
+        $sentences = preg_split('/(\.|\?|\!)(\s)/',$nakedBody);
+
+        if (count($sentences) <= $sentencesToDisplay) {
+            return $nakedBody;
+        }
+
+        $stopAt = 0;
+        foreach ($sentences as $i => $sentence) {
+            $stopAt += strlen($sentence);
+
+            if ($i >= $sentencesToDisplay - 1) {
+                break;
+            }
+        }
+
+        $stopAt += ($sentencesToDisplay * 2);
+        return trim(substr($nakedBody, 0, $stopAt));
     }
 
     /**

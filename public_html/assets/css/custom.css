@@ -43,3 +43,32 @@ p
 {
     color: #bbb6b8;
 }
+
+/*########################*/
+.btn-bs-file{
+    position:relative;
+}
+.btn-bs-file input[type="file"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+table>tr>td>th{
+    width:25px;
+}
+
+.btn-primary{
+    background-color: #D08323;
+    border: thin solid #1c868c;
+}

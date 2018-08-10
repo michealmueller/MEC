@@ -1,52 +1,121 @@
 @extends('layouts.master')
 
 @section('content')
+    <div class="container g-color-white g-pa-25--md">
+        <div class="row my-2">
+            <div class="col-lg-8 order-lg-2">
+                <ul class="nav nav-tabs" id="tabMenu">
+                    <li class="nav-item">
+                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                    </li>
+                </ul>
+                <div class="tab-content py-4">
+                    <div class="tab-pane active" id="profile">
+                        <h5 class="mb-3">{{$data['user']->org_name}}'s Profile</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                @if($data['user']->founder)
+                                    <span class="badge badge-danger"><i class="fa fa-user"></i> Founder</span>
+                                @endif
+                                @if($data['user']->subscriber)
+                                    <span class="badge badge-primary"><i class="fa fa-money"></i> Subscriber</span>
+                                @endif
+                            </div>
+                            <div class="col-md-12">
+                                <h5 class="mt-2">Recent Activity</h5>
+                                <table class="table table-sm table-hover table-striped">
+                                    <tbody>
+                                    @if(isset($data['user']->recent))
 
-    <section class="container g-py-50 g-px-75--sm g-pb-170--md">
-        <div class="row justify-content-center">
-            @include('shared.errors')
-            <form action="/profile" method="post" enctype="multipart/form-data">
-                {{csrf_field()}}
-                <div class="mb-4">
-                    <div class="input-group">
-                        <div class="row justify-content-center">
-                            <div class="profile-header-container">
-                                <div class="profile-header-img">
-                                    <img class="rounded-circle"
-                                         @if($data['user']->avatar)
-                                            src="/storage/app/avatars/{{ $data['user']->avatar }}"
-                                         @else
-                                            src="/assets/img-temp/100x100/img3.jpg"
-                                         @endif
-                                    >
-                                </div>
+                                    @else
+                                        Nothing New Here.
+                                    @endif
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                        <!--/row-->
+                    </div>
+                    <div class="tab-pane" id="edit">
+                        @include('shared.errors')
+                        <form method="post" enctype="multipart/form-data">
+                            {{csrf_field()}}
+                            <!-- Begin Avatar -->
+                            <div class="row">
+                                <div class="col-lg-4 order-lg-1 text-center"></div>
+                                <div class="col-lg-4 order-lg-1 text-center">
+                                    <div class="col-sm-12" style="margin-bottom:20px;">
+                                        <img id="avatar"
+                                             @if($data['user']->avatar)
+                                             src="/storage/app/avatars/{{ $data['user']->avatar }}"
+                                             @else
+                                             src="//placehold.it/100"
+                                             @endif
+                                             class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
+                                        <label  class="btn-bs-file btn btn-block btn-primary ">
+                                            Browse
+                                            <input id="avatarUp" type="file" name="avatar" style="display: none;">
+                                        </label>
+                                        <small><p>Image should be 100x100 or smaller</p></small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 order-lg-1 text-center"></div>
+                            </div>
+                            <!-- End Avatar -->
+                            <input type="hidden" name="user_id" value="{{$data['user']->id}}">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Organization</label>
+                                <div class="col-lg-9">
+                                    <input name="org_name" class="form-control" type="text" value="{{$data['user']->org_name}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                                <div class="col-lg-9">
+                                    <input name="email" class="form-control" type="email" value="{{$data['user']->email}}">
+                                </div>
+                            </div>
+                            <!--<br>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                                <div class="col-lg-9">
+                                    <input name="password" class="form-control" type="password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
+                                <div class="col-lg-9">
+                                    <input name="password_confirmation" class="form-control" type="password">
+
+                                </div>
+                            </div>-->
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label"></label>
+                                <div class="col-lg-9">
+                                    <input type="reset" class="btn btn-secondary" value="Cancel">
+                                    <input type="submit" class="btn btn-primary" value="Save Changes">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="mb-4">
-                    <div class="input-group">
-                        <input type="file" class="form-control-file" name="avatar" id="avatarFile" aria-describedby="fileHelp">
-                        <small id="fileHelp" class="form-text text-muted">Please upload a valid image file. dimensions should be less then 100x100.</small>
-                    </div>
+            </div>
+
+            <div class="col-lg-4 order-lg-1 text-center">
+                <div class="col-sm-12" style="margin-bottom:20px;">
+                    <img
+                         @if($data['user']->avatar)
+                         src="/storage/app/avatars/{{ $data['user']->avatar }}"
+                         @else
+                         src="//placehold.it/100"
+                         @endif
+                         class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
                 </div>
-                <label>Organization Name:</label>
-                <div class="mb-4">
-                    <div class="input-group">
-                        <input class="form-control" type="text" name="org_name"
-                                @if($data['user']->org_name)
-                                    value="{{ $data['user']->org_name }}"
-                                @endif
-                        >
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <div class="input-group">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-    </section>
+    </div>
 
 @endsection

@@ -1,11 +1,11 @@
 <!-- Footer -->
 <footer>
-    <div id="contacts-section" class=" g-color-white-opacity-0_8 ">
-        <div class="container">
+    <div id="contacts-section" class="g-color-white-opacity-0_8 g-mt-150--md">
+        <div class="container g-mt-10--md">
             <div class="row">
 
                 <!-- Footer Content -->
-                <div class="col-lg-3">
+                <div class="col-lg-3 g-mt-15--md">
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Latest From Star Citizen</h2>
                     </div>
@@ -22,7 +22,7 @@
                 <!-- End Footer Content -->
 
                 <!-- Footer Content -->
-                <div class="col-lg-3 ">
+                <div class="col-lg-3 g-mt-15--md">
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Useful Links</h2>
                     </div>
@@ -72,7 +72,7 @@
                 <!-- End Footer Content -->
 
                 <!-- Footer Content -->
-                <div class="col-lg-3">
+                <div class="col-lg-3 g-mt-15--md">
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Our Contacts</h2>
                     </div>
@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- End Footer Content -->
-                <div class="col-lg-3">
+                <div class="col-lg-3 g-mt-15--md">
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Donate</h2>
                     </div>

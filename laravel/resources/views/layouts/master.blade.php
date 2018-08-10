@@ -192,8 +192,35 @@
 
     </script>
 
+    <script >
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#avatar')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+                console.log(this);
+                console.log(input.files);
+                console.log(input.files[0]);
 
 
+            }
+        }
+        $("#avatarUp").change(function() {
+            readURL(this);
+        });
+    </script>
+
+    <script>
+        //redirect to specific tab
+        $(document).ready(function () {
+            $('#tabMenu a[href="#{{ old('tab') }}"]').tab('show')
+        });
+    </script>
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}

@@ -63,33 +63,39 @@ class ProfileController extends Controller
         //validate input.
         $request->validate([
             'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:max_height=100,max_width=100',
-            'org_name' => 'required|string'
+            'org_name' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'min:6|confirmed'
         ]);
 
-        //general info update
-        $updated = DB::table('users')->update([
-            'org_name'=>$request->org_name,
-        ]);
-
-
-        //avatar update
-        if($request->avatar) {
-
-
+        if(Auth::check())
+        {
             $user = Auth::user();
-
-            $avatarName = $user->id . '_avatar' . time() . '.' . request()->avatar->getClientOriginalExtension();
-
-            $request->avatar->storeAs('avatars', $avatarName);
-
-            $user->avatar = $avatarName;
-            $user->org_name = $request->org_name;
-            $user->save();
         }
 
-        return back()
-            ->with('success','Updated Profile.');
+        if(!$request->hasFile('avatar')) {
+            $user->org_name = $request['org_name'];
+            $user->email = $request['email'];
+        }
+
+        if($request->hasFile('avatar')) {
+            $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
+            $request->avatar->storeAs('avatars', $avatarName);
+            $user->avatar = $avatarName;
+
+            $user->org_name = $request['org_name'];
+            $user->email = $request['email'];
+        }
+
+        if($user->save()){
+            session()->put('success', 'Profile updated');
+            return back()->withInput(['tab'=>'edit']);
+        }
+        session()->put('error', 'Something went wrong!');
+        return back()->withInput(['tab'=>'edit']);
     }
+
+
 
     /**
      * Display the specified resource.

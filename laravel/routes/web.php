@@ -28,6 +28,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/edit/event/{id}', 'EventController@updateEvent')->name('update');
 });
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
+Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 
 
 

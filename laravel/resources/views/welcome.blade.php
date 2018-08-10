@@ -9,7 +9,3 @@
     </section>
 
 @endsection
-
-@section('js')
-    {!! $calendar->script() !!}
-@endsection

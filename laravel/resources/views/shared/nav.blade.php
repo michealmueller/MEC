@@ -87,7 +87,7 @@
                                     style="animation-duration: 300ms; left: 0px;background-color: #000000">
 
                                     <li class="g-mb-10">
-                                        <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="/profile">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile">
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="fa fa-user"></i>
                                         </span>
@@ -95,7 +95,7 @@
                                         </a>
                                     </li>
                                     <!--<li class="g-mb-10">
-                                        <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="/upgrade">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/upgrade">
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="hs-admin-rocket"></i>
                                         </span>
@@ -103,7 +103,7 @@
                                         </a>
                                     </li>-->
                                     <li class="g-mb-10">
-                                        <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="/create-event">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/create-event">
                                             <span class="d-flex align-self-center g-mr-12">
                                                 <i class="fa fa-users"></i>
                                             </span>
@@ -112,7 +112,7 @@
                                     </li>
 
                                     <li class="g-mb-10">
-                                        <a class="media g-color-lightred-v2--hover g-py-5 g-px-20" href="{{ route('logout') }}">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="{{ route('logout') }}">
                                                     <span class="d-flex align-self-center g-mr-12">
                                                         <i class="fa fa-sign-out"></i>
                                                     </span>
@@ -129,7 +129,7 @@
                     <ul class="navbar-nav text-uppercase g-font-weight-600 mx-auto">
                         <li class="nav-item g-mx-25--lg">
 
-                            <a class="nav-link media g-color-lightred-v2--hover g-py-5 g-px-20" href="{{ route('login') }}">
+                            <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('login') }}">
                                                 <span class="d-flex align-self-center g-mr-12">
                                                     <i class="hs-admin-shift-right"></i>
                                                 </span>
@@ -137,7 +137,7 @@
                             </a>
                         </li>
                         <li class="nav-item g-mx-25--lg">
-                            <a class="nav-link media g-color-lightred-v2--hover g-py-5 g-px-20" href="{{ route('register') }}">
+                            <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('register') }}">
                                             <span class="d-flex align-self-center g-mr-12">
 
                                             </span>
