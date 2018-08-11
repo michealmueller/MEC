@@ -16,6 +16,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 
 Route::get('/', 'EventController@index')->name('calendar');
+Route::get('/change/timezone', 'EventController@index');
 Route::group(['middleware'=>'auth'], function() {
 
     Route::get('/profile', 'ProfileController@index');
@@ -26,6 +27,8 @@ Route::group(['middleware'=>'auth'], function() {
 
     Route::get('/edit/event/{id}', 'EventController@editEvent')->name('edit');
     Route::post('/edit/event/{id}', 'EventController@updateEvent')->name('update');
+
+    Route::get('/remove/event/{id}', 'EventController@removeEvent')->name('remove');
 });
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');

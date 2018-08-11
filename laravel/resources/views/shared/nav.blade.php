@@ -66,8 +66,8 @@
                                         <span class="g-pos-rel">
                                     <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
-                                         @if($data['user']->avatar)
-                                         src="/storage/app/avatars/{{ $data['user']->avatar }}"
+                                         @if($user->avatar)
+                                         src="/storage/app/avatars/{{ $user->avatar }}"
                                          @else
                                          src="/assets/img-temp/100x100/img3.jpg"
                                          @endif
@@ -75,7 +75,7 @@
                                 </span>
 
                                         <span class="g-pos-rel g-top-2">
-                                    <span class="g-hidden-sm-down">{{ $data['user']->org_name }}</span>
+                                    <span class="g-hidden-sm-down">{{ $user->org_name }}</span>
                                     <i class="hs-admin-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                                 </span>
                                     @endif

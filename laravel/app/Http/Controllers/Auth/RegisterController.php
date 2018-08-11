@@ -40,7 +40,7 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('guest');
         $this->user = new User;
@@ -48,7 +48,7 @@ class RegisterController extends Controller
         $this->data = [
             'feeddata' => $this->rss->fetch(3),
         ];
-    }
+    }*/
 
     /**
      * Get a validator for an incoming registration request.

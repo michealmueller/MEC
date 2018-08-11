@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -10,12 +11,12 @@ use App\Event;
 use App\Http\Controllers\RssController as Rss;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class EventController extends Controller
-
 {
 
-    private $data;
+
     private $rss;
     /**
      * Create a new controller instance.
@@ -27,7 +28,6 @@ class EventController extends Controller
         $this->rss = new Rss;
         $this->rss->store();
         $this->data = [
-            'feeddata' => $this->rss->fetch(3),
             'timezonedata' => self::getTimeZone(),
             'eventData' => self::getEventInfo(),
         ];
@@ -35,10 +35,15 @@ class EventController extends Controller
 
 
 
-    public function index()
+    public function index($tz =null)
     {
-        //dd($timeZone);
-        $this->data['user'] = Auth::user();
+        $tz = Input::get('timezone');
+        if($tz === null){
+            $timezone = 'America/New_York';
+        }else{
+            $timezone = $tz;
+        }
+
         $events = [];
         $data = Event::all();
 
@@ -49,7 +54,7 @@ class EventController extends Controller
                 //time that is stored in DB is converted from user time to UTC so we need to take it from UTC to user TZ
 
                 //dd($this->data);
-                $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
+                $timezoneDTZ = new \DateTimeZone($timezone);
                 $start_date = Carbon::parse($value->start_date)->setTimezone('UTC');
                 $end_date = Carbon::parse($value->end_date)->setTimezone('UTC');
 
@@ -62,7 +67,7 @@ class EventController extends Controller
                     false,
                     new \DateTime($start_date),
                     new \DateTime($end_date),
-                    '',
+                    $value->id,
                     [
                         'backgroundColor' => $value->backgroundColor,
                         'textColor' => $value->color,
@@ -72,14 +77,24 @@ class EventController extends Controller
                 );
             }
         }
-        $calendar = Calendar::addEvents($events);
+        $calendar = Calendar::addEvents($events)->setCallbacks([
+            'eventRender'=>'function(event,element,view){
+                var dateString = event.start.format("YYYY-MM-DD");
+                $(view.el[0]).find(".fc-day[data-date="+dateString+"]")
+                .css("background-image","url(/storage/app/avatars/'. User::findOrFail($value->creator)->avatar .')")
+                .css("background-repeat","no-repeat")
+                .css("background-size", "100%")
+                .css("opacity",".3");
+            }',
+
+        ]);
 
         return view('welcome')->with(['calendar'=>$calendar, 'data'=>$this->data]);
     }
 
     public function viewEvent($eventId)
     {
-        $this->data['user'] = Auth::user();
+        //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get();
 
         return view('viewEvent')->with(['data'=> $this->data, 'eventData'=>$eventSingle[0]]);
@@ -87,7 +102,7 @@ class EventController extends Controller
 
     public function editEvent($eventId)
     {
-        $this->data['user'] = Auth::user();
+        //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get();
         //dd($eventSingle[0]);
         return view('editEvent')->with([
@@ -117,14 +132,15 @@ class EventController extends Controller
     }
 
     public function newEvent(){
-        $this->data['user'] = Auth::user();
-        return view('createEvent')->with('data', $this->data);
+        //$this->data['user'] = Auth::user();
+        return view('createEvent');
     }
 
     public function createEvent(Request $request)
     {
+
         //get the users timezone and convert it to UTC then save to DB.
-        $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
+        $timezoneDTZ = new \DateTimeZone($request->timezone);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
 
@@ -145,23 +161,27 @@ class EventController extends Controller
         return back();
     }
 
+    public function removeEvent($eventId)
+    {
+        Event::destroy('$eventId');
+    }
+
     public function getEventInfo()
     {
         $eventData = Event::all();
         return $eventData;
     }
 
-    private function getTimeZone()
+    public function getTimeZone()
     {
 
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
         $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
 
         if($query && $query['status'] == 'success') {
-          return $query;
+            return $query;
         } else {
-          $query['timezone'] = 'America/New_York';
-
+            $query['timezone'] = 'America/New_York';
           return $query;
         }
     }

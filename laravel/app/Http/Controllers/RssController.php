@@ -17,17 +17,15 @@ class RssController extends Controller implements ShouldQueue
     //for running in the background so it does not effect loading.
     use InteractsWithQueue, SerializesModels;
 
-    private $rsi;
-    private $inn;
-    private $feeds;
 
-    public function __construct()
+
+    /*public function __construct()
     {
         $this->feeds = [
             'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
             'inn' => 'http://imperialnews.network/category/blog/feed/',
         ];
-    }
+    }*/
 
     /**
      * Display a listing of the resource.
@@ -59,9 +57,15 @@ class RssController extends Controller implements ShouldQueue
      */
     public function store()
     {
+        $feeds = [
+            'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
+            'inn' => 'http://imperialnews.network/category/blog/feed/',
+        ];
+
         //TODO::move this to Laravel cron later.
         $Feed = new Feed;
-        foreach($this->feeds as $rss) {
+
+        foreach($feeds as $rss) {
             $feedData = $Feed->load($rss)->toArray();
 
             if (isset($feedData)) {

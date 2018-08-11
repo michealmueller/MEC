@@ -2,25 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use EpicArrow\GitChangeLog\GitChangeLog;
-use EpicArrow\GitChangeLog\Models\Commit;
 use Illuminate\Http\Request;
 use App\Http\Controllers\RssController as Rss;
 use Illuminate\Support\Facades\Auth;
 
 class gitCommitsLog extends Controller
 {
-    private $data;
-    private $rss;
+    //private $data;
+    //private $rss;
 
-    public function __construct()
+    /*public function __construct()
     {
         //$this->middleware('auth');
         $this->rss = new Rss;
         $this->data = [
             'feeddata' => $this->rss->fetch(3),
         ];
-    }
+    }*/
 
     /**
      * Display a listing of the resource.

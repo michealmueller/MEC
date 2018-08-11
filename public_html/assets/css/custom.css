@@ -72,3 +72,7 @@ table>tr>td>th{
     background-color: #D08323;
     border: thin solid #1c868c;
 }
+
+.mce-txt{
+    color: #000000;
+}

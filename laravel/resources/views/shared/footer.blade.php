@@ -32,12 +32,6 @@
                         <ul class="list-unstyled g-mt-minus-10 mb-0">
                             <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
                                 <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="http://imperialnews.network/">INN</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
                                     <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/">RSI</a>
                                     <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
                                 </h4>
@@ -51,6 +45,18 @@
                             <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
                                 <h4 class="h6 g-pr-20 mb-0">
                                     <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/SE47">Skylark Enterprises</a>
+                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                                </h4>
+                            </li>
+                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                                <h4 class="h6 g-pr-20 mb-0">
+                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/SQUIDINK">SquidInk</a>
+                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                                </h4>
+                            </li>
+                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                                <h4 class="h6 g-pr-20 mb-0">
+                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/corp">The Corporation</a>
                                     <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
                                 </h4>
                             </li>

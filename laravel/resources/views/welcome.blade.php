@@ -4,6 +4,22 @@
 
     <section class="container g-py-100">
         <div class="row justify-content-center">
+            <form method="get">
+                <div class="form-group row g-mb-25">
+                    <label for="example-text-input" class="col-2 col-form-label">Time Zone:</label>
+                    <div class="col-8">
+                        <select class="form-control" id="zone" name="timezone">
+                            <option selected value="{{$data['timezonedata']['timezone']}}">{{$data['timezonedata']['timezone']}}</option>
+                            @foreach($data['timezones'] as $k=>$v)
+                                <option value="{{ $k }}">{{$v}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-primary">Change</button>
+                    </div>
+                </div>
+            </form>
             {!! $calendar->calendar() !!}
         </div>
     </section>

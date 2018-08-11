@@ -20,11 +20,7 @@ class ProfileController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
-        $this->rss = new Rss;
-        $this->data = [
-            'feeddata' => $this->rss->fetch(3),
-        ];
+        $this->middleware('auth');
     }
 
     /**
@@ -34,10 +30,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
         $this->data['user'] = Auth::user();
         $this->data['timezones'] = \DateTimeZone::listIdentifiers();
-        //dd($this->data);
 
         return view('profile')->with('data',$this->data);
     }

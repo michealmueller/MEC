@@ -9171,11 +9171,6 @@ input[type="radio"]:checked + * .g-show-check {
 .u-file-attach-v3:hover {
   background-color: #eee; }
 
-/*------------------------------------
-  Selects
-------------------------------------*/
-.input-group select {
-  -webkit-appearance: none; }
 
 /*------------------------------------
   Selects v1
@@ -22134,68 +22129,6 @@ pre[class*="language-"] .toolbar-item a {
   background-color: #fff;
   border: 1px solid #bbb;
   border-radius: 0 0 0 4px; }
-
-.select2-container .select2-selection--single {
-  height: 2.5rem; }
-
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: normal;
-  padding: .5rem .75rem; }
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  top: 50%;
-  line-height: 26px;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  position: static;
-  top: auto;
-  left: auto;
-  width: auto;
-  height: auto;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  vertical-align: middle;
-  border: none;
-  margin-top: 0;
-  margin-left: 0; }
-
-.select2-container--default .select2-selection--single .select2-selection__arrow b::before {
-  content: "\f0dc"; }
-
-.g-rounded-0 + .select2-container--default .select2-selection--single {
-  border-radius: 0; }
-
-.select2-results__option {
-  position: relative; }
-
-.select2-results__option img:first-child {
-  margin-right: 10px; }
-
-.select2-results__option img:last-child {
-  margin-left: 10px; }
-
-.select2-results__option:hover .u-option-icons--v1 {
-  opacity: 1; }
-
-.u-select-v1 {
-  position: relative; }
-
-.select2-container--default .u-select-v1 {
-  height: auto;
-  border-radius: 0; }
-
-.select2-container--default .u-select-v1 .select2-selection__rendered {
-  padding: 0; }
-
-.select2-container--default .u-select-v1 .select2-selection__arrow {
-  line-height: 22px; }
-
-.select2-container--default .u-select-v1:focus {
-  outline: 0 none; }
 
 .slick-slide:focus {
   outline: 0 none; }

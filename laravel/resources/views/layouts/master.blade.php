@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
 
     <!-- CSS Unify -->
-    <link rel="stylesheet" href="/assets/css/unify-admin.css">
+    <!--<link rel="stylesheet" href="/assets/css/unify-admin.css">-->
     <link rel="stylesheet" href="/assets/css/unify-core.css">
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
@@ -48,7 +48,7 @@
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/assets/css/select2.min.css"/>
 
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
@@ -59,17 +59,19 @@
     <script src="/assets/js/fullcalendar.js"></script>
 
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
+    <script src="/assets/js/select2.min.js"></script>
+    <script src="/assets/js/jstz.min.js"></script>
     <script src="/vendor/tinymce/js/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init(
-        {
-            selector:'textarea',
-            inline: true,
+    <script language="javascript">
+        $(document).on('ready', function(){
+            var timezone = jstz.determine();
+            var name=timezone.name();
+            $('#systemtz').html(name);
         });
+
     </script>
+
+
 </head>
 <body>
     <main>
@@ -79,7 +81,27 @@
         @yield('content')
         @include('shared.footer')
     </main>
+    <script>
+        $('select').select2();
+    </script>
+    <script>
 
+        var config ={
+            selector: "textarea",
+            width: 500,
+            height: 500,
+            resize: true,
+            themes: "modern",
+            plugins: [
+                "anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools",
+                " lists link media noneditable preview",
+                " searchreplace table template textcolor visualblocks wordcount"
+            ],
+            toolbar:
+                "insertfile undo redo | bold italic | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist | link image",
+        };
+        tinymce.init(config);
+    </script>
     <!-- JS Implementing Plugins -->
     <script src="/vendor/appear.js"></script>
     <script src="/vendor/slick-carousel/slick/slick.js"></script>
@@ -119,9 +141,6 @@
         $(document).on('ready', function () {
             // initialization of HSDropdown component
             $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {dropdownHideOnScroll: false});
-
-            // initialization of custom select
-            $('.js-select').select2();
 
             // initialization of hamburger
             $.HSCore.helpers.HSHamburgers.init('.hamburger');
@@ -203,11 +222,6 @@
                 };
 
                 reader.readAsDataURL(input.files[0]);
-                console.log(this);
-                console.log(input.files);
-                console.log(input.files[0]);
-
-
             }
         }
         $("#avatarUp").change(function() {

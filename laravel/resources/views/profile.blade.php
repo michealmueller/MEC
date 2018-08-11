@@ -14,13 +14,13 @@
                 </ul>
                 <div class="tab-content py-4">
                     <div class="tab-pane active" id="profile">
-                        <h5 class="mb-3">{{$data['user']->org_name}}'s Profile</h5>
+                        <h5 class="mb-3">{{$user->org_name}}'s Profile</h5>
                         <div class="row">
                             <div class="col-md-6">
-                                @if($data['user']->founder)
+                                @if($user->founder)
                                     <span class="badge badge-danger"><i class="fa fa-user"></i> Founder</span>
                                 @endif
-                                @if($data['user']->subscriber)
+                                @if($user->subscriber)
                                     <span class="badge badge-primary"><i class="fa fa-money"></i> Subscriber</span>
                                 @endif
                             </div>
@@ -28,7 +28,7 @@
                                 <h5 class="mt-2">Recent Activity</h5>
                                 <table class="table table-sm table-hover table-striped">
                                     <tbody>
-                                    @if(isset($data['user']->recent))
+                                    @if(isset($user->recent))
 
                                     @else
                                         Nothing New Here.
@@ -49,8 +49,8 @@
                                 <div class="col-lg-4 order-lg-1 text-center">
                                     <div class="col-sm-12" style="margin-bottom:20px;">
                                         <img id="avatar"
-                                             @if($data['user']->avatar)
-                                             src="/storage/app/avatars/{{ $data['user']->avatar }}"
+                                             @if($user->avatar)
+                                             src="/storage/app/avatars/{{ $user->avatar }}"
                                              @else
                                              src="//placehold.it/100"
                                              @endif
@@ -65,17 +65,17 @@
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
                             </div>
                             <!-- End Avatar -->
-                            <input type="hidden" name="user_id" value="{{$data['user']->id}}">
+                            <input type="hidden" name="user_id" value="{{$user->id}}">
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Organization</label>
                                 <div class="col-lg-9">
-                                    <input name="org_name" class="form-control" type="text" value="{{$data['user']->org_name}}">
+                                    <input name="org_name" class="form-control" type="text" value="{{$user->org_name}}">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-9">
-                                    <input name="email" class="form-control" type="email" value="{{$data['user']->email}}">
+                                    <input name="email" class="form-control" type="email" value="{{$user->email}}">
                                 </div>
                             </div>
                             <!--<br>
@@ -107,13 +107,29 @@
             <div class="col-lg-4 order-lg-1 text-center">
                 <div class="col-sm-12" style="margin-bottom:20px;">
                     <img
-                         @if($data['user']->avatar)
-                         src="/storage/app/avatars/{{ $data['user']->avatar }}"
-                         @else
-                         src="//placehold.it/100"
-                         @endif
-                         class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
+                            @if($user->avatar)
+                            src="/storage/app/avatars/{{ $user->avatar }}"
+                            @else
+                            src="//placehold.it/100"
+                            @endif
+                            class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
                 </div>
+                <h3>{{ $user['org_name'] }}</h3>
+                <table>
+                    <tr>
+                        <th>IP TZ:</th>
+                        <td>&nbsp;</td>
+                        <td>{{ $data['timezonedata']['timezone'] }}</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <th>System TZ:</th>
+                        <td>&nbsp;</td>
+                        <td id="systemtz">
+
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
