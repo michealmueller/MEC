@@ -37,7 +37,7 @@ class EventController extends Controller
 
     public function index($tz =null)
     {
-        //dd($this->data['timezonedata']->timezone->name);
+        dd($this->data['timezonedata']);
 
         $tz = Input::get('timezone');
         if($tz === null){

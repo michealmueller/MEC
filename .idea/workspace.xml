@@ -100,7 +100,7 @@
           <entry key="css" value="232" />
           <entry key="env" value="74" />
           <entry key="gitignore" value="33" />
-          <entry key="php" value="21156" />
+          <entry key="php" value="21168" />
           <entry key="sql" value="17" />
           <entry key="txt" value="1402" />
           <entry key="vmoptions" value="7" />
@@ -112,7 +112,7 @@
           <entry key="Blade" value="9267" />
           <entry key="CSS" value="232" />
           <entry key="Git file" value="33" />
-          <entry key="PHP" value="11889" />
+          <entry key="PHP" value="11901" />
           <entry key="PLAIN_TEXT" value="1409" />
           <entry key="Scratch" value="59" />
         </counts>
@@ -259,8 +259,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="485">
-                      <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+                    <state relative-caret-position="383">
+                      <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
                       <folding>
                         <element signature="e#40#53#0#PHP" expanded="true" />
                       </folding>
@@ -681,7 +681,7 @@
       <workItem from="1533854322141" duration="2293000" />
       <workItem from="1533905887319" duration="11918000" />
       <workItem from="1533921969339" duration="18568000" />
-      <workItem from="1533993726147" duration="38704000" />
+      <workItem from="1533993726147" duration="38839000" />
     </task>
     <task id="LOCAL-00001" summary="removed column from DB that was not needed, updated activation email and added sendgrid to application.">
       <created>1533598459180</created>
@@ -809,11 +809,25 @@
       <option name="project" value="LOCAL" />
       <updated>1534092166141</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists&#10;&#10;------testing new ip detection&#10;&#10;backend cleaning of code to stop duplication of code.">
+      <created>1534092245072</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1534092245072</updated>
+    </task>
+    <task id="LOCAL-00020" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists&#10;&#10;------testing new ip detection&#10;&#10;backend cleaning of code to stop duplication of code.">
+      <created>1534092339048</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1534092339048</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173936000" />
+    <option name="totallyTimeSpent" value="174071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1272,8 +1286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="383">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
