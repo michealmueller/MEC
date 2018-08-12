@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                        @if($eventData->creator === Auth::id() && Auth::check())
+                        @if($eventData->creator == \Auth::id() && \Auth::check())
                         <div class="media-body d-flex align-self-center justify-content-end">
                             <div class="g-pos-rel g-z-index-2">
                                 <a id="profileMenuInvoker" class="u-link-v5 g-line-height-0 g-font-size-24 g-color-white g-color-lightblue-v3--hover g-ml-10 g-ml-20--md"

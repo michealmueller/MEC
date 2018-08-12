@@ -97,7 +97,7 @@ class EventController extends Controller
         //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get();
 
-        return view('viewEvent')->with(['data'=> $this->data, 'eventData'=>$eventSingle[0]]);
+        return view('viewEvent')->with( 'eventData',$eventSingle[0]);
     }
 
     public function editEvent($eventId)
@@ -163,7 +163,8 @@ class EventController extends Controller
 
     public function removeEvent($eventId)
     {
-        Event::destroy('$eventId');
+        Event::destroy($eventId);
+        return redirect('/');
     }
 
     public function getEventInfo()
