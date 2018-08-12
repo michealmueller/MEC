@@ -37,9 +37,10 @@ class EventController extends Controller
 
     public function index($tz =null)
     {
+        dd($this->data['timezonedata']);
         $tz = Input::get('timezone');
         if($tz === null){
-            $timezone = 'America/New_York';
+            $timezone = $this->data['timezonedata']['timezone'];
         }else{
             $timezone = $tz;
         }
@@ -187,14 +188,24 @@ class EventController extends Controller
     {
 
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-        $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
+        $ip ='71.60.23.77';
 
-        if($query && $query['status'] == 'success') {
-            return $query;
-        } else {
-            $query['timezone'] = 'America/New_York';
-          return $query;
-        }
+        $ch = curl_init();
+        $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=f3c6b481fd5bc27015b9b7eb6a60df4d4b21ed14f0438be8995b53b5';
+        //dd($endpoint, $ch);
+
+        curl_setopt($ch, CURLOPT_URL, $endpoint);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            "Accept: application/json"
+        ));
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+dd($response);
+        return $response;
     }
 
 }
