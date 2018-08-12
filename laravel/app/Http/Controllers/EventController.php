@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Input;
 class EventController extends Controller
 {
 
-
+    private $data;
     private $rss;
     /**
      * Create a new controller instance.
@@ -189,7 +189,6 @@ class EventController extends Controller
     {
 
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-        $ip ='71.60.23.77';
 
         $ch = curl_init();
         $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=f3c6b481fd5bc27015b9b7eb6a60df4d4b21ed14f0438be8995b53b5';
