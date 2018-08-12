@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-12 row">
                     <label for="start_date ">Mission Brief:</label>
-                    <input class="form-control text-center" type="url" name="brief" placeholder="GCloud Document URL">
+                    <input class="form-control text-center" type="url" name="brief" placeholder="GCloud Document URL" value="{{ $eventData->brief_url }}">
                 </div>
                 <div class="row mb-12">
                     <label for="comments ">Description:</label><br>
