@@ -80,7 +80,7 @@
                         <div class="form-group row g-mb-25">
                             <label for="example-text-input" class="col-2 col-form-label">Description</label>
                             <div class="col-10">
-                                <textarea class="form-control" id="content"></textarea>
+                                <textarea class="form-control" id="content" name="comments"></textarea>
                             </div>
                         </div>
                         <div class="form-group row g-mb-25">

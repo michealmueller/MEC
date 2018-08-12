@@ -24,13 +24,6 @@
     <link rel="stylesheet" href="/vendor/icon-line-pro/style.css">
     <link rel="stylesheet" href="/vendor/icon-hs/style.css">
     <link rel="stylesheet" href="/vendor/animate.css">
-    <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="/vendor/dzsparallaxer/dzsscroller/scroller.css">
-    <link rel="stylesheet" href="/vendor/dzsparallaxer/advancedscroller/plugin.css">
-    <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="/vendor/hs-bg-video/hs-bg-video.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
@@ -55,7 +48,7 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
     <script src="/assets/js/fullcalendar.js"></script>
 
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
@@ -87,11 +80,12 @@
     <script>
 
         var config ={
-            selector: "textarea",
+            selector: "",
             width: 500,
             height: 500,
             resize: true,
             themes: "modern",
+            menubar: false,
             plugins: [
                 "anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools",
                 " lists link media noneditable preview",
@@ -99,8 +93,12 @@
             ],
             toolbar:
                 "insertfile undo redo | bold italic | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist | link image",
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
         };
-        tinymce.init(config);
+        tinymce.init();
     </script>
     <!-- JS Implementing Plugins -->
     <script src="/vendor/appear.js"></script>

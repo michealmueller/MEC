@@ -64,6 +64,7 @@
         <item url="file://$PROJECT_DIR$/public_html/assets/js/jquery.min.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.min.js" />
+        <item url="file://$PROJECT_DIR$/public_html/assets/js/moment.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/vendor/bootstrap-notify/js/bootstrap-notify.min.js" />
@@ -184,6 +185,7 @@
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jquery.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/moment.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/vendor/bootstrap-notify/js/bootstrap-notify.min.js" />
