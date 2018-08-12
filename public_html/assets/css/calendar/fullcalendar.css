@@ -263,7 +263,8 @@ body .fc {
 }
 
 .fc td.fc-today {
-    border-style: double
+    border-style: double;
+    color:#00ff00;
 }
 
 .fc .fc-row {
