@@ -22,11 +22,11 @@
                     <div class="row mb-6">
                         <div class="mb-3 pull-left">
                             <label for="start_date">Start Date:</label>
-                            <input class="form-control text-center " name="start_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']['timezone'])->format('Y-m-d\TH:i:s') }}">
+                            <input class="form-control text-center " name="start_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('Y-m-d\TH:i:s') }}">
                         </div>
                         <div class="mb-3 pull-right">
                             <label for="start_date ">End Date:</label>
-                            <input class="form-control text-center " name="end_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']['timezone'])->format('Y-m-d\TH:i:s') }}">
+                            <input class="form-control text-center " name="end_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('Y-m-d\TH:i:s') }}">
                         </div>
                     </div>
                 </div>

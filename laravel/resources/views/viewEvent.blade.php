@@ -23,7 +23,7 @@
 
                                 <div class="media-body align-self-center">
                                     <h3 class="g-font-weight-300 g-font-size-16 g-color-orange g-mb-5">{{ $eventData->title }}</h3>
-                                    <em class="d-block g-font-style-normal g-font-weight-300 g-color-white">Event Date: <label>{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']['timezone'])->format('m-d-Y g:ia') }} - {{ \Carbon\Carbon::parse($eventData->end_date)->setTimezone($data['timezonedata']['timezone'])->format('m-d-Y g:ia') }}</label></em>
+                                    <em class="d-block g-font-style-normal g-font-weight-300 g-color-white">Event Date: <label>{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} - {{ \Carbon\Carbon::parse($eventData->end_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }}</label></em>
                                     @if($eventData->brief_url != null)
                                         <em class="d-block g-font-style-normal g-font-weight-300 g-color-white"><a target="_blank" href="{{$eventData->brief_url}}">View Mission Brief</a></em>
                                     @endif

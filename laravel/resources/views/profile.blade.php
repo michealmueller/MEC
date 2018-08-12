@@ -119,7 +119,7 @@
                     <tr>
                         <th>IP TZ:</th>
                         <td>&nbsp;</td>
-                        <td>{{ $data['timezonedata']['timezone'] }}</td>
+                        <td>{{ $data['timezonedata']->time_zone->name }}</td>
                     </tr>
                     <tr></tr>
                     <tr>
