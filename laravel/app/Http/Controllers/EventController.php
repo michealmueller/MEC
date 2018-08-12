@@ -37,11 +37,11 @@ class EventController extends Controller
 
     public function index($tz =null)
     {
-        //dd($this->data['timezonedata']);
+        //dd($this->data['timezonedata']->timezone->name);
 
         $tz = Input::get('timezone');
         if($tz === null){
-            $timezone = $this->data['timezonedata']['timezone'];
+            $timezone = $this->data['timezonedata']->timezone->name;
         }else{
             $timezone = $tz;
         }
@@ -205,8 +205,8 @@ class EventController extends Controller
 
         $response = curl_exec($ch);
         curl_close($ch);
-dd(json_decode($response));
-        return $response;
+
+        return json_decode($response);
     }
 
 }
