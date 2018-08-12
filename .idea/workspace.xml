@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public_html/assets/js/moment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/sessions/rAeZ9xjdOkfLVCNrM9DhTkIeAZlA2MUFIwgiFhK4" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +103,7 @@
           <entry key="css" value="232" />
           <entry key="env" value="74" />
           <entry key="gitignore" value="33" />
-          <entry key="php" value="20720" />
+          <entry key="php" value="20721" />
           <entry key="sql" value="17" />
           <entry key="txt" value="1185" />
           <entry key="vmoptions" value="7" />
@@ -121,7 +115,7 @@
           <entry key="Blade" value="9132" />
           <entry key="CSS" value="232" />
           <entry key="Git file" value="33" />
-          <entry key="PHP" value="11588" />
+          <entry key="PHP" value="11589" />
           <entry key="PLAIN_TEXT" value="1192" />
           <entry key="Scratch" value="56" />
         </counts>
@@ -268,8 +262,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="431">
-                      <caret line="153" column="46" lean-forward="true" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
+                    <state relative-caret-position="771">
+                      <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
                       <folding>
                         <element signature="e#40#53#0#PHP" expanded="true" />
                       </folding>
@@ -690,7 +684,7 @@
       <workItem from="1533854322141" duration="2293000" />
       <workItem from="1533905887319" duration="11918000" />
       <workItem from="1533921969339" duration="18568000" />
-      <workItem from="1533993726147" duration="34276000" />
+      <workItem from="1533993726147" duration="34461000" />
     </task>
     <task id="LOCAL-00001" summary="removed column from DB that was not needed, updated activation email and added sendgrid to application.">
       <created>1533598459180</created>
@@ -783,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534033285824</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;&#10;backend cleaning of code to stop duplication of code.">
+      <created>1534037913047</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1534037913047</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169508000" />
+    <option name="totallyTimeSpent" value="169693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1237,8 +1238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="153" column="46" lean-forward="true" selection-start-line="153" selection-start-column="46" selection-end-line="153" selection-end-column="46" />
+        <state relative-caret-position="771">
+          <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>

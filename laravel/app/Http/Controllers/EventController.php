@@ -127,6 +127,10 @@ class EventController extends Controller
         $event->end_date = $end_date->setTimezone('UTC');
         $event->brief_url = $request->brief;
         $event->comments = $request->comments;
+        $event->backgroundColor = $request->backgroundColor;
+        $event->borderColor = $request->borderColor;
+        $event->textColor = $request->textColor;
+        $event->creator = Auth::id();
 
         $event->update();
 
