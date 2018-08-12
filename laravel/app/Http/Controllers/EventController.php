@@ -41,7 +41,7 @@ class EventController extends Controller
 
         $tz = Input::get('timezone');
         if($tz === null){
-            $timezone = $this->data['timezonedata']->timezone->name;
+            $timezone = $this->data['timezonedata']['timezone']['name'];
         }else{
             $timezone = $tz;
         }
