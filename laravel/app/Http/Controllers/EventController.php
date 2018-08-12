@@ -77,17 +77,7 @@ class EventController extends Controller
                 );
             }
         }
-        $calendar = Calendar::addEvents($events)->setCallbacks([
-            'eventRender'=>'function(event,element,view){
-                var dateString = event.start.format("YYYY-MM-DD");
-                $(view.el[0]).find(".fc-day[data-date="+dateString+"]")
-                .css("background-image","url(/storage/app/avatars/'. User::findOrFail($value->creator)->avatar .')")
-                .css("background-repeat","no-repeat")
-                .css("background-size", "100%")
-                .css("opacity",".3");
-            }',
-
-        ]);
+        $calendar = Calendar::addEvents($events);
 
         return view('welcome')->with(['calendar'=>$calendar, 'data'=>$this->data]);
     }
