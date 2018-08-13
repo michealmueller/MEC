@@ -13,16 +13,9 @@
 
     <link rel="shortcut icon" href="assets/favicon.ico">
 
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- CSS Global Icons -->
-    <link rel="stylesheet" href="/vendor/icon-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/icon-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/vendor/icon-etlinefont/style.css">
-    <link rel="stylesheet" href="/vendor/icon-line-pro/style.css">
-    <link rel="stylesheet" href="/vendor/icon-hs/style.css">
     <link rel="stylesheet" href="/vendor/animate.css">
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="/vendor/hs-bg-video/hs-bg-video.css">
@@ -37,11 +30,11 @@
     <link rel="stylesheet" href="/assets/css/unify-core.css">
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
+    <link rel="stylesheet" href="/assets/css/select2.min.css"/>
 
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/select2.min.css"/>
 
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
@@ -86,11 +79,6 @@
             resize: true,
             themes: "modern",
             menubar: false,
-            plugins: [
-                "anchor autolink codesample colorpicker contextmenu fullscreen help image imagetools",
-                " lists link media noneditable preview",
-                " searchreplace table template textcolor visualblocks wordcount"
-            ],
             toolbar:
                 "insertfile undo redo | bold italic | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist | link image",
             setup: function (editor) {

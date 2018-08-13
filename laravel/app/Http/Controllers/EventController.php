@@ -117,7 +117,7 @@ class EventController extends Controller
 
     public function updateEvent(Request $request, $eventID)
     {
-        $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']['timezone']);
+        $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']->time_zone->name);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
 
