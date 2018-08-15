@@ -26,52 +26,19 @@
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Useful Links</h2>
                     </div>
-                    <h6><small>Want your Org here, send me an email.</small></h6>
-
                     <nav class="text-uppercase1">
                         <ul class="list-unstyled g-mt-minus-10 mb-0">
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/">RSI</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/OMEGACORP">Omega Corp</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/SE47">Skylark Enterprises</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/SQUIDINK">SquidInk</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://robertsspaceindustries.com/orgs/corp">The Corporation</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <!--<li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!"></a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>
-                            <li class="g-pos-rel g-py-10">
-                                <h4 class="h6 g-pr-20 mb-0">
-                                    <a class="g-color-white-opacity-0_8 g-color-white--hover" href="#!">Contact Us</a>
-                                    <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
-                                </h4>
-                            </li>-->
+                            @foreach($data['org_list'] as $org)
+                                <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
+                                    <h4 class="h6 g-pr-20 mb-0">
+                                        @if($org->team_logo != null)
+                                            <img src="{{ $org->team_logo }}" height="25" width="25">
+                                        @endif
+                                        <a target="_blank" class="g-color-white-opacity-0_8 g-color-white--hover" href="{{ $org->org_rsi_site }}">{{ $org->org_name }}</a>
+                                        <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>
+                                    </h4>
+                                </li>
+                            @endforeach
                         </ul>
                     </nav>
                 </div>
@@ -83,7 +50,7 @@
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Our Contacts</h2>
                     </div>
 
-                    <address class="g-bg-no-repeat g-font-size-12 mb-0" style="height: 100%; background-image: url('assets/maps/map2.png');">
+                    <address class="g-bg-no-repeat g-font-size-12 mb-0" style="height: 100%; background-image: url('/assets/maps/map2.png');">
                         <!-- Location -->
                         <div class="d-flex g-mb-20">
                             <div class="g-mr-10">

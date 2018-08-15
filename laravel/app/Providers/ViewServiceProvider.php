@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\RssController as Rss;
 use App\Http\Controllers\EventController as Event;
@@ -448,6 +449,7 @@ class ViewServiceProvider extends ServiceProvider
                 'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
             ],
             'timezonedata' => $this->event->getTimeZone(),
+            'org_list' => DB::table('org_list')->inRandomOrder()->limit(5)->get()
         ];
 
         view()->composer('*', function($view){

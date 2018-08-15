@@ -59,6 +59,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'avatar' => 'image|dimensions:max_height=100,max_width=100',
             'email' => 'required|email|max:255|unique:users,email',
             'org_name' => 'required|max:255',
             'password' => 'required|min:6|confirmed',
@@ -74,12 +75,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
+        $avatarName = 'avatar' . time() . '.' . $data['avatar']->getClientOriginalExtension();
+
+
         $user = User::create([
+            'avatar' => $avatarName,
             'email' => $data['email'],
             'org_name'=>$data['org_name'],
             'password' => password_hash($data['password'], PASSWORD_BCRYPT),
             'hash' => Hash::make($data['email']),
         ]);
+        $data['avatar']->storeAs('avatars', $avatarName);
 
         Event::fire('NewRegistration', $user);
         return $user;
