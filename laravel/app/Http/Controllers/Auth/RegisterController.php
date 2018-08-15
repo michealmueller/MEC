@@ -59,7 +59,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'avatar' => 'image|dimensions:max_height=100,max_width=100',
+            'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
             'email' => 'required|email|max:255|unique:users,email',
             'org_name' => 'required|max:255',
             'password' => 'required|min:6|confirmed',

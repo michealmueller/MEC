@@ -56,7 +56,7 @@ class ProfileController extends Controller
     {
         //validate input.
         $request->validate([
-            'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048|dimensions:max_height=100,max_width=100',
+            'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
             'org_name' => 'required|string',
             'email' => 'required|email',
             'password' => 'min:6|confirmed'

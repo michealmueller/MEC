@@ -26,4 +26,15 @@ class HomeController extends Controller
         session()->put('error', 'Sorry Registration is disabled, contact support@citizenwarfare.com for more information.');
         return back();
     }
+
+    public function Privacy()
+    {
+        //dd($this->data);
+        return view('privacy');
+    }
+
+    public function Terms()
+    {
+        return view('terms');
+    }
 }
