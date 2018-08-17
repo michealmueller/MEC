@@ -14,27 +14,27 @@
                     <form class="g-py-15" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 text-center">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4 text-center">
+                                <small>Organization Logo</small>
                                 <div class="col-sm-12" style="margin-bottom:20px;">
                                     <img id="avatar" src="//placehold.it/100" class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
                                     <label  class="btn-bs-file btn btn-block btn-primary ">
                                         Browse
                                         <input id="avatarUp" type="file" name="avatar" style="display: none;">
                                     </label>
-                                    <small><p>Image should be 100x100 or smaller</p></small>
                                 </div>
                             </div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-4"></div>
                         </div>
                             <div class="mb-4">
                             <div class="input-group">
-                                <input class="form-control text-center " name="email" type="email" placeholder="Email" required>
+                                <input class="form-control text-center " name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="input-group">
-                                <input class="form-control text-center " name="org_name" type="text" placeholder="Organization" required>
+                                <input class="form-control text-center " name="org_name" type="text" placeholder="Organization" value="{{ old('org_name') }}" required>
                             </div>
                         </div>
 

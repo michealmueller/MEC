@@ -37,4 +37,9 @@ class HomeController extends Controller
     {
         return view('terms');
     }
+
+    public function Dev()
+    {
+        return view('aboutdev');
+    }
 }

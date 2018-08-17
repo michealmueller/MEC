@@ -112,6 +112,15 @@
                                     </li>
 
                                     <li class="g-mb-10">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/about-dev">
+                                            <span class="d-flex align-self-center g-mr-12">
+                                                <i class="fa fa-user-secret"></i>
+                                            </span>
+                                            <span class="media-body align-self-center">About the Developer</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="{{ route('logout') }}">
                                                     <span class="d-flex align-self-center g-mr-12">
                                                         <i class="fa fa-sign-out"></i>

@@ -130,7 +130,7 @@
                             <span>|</span>
                         </li>-->
                         <li class="list-inline-item">
-                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="/faq">Support</a>
+                            <a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:support@citizenwarfare.com">Support</a>
                         </li>
                     </ul>
                 </div>

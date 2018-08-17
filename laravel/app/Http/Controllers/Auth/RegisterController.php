@@ -40,15 +40,11 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    /*public function __construct()
+    public function __construct()
     {
         $this->middleware('guest');
-        $this->user = new User;
-        $this->rss = new Rss;
-        $this->data = [
-            'feeddata' => $this->rss->fetch(3),
-        ];
-    }*/
+
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -59,7 +55,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
+            'avatar' => 'required|image|mimes:jpeg,jpg,png,gif|max:1024',
             'email' => 'required|email|max:255|unique:users,email',
             'org_name' => 'required|max:255',
             'password' => 'required|min:6|confirmed',
@@ -75,7 +71,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        $avatarName = 'avatar' . time() . '.' . $data['avatar']->getClientOriginalExtension();
+        if(!$data['avatar']) {
+            $avatarName = 'avatar' . time() . '.' . $data['org_logo']->getClientOriginalExtension();
+        }else {
+            $avatarName = 'avatar' . time() . '.' . $data['avatar']->getClientOriginalExtension();
+        }
 
 
         $user = User::create([

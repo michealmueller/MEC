@@ -19,6 +19,7 @@ Route::get('/', 'EventController@index')->name('calendar');
 Route::get('/change/timezone', 'EventController@index');
 Route::get('/privacy', 'HomeController@Privacy');
 Route::get('/terms', 'HomeController@Terms');
+Route::get('/about-dev', 'HomeController@Dev');
 Route::group(['middleware'=>'auth'], function() {
 
     Route::get('/profile', 'ProfileController@index');
