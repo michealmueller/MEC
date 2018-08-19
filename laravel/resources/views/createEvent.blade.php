@@ -102,7 +102,7 @@
                         </div>-->
                         <div class="form-group row g-mb-25">
                             <!-- Left Column -->
-                            <label for="example-text-input" class="col-2 col-form-label">Make this event Private?</label>
+                            <label for="example-text-input" class="col-2 col-form-label">Make this event Public or Private?</label>
                             <div class="col-md-6">
                                 <div class="form-group g-mb-10">
                                     <label class="form-check-inline u-check g-pl-25 ml-0 g-mr-25">
@@ -110,7 +110,7 @@
                                         <div class="u-check-icon-radio-v5 g-absolute-centered--y g-left-0">
                                             <i></i>
                                         </div>
-                                        Yes
+                                        Private
                                     </label>
                                 </div>
 
@@ -120,7 +120,7 @@
                                         <div class="u-check-icon-radio-v5 g-absolute-centered--y g-left-0">
                                             <i></i>
                                         </div>
-                                        No
+                                        Public
                                     </label>
                                 </div>
                             <!-- End Left Column -->

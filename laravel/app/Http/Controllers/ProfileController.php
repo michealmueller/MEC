@@ -32,6 +32,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        $sharing = [];
         $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();
         if(count($shared) > 0){
             $sharing = $shared;
@@ -106,7 +107,7 @@ class ProfileController extends Controller
 
     public function updateShare(Request $request)
     {
-
+        $sharedOrgsArray = [];
         $sharedOrgs = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get()->toArray();
         foreach($sharedOrgs as $k=>$v){
             $sharedOrgsArray[] = $sharedOrgs[$k]->shared_id;
@@ -145,6 +146,7 @@ class ProfileController extends Controller
 
     public function getNotSharedOrgs($shared)
     {
+        $sharedOrgsArray = [];
         foreach($shared as $k=>$v){
             $sharedOrgsArray[] = $shared[$k]->shared_id;
         }
