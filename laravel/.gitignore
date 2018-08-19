@@ -1,5 +1,3 @@
-!/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php
-!/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php
 /node_modules
 /public/hot
 /public/storage
@@ -14,3 +12,4 @@ npm-debug.log
 yarn-error.log
 .env
 public
+!/storage/app/org_logos/
