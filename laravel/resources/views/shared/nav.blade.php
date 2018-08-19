@@ -67,7 +67,7 @@
                                     <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
                                          @if($user->avatar)
-                                         src="/storage/app/avatars/{{ $user->avatar }}"
+                                         src="/storage/app/org_logos/{{ $user->organization->org_logo }}"
                                          @else
                                          src="/assets/img-temp/100x100/img3.jpg"
                                          @endif
@@ -75,7 +75,7 @@
                                 </span>
 
                                         <span class="g-pos-rel g-top-2">
-                                    <span class="g-hidden-sm-down">{{ $user->org_name }}</span>
+                                    <span class="g-hidden-sm-down">{{ $user->organization->org_name }}</span>
                                     <i class="hs-admin-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                                 </span>
                                     @endif
@@ -85,6 +85,15 @@
                                 <ul id="profileMenu" class="g-pos-abs g-left-20 g-width-100x--md g-nowrap g-font-size-12 g-py-20
                             g-mt-17 rounded u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="profileMenuInvoker"
                                     style="animation-duration: 300ms; left: 0px;background-color: #000000">
+
+                                    <li class="g-mb-10">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/{{$user->organization->org_name}}/calendar">
+                                        <span class="d-flex align-self-center g-mr-12">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                            <span class="media-body align-self-center">View Calendar</span>
+                                        </a>
+                                    </li>
 
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile">

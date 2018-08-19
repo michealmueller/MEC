@@ -13,10 +13,12 @@
                     <!-- Form -->
                     <form class="g-py-15" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
+                        <div class="justify-content-center text-center col-md-12">
+                            <h5>Organization Logo</h5>
+                        </div>
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col-md-4 text-center">
-                                <small>Organization Logo</small>
                                 <div class="col-sm-12" style="margin-bottom:20px;">
                                     <img id="avatar" src="//placehold.it/100" class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
                                     <label  class="btn-bs-file btn btn-block btn-primary ">
@@ -27,14 +29,28 @@
                             </div>
                             <div class="col-md-4"></div>
                         </div>
-                            <div class="mb-4">
+                        <div class="mb-4">
                             <div class="input-group">
                                 <input class="form-control text-center " name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="input-group">
-                                <input class="form-control text-center " name="org_name" type="text" placeholder="Organization" value="{{ old('org_name') }}" required>
+                                <input class="form-control search-input text-center" type="text" name="q" placeholder="Organization" autocomplete="off" value="{{ old('q') }}" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 mb-4">
+                                <div class="input-group">
+                                    <input class="form-control text-center " name="org_rsi_site" type="url" placeholder="RSI Organization URL" value="{{ old('org_rsi_site') }}" required>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 mb-4">
+                                <div class="input-group">
+                                    <input class="form-control text-center" name="org_discord" type="text" placeholder="Organization Discord(Optional)" value="{{ old('org_discord') }}">
+                                </div>
                             </div>
                         </div>
 

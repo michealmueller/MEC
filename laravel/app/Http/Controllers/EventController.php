@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 use Calendar;
 use App\Event;
-use App\Http\Controllers\RssController as Rss;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -25,8 +24,6 @@ class EventController extends Controller
      */
     public function __construct()
     {
-        $this->rss = new Rss;
-        $this->rss->store();
         $this->data = [
             'timezonedata' => self::getTimeZone(),
             'eventData' => self::getEventInfo(),
@@ -37,63 +34,15 @@ class EventController extends Controller
 
     public function index($tz =null)
     {
-        //dd($this->data['timezonedata']->timezone->name);
+        return view('welcome');
+    }
 
-        $tz = Input::get('timezone');
-        if($tz === null){
-            $timezone = $this->data['timezonedata']->time_zone->name;
-        }else{
-            $timezone = $tz;
+    public function getEventsAndSharedOrgEvents()
+    {
+        $sharedOrgs = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get()->toArray();
+        foreach($sharedOrgs as $k=>$v){
+            $sharedOrgsArray[] = $sharedOrgs[$k]->shared_id;
         }
-
-        $events = [];
-        $data = Event::all();
-
-        if($data->count()){
-
-            foreach ($data as $key => $value) {
-                //create carbon object with timezone information so that it can be converted to the users TZ
-                //time that is stored in DB is converted from user time to UTC so we need to take it from UTC to user TZ
-
-                //dd($this->data);
-                $timezoneDTZ = new \DateTimeZone($timezone);
-                $start_date = Carbon::parse($value->start_date)->setTimezone('UTC');
-                $end_date = Carbon::parse($value->end_date)->setTimezone('UTC');
-
-                $start_date = Carbon::parse($value->start_date)->setTimezone($timezoneDTZ);
-                $end_date = Carbon::parse($value->end_date)->setTimezone($timezoneDTZ);
-
-                //dd($date->settimezone('UTC'));
-                $events[] = Calendar::event(
-                    $value->title,
-                    false,
-                    new \DateTime($start_date),
-                    new \DateTime($end_date),
-                    $value->id,
-                    [
-                        'eventBackgroundColor' => $value->backgroundColor,
-                        'eventTextColor' => $value->textColor,
-                        'eventBorderColor' => $value->borderColor,
-                        'url' => '/view/event/'.$value->id,
-                        'avatar'=> User::findOrFail($value->creator)->avatar,
-                    ]
-                );
-            }
-        }
-        $calendar = Calendar::addEvents($events)->setCallbacks([
-           'eventRender'=>'function(event,element,view){
-                var dateString = event.start.format("YYYY-MM-DD");
-                
-                $(view.el[0]).find(".fc-day[data-date="+dateString+"]")
-                .css("background-image","url(/storage/app/avatars/"+event.avatar+")")
-                .css("background-repeat","no-repeat")
-                .css("background-size", "100%")
-                .css("opacity",".3");
-            }',
-
-        ]);
-
-        return view('welcome')->with(['calendar'=>$calendar, 'data'=>$this->data]);
     }
 
     public function viewEvent($eventId)
@@ -162,11 +111,14 @@ class EventController extends Controller
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
         $event->creator = Auth::id();
+        $event->organization_id = Auth::user()->organization->id;
+        if($request->radGroup1_2 == 0){
+            $event->private = 0;
+        }
         $save = $event->save();
-
         if($save) {
             session()->put('success', 'Event Created!');
-            return redirect('/');
+            return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
 
         return back();
@@ -189,6 +141,10 @@ class EventController extends Controller
     {
 
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
+
+        if($ip == '::1'){
+            $ip = '71.60.23.77';
+        }
 
         $ch = curl_init();
         $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=f3c6b481fd5bc27015b9b7eb6a60df4d4b21ed14f0438be8995b53b5';

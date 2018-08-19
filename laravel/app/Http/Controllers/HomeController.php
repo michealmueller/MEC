@@ -23,8 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        session()->put('error', 'Sorry Registration is disabled, contact support@citizenwarfare.com for more information.');
-        return back();
+        //session()->put('error', 'Sorry Registration is Required, contact support@citizenwarfare.com for more information.');
+        return view('home');
     }
 
     public function Privacy()

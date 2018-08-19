@@ -28,6 +28,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOrgName($value)
  * @property string|null $avatar
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereAvatar($value)
+ * @property string|null $organization_id
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Event[] $events
+ * @property-read \App\Organization|null $organization
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOrganizationId($value)
  */
 class User extends Authenticatable
 {
@@ -50,4 +54,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function organization()
+    {
+        return $this->belongsTo(Organization::class);
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
+    }
 }

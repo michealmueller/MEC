@@ -76,3 +76,7 @@ table>tr>td>th{
 .mce-txt{
     color: #000000;
 }
+
+.twitter_typeahead{
+    width: 100%;
+}

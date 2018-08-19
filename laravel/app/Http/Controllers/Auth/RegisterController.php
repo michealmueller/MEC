@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\OrgCalendar;
+use App\Organization;
 use App\User;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use App\Http\Controllers\RssController as Rss;
 
 class RegisterController extends Controller
 {
-    private $rss;
     private $data;
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/profile';
 
     /**
      * Create a new controller instance.
@@ -57,7 +56,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'avatar' => 'required|image|mimes:jpeg,jpg,png,gif|max:1024',
             'email' => 'required|email|max:255|unique:users,email',
-            'org_name' => 'required|max:255',
+            'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -70,22 +69,48 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
+        $exists = Organization::where('org_name', $data['q'])->get();
+//dd($exists[0]->id);
         if(!$data['avatar']) {
             $avatarName = 'avatar' . time() . '.' . $data['org_logo']->getClientOriginalExtension();
         }else {
             $avatarName = 'avatar' . time() . '.' . $data['avatar']->getClientOriginalExtension();
         }
 
-
+        //create the user
         $user = User::create([
             'avatar' => $avatarName,
             'email' => $data['email'],
-            'org_name'=>$data['org_name'],
             'password' => password_hash($data['password'], PASSWORD_BCRYPT),
             'hash' => Hash::make($data['email']),
         ]);
-        $data['avatar']->storeAs('avatars', $avatarName);
+        $data['avatar']->storeAs('org_logos', $avatarName);
+
+        //create the Organization
+        if(count($exists) == 0){
+            $organization = Organization::create([
+             'org_logo' => $avatarName,
+                'org_name'=> $data['q'],
+                'org_rsi_site' => $data['org_rsi_site'],
+                'org_discord' => $data['org_discord'],
+         ]);
+            $data['avatar']->storeas('org_logos', $avatarName);
+        }
+        if(isset($organization->id)){
+            $user->organization_id = $organization->id;
+        }else{
+            $user->organization_id = $exists[0]->id;
+        }
+        $user->update();
+
+        //Create the calendar
+        $calendar = OrgCalendar::create([
+            'cal_url' => '/'.Organization::findorfail($user->organization_id)->org_name.'/calendar',
+            'organization_id' => $user->organization_id,
+            'public' => 0,
+        ]);
+
+
 
         Event::fire('NewRegistration', $user);
         return $user;

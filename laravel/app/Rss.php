@@ -22,6 +22,14 @@ use Illuminate\Database\Eloquent\Model;
  * @mixin \Eloquent
  * @property string|null $deleted_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereDeletedAt($value)
+ * @property string $rss_content
+ * @property string $rss_contentExerpt
+ * @property string $rss_feedImage
+ * @property string $rss_feed
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssContentExerpt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssFeed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssFeedImage($value)
  */
 class Rss extends Model
 {

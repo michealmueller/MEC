@@ -15,12 +15,14 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Auth::routes();
 
-Route::get('/', 'EventController@index')->name('calendar');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/change/timezone', 'EventController@index');
 Route::get('/privacy', 'HomeController@Privacy');
 Route::get('/terms', 'HomeController@Terms');
 Route::get('/about-dev', 'HomeController@Dev');
+
 Route::group(['middleware'=>'auth'], function() {
+
 
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
@@ -31,12 +33,22 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/edit/event/{id}', 'EventController@editEvent')->name('edit');
     Route::post('/edit/event/{id}', 'EventController@updateEvent')->name('update');
 
+    Route::post('/update/share', 'ProfileController@updateShare');
+
+    Route::get('/{organization}/calendar', 'OrgCalendarController@index')->name('calendar');
     Route::get('/remove/event/{id}', 'EventController@removeEvent')->name('remove');
+
+        Route::group(['prefix'=>'/admin', 'middleware'=>'isAdmin'], function(){
+
+            Route::get('dashboard', 'AdminController@index');
+
+        });
+
 });
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 
-
+Route::get('find', 'SearchController@find');
 
 //event view routes.
 

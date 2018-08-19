@@ -35,6 +35,21 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereBorderColor($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereBriefUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereTextColor($value)
+ * @property string|null $creator
+ * @property string|null $deleted_at
+ * @property string|null $organization_id
+ * @property int|null $private
+ * @property-read \App\Organization $org
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $users
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\App\Event onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereCreator($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event whereOrganizationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Event wherePrivate($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Event withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Event withoutTrashed()
  */
 class Event extends Model
 {
@@ -43,5 +58,15 @@ class Event extends Model
     protected $fillable = ['title','start_date','end_date', 'brief_url', 'comments', 'creator'];
 
     protected $table = 'events';
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function org()
+    {
+        return $this->belongsTo(Organization::class);
+    }
 
 }

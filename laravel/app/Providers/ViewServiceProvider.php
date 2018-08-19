@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Admin;
+use App\Organization;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
@@ -14,6 +16,7 @@ class ViewServiceProvider extends ServiceProvider
     protected $rss;
     protected $event;
     protected $feeds;
+    protected $userdata;
     /**
      * Bootstrap services.
      *
@@ -26,7 +29,7 @@ class ViewServiceProvider extends ServiceProvider
         $this->rss = new Rss;
         $this->rss->store();
         $this->data = [
-            'feeddata' => $this->rss->fetch(5),
+            'feeddata' => $this->rss->fetch(6),
             'timezones' =>[
                 'Pacific/Midway' => '(UTC-11:00) Midway',
                 'Pacific/Niue' => '(UTC-11:00) Niue',
@@ -449,7 +452,8 @@ class ViewServiceProvider extends ServiceProvider
                 'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
             ],
             'timezonedata' => $this->event->getTimeZone(),
-            'org_list' => DB::table('org_list')->inRandomOrder()->limit(5)->get(),
+            'org_list' => Organization::all()->random(5),
+            'org_list_full' => Organization::all(),
         ];
 
         view()->composer('*', function($view){

@@ -31,8 +31,8 @@
                             @foreach($data['org_list'] as $org)
                                 <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
                                     <h4 class="h6 g-pr-20 mb-0">
-                                        @if($org->team_logo != null)
-                                            <img src="{{ $org->team_logo }}" height="25" width="25">
+                                        @if($org->org_logo != null)
+                                            <img src="/storage/app/org_logos/{{ $org->org_logo }}" height="25" width="25">
                                         @endif
                                         <a target="_blank" class="g-color-white-opacity-0_8 g-color-white--hover" href="{{ $org->org_rsi_site }}">{{ $org->org_name }}</a>
                                         <i class="fa fa-angle-right g-absolute-centered--y g-right-0"></i>

@@ -11,10 +11,13 @@
                     <li class="nav-item">
                         <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link">Sharing</a>
+                    </li>
                 </ul>
                 <div class="tab-content py-4">
                     <div class="tab-pane active" id="profile">
-                        <h5 class="mb-3">{{$user->org_name}}'s Profile</h5>
+                        <h5 class="mb-3">{{$user->organization->org_name}}'s Profile</h5>
                         <div class="row">
                             <div class="col-md-6">
                                 @if($user->founder)
@@ -49,8 +52,8 @@
                                 <div class="col-lg-4 order-lg-1 text-center">
                                     <div class="col-sm-12" style="margin-bottom:20px;">
                                         <img id="avatar"
-                                             @if($user->avatar)
-                                             src="/storage/app/avatars/{{ $user->avatar }}"
+                                             @if($user->organization->org_logo)
+                                             src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
                                              @else
                                              src="//placehold.it/100"
                                              @endif
@@ -59,7 +62,6 @@
                                             Browse
                                             <input id="avatarUp" type="file" name="avatar" style="display: none;">
                                         </label>
-                                        <small><p>Image should be 100x100 or smaller</p></small>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
@@ -69,7 +71,7 @@
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Organization</label>
                                 <div class="col-lg-9">
-                                    <input name="org_name" class="form-control" type="text" value="{{$user->org_name}}">
+                                    <input name="org_name" class="form-control" type="text" value="{{$user->organization->org_name}}">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -101,20 +103,58 @@
                             </div>
                         </form>
                     </div>
+                    <div class="tab-pane" id="sharing">
+                        <div class="row">
+                            <div class="col-md-12 justify-content-center text-center row">
+
+                                <div class="col-md-4">
+                                    <select class="form-control" multiple id='lstBox1' style="height: 150px; width: 100%;">
+                                        @foreach($org_list as $org)
+                                            <option value="{{ $org->id }}">{{ $org->org_name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-2 justify-content-center text-center">
+                                    <div class="col-md-2">&nbsp;</div>
+                                    <div class="col-md-2">
+                                        <input class="btn btn-primary " type='button' id='btnRight' value ='  >>  '/>
+                                    </div>
+                                    <div class="col-md-2">&nbsp;</div>
+                                    <div class="col-md-2">
+                                        <input class="btn btn-primary " type='button' id='btnLeft' value ='  <<  '/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <form method="post" action="/update/share" enctype="multipart/form-data">
+                                        {{csrf_field()}}
+                                        <select class="form-control" multiple="multiple" id='lstBox2' name="share[]" style="height: 150px; width: 100%;">
+                                            @if(isset($sharing))
+                                                @foreach($sharing as $shared)
+                                                <option value="{{ $shared->shared_id }}">{{ $shared->org_name }}</option>
+                                                @endforeach
+                                            @endif
+                                        </select>
+                                        <input id="sharing" type="submit" class="btn btn-primary btn-block" onclick="selectAll()" value="Save">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-4 order-lg-1 text-center">
                 <div class="col-sm-12" style="margin-bottom:20px;">
                     <img
-                            @if($user->avatar)
-                            src="/storage/app/avatars/{{ $user->avatar }}"
+                            @if($user->organization->org_logo)
+                            src="/storage/app/org_logos/{{ $user->organization->org_logo }}"
                             @else
                             src="//placehold.it/100"
                             @endif
                             class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
                 </div>
-                <h3>{{ $user['org_name'] }}</h3>
+                <h3>{{ $user->organization->org_name}}</h3>
                 <table>
                     <tr>
                         <th>IP TZ:</th>

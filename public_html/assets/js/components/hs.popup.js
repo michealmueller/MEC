@@ -16,7 +16,6 @@
      * @var Object _baseConfig
      */
     _baseConfig: {
-      parentEl : 'html',
       baseClass: 'u-fancybox-theme',
       slideClass: 'u-fancybox-slide',
       speed: 1000,
@@ -31,7 +30,7 @@
       '<div class="fancybox-controls" style="position: relative; z-index: 99999;">' +
       '<div class="fancybox-infobar">' +
       '<div class="fancybox-infobar__body">' +
-      '<span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span>' +
+      '<span class="js-fancybox-index"></span>&nbsp;/&nbsp;<span class="js-fancybox-count"></span>' +
       '</div>' +
       '</div>' +
       '<div class="fancybox-toolbar">{{BUTTONS}}</div>' +
@@ -104,31 +103,16 @@
           var $fancyModal = $(instance.$refs.container),
             $fancyOverlay = $(instance.$refs.bg[0]),
             $fancySlide = $(instance.current.$slide),
+            $notFancyContent = $($fancyModal.nextAll()),
 
             animateIn = instance.current.opts.$orig[0].dataset.animateIn,
-            animateOut = instance.current.opts.$orig[0].dataset.animateOut,
             speed = instance.current.opts.$orig[0].dataset.speed,
             overlayBG = instance.current.opts.$orig[0].dataset.overlayBg,
             overlayBlurBG = instance.current.opts.$orig[0].dataset.overlayBlurBg;
 
-          if (animateIn && $('body').hasClass('u-first-slide-init')) {
-            var $fancyPrevSlide = $(instance.slides[instance.prevPos].$slide);
-
-            $fancySlide.addClass('has-animation');
-
-            $fancyPrevSlide.addClass('animated ' + animateOut);
-
-            setTimeout(function() {
-              $fancySlide.addClass('animated ' + animateIn);
-            }, speed / 2);
-          } else if (animateIn) {
-            var $fancyPrevSlide = $(instance.slides[instance.prevPos].$slide);
-
-            $fancySlide.addClass('has-animation');
-
+          if (animateIn) {
+            console.log($fancySlide);
             $fancySlide.addClass('animated ' + animateIn);
-
-            $('body').addClass('u-first-slide-init');
           }
 
           if (speed) {
@@ -142,13 +126,15 @@
           }
 
           if (overlayBlurBG) {
-            $('body').addClass('g-blur-30');
+            $('<div></div>', {id: 'notFancyContent', class: 'g-blur-30'}).insertAfter($fancyModal);
+            $notFancyContent.appendTo($('#notFancyContent'));
           }
         },
 
         beforeClose: function (instance, slide) {
           var $fancyModal = $(instance.$refs.container),
             $fancySlide = $(instance.current.$slide),
+            $notFancyContent = $($('#notFancyContent').html()),
 
             animateIn = instance.current.opts.$orig[0].dataset.animateIn,
             animateOut = instance.current.opts.$orig[0].dataset.animateOut,
@@ -156,11 +142,11 @@
 
           if (animateOut) {
             $fancySlide.removeClass(animateIn).addClass(animateOut);
-            $('body').removeClass('u-first-slide-init')
           }
 
           if (overlayBlurBG) {
-            $('body').removeClass('g-blur-30')
+            $notFancyContent.insertAfter($fancyModal);
+            $('#notFancyContent').remove();
           }
         }
       }));

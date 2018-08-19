@@ -162,6 +162,7 @@ return [
 
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         dg\rssphp\src\FeedServiceProvider::class,
+
     ],
 
     /*

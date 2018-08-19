@@ -8,8 +8,12 @@
                 <div class="form-group row g-mb-25">
                     <label for="example-text-input" class="col-2 col-form-label">Time Zone:</label>
                     <div class="col-8">
-                        <select class="form-control" id="zone" name="timezone">
-                            <!--<option selected value="{$data['timezonedata']->time_zone->name}}">{$data['timezonedata']->time_zone->name}}</option>-->
+                        <select class="form-control select2" id="zone" name="timezone">
+                            @if($selectedTZ !=null)
+                                <option selected value="{{ $selectedTZ}}">{{ $selectedTZ}}</option>
+                            @else
+                            <option selected value="{{$data['timezonedata']->time_zone->name}}">{{ $data['timezonedata']->time_zone->name}}</option>
+                            @endif
                             @foreach($data['timezones'] as $k=>$v)
                                 <option value="{{ $k }}">{{$v}}</option>
                             @endforeach

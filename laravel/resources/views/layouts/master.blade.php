@@ -75,18 +75,6 @@
         });
 
     </script>
-
-    <!-- Hotjar Tracking Code for https://events.citizenwarfare.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:983821,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 <body>
     <main>
@@ -102,7 +90,8 @@
         @include('shared.footer')
     </main>
     <script>
-        $('select').select2();
+        $('#select2').select2();
+        $('.select2').select2();
     </script>
     <!-- JS Implementing Plugins -->
     <script src="/vendor/appear.js"></script>
@@ -130,9 +119,13 @@
     <script src="/assets/js/components/hs.onscroll-animation.js"></script>
     <script src="/assets/js/components/hs.video-audio.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
+    <script  src="/assets/vendor/jquery.countdown.min.js"></script>
+    <script  src="assets/js/components/hs.countdown.js"></script>
     <script src="/vendor/plyr/dist/plyr.js"></script>
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <script src="/assets/js/typeahead_bundle.js"></script>
 
     <!-- JS Customization -->
     <script src="/assets/js/custom.js"></script>
@@ -209,6 +202,17 @@
             $.HSCore.components.HSGoTo.init('.js-go-to');
         });
 
+        $(document).on('ready', function () {
+            // initialization of countdowns
+            var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown', {
+                yearsElSelector: '.js-cd-years',
+                monthElSelector: '.js-cd-month',
+                daysElSelector: '.js-cd-days',
+                hoursElSelector: '.js-cd-hours',
+                minutesElSelector: '.js-cd-minutes',
+                secondsElSelector: '.js-cd-seconds'
+            });
+        });
 
 
     </script>
@@ -244,6 +248,83 @@
         $(document).ready(function () {
             $('#tabMenu a[href="#{{ old('tab') }}"]').tab('show')
         });
+    </script>
+
+    <script>
+        $(document).ready(function($) {
+            var engine = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.whitespace('q'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                remote: {
+                    url: 'find?q=%QUERY%',
+                    wildcard: '%QUERY%'
+                }
+            });
+
+            $('.search-input').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 3,
+            },{
+                name: 'organization',
+                source: engine.ttAdapter(),
+                dynamic: true,
+                display: function(data) {
+                    return data.org_name //Input value to be set when you select a suggestion.
+                },
+                templates: {
+                    empty: [
+                        '<div class="list-group search-results-dropdown"><div class="list-group-item">Nothing found.</div></div>'
+                    ],
+                    header: [
+                        '<div class="list-group search-results-dropdown">'
+                    ],
+                    suggestion: function (data) {
+                        console.log(data);
+                        return '<div class="g-bg-black"><image src="/storage/app/org_logos/' + data.org_logo + '" height="30" />'
+                            + data.org_name + '<hr style="background-color:#ffffff;"></div>'
+                    }
+                }
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#btnRight').click(function(e) {
+                var selectedOpts = $('#lstBox1 option:selected');
+                console.log(selectedOpts);
+                if (selectedOpts.length == 0) {
+                    alert("Nothing to move.");
+                    e.preventDefault();
+                }
+
+                $('#lstBox2').append($(selectedOpts).clone());
+                $(selectedOpts).remove();
+                e.preventDefault();
+
+
+            });
+
+            $('#btnLeft').click(function(e) {
+                var selectedOpts = $('#lstBox2 option:selected');
+                if (selectedOpts.length == 0) {
+                    alert("Nothing to move.");
+                    e.preventDefault();
+                }
+
+                $('#lstBox1').append($(selectedOpts).clone());
+                $(selectedOpts).remove();
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function selectAll()
+        {
+            $('#sharing option').prop('selected', true)
+        }
+
     </script>
 
 @if(\Route::current()->getName() == 'calendar')
