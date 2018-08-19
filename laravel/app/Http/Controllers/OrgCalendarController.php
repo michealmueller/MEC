@@ -94,6 +94,7 @@ class OrgCalendarController extends Controller
 
     public function getEventsAndSharedOrgEvents()
     {
+        $sharedOrgsArray = [];
         //get organization Events
         $data = Event::where('organization_id', Auth::user()->organization->id)->get();
 
