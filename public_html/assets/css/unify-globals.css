@@ -1026,6 +1026,7 @@
 .g-bg-cover {
   position: relative;
   font-family: 'Zebulon' !important;
+  src: url('../fonts/Zebulon.otf') format('otf');
 }
 
 .g-bg-cover::after {
