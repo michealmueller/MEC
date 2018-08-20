@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\OrganizationRequest;
 use App\OrgCalendar;
 use App\Organization;
 use App\User;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Validator;
@@ -55,6 +58,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'avatar' => 'required|image|mimes:jpeg,jpg,png,gif|max:1024',
+            'username' => 'required|max:255|unique:users,username',
             'email' => 'required|email|max:255|unique:users,email',
             'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
@@ -80,6 +84,7 @@ class RegisterController extends Controller
         //create the user
         $user = User::create([
             'avatar' => $avatarName,
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => password_hash($data['password'], PASSWORD_BCRYPT),
             'hash' => Hash::make($data['email']),
@@ -95,7 +100,26 @@ class RegisterController extends Controller
                 'org_discord' => $data['org_discord'],
          ]);
             $data['avatar']->storeas('org_logos', $avatarName);
+            $user->lead = 1;
+        }else{
+            $orgMembers = User::whereOrganizationId($exists[0]->id)->get();
+
+            foreach($orgMembers as $member){
+                //fire request event
+                $eventFired = event(new OrganizationRequest($member, $exists[0]));
+            }
+
+            session()->put('info', 'Your request to join this organization has been sent, Watch your email for more info.');
+
+            $request = DB::table('requests')->insert([
+                'user_id' => $user->id,
+                'organization_id' => $exists[0]->id,
+                'created_at' => Carbon::now(),
+            ]);
+
+            return redirect('/');
         }
+
         if(isset($organization->id)){
             $user->organization_id = $organization->id;
         }else{
@@ -103,16 +127,18 @@ class RegisterController extends Controller
         }
         $user->update();
 
-        //Create the calendar
-        $calendar = OrgCalendar::create([
-            'cal_url' => '/'.Organization::findorfail($user->organization_id)->org_name.'/calendar',
-            'organization_id' => $user->organization_id,
-            'public' => 0,
-        ]);
+        if(count($exists) == 0) {
+
+            //Create the calendar
+            $calendar = OrgCalendar::create([
+                'cal_url' => '/' . Organization::findorfail($user->organization_id)->org_name . '/calendar',
+                'organization_id' => $user->organization_id,
+                'public' => 0,
+            ]);
+        }
 
 
-
-        Event::fire('NewRegistration', $user);
+        //Event::fire('NewRegistration', $user);
         return $user;
 
     }

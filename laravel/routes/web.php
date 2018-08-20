@@ -44,6 +44,8 @@ Route::group(['middleware'=>'auth'], function() {
 
         });
 
+    Route::get('/request/{id}/{organization_id}/{user_id}', 'OrganizationController@requests');
+
 });
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');

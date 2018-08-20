@@ -7,6 +7,8 @@
             $.notify({
                 message: '{{ Session::get('success') }}',
                 type:'success-solid-active'
+            },{
+            delay:'1000'
             })
         </script>
         @php
@@ -19,6 +21,8 @@
             $.notify({
                 message: '{{ Session::get('info') }}',
                 type:'info-solid-active'
+            },{
+                delay:'1000'
             })
         </script>
         @php
@@ -31,6 +35,8 @@
             $.notify({
                 message: '{{ Session::get('warning') }}',
                 type:'warning-solid-active'
+            },{
+                delay:'1000'
             })
         </script>
         @php
@@ -43,6 +49,8 @@
             $.notify({
                 message: '{{ Session::get('error') }}',
                 type:'danger-solid-active'
+            },{
+                delay:'1000'
             })
         </script>
         @php
@@ -55,6 +63,8 @@
                 message: '{{ Session::get('imperror') }}',
                 type:'danger-solid-active',
                 timer:5000
+            },{
+                delay:'1000'
             })
         </script>
         @php
@@ -67,6 +77,8 @@
                 message: '{{ Session::get('imperror') }}',
                 type:'info-solid-active',
                 timer:10000
+            },{
+                delay:'1000'
             })
         </script>
         @php

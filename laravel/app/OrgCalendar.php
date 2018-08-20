@@ -22,7 +22,7 @@ class OrgCalendar extends Model
     protected $table = 'calendars';
     protected $fillable = [
         'cal_url',
-        'org_id',
+        'organization_id',
         'public',
     ];
 

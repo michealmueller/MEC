@@ -11,34 +11,40 @@
                     <li class="nav-item">
                         <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
                     </li>
+                    @if($user->lead == 1)
                     <li class="nav-item">
                         <a href="" data-target="#sharing" data-toggle="tab" class="nav-link">Sharing</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link">Requests</a>
+                    </li>
+                    @endif
                 </ul>
                 <div class="tab-content py-4">
                     <div class="tab-pane active" id="profile">
-                        <h5 class="mb-3">{{$user->organization->org_name}}'s Profile</h5>
+                        <h5 class="mb-3">{{$user->username}}'s Profile</h5>
+                        <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
                         <div class="row">
-                            <div class="col-md-6">
-                                @if($user->founder)
+                            <!--<div class="col-md-6">
+                                if($status->founder)
                                     <span class="badge badge-danger"><i class="fa fa-user"></i> Founder</span>
-                                @endif
-                                @if($user->subscriber)
+                                endif
+                                if($status->sub)
                                     <span class="badge badge-primary"><i class="fa fa-money"></i> Subscriber</span>
-                                @endif
-                            </div>
-                            <div class="col-md-12">
+                                endif
+                            </div>-->
+                            <!--<div class="col-md-12">
                                 <h5 class="mt-2">Recent Activity</h5>
                                 <table class="table table-sm table-hover table-striped">
                                     <tbody>
-                                    @if(isset($user->recent))
+                                    if(isset($user->recent))
 
-                                    @else
+                                    else
                                         Nothing New Here.
-                                    @endif
+                                    endif
                                     </tbody>
                                 </table>
-                            </div>
+                            </div>-->
                         </div>
                         <!--/row-->
                     </div>
@@ -48,6 +54,7 @@
                             {{csrf_field()}}
                             <!-- Begin Avatar -->
                             <div class="row">
+                                @if($user->lead == 1)
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
                                 <div class="col-lg-4 order-lg-1 text-center">
                                     <div class="col-sm-12" style="margin-bottom:20px;">
@@ -65,13 +72,14 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
+                                @endif
                             </div>
                             <!-- End Avatar -->
                             <input type="hidden" name="user_id" value="{{$user->id}}">
                             <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Organization</label>
+                                <label class="col-lg-3 col-form-label form-control-label">Username</label>
                                 <div class="col-lg-9">
-                                    <input name="org_name" class="form-control" type="text" value="{{$user->organization->org_name}}">
+                                    <input name="username" class="form-control" type="text" value="{{$user->username}}">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -80,20 +88,6 @@
                                     <input name="email" class="form-control" type="email" value="{{$user->email}}">
                                 </div>
                             </div>
-                            <!--<br>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Password</label>
-                                <div class="col-lg-9">
-                                    <input name="password" class="form-control" type="password">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
-                                <div class="col-lg-9">
-                                    <input name="password_confirmation" class="form-control" type="password">
-
-                                </div>
-                            </div>-->
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label"></label>
                                 <div class="col-lg-9">
@@ -103,6 +97,7 @@
                             </div>
                         </form>
                     </div>
+                    @if($user->lead == 1)
                     <div class="tab-pane" id="sharing">
                         <div class="row">
                             <div class="col-md-12 justify-content-center text-center row">
@@ -141,6 +136,39 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane" id="requests">
+                        <!-- Table Inverse -->
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th class="hidden-sm">email</th>
+                                    <th>Requested On</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($org_requests as $joinReq)
+                                <tr>
+                                    <td>
+                                        @if(isset($joinReq->username))
+                                            {{$joinReq->username}}
+                                        @endif
+                                    </td>
+                                    <td>{{ $joinReq->email }}</td>
+                                    <td>{{ $joinReq->created_at->format('Y-m-d H:m:s') }}</td>
+                                    <td>
+                                        <a href="/request/1/{{ $user->organization_id }}/{{ $joinReq->id }}"><button type="button" class="btn btn-primary btn-block">Approve</button></a>
+                                        <a href="/request/0/{{ $user->organization_id }}/{{ $joinReq->id }}"><button type="button" class="btn btn-danger btn-block">Deny</button></a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @endif
                 </div>
             </div>
 

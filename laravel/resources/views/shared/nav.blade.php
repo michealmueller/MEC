@@ -54,11 +54,11 @@
                 <!-- End Navigation -->
 
                 @if(Auth::check())
-                    <div class="d-inline-block g-pos-rel g-valign-middle g-ml-30 g-ml-0--lg">
+                    <div class="collapse navbar-collapse" id="navBar">
 
-                        <div class="col-auto d-flex g-pt-5 g-pt-0--sm g-pl-10 g-pl-20--sm">
+                        <div class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
                             <div class="g-pos-rel g-px-10--lg">
-                                <a id="profileMenuInvoker" class="d-block" href="" data-dropdown-event="hover" data-dropdown-target="#profileMenu"
+                                <a id="profileMenuInvoker" class="d-block" href="" data-dropdown-event="click" data-dropdown-target="#profileMenu"
                                    data-dropdown-type="css-animation" data-dropdown-duration="300" data-dropdown-animation-in="fadeIn"
                                    data-dropdown-animation-out="fadeOut">
 
@@ -75,7 +75,7 @@
                                 </span>
 
                                         <span class="g-pos-rel g-top-2">
-                                    <span class="g-hidden-sm-down">{{ $user->organization->org_name }}</span>
+                                    <span class="g-hidden-sm-down">@if(isset($user->username)){{ $user->username }}@else{{ $user->organization->org_name }}@endif</span>
                                     <i class="hs-admin-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                                 </span>
                                     @endif
@@ -144,25 +144,27 @@
                         </div>
                     </div>
                 @else
-                    <ul class="navbar-nav text-uppercase g-font-weight-600 mx-auto">
-                        <li class="nav-item g-mx-25--lg">
+                    <div class="collapse navbar-collapse" id="navBar">
+                        <ul class="navbar-nav text-uppercase g-font-weight-600 mx-auto g-width-100x--md">
+                            <li class="nav-item g-mx-25--lg">
 
-                            <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('login') }}">
+                                <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('login') }}">
+                                                    <span class="d-flex align-self-center g-mr-12">
+                                                        <i class="hs-admin-shift-right"></i>
+                                                    </span>
+                                    <span class="media-body align-self-center">Login <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
+                                </a>
+                            </li>
+                            <li class="nav-item g-mx-25--lg">
+                                <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('register') }}">
                                                 <span class="d-flex align-self-center g-mr-12">
-                                                    <i class="hs-admin-shift-right"></i>
-                                                </span>
-                                <span class="media-body align-self-center">Login <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg">
-                            <a class="nav-link media g-color-orange--hover g-py-5 g-px-20" href="{{ route('register') }}">
-                                            <span class="d-flex align-self-center g-mr-12">
 
-                                            </span>
-                                <span class="media-body align-self-center">Register <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
-                            </a>
-                        </li>
-                    </ul>
+                                                </span>
+                                    <span class="media-body align-self-center">Register <span class="g-font-color-blue-SC fa fa-chevron-right"></span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
             @endif
             <!-- End Search -->
             </div>

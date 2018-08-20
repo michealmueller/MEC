@@ -7,8 +7,10 @@ use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\RssController as Rss;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
@@ -22,7 +24,6 @@ class ProfileController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -32,6 +33,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        //$status = self::determineFounderSub(Auth::user());
         $sharing = [];
         $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();
         if(count($shared) > 0){
@@ -44,7 +46,19 @@ class ProfileController extends Controller
         }
         $notSharedOrgs = self::getNotSharedOrgs($shared);
 
-        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs]);
+        $org_requests = self::getOrgRequests(Auth::user()->organization_id);
+
+        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests]);
+    }
+
+    public function getOrgRequests($org_id)
+    {
+        $requestsData = [];
+        $orgRequests = DB::table('requests')->where('organization_id', $org_id)->get();
+        foreach($orgRequests as $req){
+            $requestsData = User::whereId($req->user_id)->get();
+        }
+        return $requestsData;
     }
 
     /**
@@ -68,19 +82,21 @@ class ProfileController extends Controller
         //validate input.
         $request->validate([
             'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
-            'org_name' => 'required|string',
-            'email' => 'required|email',
+            'username' => ['required', Rule::unique('users')->ignore(Auth::id())],
+            'email' => ['required', Rule::unique('users')->ignore(Auth::id())],
             'password' => 'min:6|confirmed'
         ]);
 
         if(Auth::check())
         {
             $user = Auth::user();
+            $organization = Organization::whereId($user->organization->id)->get();
+            $organization = $organization[0];
         }
 
         if(!$request->hasFile('avatar')) {
-            $user->org_name = $request['org_name'];
             $user->email = $request['email'];
+            $user->username = $request['username'];
         }
 
         if($request->hasFile('avatar')) {
@@ -88,13 +104,12 @@ class ProfileController extends Controller
             $request->avatar->storeAs('org_logos', $avatarName);
             //$user->avatar = $avatarName;
 
-            $user->email = $request['email'];
             //update organization info
-            $organization = Organization::whereId($user->organization->id)->get();
-            $organization = $organization[0];
+
             $organization->org_logo = $avatarName;
-            $organization->org_name = $request->org_name;
         }
+
+        $user->email = $request['email'];
 
         if($user->save() && $organization->save()){
             session()->put('success', 'Profile updated');
@@ -163,6 +178,23 @@ class ProfileController extends Controller
         return $notSharedOrgs;
     }
 
+    public function determineFounderSub($user)
+    {
+        //Founder should be before jan 1st 2019
+        $regDate = Carbon::parse($user->created_at);
+
+        if($regDate->year < 2019){
+            $status[] = collect(['founder' => true]);
+        }
+
+        if($user->card_brand != null){
+            $status[] = collect(['sub' => true]);
+        }else{
+            $status[] = collect(['sub' => false]);
+        }
+        dd($status);
+        return $status;
+    }
     /**
      * Display the specified resource.
      *

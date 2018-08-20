@@ -2,11 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\AuthorizeRequest;
 use App\Organization;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OrganizationController extends Controller
 {
+    public function requests($id, $organization_id, $user_id)
+    {
+        if($id == 1){
+            $user = User::whereId($user_id)->get();
+            $user = $user[0];
+
+            $user->organization_id = $organization_id;
+            $updated = $user->update();
+
+            if($updated){
+                $eventFired = event(new AuthorizeRequest($user));
+                if($eventFired) {
+                    session()->put('success', 'User has been approved and added to the Org.');
+                    //add user to members DB
+                    DB::table('members')->insert([
+                        'user_id' => $user->id,
+                        'organization_id' => $user->organization_id,
+                        'created_at' => Carbon::now(),
+                    ]);
+                    return back();
+                }
+            }
+            session()->put('error', 'There was an error approving the user, <b>notification was not sent.</b>');
+            return back();
+        }else{
+            DB::table('requests')
+                ->where('user_id', $user_id)
+                ->where('organization_id', $organization_id)
+                ->delete();
+        }
+        return back();
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -34,7 +34,11 @@ class OrgCalendarController extends Controller
      */
     public function index($organization)
     {
-        //
+        //todo::put this into middleware
+        if(Auth::user()->organization->id != Organization::whereOrgName($organization)->value('id')){
+            session()->put('error', 'Sorry but you do not have permission to view this Organizations Private Calendar');
+            return back();
+        }
 
         $tz = Input::get('timezone');
         if($tz === null){
@@ -43,9 +47,8 @@ class OrgCalendarController extends Controller
             $timezone = $tz;
         }
 
-        //$organization = Organization::where('')
         $events = [];
-        //$data = Event::where('organization_id', Auth::user()->organization->id)->get();
+
         $data = self::getEventsAndSharedOrgEvents();
 
         if($data->count()){

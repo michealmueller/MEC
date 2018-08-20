@@ -31,6 +31,11 @@
                         </div>
                         <div class="mb-4">
                             <div class="input-group">
+                                <input class="form-control text-center " name="username" type="text" placeholder="Username" value="{{ old('username') }}" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="input-group">
                                 <input class="form-control text-center " name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
                             </div>
                         </div>
