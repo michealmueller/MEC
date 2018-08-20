@@ -99,8 +99,9 @@ class OrgCalendarController extends Controller
         $data = Event::where('organization_id', Auth::user()->organization->id)->get();
 //get events that have been shared to us.
         $sharedOrgs = DB::table('shared')->where('shared_id', Auth::user()->organization->id)->get()->toArray();
+
         foreach($sharedOrgs as $k=>$v){
-            $sharedOrgsArray[] = $sharedOrgs[$k]->shared_id;
+            $sharedOrgsArray[] = $sharedOrgs[$k]->organization_id;
         }
         foreach($sharedOrgsArray as $k=>$v){
             $event = Event::where('organization_id', $v)->where('private', 0)->get();
