@@ -30,6 +30,10 @@ class OrganizationController extends Controller
                         'organization_id' => $user->organization_id,
                         'created_at' => Carbon::now(),
                     ]);
+                    DB::table('requests')
+                        ->where('user_id', $user_id)
+                        ->where('organization_id', $organization_id)
+                        ->delete();
                     return back();
                 }
             }
