@@ -87,20 +87,7 @@
 </head>
 <body>
     <main>
-        @if(count($data['pubevents']) > 0)
-        <div class="fixed-bottom g-bg-black-opacity-0_8 ">
-            <marquee >
-                @foreach($data['pubevents'] as $events)
-                    <span class=" g-color-orange">
-                            {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
-                        @if($events->brief_url != null)
-                            <small ><a target="_blank" href="{{$events->brief_url}}">View Mission Brief</a> -- </small>
-                        @endif
-                        <small>{!! nl2br($events->comments) !!}</small> ||
-                @endforeach
-            </marquee>
-        </div>
-        @endif
+
         @include('shared.nav')
         @include('notification')
         @include('shared.header')

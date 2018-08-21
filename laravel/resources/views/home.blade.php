@@ -1,6 +1,20 @@
 @extends('layouts.master')
 
 @section('content')
+    @if(count($pubEvents) > 0)
+        <div class="fixed-bottom g-bg-black-opacity-0_8 ">
+            <marquee >
+                @foreach($pubEvents as $events)
+                    <span class=" g-color-orange">
+                            {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
+                    @if($events->brief_url != null)
+                        <small ><a target="_blank" href="{{$events->brief_url}}">View Mission Brief</a> -- </small>
+                    @endif
+                    <small>{!! nl2br($events->comments) !!}</small> ||
+                @endforeach
+            </marquee>
+        </div>
+        @endif
     <section class="container g-pt-100 g-pb-10">
         <!-- Heading -->
         <div class="row justify-content-center text-center g-mb-50">
