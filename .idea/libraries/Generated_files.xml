@@ -2,15 +2,6 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/dist/lava.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/karma.conf.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/phantomjs/compare.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/phantomjs/render.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava.entry.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Dashboard.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Errors.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Lava.min.js" />
-        <item url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Utils.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.bundle.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.min.js" />
@@ -87,8 +78,7 @@
         <item url="file://$PROJECT_DIR$/public_html/assets/js/moment.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
-        <item url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.js" />
-        <item url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.min.js" />
+        <item url="file://$PROJECT_DIR$/public_html/assets/js/sly.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/appear.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.min.js" />
@@ -1409,6 +1399,8 @@
       <root url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Errors.min.js" />
       <root url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Lava.min.js" />
       <root url="file://$PROJECT_DIR$/laravel/vendor/khill/lavacharts/javascript/src/lava/Utils.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.bundle.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.min.js" />
@@ -1485,8 +1477,7 @@
       <root url="file://$PROJECT_DIR$/public_html/assets/js/moment.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
-      <root url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.js" />
-      <root url="file://$PROJECT_DIR$/public_html/assets/js/typeahead_bundle.min.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/sly.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/appear.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.min.js" />

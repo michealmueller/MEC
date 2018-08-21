@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         //session()->put('error', 'Sorry Registration is Required, contact support@citizenwarfare.com for more information.');
-        return view('home');
+        $pubEvents = Event::where('private', 0)->with('organization')->get();
+
+        return view('home')->with('pubEvents', $pubEvents);
     }
 
     public function Privacy()

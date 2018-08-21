@@ -80,3 +80,10 @@ table>tr>td>th{
 .twitter_typeahead{
     width: 100%;
 }
+.bottom{
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
+
+}

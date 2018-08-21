@@ -64,7 +64,7 @@ class Event extends Model
         return $this->hasMany(User::class);
     }
 
-    public function org()
+    public function organization()
     {
         return $this->belongsTo(Organization::class);
     }

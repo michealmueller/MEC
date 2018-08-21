@@ -62,6 +62,7 @@
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
+    <link href="/assets/css/horizontalSly.min.css" rel="stylesheet">
 
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
@@ -86,15 +87,25 @@
 </head>
 <body>
     <main>
-        <div id="outer-div">
-            <div id="inner-div">
-
-            </div>
+        @if(count($pubEvents) > 0)
+        <div class="fixed-bottom g-bg-black-opacity-0_8 ">
+            <marquee >
+                @foreach($pubEvents as $events)
+                    <span class=" g-color-orange">
+                            {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
+                        @if($events->brief_url != null)
+                            <small ><a target="_blank" href="{{$events->brief_url}}">View Mission Brief</a> -- </small>
+                        @endif
+                        <small>{!! nl2br($events->comments) !!}</small> ||
+                @endforeach
+            </marquee>
         </div>
+        @endif
         @include('shared.nav')
         @include('notification')
         @include('shared.header')
         @yield('content')
+
         @include('shared.footer')
     </main>
     <script>
@@ -132,12 +143,23 @@
     <script src="/vendor/plyr/dist/plyr.js"></script>
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-
+    <script src="/assets/js/sly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="/assets/js/typeahead_bundle.js"></script>
 
     <!-- JS Customization -->
     <script src="/assets/js/custom.js"></script>
 
+    <script>
+        var sly = new Sly(('.frame'), {
+            horizontal: true,
+            itemNav: 'forceCentered',
+            cycleBy:'items',
+            cycleInterval: 1000,
+
+        });
+        sly.init();
+    </script>
     <!-- JS Plugins Init. -->
     <script>
 
@@ -334,6 +356,7 @@
         }
 
     </script>
+
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}

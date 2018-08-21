@@ -12,35 +12,38 @@
         </div>
         <!-- End Heading -->
 
-        <div class="row">
-            <div class="col-lg-12 g-mb-30 justify-content-center text-center">
+        <div class="col-lg-12 g-mb-30 justify-content-center text-center">
+            <div class="row">
                 <!-- Icon Blocks -->
-                <div class="media g-mb-15">
+                <div class="col-md-4 media g-mb-15">
                     <div class="media-body">
                         <h3 class="h5 g-color-white g-font-weight-600 mb-20">
                             <span class="g-color-primary"><span class="fas fa-share"></span></span>
                                 Share your events!</h3>
-                        <p class="g-color-gray-dark-v4">you can choose to keep all events private by not sharing the calendar with anyone, Or you can share it with everyone.</p>
+                        <p class="g-color-gray-dark-v4">you can choose to keep all events private by not sharing the
+                            calendar with anyone, Or you can share it with everyone.</p>
                         <!--<a class="g-color-main g-color-primary--hover g-font-weight-600 g-font-size-12 g-text-underline--none--hover text-uppercase" href="#!">Learn More</a>-->
                     </div>
                 </div>
 
-                <div class="media g-mb-15">
+                <div class="col-md-4 media g-mb-15">
                     <div class="media-body">
                         <h3 class="h5 g-color-white g-font-weight-600 mb-20">
                             <span class="g-color-primary"><span class="fas fa-user-secret"></span></span>
                             Private Events</h3>
-                        <p class="g-color-gray-dark-v4">Want to keep things under wraps? make the event private then only your people can see it!</p>
+                        <p class="g-color-gray-dark-v4">Want to keep things under wraps? make the event private then
+                            only your people can see it!</p>
                         <!--<a class="g-color-main g-color-primary--hover g-font-weight-600 g-font-size-12 g-text-underline--none--hover text-uppercase" href="#!">Learn More</a>-->
                     </div>
                 </div>
                 <!-- End Icon Blocks -->
-                <div class="media g-mb-15">
+                <div class="col-md-4 media g-mb-15">
                     <div class="media-body">
                         <h3 class="h5 g-color-white g-font-weight-600 mb-20">
                             <span class="g-color-primary"><span class="fas fa-user-friends"></span></span>
                             Public Events</h3>
-                        <p class="g-color-gray-dark-v4">If you want co-operation, make the event public so that your affiliate organizations can join in on the debauchery </p>
+                        <p class="g-color-gray-dark-v4">If you want co-operation, make the event public so that your
+                            affiliate organizations can join in on the debauchery </p>
                     </div>
                 </div>
             </div>
@@ -100,7 +103,7 @@
                 <div class="col-sm-6 col-lg-4 g-mb-30">
                     <!-- Blog Grid Overlap Blocks -->
                     <article>
-                        <img class="img-fluid w-100" src="{{ $post->rss_feedImage }}" alt="Image Description">
+                        <img class="img-fluid w-100 g-pb-15 g-pb-10--md" src="{{ $post->rss_feedImage }}" alt="Image Description">
                         <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-5 mx-auto">
                             <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate,'D d, m Y') }}(</span>
                             <h2 class="h5 g-color-black g-font-weight-600 mb-3">
