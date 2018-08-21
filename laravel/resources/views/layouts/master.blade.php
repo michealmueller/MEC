@@ -281,7 +281,7 @@
             $('.search-input').typeahead({
                 hint: true,
                 highlight: true,
-                minLength: 3,
+                minLength: 1,
             },{
                 name: 'organization',
                 source: engine.ttAdapter(),

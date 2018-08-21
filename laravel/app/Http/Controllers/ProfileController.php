@@ -33,6 +33,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
+
+        if(!Auth::user()->organization->id){
+            session()->put('info', 'You must wait you be approved.');
+            return redirect('/');
+        }
         //$status = self::determineFounderSub(Auth::user());
         $sharing = [];
         $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();

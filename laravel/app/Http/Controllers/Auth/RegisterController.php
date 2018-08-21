@@ -35,7 +35,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -102,7 +102,7 @@ class RegisterController extends Controller
             $data['avatar']->storeas('org_logos', $avatarName);
             $user->lead = 1;
         }else{
-            $orgMembers = User::whereOrganizationId($exists[0]->id)->get();
+            $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
 
             foreach($orgMembers as $member){
                 //fire request event
