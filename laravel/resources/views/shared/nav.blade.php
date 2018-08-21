@@ -66,10 +66,10 @@
                                         <span class="g-pos-rel">
                                     <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
-                                         @if($user->avatar)
-                                         src="/storage/app/org_logos/{{ $user->organization->org_logo }}"
+                                         @if($user->organization->org_logo)
+                                         src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
                                          @else
-                                         src="/assets/img-temp/100x100/img3.jpg"
+                                         src="/storage/app/org_logos/{{ $user->avatar}}"
                                          @endif
                                     >
                                 </span>
