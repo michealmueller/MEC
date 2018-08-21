@@ -9,7 +9,7 @@
                     <label for="example-text-input" class="col-2 col-form-label">Time Zone:</label>
                     <div class="col-8">
                         <select class="form-control select2" id="zone" name="timezone">
-                            @if($selectedTZ !=null)
+                            @if($selectedTZ !=null && !$data['timezonedata']->time_zone->name)
                                 <option selected value="{{ $selectedTZ}}">{{ $selectedTZ}}</option>
                             @else
                             <option selected value="{{$data['timezonedata']->time_zone->name}}">{{ $data['timezonedata']->time_zone->name}}</option>

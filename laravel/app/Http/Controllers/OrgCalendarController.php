@@ -22,7 +22,7 @@ class OrgCalendarController extends Controller
     {
         $event = new EventController;
         $this->data = [
-            'timezonedata' => $event->getTimeZone(),
+            'timezonedata' => 'UTC',// $event->getTimeZone(),
             'eventData' => $event->getEventInfo(),
         ];
     }
@@ -42,11 +42,14 @@ class OrgCalendarController extends Controller
 
         $tz = Input::get('timezone');
         if($tz === null){
-            $timezone = $this->data['timezonedata']->time_zone->name;
+            $timezone = $this->data['timezonedata']->time_zone->name ?: 'UTC';
         }else{
             $timezone = $tz;
         }
 
+        if($timezone->message){
+            $timezone = 'UTC';
+        }
         $events = [];
 
         $data = self::getEventsAndSharedOrgEvents();

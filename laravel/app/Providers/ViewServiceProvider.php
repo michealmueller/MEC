@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Admin;
 use App\Organization;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
@@ -452,10 +453,22 @@ class ViewServiceProvider extends ServiceProvider
                 'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
             ],
             'org_list' => Organization::all()->random(5),
-            'timezonedata' => $this->event->getTimeZone(),
+            'timezonedata' =>  $this->event->getTimeZone(),
             'org_list_full' => Organization::all(),
             //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id)
         ];
+
+        if($this->data['timezonedata']->message){
+            $this->data['timezonedata'] = new Collection();
+            $array1 = [
+                'time_zone' => [
+                    'name' => 'UTC'
+                ]
+            ];
+            $json = json_encode($array1);
+            $this->data['timezonedata'] = json_decode($json) ;
+            session()->put('info', 'Time Zone Detection by IP failed, Defaulting to UTC');
+        }
 
         view()->composer('*', function($view){
            $view->with(['data'=> $this->data, 'user'=>Auth::user()]);
