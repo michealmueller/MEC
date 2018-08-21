@@ -87,10 +87,7 @@
                                     style="animation-duration: 300ms; left: 0px;background-color: #000000">
 
                                     <li class="g-mb-10">
-                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/
-                                            @if($user->organization_id != null)
-                                                {{$user->organization->org_name}}/calendar">
-                                            @endif
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/@if($user->organization_id != null){{$user->organization->org_name}}/calendar">@endif
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="fa fa-calendar"></i>
                                         </span>
