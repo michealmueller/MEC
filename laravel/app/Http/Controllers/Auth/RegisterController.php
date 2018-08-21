@@ -117,7 +117,7 @@ class RegisterController extends Controller
                 'created_at' => Carbon::now(),
             ]);
 
-            return redirect('/');
+            return $user;
         }
 
         if(isset($organization->id)){
