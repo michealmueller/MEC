@@ -458,7 +458,7 @@ class ViewServiceProvider extends ServiceProvider
             //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id)
         ];
 
-        if($this->data['timezonedata']->message){
+        if($this->data['timezonedata']->message || $this->data['timezonedata'] == null){
             $this->data['timezonedata'] = new Collection();
             $array1 = [
                 'time_zone' => [
