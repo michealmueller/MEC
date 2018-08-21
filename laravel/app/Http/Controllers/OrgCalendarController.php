@@ -47,7 +47,7 @@ class OrgCalendarController extends Controller
             $timezone = $tz;
         }
 
-        if($timezone->message){
+        if(isset($timezone->message)){
             $timezone = 'UTC';
         }
         $events = [];
