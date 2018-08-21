@@ -187,9 +187,7 @@
                     <tr>
                         <th>IP TZ:</th>
                         <td>&nbsp;</td>
-                        @if($data['timezonedata']->time_zone->name)
-                        <td>{{ $data['timezonedata']->time_zone->name }}</td>
-                        @endif
+
                     </tr>
                     <tr></tr>
                     <tr>
