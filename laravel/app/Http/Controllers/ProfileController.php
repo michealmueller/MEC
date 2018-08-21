@@ -34,8 +34,8 @@ class ProfileController extends Controller
     public function index()
     {
 
-        if(!Auth::user()->organization->id){
-            session()->put('info', 'You must wait you be approved.');
+        if(!Auth::user()->organization_id){
+            session()->put('info', 'You must wait to be approved.');
             return redirect('/');
         }
         //$status = self::determineFounderSub(Auth::user());
