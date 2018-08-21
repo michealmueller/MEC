@@ -22,7 +22,7 @@ class OrgCalendarController extends Controller
     {
         $event = new EventController;
         $this->data = [
-            'timezonedata' => 'UTC',// $event->getTimeZone(),
+            'timezonedata' => $event->getTimeZone(),
             'eventData' => $event->getEventInfo(),
         ];
     }
