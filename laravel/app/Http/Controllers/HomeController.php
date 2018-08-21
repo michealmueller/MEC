@@ -25,9 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         //session()->put('error', 'Sorry Registration is Required, contact support@citizenwarfare.com for more information.');
-        $pubEvents = Event::where('private', 0)->with('organization')->get();
 
-        return view('home')->with('pubEvents', $pubEvents);
+
+        return view('home');
     }
 
     public function Privacy()

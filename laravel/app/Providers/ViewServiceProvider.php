@@ -454,12 +454,12 @@ class ViewServiceProvider extends ServiceProvider
             'org_list' => Organization::all()->random(5),
             'timezonedata' => $this->event->getTimeZone(),
             'org_list_full' => Organization::all(),
-
+            'pubevents' => $this->event->where('private', 0)->with('organization')->get(),
             //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id)
         ];
 
         view()->composer('*', function($view){
-           $view->with(['data'=> $this->data, 'user'=>Auth::user()]);
+           $view->with(['data'=> $this->data, 'user'=>Auth::user(), 'pubEvents'=> $this->data['pubevents']]);
         });
     }
 

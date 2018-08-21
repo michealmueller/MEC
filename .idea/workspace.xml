@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public_html/assets/css/horizontalSly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/assets/js/sly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Event.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/sessions/RjDzkB1Ol6dBqYihkDqKPUeFgzQB5OSSWQ2A49Lr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/custom.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/custom.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,22 +122,22 @@
           <entry key="env" value="86" />
           <entry key="gitignore" value="36" />
           <entry key="js" value="42" />
-          <entry key="php" value="44969" />
+          <entry key="php" value="45063" />
           <entry key="sql" value="52" />
-          <entry key="txt" value="2605" />
+          <entry key="txt" value="2655" />
           <entry key="vmoptions" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="86" />
-          <entry key="Blade" value="18973" />
+          <entry key="Blade" value="18984" />
           <entry key="CSS" value="897" />
           <entry key="Git file" value="36" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="42" />
-          <entry key="PHP" value="25995" />
-          <entry key="PLAIN_TEXT" value="2618" />
+          <entry key="PHP" value="26078" />
+          <entry key="PLAIN_TEXT" value="2668" />
           <entry key="SQL" value="34" />
           <entry key="Scratch" value="515" />
         </counts>
@@ -220,7 +213,7 @@
                 <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="646">
-                      <caret line="458" column="10" selection-start-line="458" selection-start-column="10" selection-end-line="458" selection-end-column="10" />
+                      <caret line="461" column="109" lean-forward="true" selection-start-line="461" selection-start-column="109" selection-end-line="461" selection-end-column="109" />
                       <folding>
                         <element signature="e#33#47#0#PHP" expanded="true" />
                         <element signature="e#748#26397#1#PHP" />
@@ -232,8 +225,11 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="298">
-                      <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+                    <state relative-caret-position="332">
+                      <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+                      <folding>
+                        <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -294,11 +290,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="493">
-                      <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+                      <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
                       <folding>
                         <element signature="e#40#54#0#PHP" expanded="true" />
                       </folding>
@@ -306,7 +302,7 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public_html/assets/css/custom.css">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="621">
@@ -546,7 +542,6 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/emails/orgrequestemail.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Listeners/AuthorizeEmail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Mail/AuthorizationEmail.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/auth/register.blade.php" />
@@ -556,13 +551,14 @@
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" />
         <option value="$PROJECT_DIR$/laravel/app/Event.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/public_html/assets/js/sly.js" />
         <option value="$PROJECT_DIR$/public_html/assets/css/horizontalSly.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
       </list>
     </option>
@@ -732,7 +728,7 @@
       <workItem from="1534638300657" duration="41992000" />
       <workItem from="1534718252583" duration="32253000" />
       <workItem from="1534804805892" duration="2104000" />
-      <workItem from="1534854524927" duration="11222000" />
+      <workItem from="1534854524927" duration="12103000" />
     </task>
     <task id="LOCAL-00001" summary="removed column from DB that was not needed, updated activation email and added sendgrid to application.">
       <created>1533598459180</created>
@@ -1049,11 +1045,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534796856186</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.">
+      <created>1534869831978</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1534869831978</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334013000" />
+    <option name="totallyTimeSpent" value="334894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1115,7 +1118,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="typo" />
     <MESSAGE value="color changes, small back end fixes." />
     <MESSAGE value="modified colors again, updated profile area to resemble citizenwarfare also, its a little cleaner now." />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;&#10;backend cleaning of code to stop duplication of code." />
@@ -1140,7 +1142,8 @@
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4" />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics" />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes" />
+    <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport." />
+    <option name="LAST_COMMIT_MESSAGE" value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_18_154923_add_field_to_event_org_id.php">
@@ -1300,17 +1303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="458" column="10" selection-start-line="458" selection-start-column="10" selection-end-line="458" selection-end-column="10" />
-          <folding>
-            <element signature="e#33#47#0#PHP" expanded="true" />
-            <element signature="e#748#26397#1#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1431,16 +1423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
@@ -1501,13 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -1515,10 +1490,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="461" column="109" lean-forward="true" selection-start-line="461" selection-start-column="109" selection-end-line="461" selection-end-column="109" />
+          <folding>
+            <element signature="e#33#47#0#PHP" expanded="true" />
+            <element signature="e#748#26397#1#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+        <state relative-caret-position="332">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

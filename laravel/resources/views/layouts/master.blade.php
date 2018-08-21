@@ -87,10 +87,10 @@
 </head>
 <body>
     <main>
-        @if(count($pubEvents) > 0)
+        @if(count($data['pubevents']) > 0)
         <div class="fixed-bottom g-bg-black-opacity-0_8 ">
             <marquee >
-                @foreach($pubEvents as $events)
+                @foreach($data['pubevents'] as $events)
                     <span class=" g-color-orange">
                             {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
                         @if($events->brief_url != null)
