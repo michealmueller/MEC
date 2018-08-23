@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Admin;
 use App\Event;
+use App\Organization;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,11 +18,13 @@ class AdminController extends Controller
     {
         $user = new User;
         $event = new Event;
+        $organization = new Organization;
 
         $this->adminData = [
             'userCount' => $user->count(),
-            'eventCount' => $event->count(),
-            'orgCount' => count($user->select('org_name')->distinct()->get())
+            'publicEventCount' => $event->where('private', 0)->count(),
+            'privateEventCount' => $event->where('private', 1)->count(),
+            'orgCount' => count($organization->select('org_name')->distinct()->get())
         ];
         //dd($this->adminData['userCount']);
     }

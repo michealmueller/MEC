@@ -17,7 +17,7 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Admin::findorfail(Auth::id())){
+        if(Auth::user()->isAdmin === 1){
             return $next($request);
         }
         return redirect('/')->with('error', 'Sorry you are not an Administrator');

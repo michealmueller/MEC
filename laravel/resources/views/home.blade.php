@@ -119,7 +119,7 @@
                     <article>
                         <img class="img-fluid w-100 g-pb-15 g-pb-10--md" src="{{ $post->rss_feedImage }}" alt="Image Description">
                         <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-5 mx-auto">
-                            <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate,'D d, m Y') }}(</span>
+                            <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate,'D d, m Y') }}</span>
                             <h2 class="h5 g-color-black g-font-weight-600 mb-3">
                                 <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">{{ $post->rss_title }}</a>
                             </h2>

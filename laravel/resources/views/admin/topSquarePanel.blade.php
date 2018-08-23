@@ -45,11 +45,11 @@
 
                 <div class="media-body align-self-center">
                     <div class="d-flex align-items-center g-mb-5">
-                        <span class="g-font-size-24 g-line-height-1 g-color-black">{{ $adminData['eventCount'] }}</span>
+                        <span class="g-font-size-24 g-line-height-1 g-color-black">{{ $adminData['publicEventCount'] }} / {{ $adminData['privateEventCount'] }}</span>
 
                     </div>
 
-                    <h6 class="g-font-size-16 g-font-weight-300 g-color-gray-dark-v6 mb-0">Total Events</h6>
+                    <h6 class="g-font-size-16 g-font-weight-300 g-color-gray-dark-v6 mb-0"><small>Public Events / Private Events</small></h6>
                 </div>
             </div>
         </div>

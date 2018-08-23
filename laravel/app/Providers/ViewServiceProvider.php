@@ -26,6 +26,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
         $this->event = new Event;
         $this->rss = new Rss;
         $this->rss->store();
