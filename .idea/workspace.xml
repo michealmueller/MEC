@@ -2,6 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/config/tracker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311070_create_tracker_paths_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311071_create_tracker_queries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311072_create_tracker_queries_arguments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311073_create_tracker_routes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311074_create_tracker_routes_paths_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311075_create_tracker_route_path_parameters_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311076_create_tracker_agents_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311077_create_tracker_cookies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311078_create_tracker_devices_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311079_create_tracker_domains_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311080_create_tracker_referers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311081_create_tracker_geoip_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311082_create_tracker_sessions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311083_create_tracker_errors_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311084_create_tracker_system_classes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311085_create_tracker_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311086_create_tracker_events_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311087_create_tracker_events_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311088_create_tracker_sql_queries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311089_create_tracker_sql_query_bindings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311090_create_tracker_sql_query_bindings_parameters_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311091_create_tracker_sql_queries_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311092_create_tracker_connections_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311093_create_tracker_tables_relations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_13_311094_create_tracker_referer_search_term_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_03_13_311095_add_tracker_referer_columns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_11_23_311096_add_tracker_referer_column_to_log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_11_23_311097_create_tracker_languages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_11_23_311098_add_language_id_column_to_sessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_11_23_311099_add_tracker_language_foreign_key_to_sessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2015_11_23_311100_add_nullable_to_tracker_error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2017_01_31_311101_fix_agent_name.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2017_06_20_311102_add_agent_name_hash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2017_12_13_150000_fix_query_arguments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2018_08_23_145341_add_field_is_admin_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/storage/framework/sessions/sZsoToKop6on3UWdasXcfELvTIYn7gIJ4J3NHxCA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/flot-data.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/morris-data.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/css/sb-admin-2.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/js/sb-admin-2.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/gulpfile.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/js/sb-admin-2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/bootstrap-social/bootstrap-social.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/bootstrap/css/bootstrap.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/bootstrap/js/bootstrap.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables-plugins/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables-plugins/dataTables.bootstrap.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables-responsive/dataTables.responsive.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables-responsive/dataTables.responsive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.bootstrap.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.bootstrap4.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.foundation.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.jqueryui.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.material.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.semanticui.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/dataTables.uikit.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/jquery.dataTables.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/css/jquery.dataTables_themeroller.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.bootstrap.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.bootstrap4.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.foundation.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.jqueryui.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.material.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.semanticui.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/dataTables.uikit.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/jquery.dataTables.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/datatables/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot-tooltip/jquery.flot.tooltip.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot-tooltip/jquery.flot.tooltip.source.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/excanvas.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.colorhelpers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.canvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.categories.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.crosshair.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.errorbars.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.fillbetween.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.navigate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.selection.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.stack.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.symbol.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.threshold.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.flot.time.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/flot/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/font-awesome/css/font-awesome.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/jquery/jquery.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/metisMenu/metisMenu.min.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/metisMenu/metisMenu.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/morrisjs/morris.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/morrisjs/morris.min.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/raphael/raphael.min.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
@@ -86,7 +181,7 @@
     <session id="1567710746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="7" />
@@ -163,7 +258,7 @@
           <entry key="js" value="42" />
           <entry key="php" value="46783" />
           <entry key="sql" value="52" />
-          <entry key="txt" value="2735" />
+          <entry key="txt" value="2819" />
           <entry key="vmoptions" value="7" />
         </counts>
       </usages-collector>
@@ -176,7 +271,7 @@
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="42" />
           <entry key="PHP" value="27479" />
-          <entry key="PLAIN_TEXT" value="2748" />
+          <entry key="PLAIN_TEXT" value="2832" />
           <entry key="SQL" value="34" />
           <entry key="Scratch" value="517" />
         </counts>
@@ -243,8 +338,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/laravel/config/database.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="437">
-                      <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+                    <state relative-caret-position="374">
+                      <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
                     </state>
                   </provider>
                 </entry>
@@ -320,8 +415,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+                <state relative-caret-position="612">
+                  <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -599,25 +694,6 @@
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Middleware" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Event" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Event" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Event" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Event" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Event" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Event" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -635,7 +711,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -708,14 +784,7 @@
       <workItem from="1534883458652" duration="5658000" />
       <workItem from="1534897735098" duration="599000" />
       <workItem from="1535027264928" duration="178000" />
-      <workItem from="1535029791255" duration="7570000" />
-    </task>
-    <task id="LOCAL-00018" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists&#10;&#10;------testing new ip detection&#10;&#10;backend cleaning of code to stop duplication of code.">
-      <created>1534092166141</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1534092166141</updated>
+      <workItem from="1535029791255" duration="7814000" />
     </task>
     <task id="LOCAL-00019" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists&#10;&#10;------testing new ip detection&#10;&#10;backend cleaning of code to stop duplication of code.">
       <created>1534092245072</created>
@@ -1053,17 +1122,23 @@
       <option name="project" value="LOCAL" />
       <updated>1534887987499</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue&#10;&#10;update to notifications to make them hang out for a sec&#10;&#10;small update to frontend.&#10;&#10;added admin section user/visitor tracking">
+      <created>1535037514978</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1535037514978</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355189000" />
+    <option name="totallyTimeSpent" value="355433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09419714" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09419714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1079,7 +1154,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.22961374" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.23283261" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.23283261" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1119,7 +1194,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;&#10;backend cleaning of code to stop duplication of code." />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/public_html/public/templates/sb-admin-2" />
+      <path value="$PROJECT_DIR$/public_html/templates/sb-admin-2" />
+    </ignored-roots>
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;&#10;backend cleaning of code to stop duplication of code." />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;backend cleaning of code to stop duplication of code." />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;added timezone selection as well as ip and JS based.&#10;fixed edit/delete menu to show for creator.&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists&#10;&#10;backend cleaning of code to stop duplication of code." />
@@ -1144,7 +1222,8 @@
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport." />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue" />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue&#10;&#10;update to notifications to make them hang out for a sec" />
-    <option name="LAST_COMMIT_MESSAGE" value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue&#10;&#10;update to notifications to make them hang out for a sec" />
+    <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue&#10;&#10;update to notifications to make them hang out for a sec&#10;&#10;small update to frontend.&#10;&#10;added admin section user/visitor tracking" />
+    <option name="LAST_COMMIT_MESSAGE" value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue&#10;&#10;update to notifications to make them hang out for a sec&#10;&#10;small update to frontend.&#10;&#10;added admin section user/visitor tracking" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
@@ -1390,13 +1469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1508,8 +1580,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+        <state relative-caret-position="374">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
