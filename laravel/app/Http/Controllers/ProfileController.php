@@ -60,9 +60,11 @@ class ProfileController extends Controller
     {
         $requestsData = [];
         $orgRequests = DB::table('requests')->where('organization_id', $org_id)->get();
+
         foreach($orgRequests as $req){
-            $requestsData = User::whereId($req->user_id)->get();
+            $requestsData[] = User::whereId($req->user_id)->get()->first();
         }
+
         return $requestsData;
     }
 

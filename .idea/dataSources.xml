@@ -15,11 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="events@localhost" uuid="9311c420-6003-4b7a-af69-ed34032eb1b6">
+    <data-source source="LOCAL" name="admin_events@localhost" uuid="9311c420-6003-4b7a-af69-ed34032eb1b6">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/events</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/admin_events</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

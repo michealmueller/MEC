@@ -11,14 +11,14 @@
       <user-name>admin_events</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="events@localhost" uuid="9311c420-6003-4b7a-af69-ed34032eb1b6">
-      <database-info product="MySQL" version="5.5.5-10.1.34-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MARIADB" exact-version="5.5.5">
+    <data-source name="admin_events@localhost" uuid="9311c420-6003-4b7a-af69-ed34032eb1b6">
+      <database-info product="MySQL" version="5.7.23" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MYSQL" exact-version="5.7.23">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>admin_events</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>

@@ -6,11 +6,16 @@
             <marquee >
                 @foreach($pubEvents as $events)
                     <span class=" g-color-orange">
+                        @if($data['timezonedata']== null)
+                            {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($_GET['timezone'])->format('m-d-Y g:ia') }} --
+                        @else
                             {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
+                        @endif
                     @if($events->brief_url != null)
                         <small ><a target="_blank" href="{{$events->brief_url}}">View Mission Brief</a> -- </small>
                     @endif
-                    <small>{!! nl2br($events->comments) !!}</small> ||
+                    <small>{!! nl2br($events->comments) !!}</small>
+
                 @endforeach
             </marquee>
         </div>
@@ -66,9 +71,9 @@
     </section>
     <section class=" g-bg-black-opacity-0_5 g-color-white g-py-100">
         <div class="text-center g-mb-60">
-            <h1 class="h4"><u>CountDown To Citizen<span class="g-color-primary">Con</span></u></h1>
+            <h1 class="h4"><u>CountDown To CitizenCon 20<span class="g-color-primary">49</span></u></h1>
         </div>
-        <div class="js-countdown u-countdown-v1 text-center text-uppercase g-color-white g-line-height-1" data-end-date="2018/10/10 10:00" data-month-format="%m" data-days-format="%d" data-hours-format="%H" data-minutes-format="%M" data-seconds-format="%S">
+        <div class="js-countdown u-countdown-v1 text-center text-uppercase g-color-white g-line-height-1" data-end-date="2019/10/10 10:00" data-month-format="%m" data-days-format="%d" data-hours-format="%H" data-minutes-format="%M" data-seconds-format="%S">
             <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
                 <div class="js-cd-month g-font-weight-700 g-font-size-40"></div>
                 <hr class="g-brd-white-opacity-0_5 my-2">

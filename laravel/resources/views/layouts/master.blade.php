@@ -80,6 +80,8 @@
         $(document).on('ready', function(){
             var timezone = jstz.determine();
             var name=timezone.name();
+            console.log(name);
+            console.log(timezone);
             $('#systemtz').html(name);
         });
 

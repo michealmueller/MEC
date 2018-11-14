@@ -149,6 +149,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+
                                 @foreach($org_requests as $joinReq)
                                 <tr>
                                     <td>
@@ -187,8 +188,10 @@
                     <tr>
                         <th>IP TZ:</th>
                         <td>&nbsp;</td>
-                        @if($data['timezonedata']->time_zone->name)
-                        <td>{{ $data['timezonedata']->time_zone->name }}</td>
+                        @if($data['timezonedata'] == null)
+                            <td>{{ $_GET['timezone'] }}</td>
+                        @else
+                            <td>{{ $data['timezonedata']->time_zone->name }}</td>
                         @endif
                     </tr>
                     <tr></tr>

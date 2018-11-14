@@ -28,6 +28,7 @@ class EventController extends Controller
             'timezonedata' => self::getTimeZone(),
             'eventData' => self::getEventInfo(),
         ];
+
     }
 
 
@@ -141,14 +142,14 @@ class EventController extends Controller
     {
 
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-/*
         if($ip == '::1'){
             $ip = '71.60.23.77';
         }
-*/
+//dd($ip);
 
         $ch = curl_init();
-        $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=f3c6b481fd5bc27015b9b7eb6a60df4d4b21ed14f0438be8995b53b5';
+        $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
+        //$endpoint = 'https://timezoneapi.io/api/ip/?token=';
         //dd($endpoint, $ch);
 
         curl_setopt($ch, CURLOPT_URL, $endpoint);
