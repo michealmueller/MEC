@@ -163,7 +163,7 @@ return [
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         dg\rssphp\src\FeedServiceProvider::class,
 
-        //PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
+        PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
 
     ],
 
@@ -215,7 +215,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
         'Feed' => dg\rssphp\src\FeedFacade::class,
-        //'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
+        'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
     ],
 
 ];

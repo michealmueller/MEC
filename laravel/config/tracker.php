@@ -5,7 +5,7 @@ return [
     /*
      * Enable it?
      */
-    'enabled' => true,
+    'enabled' => false,
 
     /*
      * Enable cache?
@@ -20,7 +20,7 @@ return [
     /*
      * Robots should be tracked?
      */
-    'do_not_track_robots' => true,
+    'do_not_track_robots' => false,
 
     /*
      * Which environments are not trackable?
@@ -186,7 +186,7 @@ return [
     /*
      * Do you wish to log the user agent?
      */
-    'log_user_agents' => true,
+    'log_user_agents' => false,
 
     /*
      * Do you wish to log your users?

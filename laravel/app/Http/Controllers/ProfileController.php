@@ -38,7 +38,7 @@ class ProfileController extends Controller
             session()->put('info', 'You must wait to be approved.');
             return redirect('/');
         }
-        //$status = self::determineFounderSub(Auth::user());
+        $status = self::determineFounderSub(Auth::user());
         $sharing = [];
         $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();
         if(count($shared) > 0){
@@ -53,7 +53,7 @@ class ProfileController extends Controller
 
         $org_requests = self::getOrgRequests(Auth::user()->organization_id);
 
-        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests]);
+        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests, 'status'=>$status]);
     }
 
     public function getOrgRequests($org_id)
@@ -191,15 +191,15 @@ class ProfileController extends Controller
         $regDate = Carbon::parse($user->created_at);
 
         if($regDate->year < 2019){
-            $status[] = collect(['founder' => true]);
+            $status['founder'] = true;
         }
 
         if($user->card_brand != null){
-            $status[] = collect(['sub' => true]);
+            $status['sub'] = true;
         }else{
-            $status[] = collect(['sub' => false]);
+            $status['sub'] = false;
         }
-        dd($status);
+        //dd($status);
         return $status;
     }
     /**

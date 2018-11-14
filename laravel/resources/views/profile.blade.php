@@ -25,28 +25,27 @@
                         <h5 class="mb-3">{{$user->username}}'s Profile</h5>
                         <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
                         <div class="row">
-                            <!--<div class="col-md-6">
-                                if($status->founder)
+                            <div class="col-md-6">
+                                @if($status['founder'])
                                     <span class="badge badge-danger"><i class="fa fa-user"></i> Founder</span>
-                                endif
-                                if($status->sub)
+                                @endif
+                                @if($status['sub'])
                                     <span class="badge badge-primary"><i class="fa fa-money"></i> Subscriber</span>
-                                endif
-                            </div>-->
-                            <!--<div class="col-md-12">
+                                @endif
+                            </div>
+                            <div class="col-md-12">
                                 <h5 class="mt-2">Recent Activity</h5>
                                 <table class="table table-sm table-hover table-striped">
                                     <tbody>
-                                    if(isset($user->recent))
+                                   @if(isset($user->recent))
 
-                                    else
+                                    @else
                                         Nothing New Here.
-                                    endif
+                                    @endif
                                     </tbody>
                                 </table>
-                            </div>-->
+                            </div>
                         </div>
-                        <!--/row-->
                     </div>
                     <div class="tab-pane" id="edit">
                         @include('shared.errors')
