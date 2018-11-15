@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a href="" data-target="#requests" data-toggle="tab" class="nav-link">Requests</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Generate Ref. Code</a>
+                    </li>
                     @endif
                 </ul>
                 <div class="tab-content py-4">
@@ -50,6 +53,7 @@
                     <div class="tab-pane" id="edit">
                         @include('shared.errors')
                         <form method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="form" value="0">
                             {{csrf_field()}}
                             <!-- Begin Avatar -->
                             <div class="row">
@@ -167,6 +171,32 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                    <div class="tab-pane" id="refcode">
+                        <p>You can use this code to allow organization members to join simply and quickly.</p>
+                        <p>This code will change and be saved in the DB on each button click.</p>
+                        <div class="row">
+                            <div class="col-md-4 text-center center-v center-block">Reference Code:</div>
+                            <div class="col-md-4">
+                                @if(isset($user->organization->refHash))
+                                    <p><h3><b><a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash }}">{{ $user->organization->refHash }}</a></b></h3></p>
+                                @else
+                                    <p>Click Generate!</p>
+                                @endif
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <form method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="form" value="1">
+                            <div class="row">
+                                <div class="col-lg-2 order-lg-1 text-center"></div>
+                                <div class="col-lg-8 order-lg-1 text-center">
+                                    <input class="btn btn-primary btn-block" type="submit" value="Generate">
+                                </div>
+                                <div class="col-lg-2 order-lg-1 text-center"></div>
+                            </div>
+                        </form>
                     </div>
                     @endif
                 </div>

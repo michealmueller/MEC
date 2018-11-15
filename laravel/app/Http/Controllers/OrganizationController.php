@@ -48,6 +48,20 @@ class OrganizationController extends Controller
         return back();
     }
 
+    public function generateHash($organization_id)
+    {
+        $organization = DB::table('organizations')->where('id', $organization_id)->value('org_name');
+            //generate the hash for invitations
+            $hash = crypt($organization, Carbon::now());
+
+            //store the hash in the DB for future reference( this gets overwritten every time its generated.)
+            DB::table('organizations')->where('id', $organization_id)->update([
+                'refHash' => $hash
+            ]);
+
+            return $hash;
+    }
+
     /**
      * Display a listing of the resource.
      *

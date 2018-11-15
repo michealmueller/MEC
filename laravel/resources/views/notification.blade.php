@@ -22,7 +22,7 @@
                 message: '{{ Session::get('info') }}',
                 type:'info-solid-active'
             },{
-                delay:'10000'
+                delay:'0'
             })
         </script>
         @php
@@ -76,9 +76,8 @@
             $.notify({
                 message: '{{ Session::get('imperror') }}',
                 type:'info-solid-active',
-                timer:10000
             },{
-                delay:'5000'
+                delay:'0'
             })
         </script>
         @php

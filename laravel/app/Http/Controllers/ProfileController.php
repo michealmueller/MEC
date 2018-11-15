@@ -86,45 +86,52 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //validate input.
-        $request->validate([
-            'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
-            'username' => ['required', Rule::unique('users')->ignore(Auth::id())],
-            'email' => ['required', Rule::unique('users')->ignore(Auth::id())],
-            'password' => 'min:6|confirmed'
-        ]);
+        if($request->form == 0) {
+            //validate input.
+            $request->validate([
+                'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
+                'username' => ['required', Rule::unique('users')->ignore(Auth::id())],
+                'email' => ['required', Rule::unique('users')->ignore(Auth::id())],
+                'password' => 'min:6|confirmed'
+            ]);
 
-        if(Auth::check())
-        {
-            $user = Auth::user();
-            $organization = Organization::whereId($user->organization->id)->get();
-            $organization = $organization[0];
-        }
+            if (Auth::check()) {
+                $user = Auth::user();
+                $organization = Organization::whereId($user->organization->id)->get();
+                $organization = $organization[0];
+            }
 
-        if(!$request->hasFile('avatar')) {
+            if (!$request->hasFile('avatar')) {
+                $user->email = $request['email'];
+                $user->username = $request['username'];
+            }
+
+            if ($request->hasFile('avatar')) {
+                $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
+                $request->avatar->storeAs('org_logos', $avatarName);
+                //$user->avatar = $avatarName;
+
+                //update organization info
+
+                $organization->org_logo = $avatarName;
+            }
+
             $user->email = $request['email'];
-            $user->username = $request['username'];
+
+            if ($user->save() && $organization->save()) {
+                session()->put('success', 'Profile updated');
+                return back()->withInput(['tab' => 'edit']);
+            }
+
+            session()->put('error', 'Something went wrong!');
+            return back()->withInput(['tab' => 'edit']);
+        }elseif($request->form == 1){
+            $org = new OrganizationController;
+            $refHash = $org->generateHash(Auth::user()->organization_id);
+            session()->put('info', 'Successfully created your Reference Code - '.$refHash);
+
+            return back()->with('refHash', $refHash);
         }
-
-        if($request->hasFile('avatar')) {
-            $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
-            $request->avatar->storeAs('org_logos', $avatarName);
-            //$user->avatar = $avatarName;
-
-            //update organization info
-
-            $organization->org_logo = $avatarName;
-        }
-
-        $user->email = $request['email'];
-
-        if($user->save() && $organization->save()){
-            session()->put('success', 'Profile updated');
-            return back()->withInput(['tab'=>'edit']);
-        }
-
-        session()->put('error', 'Something went wrong!');
-        return back()->withInput(['tab'=>'edit']);
     }
 
     public function updateShare(Request $request)
