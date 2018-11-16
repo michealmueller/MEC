@@ -8,14 +8,14 @@
                     <span class=" g-color-orange">
 
                         @if($data['timezonedata']== null)
-                            @if(\Carbon\Carbon::parse($events->start_date)->setTimezone($_GET['timezone'])->format('m-d-Y g:ia') < \Carbon\Carbon::now()->setTimezone($_GET['timezone']))
+                            @if(\Carbon\Carbon::parse($events->start_date) < \Carbon\Carbon::now())
                                 @continue
                             @endif
                             {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($_GET['timezone'])->format('m-d-Y g:ia') }} --
                         @else
-                        @if(\Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata'])->format('m-d-Y g:ia') < \Carbon\Carbon::now()->setTimezone($_GET['timezone']))
-                            @continue
-                        @endif
+                            @if(\Carbon\Carbon::parse($events->start_date) < \Carbon\Carbon::now())
+                                @continue
+                            @endif
                             {{ $events->organization->org_name }}: </span>Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} --
                         @endif
                     @if($events->brief_url != null)
