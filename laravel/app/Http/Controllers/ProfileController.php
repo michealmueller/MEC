@@ -88,6 +88,7 @@ class ProfileController extends Controller
     {
         if($request->form == 0) {
             //validate input.
+            dd($request);
             $request->validate([
                 'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
                 'username' => ['required', Rule::unique('users')->ignore(Auth::id())],

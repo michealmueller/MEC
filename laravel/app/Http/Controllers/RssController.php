@@ -66,9 +66,10 @@ class RssController extends Controller implements ShouldQueue
         $Feed = new Feed;
 
         foreach($feeds as $rss) {
-            $feedData = $Feed->load($rss)->toArray();
+            try {
+                $feedData = $Feed->load($rss)->toArray();
 
-            if (isset($feedData)) {
+            if (isset($feedData) && $feedData != null) {
                 foreach ($feedData['item'] as $post) {
                     if (DB::table('rsses')->where('rss_title', $post['title'])->count() <= 0) {
                         //if the title does not exist add to DB
@@ -90,6 +91,9 @@ class RssController extends Controller implements ShouldQueue
                         ]);
                     }
                 }
+            }
+            }catch (\Exception $e){
+                return true;
             }
         }
     }

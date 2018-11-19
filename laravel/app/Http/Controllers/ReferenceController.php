@@ -30,6 +30,7 @@ class ReferenceController extends Controller
         if($organization === null){
             abort(404);
         }
+        dd($organization);
         return view('org_ref_register')->with('organization', $organization);
 
     }

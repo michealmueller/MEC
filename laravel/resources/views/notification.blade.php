@@ -22,7 +22,7 @@
                 message: '{{ Session::get('info') }}',
                 type:'info-solid-active'
             },{
-                delay:'0'
+                delay:'30000'
             })
         </script>
         @php

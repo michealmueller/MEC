@@ -4,12 +4,14 @@ namespace App\Providers;
 
 use App\Admin;
 use App\Organization;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\RssController as Rss;
-use App\Http\Controllers\EventController as Event;
+use App\Http\Controllers\EventController as EventController;
+use App\Event as Event;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -27,7 +29,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         //
 
-        $this->event = new Event;
+        $this->EventController = new EventController;
         $this->rss = new Rss;
         $this->rss->store();
         $this->data = [
@@ -454,23 +456,22 @@ class ViewServiceProvider extends ServiceProvider
                 'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
             ],
             'org_list' => Organization::all()->random(5),
-            'timezonedata' =>  $this->event->getTimeZone(),
+            'timezonedata' =>  $this->EventController->getTimeZone(),
             'org_list_full' => Organization::all(),
-            //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id)
+            //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id),
+            'pubEvents' => Event::where('private', 0)->with('organization')->get(),
         ];
 
-    //dd($this->data['timezonedata']);
+        //set the timezone in the session
+        session()->put('timezone', $this->data['timezonedata']->time_zone->name);
 
-        if(isset($this->data['timezonedata']->message)){
-            $this->data['timezonedata'] = new Collection();
-            $array1 = [
-                'time_zone' => [
-                    'name' => 'UTC'
-                ]
-            ];
-            $json = json_encode($array1);
-            $this->data['timezonedata'] = json_decode($json) ;
-            session()->put('info', 'Time Zone Detection by IP failed, Defaulting to UTC');
+        //remove outdated public events
+        $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
+        foreach ($this->data['pubEvents'] as $k=>$event){
+            $parsed = Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d');
+            if($parsed < $today){
+                unset($this->data['pubEvents'][$k]);
+            }
         }
 
         view()->composer('*', function($view){

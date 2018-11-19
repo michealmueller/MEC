@@ -14,6 +14,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Profile query()
  */
 class Profile extends Model
 {

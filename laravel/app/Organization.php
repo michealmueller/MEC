@@ -30,6 +30,11 @@ use Nicolaslopezj\Searchable\SearchableTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization whereOrgRsiSite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $refHash
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization whereRefHash($value)
  */
 class Organization extends Model
 {

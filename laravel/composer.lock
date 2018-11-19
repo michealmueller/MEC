@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bca8a28d2ab919913284f87f0c0fe22",
+    "content-hash": "cfb9c143bdd30a4197defba3bf8d4664",
     "packages": [
+        {
+            "name": "arkhas/laravel5calendar",
+            "version": "v1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Arkhas/Laravel5Calendar.git",
+                "reference": "d99e970a801c663381da7f4e79befb9d918b1566"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Arkhas/Laravel5Calendar/zipball/d99e970a801c663381da7f4e79befb9d918b1566",
+                "reference": "d99e970a801c663381da7f4e79befb9d918b1566",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "^6.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Arkhas\\Calendar\\CalendarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Calendar": "Arkhas\\Calendar\\Facades\\Calendar"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Arkhas\\Calendar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arkhas",
+                    "email": "git@arkhas.fr"
+                }
+            ],
+            "description": "A calendar with event managment package for laravel 5 using Carbon and Blade templating",
+            "time": "2017-11-30T21:27:28+00:00"
+        },
         {
             "name": "barryvdh/laravel-ide-helper",
             "version": "v2.5.2",

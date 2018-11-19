@@ -11,6 +11,9 @@
                     <li class="nav-item">
                         <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#members" data-toggle="tab" class="nav-link">Members</a>
+                    </li>
                     @if($user->lead == 1)
                     <li class="nav-item">
                         <a href="" data-target="#sharing" data-toggle="tab" class="nav-link">Sharing</a>
@@ -63,9 +66,9 @@
                                     <div class="col-sm-12" style="margin-bottom:20px;">
                                         <img id="avatar"
                                              @if($user->organization->org_logo)
-                                             src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
+                                                src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
                                              @else
-                                             src="//placehold.it/100"
+                                                src="//placehold.it/100"
                                              @endif
                                              class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
                                         <label  class="btn-bs-file btn btn-block btn-primary ">
@@ -99,6 +102,9 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="tab-pane" id="members">
+
                     </div>
                     @if($user->lead == 1)
                     <div class="tab-pane" id="sharing">
@@ -186,7 +192,7 @@
                             </div>
                             <div class="col-md-4"></div>
                         </div>
-                        <form method="post">
+                        <form method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input type="hidden" name="form" value="1">
                             <div class="row">
@@ -217,11 +223,7 @@
                     <tr>
                         <th>IP TZ:</th>
                         <td>&nbsp;</td>
-                        @if($data['timezonedata'] == null)
-                            <td>{{ $_GET['timezone'] }}</td>
-                        @else
                             <td>{{ $data['timezonedata']->time_zone->name }}</td>
-                        @endif
                     </tr>
                     <tr></tr>
                     <tr>

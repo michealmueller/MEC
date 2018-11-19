@@ -42,7 +42,7 @@ class OrgCalendarController extends Controller
 
         $tz = Input::get('timezone');
         if($tz === null){
-            $timezone = $this->data['timezonedata']->time_zone->name ?: 'UTC';
+            $timezone = $this->data['timezonedata']->time_zone->name ?? 'UTC';
         }else{
             $timezone = $tz;
         }
@@ -68,7 +68,7 @@ class OrgCalendarController extends Controller
 
                 //dd($date->settimezone('UTC'));
                 $events[] = Calendar::event(
-                    $value->title,
+                    $value->title .' - ' . User::findOrFail($value->creator)->organization->org_name,
                     false,
                     new \DateTime($start_date),
                     new \DateTime($end_date),
@@ -78,7 +78,7 @@ class OrgCalendarController extends Controller
                         'TextColor' => $value->textColor,
                         'BorderColor' => $value->borderColor,
                         'url' => '/view/event/'.$value->id,
-                        'avatar'=> User::findOrFail($value->creator)->organization->org_logo,
+                        //'avatar'=> User::findOrFail($value->creator)->organization->org_logo,
                     ]
                 );
             }
@@ -92,7 +92,7 @@ class OrgCalendarController extends Controller
                 .css("background-repeat","no-repeat")
                 .css("background-size", "100%")
                 .css("opacity",".5");
-            }',
+            }'
 
         ]);
         return view('welcome')->with(['calendar'=>$calendar, 'selectedTZ'=>$timezone]);

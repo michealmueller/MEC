@@ -16,6 +16,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Admin whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Admin whereUserId($value)
  * @mixin \Eloquent
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admin newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admin newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admin query()
  */
 class Admin extends Model
 {

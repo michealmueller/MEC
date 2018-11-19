@@ -32,6 +32,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Event[] $events
  * @property-read \App\Organization|null $organization
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOrganizationId($value)
+ * @property string|null $username
+ * @property int|null $lead
+ * @property int $isAdmin
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereIsAdmin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLead($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUsername($value)
  */
 class User extends Authenticatable
 {

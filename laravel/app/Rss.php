@@ -30,6 +30,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssContentExerpt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssFeed($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss whereRssFeedImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Rss query()
  */
 class Rss extends Model
 {
