@@ -177,7 +177,7 @@
             <div class="col-lg-9">
                 <h2 class="h2 g-color-primary g-font-weight-600 mb-2">Follow the Latest News</h2>
                 <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
-                <p class="lead mb-0">This is the lates about Star Citizen.</p>
+                <p class="lead mb-0">This is the latest about Star Citizen.</p>
             </div>
         </div>
         <!-- End Heading -->
