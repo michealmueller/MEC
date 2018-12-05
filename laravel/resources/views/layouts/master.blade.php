@@ -96,28 +96,28 @@
         @yield('content')
 
         @include('shared.footer')
-        @if(count($data['pubEvents']) > 0)
+        <!--(count($data['pubEvents']) > 0)
             <div class="fixed-bottom g-bg-black-opacity-0_8 ">
                 <marquee >
-                    @foreach($data['pubEvents'] as $events)
+                    foreach($data['pubEvents'] as $events)
                         <span class=" g-color-orange">
-                        {{ $events->organization->org_name }}:
+                        { $events->organization->org_name }}:
                     </span>
-                        Event Date-{{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }}
-                        @if($events->brief_url != null )
+                        Event Date-{  \Carbon\Carbon::parse($events->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }}
+                        if($events->brief_url != null )
 
-                            <small > -- <a target="_blank" href="{{$events->brief_url}}">View Mission Brief</a></small>
-                        @endif
-                        @if($events->comments != null)
-                            <small> -- {!! nl2br($events->comments) !!}</small>
-                        @endif
-                        @if(count($data['pubEvents']) > 1)
+                            <small > -- <a target="_blank" href="{$events->brief_url}}">View Mission Brief</a></small>
+                        endif
+                        if($events->comments != null)
+                            <small> -- !! nl2br($events->comments) !!}</small>
+                        endif
+                        if(count($data['pubEvents']) > 1)
                             <small>----</small>
-                        @endif
-                    @endforeach
+                        endif
+                    endforeach
                 </marquee>
             </div>
-        @endif
+        endif-->
     </main>
     <script>
         $('#select2').select2();
