@@ -139,7 +139,7 @@
                                     </li>
 
                                     <li class="g-mb-10">
-                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="javascript:void(0);" onclick="startTour({{ $steps }})">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="javascript:void(0);" onclick="startTour()">
                                                     <span class="d-flex align-self-center g-mr-12">
                                                         <i class="fa fa-plane"></i>
                                                     </span>

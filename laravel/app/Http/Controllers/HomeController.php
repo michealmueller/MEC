@@ -61,7 +61,7 @@ class HomeController extends Controller
         $json_steps = json_encode($steps);
         //dd($json_steps);
 
-        return view('home')->with('sorted', $sorted)->with('steps', $json_steps);
+        return view('home')->with('sorted', $sorted);
     }
 
     public function Privacy()

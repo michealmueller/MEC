@@ -363,13 +363,12 @@
     </script>
 
     <script>
-        function startTour(steps)
+        function startTour()
         {
-             console.log(steps);
+
             var intro = introJs();
                 intro.setOptions({
                     overlayOpacity: 0,
-                    steps: steps
                 });
             introJs().start()
         }
