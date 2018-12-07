@@ -50,7 +50,18 @@ class HomeController extends Controller
             }
         }
 
-        return view('home')->with('sorted', $sorted);
+        $steps = array([
+            'element' => '#one',
+            'intro' => 'Here you will quickly see what is going on.'
+        ],[
+            'element' =>'#two',
+            'intro' => 'Get the latest news about StarCitizen here!'
+            ]
+        );
+        $json_steps = json_encode($steps);
+        //dd($json_steps);
+
+        return view('home')->with('sorted', $sorted)->with('steps', $json_steps);
     }
 
     public function Privacy()
@@ -67,5 +78,10 @@ class HomeController extends Controller
     public function Dev()
     {
         return view('aboutdev');
+    }
+
+    public function Faq()
+    {
+        return view('faq');
     }
 }

@@ -49,10 +49,10 @@
             </div>
         </div>
     </section>
-    <section class="container g-pt-100 g-pb-10 g-bg-black-opacity-0_5 g-color-white">
+    <section class="container g-pt-100 g-pb-10 g-bg-black-opacity-0_5 g-color-white" id="one">
         <div class="row justify-content-center text-center g-mb-50">
             <div class="col-lg-9">
-                <h1 class="h2 g-color-primary g-font-weight-600 mb-2">Public Events</h1>
+                <h1 class="h2 g-color-primary g-font-weight-600 mb-2" >Public Events</h1>
                 <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
                 <p class="lead mb-0">Make you're events public, guaranteed to get more attention!</p>
                 <!--<a class="g-color-main g-color-primary--hover g-font-weight-600 g-font-size-12 g-text-underline--none--hover text-uppercase" href="#!">Learn More</a>-->
@@ -171,9 +171,9 @@
     </section>
 
 
-    <section class="container g-pt-50 g-pb-60 g-bg-g g-bg-black-opacity-0_5 g-color-white">
+    <section class="container g-pt-50 g-pb-60 g-bg-g g-bg-black-opacity-0_5 g-color-white" >
         <!-- Heading -->
-        <div class="row justify-content-center text-center g-mb-50">
+        <div class="row justify-content-center text-center g-mb-50" id="two">
             <div class="col-lg-9">
                 <h2 class="h2 g-color-primary g-font-weight-600 mb-2">Follow the Latest News</h2>
                 <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
@@ -187,10 +187,10 @@
                     <!-- Blog Grid Overlap Blocks -->
                     <article>
                         <img class="img-fluid w-100 g-pb-15 g-pb-10--md" src="{{ $post->rss_feedImage }}" alt="Image Description">
-                        <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-5 mx-auto">
-                            <span class="d-block g-color-gray-dark-v4 g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate,'D d, m Y') }}</span>
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-3">
-                                <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="#!">{{ $post->rss_title }}</a>
+                        <div class="g-width-80x g-bg-grey-dark-v1 g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-5 mx-auto">
+                            <span class="d-block g-color-white g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate,'D d, m Y') }}</span>
+                            <h2 class="h5 g-color-white g-font-weight-600 mb-3">
+                                <a class="u-link-v5 g-color-grey-dark-v4 g-color-primary--hover g-cursor-pointer" href="#!">{{ $post->rss_title }}</a>
                             </h2>
                             <p class="g-color-gray-dark-v4 g-line-height-1_8">{{ $post->rss_contentExerpt }}</p>
                             <a class="g-font-size-13" href="{{ $post->rss_link }}" target="_blank">Read more...</a>

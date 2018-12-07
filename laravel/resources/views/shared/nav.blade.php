@@ -54,7 +54,7 @@
                 <!-- End Navigation -->
 
                 @if(Auth::check())
-                    <div class="collapse navbar-collapse" id="navBar">
+                    <div class="collapse navbar-collapse two" id="navBar">
 
                         <div class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
                             <div class="g-pos-rel g-px-10--lg">
@@ -63,7 +63,7 @@
                                    data-dropdown-animation-out="fadeOut">
 
                                     @if(Auth::check())
-                                        <span class="g-pos-rel">
+                                        <span class="g-pos-rel" >
                                     <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
                                          @if($user->organization_id != null)
@@ -120,14 +120,14 @@
                                         </a>
                                     </li>
 
-                                    <!--<li class="g-mb-10">
-                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/about-dev">
+                                    <li class="g-mb-10">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/faq">
                                             <span class="d-flex align-self-center g-mr-12">
                                                 <i class="fa fa-user-secret"></i>
                                             </span>
-                                            <span class="media-body align-self-center">About the Developer</span>
+                                            <span class="media-body align-self-center">F.A.Q</span>
                                         </a>
-                                    </li>-->
+                                    </li>
 
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="{{ route('logout') }}">
@@ -138,13 +138,21 @@
                                         </a>
                                     </li>
 
+                                    <li class="g-mb-10">
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="javascript:void(0);" onclick="startTour({{ $steps }})">
+                                                    <span class="d-flex align-self-center g-mr-12">
+                                                        <i class="fa fa-plane"></i>
+                                                    </span>
+                                            <span class="media-body align-self-center" >Take the Tour</span>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <!-- End Top User Menu -->
                             </div>
                         </div>
                     </div>
                 @else
-                    <div class="collapse navbar-collapse" id="navBar">
+                    <div class="collapse navbar-collapse" id="navBar" >
                         <ul class="navbar-nav text-uppercase g-font-weight-600 mx-auto g-width-100x--md">
                             <li class="nav-item g-mx-25--lg">
 

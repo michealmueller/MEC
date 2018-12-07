@@ -192,7 +192,7 @@
                             </div>
                             <div class="col-md-4"></div>
                         </div>
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="post">
                             {{ csrf_field() }}
                             <input type="hidden" name="form" value="1">
                             <div class="row">

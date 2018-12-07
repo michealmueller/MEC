@@ -58,19 +58,23 @@
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
     <link rel="stylesheet" href="/assets/css/select2.min.css"/>
+    <link rel="stylesheet" href="/vendor/introjs/introjs.css"/>
+    <link rel="stylesheet" href="/vendor/introjs/themes/introjs-nazanin.css"/>
 
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
-    <link href="/assets/css/horizontalSly.min.css" rel="stylesheet">
 
-    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+
     <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="/assets/js/moment.js"></script>
     <script src="/assets/js/fullcalendar.js"></script>
+
+    <script src="/vendor/introjs/intro.js"></script>
 
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
     <script src="/assets/js/select2.min.js"></script>
@@ -86,6 +90,8 @@
         });
 
     </script>
+
+
 </head>
 <body>
     <main>
@@ -154,23 +160,11 @@
     <script src="/vendor/plyr/dist/plyr.js"></script>
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="/assets/js/sly.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="/assets/js/typeahead_bundle.js"></script>
 
     <!-- JS Customization -->
     <script src="/assets/js/custom.js"></script>
-
-    <script>
-        var sly = new Sly(('.frame'), {
-            horizontal: true,
-            itemNav: 'forceCentered',
-            cycleBy:'items',
-            cycleInterval: 1000,
-
-        });
-        sly.init();
-    </script>
     <!-- JS Plugins Init. -->
     <script>
 
@@ -368,24 +362,21 @@
 
     </script>
 
+    <script>
+        function startTour(steps)
+        {
+             console.log(steps);
+            var intro = introJs();
+                intro.setOptions({
+                    overlayOpacity: 0,
+                    steps: steps
+                });
+            introJs().start()
+        }
+    </script>
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}
 @endif
-    <!-- Chatter JS -->
-@yield('js')
-
-    <!-- Demo modal window -->
-    <div id="modal6" class="text-left g-max-width-600 g-bg-white g-overflow-y-auto g-pa-20" style="display: none;">
-        <button type="button" class="close" onclick="Custombox.modal.close();">
-            <i class="hs-icon hs-icon-close"></i>
-        </button>
-        <h4 class="g-mb-20">Modal title</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book.</p>
-        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    <!-- End Demo modal window -->
 </body>
 </html>

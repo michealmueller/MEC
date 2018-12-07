@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class OrganizationController extends Controller
 {
+    const CRYPT_STD_DES = 1;
     public function requests($id, $organization_id, $user_id)
     {
         if($id == 1){
@@ -50,9 +51,11 @@ class OrganizationController extends Controller
 
     public function generateHash($organization_id)
     {
+
         $organization = DB::table('organizations')->where('id', $organization_id)->value('org_name');
             //generate the hash for invitations
-            $hash = crypt($organization, Carbon::now());
+            $time = Carbon::now()->format('s');
+            $hash = crypt($organization, $time);
 
             //store the hash in the DB for future reference( this gets overwritten every time its generated.)
             DB::table('organizations')->where('id', $organization_id)->update([

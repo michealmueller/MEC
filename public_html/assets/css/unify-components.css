@@ -1246,7 +1246,7 @@ hr {
   width: 100%;
   font-size: 0.92857rem;
   z-index: 101;
-    font-family: 'Zebulon' !important;}
+}
 
 .u-header [aria-labelledby] {
   opacity: 0; }

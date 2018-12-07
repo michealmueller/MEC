@@ -20,6 +20,7 @@ Route::get('/change/timezone', 'EventController@index');
 Route::get('/privacy', 'HomeController@Privacy');
 Route::get('/terms', 'HomeController@Terms');
 Route::get('/about-dev', 'HomeController@Dev');
+Route::get('/faq', 'HomeController@Faq');
 
 Route::group(['middleware'=>'auth'], function() {
 

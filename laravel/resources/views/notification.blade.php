@@ -1,5 +1,5 @@
 
-<div class='notifications top-right'>
+<div class='notifications bottom-right'>
 
 
     @if(session()->get('success'))

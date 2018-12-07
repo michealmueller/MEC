@@ -1560,6 +1560,7 @@
       <root url="file://$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/raphael/raphael.min.min.min.js" />
       <root url="file://$PROJECT_DIR$/laravel/vendor/snowplow/referer-parser/nodejs/index.min.js" />
       <root url="file://$PROJECT_DIR$/laravel/vendor/snowplow/referer-parser/nodejs/test/test.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/jquery.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.bundle.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/bootstrap.min.min.js" />
@@ -1630,7 +1631,6 @@
       <root url="file://$PROJECT_DIR$/public_html/assets/js/hs.core.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jqBootstrapValidation.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jquery.min.js" />
-      <root url="file://$PROJECT_DIR$/public_html/assets/js/jquery.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/jstz.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/moment.min.js" />
