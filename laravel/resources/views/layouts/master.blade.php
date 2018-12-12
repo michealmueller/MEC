@@ -60,8 +60,6 @@
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
     <link rel="stylesheet" href="/assets/css/select2.min.css"/>
-    <link rel="stylesheet" href="/vendor/introjs/introjs.css"/>
-    <link rel="stylesheet" href="/vendor/introjs/themes/introjs-nazanin.css"/>
 
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
@@ -75,8 +73,6 @@
 
     <script src="/assets/js/moment.js"></script>
     <script src="/assets/js/fullcalendar.js"></script>
-
-    <script src="/vendor/introjs/intro.js"></script>
 
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
     <script src="/assets/js/select2.min.js"></script>
@@ -364,18 +360,6 @@
             ajaxRequest('/update/share', 0, 'share', share)
         }
 
-    </script>
-
-    <script>
-        function startTour()
-        {
-
-            var intro = introJs();
-                intro.setOptions({
-                    overlayOpacity: 0,
-                });
-            introJs().start()
-        }
     </script>
 
     <script>
