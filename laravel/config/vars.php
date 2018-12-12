@@ -427,4 +427,8 @@ return[
             'Pacific/Tongatapu' => '(UTC+13:00) Tongatapu',
             'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
         ],
+        'feeds' => [
+            'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
+            'relay' => 'https://relay.sc/feed/rss',
+        ]
     ];
