@@ -29,6 +29,8 @@
     <meta name="description" content="Mec - Multi Organization Event Calendar">
     <meta name="author" content="Micheal Mueller - MuellerTek">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Multi Organization Event Calendar</title>
 
     <link rel="shortcut icon" href="assets/favicon.ico">
@@ -358,6 +360,8 @@
         function selectAll()
         {
             $('#sharing option').prop('selected', true)
+
+            ajaxRequest('/update/share', 0, 'share', share)
         }
 
     </script>
@@ -373,6 +377,41 @@
             introJs().start()
         }
     </script>
+
+    <script>
+        function ajaxRequest(url, element=0, type, data=0)
+        {
+            if (element != 0) {
+                $('#' + element).html('Generating!');
+            }
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                method: 'POST', // Type of response and matches what we said in the route
+                url: url, // This is the url we gave in the route
+                data: {'id' : data}, // a JSON object to send back
+                success: function(response) { // What to do if we succeed
+                    console.log(response);
+                    $('#' + response.selector).html(response.replaceText);
+                    if (type == 'ref'){
+                        $('#' + response.selector + '2').html(response.replaceText);
+                    }
+                    $.notify({
+                        message: response.notificationMsg,
+                        type:response.notificationType+'-solid-active'
+                    },{
+                        delay:'10000'
+                    });
+
+                },
+                error: function(response) { // What to do if we fail
+                    alert(response.errorMsg+' '+response);
+                }
+            });
+        }
+    </script>
+
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}

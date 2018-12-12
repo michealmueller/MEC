@@ -15,7 +15,7 @@
             <div class="col-lg-10">
                 <!-- Heading -->
                 <div class="text-center g-mb-60">
-                    <h2 class="g-font-weight-600 text-uppercase mb-2">Purchase</h2>
+                    <h2 class="g-font-weight-600 text-uppercase mb-2">F.A.Q</h2>
                 </div>
                 <!-- End Heading -->
 
@@ -25,7 +25,7 @@
                         <div id="accordion-heading-01" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
                             <h5 class="mb-0">
                                 <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-body-01" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="accordion-body-01">
-                                    Guarantee?
+                                    How do I donate!?
                                     <span class="u-accordion__control-icon">
                           <i class="fa fa-angle-down"></i>
                           <i class="fa fa-angle-up"></i>
@@ -35,9 +35,7 @@
                         </div>
                         <div id="accordion-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-heading-01" data-parent="#accordion">
                             <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                If you would like to donate there is a button in the footer at the bottom of all pages.
                             </div>
                         </div>
                     </div>
@@ -48,7 +46,7 @@
                         <div id="accordion-heading-02" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
                             <h5 class="mb-0">
                                 <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-body-02" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="accordion-body-02">
-                                    Do you have any built-in caching?
+                                    What will you do with the donations?
                                     <span class="u-accordion__control-icon">
                           <i class="fa fa-angle-down"></i>
                           <i class="fa fa-angle-up"></i>
@@ -58,9 +56,9 @@
                         </div>
                         <div id="accordion-body-02" class="collapse" role="tabpanel" aria-labelledby="accordion-heading-02" data-parent="#accordion">
                             <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                               All donations are first used for server fees, monthly cost is around $20 at the moment. once we get to a point that the server is chocking this will increase.
+                                after the current months fees are covered the rest is kept for the following month. If donations are consistent and cover an entire year before the year is up
+                                what remains will be used for paid features ( better IP detection for timezone conversions ).
                             </div>
                         </div>
                     </div>
@@ -71,7 +69,7 @@
                         <div id="accordion-heading-03" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
                             <h5 class="mb-0">
                                 <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-body-03" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="accordion-body-03">
-                                    Can I add/upgrade my plan at any time?
+                                    Does Omega Corporation own / or is affiliated with this site?
                                     <span class="u-accordion__control-icon">
                           <i class="fa fa-angle-down"></i>
                           <i class="fa fa-angle-up"></i>
@@ -81,9 +79,7 @@
                         </div>
                         <div id="accordion-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-heading-03" data-parent="#accordion">
                             <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                While I am an Omega Corporation member, this site, and server are owned and operated by me, independently from Omega Corp.
                             </div>
                         </div>
                     </div>
@@ -94,7 +90,7 @@
                         <div id="accordion-heading-04" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
                             <h5 class="mb-0">
                                 <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-body-04" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="accordion-body-04">
-                                    What access comes with my hosting plan?
+                                    Why was this site created.
                                     <span class="u-accordion__control-icon">
                           <i class="fa fa-angle-down"></i>
                           <i class="fa fa-angle-up"></i>
@@ -104,333 +100,7 @@
                         </div>
                         <div id="accordion-body-04" class="collapse" role="tabpanel" aria-labelledby="accordion-heading-04" data-parent="#accordion">
                             <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Accordion -->
-
-    <!-- Accordion -->
-    <div id="installation" class="u-shadow-v11 rounded g-py-100 g-mb-100">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Heading -->
-                <div class="text-center g-mb-60">
-                    <h2 class="g-font-weight-600 text-uppercase mb-2">Installation</h2>
-                </div>
-                <!-- End Heading -->
-
-                <div id="accordion-1" class="u-accordion u-accordion-color-primary" role="tablist" aria-multiselectable="true">
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-1-heading-01" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-1-body-01" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" aria-controls="accordion-1-body-01">
-                                    Guarantee?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-1-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-1-heading-01" data-parent="#accordion-1">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-1-heading-02" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-1-body-02" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" aria-controls="accordion-1-body-02">
-                                    Do you have any built-in caching?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-1-body-02" class="collapse" role="tabpanel" aria-labelledby="accordion-1-heading-02" data-parent="#accordion-1">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-1-heading-03" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-1-body-03" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" aria-controls="accordion-1-body-03">
-                                    Can I add/upgrade my plan at any time?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-1-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-1-heading-03" data-parent="#accordion-1">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-1-heading-04" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-1-body-04" data-toggle="collapse" data-parent="#accordion-1" aria-expanded="false" aria-controls="accordion-1-body-04">
-                                    What access comes with my hosting plan?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-1-body-04" class="collapse" role="tabpanel" aria-labelledby="accordion-1-heading-04" data-parent="#accordion-1">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Accordion -->
-
-    <!-- Accordion -->
-    <div id="update" class="u-shadow-v11 rounded g-py-100 g-mb-100">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Heading -->
-                <div class="text-center g-mb-60">
-                    <h2 class="g-font-weight-600 text-uppercase mb-2">Update</h2>
-                </div>
-                <!-- End Heading -->
-
-                <div id="accordion-2" class="u-accordion u-accordion-color-primary" role="tablist" aria-multiselectable="true">
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-2-heading-01" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-2-body-01" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" aria-controls="accordion-2-body-01">
-                                    Guarantee?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-2-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-2-heading-01" data-parent="#accordion-2">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-2-heading-02" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-2-body-02" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" aria-controls="accordion-2-body-02">
-                                    Do you have any built-in caching?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-2-body-02" class="collapse" role="tabpanel" aria-labelledby="accordion-2-heading-02" data-parent="#accordion-2">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-2-heading-03" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-2-body-03" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" aria-controls="accordion-2-body-03">
-                                    Can I add/upgrade my plan at any time?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-2-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-2-heading-03" data-parent="#accordion-2">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-2-heading-04" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-2-body-04" data-toggle="collapse" data-parent="#accordion-2" aria-expanded="false" aria-controls="accordion-2-body-04">
-                                    What access comes with my hosting plan?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-2-body-04" class="collapse" role="tabpanel" aria-labelledby="accordion-2-heading-04" data-parent="#accordion-2">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Accordion -->
-
-    <!-- Accordion -->
-    <div id="wrapbootstrap" class="u-shadow-v11 rounded g-py-100">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Heading -->
-                <div class="text-center g-mb-60">
-                    <h2 class="g-font-weight-600 text-uppercase mb-2">WrapBootstrap</h2>
-                </div>
-                <!-- End Heading -->
-
-                <div id="accordion-3" class="u-accordion u-accordion-color-primary" role="tablist" aria-multiselectable="true">
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-3-heading-01" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-3-body-01" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" aria-controls="accordion-3-body-01">
-                                    Guarantee?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-3-body-01" class="collapse" role="tabpanel" aria-labelledby="accordion-3-heading-01" data-parent="#accordion-3">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-3-heading-02" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-3-body-02" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" aria-controls="accordion-3-body-02">
-                                    Do you have any built-in caching?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-3-body-02" class="collapse" role="tabpanel" aria-labelledby="accordion-3-heading-02" data-parent="#accordion-3">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-3-heading-03" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-3-body-03" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" aria-controls="accordion-3-body-03">
-                                    Can I add/upgrade my plan at any time?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-3-body-03" class="collapse" role="tabpanel" aria-labelledby="accordion-3-heading-03" data-parent="#accordion-3">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <div class="card g-brd-none rounded-0 g-mb-20">
-                        <div id="accordion-3-heading-04" class="g-brd-bottom g-brd-gray-light-v4 g-pa-0" role="tab">
-                            <h5 class="mb-0">
-                                <a class="collapsed d-flex justify-content-between g-color-main g-text-underline--none--hover rounded-0 g-px-30 g-py-20" href="#accordion-3-body-04" data-toggle="collapse" data-parent="#accordion-3" aria-expanded="false" aria-controls="accordion-3-body-04">
-                                    What access comes with my hosting plan?
-                                    <span class="u-accordion__control-icon">
-                          <i class="fa fa-angle-down"></i>
-                          <i class="fa fa-angle-up"></i>
-                        </span>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="accordion-3-body-04" class="collapse" role="tabpanel" aria-labelledby="accordion-3-heading-04" data-parent="#accordion-3">
-                            <div class="u-accordion__body g-color-gray-dark-v4 g-pa-30">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                I created this site as my way of helping all organizations organize, co-operate, and just have fun. Any organization is free to use or not use the site.
                             </div>
                         </div>
                     </div>

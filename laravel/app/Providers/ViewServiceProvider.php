@@ -28,7 +28,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-
+//TODO::move RSS storing to backend as a cron job, then pull from DB for front page.
         $this->EventController = new EventController;
         $this->rss = new Rss;
         $this->rss->store();

@@ -137,7 +137,7 @@
                                             <span class="media-body align-self-center">Sign Out</span>
                                         </a>
                                     </li>
-
+                                    <!--
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="javascript:void(0);" onclick="startTour()">
                                                     <span class="d-flex align-self-center g-mr-12">
@@ -145,7 +145,7 @@
                                                     </span>
                                             <span class="media-body align-self-center" >Take the Tour</span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <!-- End Top User Menu -->
                             </div>

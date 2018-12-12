@@ -27,6 +27,11 @@ Route::group(['middleware'=>'auth'], function() {
 
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
+    Route::post('/profile/generate', 'ProfileController@genRefCode');
+    Route::post('/profile/add/lead', 'OrgCalendarController@giveLead');
+    Route::post('/profile/remove/lead', 'OrgCalendarController@removeLead');
+
+
 
     Route::get('/create-event', 'EventController@newEvent');
     Route::post('/create-event', 'EventController@createEvent');

@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
+use App\Http\Controllers\OrganizationController as OrganizationController;
+
 class ProfileController extends Controller
 {
 
@@ -53,7 +55,12 @@ class ProfileController extends Controller
 
         $org_requests = self::getOrgRequests(Auth::user()->organization_id);
 
-        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests, 'status'=>$status]);
+        $OrgController = new OrganizationController;
+
+        $members = Auth()->user()->organization->users;
+
+        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests,
+            'status'=>$status, 'members' => $members]);
     }
 
     public function getOrgRequests($org_id)
@@ -86,9 +93,9 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->form == 0) {
+
             //validate input.
-            dd($request);
+            //dd($request);
             $request->validate([
                 'avatar' => 'image|mimes:jpeg,jpg,png,gif|max:1024',
                 'username' => ['required', Rule::unique('users')->ignore(Auth::id())],
@@ -126,13 +133,23 @@ class ProfileController extends Controller
 
             session()->put('error', 'Something went wrong!');
             return back()->withInput(['tab' => 'edit']);
-        }elseif($request->form == 1){
-            $org = new OrganizationController;
-            $refHash = $org->generateHash(Auth::user()->organization_id);
-            session()->put('info', 'Successfully created your Reference Code - '.$refHash);
+    }
 
-            return back()->with('refHash', $refHash);
-        }
+    public function genRefCode(Request $request)
+    {
+        $org = new OrganizationController;
+        $refHash = $org->generateHash(Auth::user()->organization_id);
+        $response = collect(
+            (object)[
+                'selector' => 'refHash',
+                'selector2' => 'refHash2',
+                'notificationType' => 'info',
+                'notificationMsg' => 'Successfully created your new reference code',
+                'replaceText' => '<a href="https://events.citizenwarfare.com/join/ref/'.$refHash.'">/join/ref/'.$refHash.'</a>',
+                'errorMsg' =>'Error While generating your new reference code'
+        ]);
+
+        return $response;
     }
 
     public function updateShare(Request $request)

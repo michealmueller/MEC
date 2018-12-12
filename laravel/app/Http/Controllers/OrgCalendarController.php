@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 use App\Http\Controllers\EventController as EventController;
+use test\Mockery\TestWithParameterAndReturnType;
 
 class OrgCalendarController extends Controller
 {
@@ -121,11 +122,44 @@ class OrgCalendarController extends Controller
         return $data;
     }
 
-    public function share()
+    public function giveLead(Request $request)
     {
+        $user = User::findOrFail($request->id);
+        $user->lead = 1;
+        $user->update();
 
+        $response = collect(
+            (object)[
+                'selector' => 'lead'.$request->id,
+                'notificationType' => 'info',
+                'notificationMsg' => 'Successfully set user '. $user->username .' as an event lead',
+
+                'replaceText' => '<span class="u-label u-label-warning g-color-white">Event Lead</span><br>
+                                <a href="#" onclick="ajaxRequest(\'/profile/remove/lead\',0,\'lead\', '.$request->id.')">
+                                Remove Event Lead</a>',
+
+                'errorMsg' => 'Could not add user '. $user->username .' as an Event lead.'
+            ]);
+        return $response;
     }
 
+    public function removeLead(Request $request)
+    {
+        $user = User::findOrFail($request->id);
+        $user->lead = 0;
+        $user->update();
+
+        $response = collect(
+            (object)[
+                'selector' => 'lead'.$request->id,
+                'notificationType' => 'danger',
+                'notificationMsg' => 'Removed user '. $user->username .' as an event lead',
+                'replaceText' => '<a href="#" onclick="ajaxRequest(\'/profile/add/lead\',0,\'lead\', '.$request->id.')">
+                               Make Event Lead</a>',
+                'errorMsg' => 'Could not add user '. $user->username .' as an Event lead.'
+            ]);
+        return $response;
+    }
     /**
      * Show the form for creating a new resource.
      *
