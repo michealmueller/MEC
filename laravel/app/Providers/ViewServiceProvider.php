@@ -31,7 +31,7 @@ class ViewServiceProvider extends ServiceProvider
 //TODO::move RSS storing to backend as a cron job, then pull from DB for front page.
         $this->EventController = new EventController;
         $this->rss = new Rss;
-        $this->rss->store();
+        //$this->rss->store();
         $this->data = [
             'feeddata' => $this->rss->fetch(6),
             'timezones' =>[
