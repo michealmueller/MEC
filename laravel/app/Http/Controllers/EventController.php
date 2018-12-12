@@ -164,6 +164,7 @@ class EventController extends Controller
         curl_close($ch);
 
         if($response == false && !isset($_GET['timezone'])){
+            dd('here', $response, $_GET['timezone']);
             session()->put('info', 'Sorry I could not determine your timezone, setting timezone to America/New_York! -- EST');
             $response = collect([
                 'data' =>(object)[
@@ -175,6 +176,7 @@ class EventController extends Controller
             );
             return $response['data'];
         }elseif($response == false && isset($_GET['timezone'])){
+            dd('nope here', $response, $_GET['timezone']);
             session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
             $response = collect([
                     'data' =>(object)[
