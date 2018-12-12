@@ -59,14 +59,13 @@ class RssController extends Controller implements ShouldQueue
     {
         $feeds = [
             'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
-            'inn' => 'http://imperialnews.network/category/blog/feed/',
+            'relay' => 'https://relay.sc/feed/rss',
         ];
 
         //TODO::move this to Laravel cron later.
         $Feed = new Feed;
-
+//dd($Feed->load($feeds['relay']));
         foreach($feeds as $rss) {
-            try {
                 $feedData = $Feed->load($rss)->toArray();
 
             if (isset($feedData) && $feedData != null) {
@@ -74,26 +73,41 @@ class RssController extends Controller implements ShouldQueue
                     if (DB::table('rsses')->where('rss_title', $post['title'])->count() <= 0) {
                         //if the title does not exist add to DB
                         //fix date first then add
-                        $postDate = Carbon::parse($post['pubDate']);
+                        if($rss === 'https://robertsspaceindustries.com/comm-link/rss') {
+                            $postDate = Carbon::parse($post['pubDate']);
 
-                        //adjust content
-                        $post['contentExerpt'] = self::getExerpt($post['content:encoded']);
+                            //adjust content
+                            $post['contentExerpt'] = self::getExerpt($post['content:encoded']);
 
-                        $feed[] = DB::table('rsses')->insert([
-                            'rss_feed' => $feedData['title'],
-                            'rss_feedImage' => $feedData['image']['url'],
-                            'rss_title' => $post['title'],
-                            'rss_link' => $post['link'],
-                            'rss_pubDate' => $postDate,
-                            'rss_content' => $post['content:encoded'],
-                            'rss_contentExerpt' => $post['contentExerpt'],
-                            'created_at' => Carbon::now(),
-                        ]);
+                            $feed[] = DB::table('rsses')->insert([
+                                'rss_feed' => $feedData['title'],
+                                'rss_feedImage' => $feedData['image']['url'],
+                                'rss_title' => $post['title'],
+                                'rss_link' => $post['link'],
+                                'rss_pubDate' => $postDate,
+                                'rss_content' => $post['content:encoded'],
+                                'rss_contentExerpt' => $post['contentExerpt'],
+                                'created_at' => Carbon::now(),
+                            ]);
+                        }else{
+                            $postDate = Carbon::parse($post['pubDate']);
+
+                            //adjust content
+                            $post['contentExerpt'] = self::getExerpt($post['description']);
+
+                            $feed[] = DB::table('rsses')->insert([
+                                'rss_feed' => $feedData['title'],
+                                'rss_feedImage' => 'https://relay.sc/assets/img/logo.svg',
+                                'rss_title' => $post['title'],
+                                'rss_link' => $post['link'],
+                                'rss_pubDate' => $postDate,
+                                'rss_content' => $post['description'],
+                                'rss_contentExerpt' => $post['contentExerpt'],
+                                'created_at' => Carbon::now(),
+                            ]);
+                        }
                     }
                 }
-            }
-            }catch (\Exception $e){
-                return true;
             }
         }
     }

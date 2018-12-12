@@ -24,8 +24,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        //TODO::RSS, NesLetter,
+
+        //get and store RSS Feeds.
+        $schedule->call('App\Http\Controllers\RssConroller@store')
+            ->hourly()
+            ->runInBackground()
+            ->withoutOverlapping();
     }
 
     /**
