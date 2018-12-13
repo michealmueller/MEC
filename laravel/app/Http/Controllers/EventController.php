@@ -163,10 +163,6 @@ class EventController extends Controller
         $response = curl_exec($ch);
         curl_close($ch);
 
-        if($response['message']){
-            $response = false;
-        }
-
         if($response == false && isset($_GET['timezone'])){
             session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
             $response = collect([
