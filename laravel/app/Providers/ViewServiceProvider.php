@@ -462,6 +462,7 @@ class ViewServiceProvider extends ServiceProvider
         ];
 
         //set the timezone in the session
+        dd($this->data['timezonedata']);
         session()->put('timezone', $this->data['timezonedata']->time_zone->name);
 
         //remove outdated public events
