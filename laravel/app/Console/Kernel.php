@@ -30,6 +30,7 @@ class Kernel extends ConsoleKernel
         $schedule->call('App\Http\Controllers\RssConroller@store')
             ->hourly()
             ->runInBackground()
+            ->name('RssStore')
             ->withoutOverlapping();
     }
 

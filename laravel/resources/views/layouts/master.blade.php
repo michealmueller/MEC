@@ -3,6 +3,9 @@
 
 <head>
 
+
+
+
     <!-- Hotjar Tracking Code for https://events.citizenwarfare.com -->
     <script>
         (function(h,o,t,j,a,r){
@@ -39,6 +42,7 @@
     <title>Multi Organization Event Calendar</title>
 
     <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -89,7 +93,6 @@
 
     </script>
 
-
 </head>
 <body>
     <main>
@@ -123,6 +126,7 @@
             </div>
         endif-->
     </main>
+
     <script>
         $('#select2').select2();
         $('.select2').select2();
@@ -285,6 +289,22 @@
         }
     </script>
 
+    <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('e71e490b8c32f047fecd', {
+            cluster: 'us2',
+            forceTLS: true
+        });
+
+        var channel = pusher.subscribe('subs');
+        channel.bind('New Event', function(data) {
+            alert(JSON.stringify(data));
+        });
+    </script>
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}
