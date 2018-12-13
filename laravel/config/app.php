@@ -165,8 +165,6 @@ return [
 
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
 
-        LaravelFCM\FCMServiceProvider::class,
-
 
     ],
 
@@ -219,8 +217,6 @@ return [
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
         'Feed' => dg\rssphp\src\FeedFacade::class,
         'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
-        'FCM'      => LaravelFCM\Facades\FCM::class,
-        'FCMGroup' => LaravelFCM\Facades\FCMGroup::class,
     ],
 
 ];
