@@ -18,7 +18,10 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\AuthorizeRequest' =>[
             'App\Listeners\AuthorizeEmail',
-        ]
+        ],
+        'App\Events\NewRegistration' => [
+            'App\Listeners\NewUserListener'
+        ],
     ];
 
     /**

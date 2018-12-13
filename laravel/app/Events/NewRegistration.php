@@ -16,14 +16,16 @@ class NewRegistration
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $user;
+    public $organization;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user, $organization)
     {
         $this->user = $user;
+        $this->organization = $organization;
     }
 
     /**

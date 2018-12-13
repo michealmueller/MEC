@@ -26,37 +26,38 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mec - Multi Organization Event Calendar">
+    <meta name="description" content="The premier event site for Star Citizen, We are trting to bring players and
+    organizations together to create Co-operation and fun!">
     <meta name="author" content="Micheal Mueller - MuellerTek">
+
+    @if(\Route::current()->getName() == 'calendar')
+        <meta name="robots" content="noindex, nofollow" />
+    @endif
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Multi Organization Event Calendar</title>
 
-    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- CSS Global Icons -->
     <link rel="stylesheet" href="/vendor/animate.css">
-    <link rel="stylesheet" href="/assets/css/tutorialOverlay.min.css">
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" href="/vendor/hs-bg-video/hs-bg-video.css">
-    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/vendor/plyr/dist/plyr.css">
     <link rel="stylesheet" href="/assets/css/calendar/fullcalendar.min.css"/>
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
 
     <!-- CSS Unify -->
     <!--<link rel="stylesheet" href="/assets/css/unify-admin.css">-->
-    <link rel="stylesheet" href="/assets/css/unify-core.css">
+    <link rel="stylesheet" href="/assets/css/unify-core.min.css">
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
     <link rel="stylesheet" href="/assets/css/select2.min.css"/>
@@ -77,7 +78,6 @@
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
     <script src="/assets/js/select2.min.js"></script>
     <script src="/assets/js/jstz.min.js"></script>
-    <script src="/vendor/tinymce/js/tinymce/tinymce.min.js"></script>
     <script language="javascript">
         $(document).on('ready', function(){
             var timezone = jstz.determine();
@@ -129,15 +129,8 @@
     </script>
     <!-- JS Implementing Plugins -->
     <script src="/vendor/appear.js"></script>
-    <script src="/vendor/slick-carousel/slick/slick.js"></script>
     <script src="/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-    <script src="/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
     <script src="/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-    <script src="/vendor/hs-bg-video/hs-bg-video.js"></script>
-    <script src="/vendor/hs-bg-video/vendor/player.min.js"></script>
-    <script src="/vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script src="/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 
     <!-- JS Unify -->
     <script src="/assets/js/hs.core.js"></script>
@@ -145,7 +138,6 @@
     <script src="/assets/js/helpers/hs.hamburgers.js"></script>
     <script src="/assets/js/components/hs.tabs.js"></script>
     <script src="/assets/js/components/hs.counter.js"></script>
-    <script src="/assets/js/components/hs.video-audio.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
     <script  src="/assets/vendor/jquery.countdown.min.js"></script>
     <script  src="assets/js/components/hs.countdown.js"></script>
@@ -274,7 +266,6 @@
                 url: url, // This is the url we gave in the route
                 data: {'id' : data}, // a JSON object to send back
                 success: function(response) { // What to do if we succeed
-                    console.log(response);
                     $('#' + response.selector).html(response.replaceText);
                     if (type == 'ref'){
                         $('#' + response.selector + '2').html(response.replaceText);

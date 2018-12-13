@@ -35,7 +35,6 @@ class ProfileController extends Controller
      */
     public function index()
     {
-
         if(!Auth::user()->organization_id){
             session()->put('info', 'You must wait to be approved.');
             return redirect('/');

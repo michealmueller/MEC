@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Events\OrganizationRequest;
+use App\User;
 use App\OrgCalendar;
 use App\Organization;
-use App\User;
-use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use App\Events\OrganizationRequest;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+
+use App\Http\Controllers\OrganizationController as OrganizationController;
 
 class RegisterController extends Controller
 {
@@ -128,6 +130,10 @@ class RegisterController extends Controller
             $user->organization_id = $exists[0]->id;
         }
         $user->update();
+
+        //create the ref code for use in the email.
+        $organization = new OrganizationController;
+        $organization->generateHash($user->organization_id);
 
         if(count($exists) == 0) {
             //Create the calendar

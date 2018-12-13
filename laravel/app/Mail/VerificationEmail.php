@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Organization;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -12,14 +13,16 @@ class VerificationEmail extends Mailable
 {
     use Queueable, SerializesModels;
     public $user;
+    public $organization;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, Organization $organization)
     {
         $this->user = $user;
+        $this->organization = $organization;
     }
 
     /**
@@ -29,6 +32,6 @@ class VerificationEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.verification')->with('user', $this->user);
+        return $this->view('emails.activation')->with('user', $this->user)->with('organization', $this->organization);
     }
 }

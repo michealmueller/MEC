@@ -1,11 +1,10 @@
 @component('mail::message')
-    Thank You for Registering at <a href="https://events.citizenwarfare.com">M.E.C</a>, {{ $user->email }}
+    {{ $user->username }} Thank You for Registering at <a href="https://events.citizenwarfare.com" target="_blank">M.E.C</a>
 
 @component('mail::panel')
-To verify you're account you need to click the button below, then you will be able to login.
-    @component('mail::button', ['url' => 'https://events.citizenwarfare.com/verify/'.$user->hash.'/'.$user->id])
-        Verify You're Account Now!
-    @endcomponent
+Lets get your organization members registered, give them this link ---> <a href="Https://events.citizenwarfare.com/join/ref/{{ $organization->refHash }}" target="_blank">https://events.citizenwarfare.com/join/ref/{{ $organization->refHash }}</a>
+
+If you have an questions check out our <a href="https://events.citizenwarfare.com/faq" target="_blank">F.A.Q</a>, otherwise you can reach support <a href="Mailto:support@citizenwarfare.com">support@citizenwarfare.com</a>
 @endcomponent
 
 

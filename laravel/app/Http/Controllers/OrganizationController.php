@@ -56,6 +56,12 @@ class OrganizationController extends Controller
             //generate the hash for invitations
             $time = Carbon::now()->format('s').Carbon::now()->format('H');
             $hash = crypt($organization, $time);
+
+            $hash = crypt(19, Carbon::now()->format('s').Carbon::now()->format('H'));
+            $hash = str_replace('.', '', $hash);
+            $hash = str_replace('/', '', $hash);
+            $hash = str_replace('\\', '', $hash);
+
             //store the hash in the DB for future reference( this gets overwritten every time its generated.)
             DB::table('organizations')->where('id', $organization_id)->update([
                 'refHash' => $hash

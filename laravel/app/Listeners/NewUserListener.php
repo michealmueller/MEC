@@ -30,6 +30,6 @@ class NewUserListener implements ShouldQueue
     public function handle(NewRegistration $event)
     {
         //send the email with verification information
-        Mail::to($event->user)->send(new VerificationEmail($event->user));
+        Mail::to($event->user)->send(new VerificationEmail($event->user, $event->organization));
     }
 }
