@@ -98,7 +98,7 @@ class HomeController extends Controller
             'grant_type' => 'authorization_code',
             'code' => $code,
             'redirect_uri' => 'https://events.citizenwarfare.com/bot/discord/',
-            'scope' => 'bot connections identify',
+            'scope' => 'bot webhook.incoming',
         ];
 
         $endpoint = 'https://discordapp.com/api/oauth2/token';
