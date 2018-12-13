@@ -171,7 +171,7 @@
             $.HSCore.components.HSGoTo.init('.js-go-to');
         });
 
-        $(document).on('ready', function () {
+        /*$(document).on('ready', function () {
             // initialization of countdowns
             var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown', {
                 yearsElSelector: '.js-cd-years',
@@ -181,7 +181,7 @@
                 minutesElSelector: '.js-cd-minutes',
                 secondsElSelector: '.js-cd-seconds'
             });
-        });
+        });*/
     </script>
 
     <script >
