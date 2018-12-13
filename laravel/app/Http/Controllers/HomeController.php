@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -83,5 +84,41 @@ class HomeController extends Controller
     public function Faq()
     {
         return view('faq');
+    }
+
+    public function discord()
+    {
+        //token url https://discordapp.com/api/oauth2/token
+        $code = Input::get('code');
+        $state = Input::get('state');
+
+        $data = [
+            'client_id' => '522885672248279041',
+            'client_secret' => 'IZJfKhbZzF4Jdxv_LdRwgF-3RF7OCqUI',
+            'grant_type' => 'authorization_code',
+            'code' => $code,
+            'redirect_uri' => 'https://events.citizenwarfare.com/bot/discord/',
+            'scope' => 'bot connections identify',
+        ];
+
+        $endpoint = 'https://discordapp.com/api/oauth2/token';
+        $headers = 'Content-Type : application/x-www-form-urlencoded';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $endpoint);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_HEADER, $headers);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+        $result = curl_exec($ch);
+
+        if($result != false){
+            dd($result);
+        }else{
+            dd('no idea!', $result);
+        }
+
+
+
     }
 }

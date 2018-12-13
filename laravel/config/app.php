@@ -164,8 +164,6 @@ return [
         dg\rssphp\src\FeedServiceProvider::class,
 
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
-
-
     ],
 
     /*
