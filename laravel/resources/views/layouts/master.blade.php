@@ -141,16 +141,10 @@
 
     <!-- JS Unify -->
     <script src="/assets/js/hs.core.js"></script>
-    <script src="/assets/js/components/hs.carousel.js"></script>
     <script src="/assets/js/components/hs.header.js"></script>
     <script src="/assets/js/helpers/hs.hamburgers.js"></script>
     <script src="/assets/js/components/hs.tabs.js"></script>
-    <script src="/assets/js/components/hs.popup.js"></script>
     <script src="/assets/js/components/hs.counter.js"></script>
-    <script src="/assets/js/components/hs.cubeportfolio.js"></script>
-    <script src="/assets/js/helpers/hs.bg-video.js"></script>
-    <script src="/assets/js/components/hs.go-to.js"></script>
-    <script src="/assets/js/components/hs.onscroll-animation.js"></script>
     <script src="/assets/js/components/hs.video-audio.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
     <script  src="/assets/vendor/jquery.countdown.min.js"></script>
@@ -159,13 +153,11 @@
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src="/assets/js/typeahead_bundle.js"></script>
 
     <!-- JS Customization -->
     <script src="/assets/js/custom.js"></script>
     <!-- JS Plugins Init. -->
     <script>
-
         $(document).on('ready', function () {
             // initialization of HSDropdown component
             $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {dropdownHideOnScroll: false});
@@ -173,63 +165,11 @@
             // initialization of hamburger
             $.HSCore.helpers.HSHamburgers.init('.hamburger');
 
-            // initialization of range datepicker
-            //$.HSCore.components.HSRangeDatepicker.init('#rangeDatepicker, #rangeDatepicker2, #rangeDatepicker3');
-
-            // initialization of datepicker
-            /*$.HSCore.components.HSDatepicker.init('#datepicker', {
-                dayNamesMin: [
-                    'SU',
-                    'MO',
-                    'TU',
-                    'WE',
-                    'TH',
-                    'FR',
-                    'SA'
-                ]
-            });*/
-
-            // initialization of popups
-            $.HSCore.components.HSPopup.init('.js-fancybox', {
-                btnTpl: {
-                    smallBtn: '<button data-fancybox-close class="btn g-pos-abs g-top-25 g-right-30 g-line-height-1 g-bg-transparent g-font-size-16 g-color-gray-light-v3 g-brd-none p-0" title=""><i class="hs-admin-close"></i></button>'
-                }
-            });
-
-            // initialization of popups with media
-            $.HSCore.components.HSPopup.init('.js-fancybox-media', {
-                helpers: {
-                    media: {},
-                    overlay: {
-                        css: {
-                            'background': 'rgba(0, 0, 0, .8)'
-                        }
-                    }
-                }
-            });
-            // initialization of carousel
-            $.HSCore.components.HSCarousel.init('.js-carousel');
-
             // initialization of tabs
             $.HSCore.components.HSTabs.init('[role="tablist"]');
 
             // initialization of scroll animation
             $.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
-
-            // initialization of video on background
-            $.HSCore.helpers.HSBgVideo.init('.js-bg-video');
-
-            // initialization of popups with media
-            $.HSCore.components.HSPopup.init('.js-fancybox-media', {
-                helpers: {
-                    media: {},
-                    overlay: {
-                        css: {
-                            'background': 'rgba(0, 0, 0, .8)'
-                        }
-                    }
-                }
-            });
 
             // initialization of go to
             $.HSCore.components.HSGoTo.init('.js-go-to');
@@ -246,8 +186,6 @@
                 secondsElSelector: '.js-cd-seconds'
             });
         });
-
-
     </script>
 
     <script >
@@ -279,47 +217,7 @@
     <script>
         //redirect to specific tab
         $(document).ready(function () {
-            $('#tabMenu a[href="#{{ old('tab') }}"]').tab('show')
-        });
-    </script>
-
-    <script>
-        $(document).ready(function($) {
-            var engine = new Bloodhound({
-                datumTokenizer: Bloodhound.tokenizers.whitespace('q'),
-                queryTokenizer: Bloodhound.tokenizers.whitespace,
-                remote: {
-                    url: 'find?q=%QUERY%',
-                    wildcard: '%QUERY%'
-                }
-            });
-
-            $('.search-input').typeahead({
-                hint: true,
-                highlight: true,
-                minLength: 1,
-            },{
-                name: 'organization',
-                source: engine.ttAdapter(),
-                dynamic: true,
-                display: function(data) {
-                    return data.org_name //Input value to be set when you select a suggestion.
-                },
-                templates: {
-                    empty: [
-                        '<div class="list-group search-results-dropdown"><div class="list-group-item">Nothing found.</div></div>'
-                    ],
-                    header: [
-                        '<div class="list-group search-results-dropdown">'
-                    ],
-                    suggestion: function (data) {
-                        console.log(data);
-                        return '<div class="g-bg-black"><image src="/storage/app/org_logos/' + data.org_logo + '" height="30" />'
-                            + data.org_name + '<hr style="background-color:#ffffff;"></div>'
-                    }
-                }
-            });
-
+            $('#tabMenu a[href="#{{ old('tab') }}"]').tab('show');
         });
     </script>
     <script>

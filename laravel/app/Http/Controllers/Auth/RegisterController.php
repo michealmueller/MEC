@@ -62,6 +62,7 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:users,email',
             'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
+
         ]);
     }
 
@@ -89,6 +90,7 @@ class RegisterController extends Controller
             'password' => password_hash($data['password'], PASSWORD_BCRYPT),
             'hash' => Hash::make($data['email']),
         ]);
+
         $data['avatar']->storeAs('org_logos', $avatarName);
 
         //create the Organization
@@ -128,7 +130,6 @@ class RegisterController extends Controller
         $user->update();
 
         if(count($exists) == 0) {
-
             //Create the calendar
             $calendar = OrgCalendar::create([
                 'cal_url' => '/' . Organization::findorfail($user->organization_id)->org_name . '/calendar',
@@ -137,9 +138,7 @@ class RegisterController extends Controller
             ]);
         }
 
-
-        //Event::fire('NewRegistration', $user);
+        Event::fire('NewRegistration', $user);
         return $user;
-
     }
 }

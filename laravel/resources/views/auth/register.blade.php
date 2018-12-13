@@ -2,9 +2,9 @@
 
 @section('content')
     <!-- Login -->
-    <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+    <section class="">
         <!-- Parallax Image -->
-        <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-size-cover g-bg-bluegray-opacity-0_3--after" style="height: 140%; background-image: url(assets/images/caterpillar.jpg);"></div>
+        <div class="" style="height: 140%; background-image: url(assets/images/caterpillar.jpg);"></div>
         <!-- End Parallax Image -->
 
         <div class="container g-pt-100 g-pb-20">
@@ -16,7 +16,9 @@
                         </header>
 
                         <!-- Form -->
-                        <form class="g-py-15">
+                        <form class="g-py-15" method="post" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            @include('shared.errors')
                             <div class="row">
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4 text-center">
@@ -84,7 +86,7 @@
                                 </label>
                             </div>
 
-                            <button class="btn btn-block btn-primary rounded-0 g-py-15 mb-5" type="submit">Signup</button>
+                            <button class="btn btn-block btn-primary rounded-0 g-py-15 mb-5" type="submit">Sign Up</button>
 
                             <!--<div class="d-flex justify-content-center text-center g-mb-30">
                                 <div class="d-inline-block align-self-center g-width-50 g-height-1 g-bg-gray-light-v1"></div>

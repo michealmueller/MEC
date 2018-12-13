@@ -52,7 +52,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'avatar', 'email', 'password', 'org_name', 'username', 'organization_id'
+        'avatar', 'email', 'password', 'org_name', 'username', 'organization_id', 'q', 'org_rsi_site', 'org_discord'
     ];
 
     /**
