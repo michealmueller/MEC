@@ -1,11 +1,13 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const channel = '';
+const keys = require('vars.js');
 
 client.on('ready', () => {
     console.log("Connected as " + client.user.tag)
 })
 
-client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvV7kA.lpYk1Fhxgf6tzYdAQFY_IfZZGjQ") // Replace XXXXX with your bot token
+client.login(keys.token); // Replace XXXXX with your bot token
 
 /*client.on('ready', () => {
     var generalChannel = client.channels.get("123456789") // Replace with known channel ID
@@ -20,24 +22,31 @@ client.on('message', (receivedMessage) => {
 })
 
 function processCommand(receivedMessage) {
-    let fullCommand = receivedMessage.content.substr(1) // Remove the leading exclamation mark
-    let splitCommand = fullCommand.split(" ") // Split the message up in to pieces for each space
-    let primaryCommand = splitCommand[0] // The first word directly after the exclamation is the command
-    let arguments = splitCommand.slice(1) // All other words are arguments/parameters/options for the command
+    let fullCommand = receivedMessage.content.substr(1); // Remove the leading exclamation mark
+    let splitCommand = fullCommand.split(" "); // Split the message up in to pieces for each space
+    let primaryCommand = splitCommand[0]; // The first word directly after the exclamation is the command
+    let arguments = splitCommand.slice(1); // All other words are arguments/parameters/options for the command
 
-    console.log("Command received: " + primaryCommand)
-    console.log("Arguments: " + arguments) // There may not be any arguments
+    console.log("Command received: " + primaryCommand);
+    console.log("Arguments: " + arguments); // There may not be any arguments
 
-    if (primaryCommand == "help") {
-        helpCommand(arguments, receivedMessage)
-    }else if (primaryCommand == "setup") {
-        setupCommand(arguments, receivedMessage)
-    }else {
-        receivedMessage.channel.send("I don't understand the command. Try `!help``")
+    switch(primaryCommand){
+        case 'help':
+            helpCommand(arguments, receivedMessage);
+            break;
+        case 'setup':
+            setupCommand(arguments, receivedMessage);
+            break;
+        case 'set-channel':
+            setchannelCommand(arguments, receivedMessage);
+            break;
+        default:
+            receivedMessage.channel.send("I don't understand the command. Try `!help``")
     }
 }
 
-function helpCommand(arguments, receivedMessage) {
+function helpCommand(arguments, receivedMessage)
+{
     if (arguments.length > 0) {
         receivedMessage.channel.send("It looks like you might need help with " + arguments)
     } else {
@@ -45,19 +54,34 @@ function helpCommand(arguments, receivedMessage) {
     }
 }
 
-function setupCommand(arguments, receivedMessage) {
-    receivedMessage.channel.send('Thank you for using me, the Mec Bot, Your Event Assistant!!');
-    receivedMessage.channel.send('First thing we will do is get you a webhook, this way i can reliably receive notifications and forward those to you.');
-    receivedMessage.channel.send('Setting up the webhook now.');
-//first set the bots channel
+function setchannelCommand(arguments, receivedMessage) {
+    if (arguments.length > 1) {
+        receivedMessage.channel.send('Sorry, i can only use one channel at this time!')
+    } else {
+        var speak = client.channels.get(arguments);
+        receivedMessage.channel.send('Great!, so you want me to post in the channel with the id of ' + arguments+' all future mesages will be in that channel.')
+        speak.send('Hello, Im here now !')
+    }
+}
+
+function setupCommand(arguments, receivedMessage)
+{
+    receivedMessage.channel.send('Thank you for using M.E.C Bot, Your Premier Event Assistant!!');
+    receivedMessage.channel.send('First lets specify what channel you want me to be focus on, here is a list of the channels with there ID\'s')
     client.guilds.forEach((guild) => {
-        // List all channels
+//first set the bots channel
+// List all channels
         guild.channels.forEach((channel) => {
             if (channel.type === 'text') {
                 receivedMessage.channel.send(` -- ${channel.name} ${channel.id}`);
             }
         })
-    })
+    });
+    receivedMessage.channel.send('Please use the command !set-channel to inform me of your choice.');
+
+    receivedMessage.channel.send('First thing we will do is get you a webhook, this way i can reliably receive notifications and forward those to you.');
+    receivedMessage.channel.send('Setting up the webhook now.');
+
 }
 /*
 //Create the webhook and take care of user error and spaces
