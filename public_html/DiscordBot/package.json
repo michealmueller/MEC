@@ -1,8 +1,10 @@
 {
-  'name': 'M.E.C Bot',
-  'version': '0.1',
-  'description': 'Event Notification Assistant',
-  'main': 'bot.js',
-  'author': 'Arthmael',
-  'dependencies': {}
+  "name": "MEC-Bot",
+  "version": "1.0.0",
+  "description": "Event Notification Assistant",
+  "main": "bot.js",
+  "author": "Arthmael",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }
