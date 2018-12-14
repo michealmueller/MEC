@@ -75,11 +75,10 @@ function setupCommand(arguments, receivedMessage) {
         receivedMessage.channel.send('Webhook created successfully!')
 
         receivedMessage.channel.send('there was an issue creating the WebHook, Contact my creator [Ω] Arthmael#9572 , and notify him of this please.')
-    }
-
+}
+/*
   if (arguments.length > 0) {
         receivedMessage.channel.send("It looks like you might need help with " + arguments)
     } else {
         receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
-    }
-}
+    }*/
