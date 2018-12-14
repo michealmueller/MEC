@@ -14,10 +14,8 @@ client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvV7kA.lpYk1Fhxgf6tzYdAQFY_IfZZGjQ") // R
 
 client.on('message', (receivedMessage) => {
     // Check if the bot's user was tagged in the message
-    if (receivedMessage.content.includes(client.user.toString())) {
-        if (receivedMessage.content.startsWith("!")) {
-            processCommand(receivedMessage)
-        }
+    if (receivedMessage.content.startsWith("!")) {
+        processCommand(receivedMessage)
     }
 })
 
