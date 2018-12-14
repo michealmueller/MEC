@@ -162,7 +162,7 @@ class EventController extends Controller
 
         json_encode($response = curl_exec($ch));
         curl_close($ch);
-        dd($response);
+
         if($response == false && isset($_GET['timezone'])){
             session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
             $response = collect([
@@ -187,7 +187,6 @@ class EventController extends Controller
             );
             return $response['data'];
         }
-
         return json_decode($response);
     }
 
