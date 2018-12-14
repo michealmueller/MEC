@@ -1,8 +1,11 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
+client.on('ready', () => {
+    console.log("Connected as " + client.user.tag)
+})
 
-client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvShZg.l2osvDJI-vSmnfOyShbIXf7WWFM") // Replace XXXXX with your bot token
+client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvV7kA.lpYk1Fhxgf6tzYdAQFY_IfZZGjQ") // Replace XXXXX with your bot token
 
 /*client.on('ready', () => {
     var generalChannel = client.channels.get("123456789") // Replace with known channel ID
@@ -10,7 +13,6 @@ client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvShZg.l2osvDJI-vSmnfOyShbIXf7WWFM") // R
 })*/
 
 client.on('message', (receivedMessage) => {
-
     // Check if the bot's user was tagged in the message
     if (receivedMessage.content.includes(client.user.toString())) {
         if (receivedMessage.content.startsWith("!")) {
