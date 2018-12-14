@@ -100,9 +100,15 @@ class HomeController extends Controller
             'redirect_uri' => 'https://events.citizenwarfare.com',
             'scope' => 'bot webhook.incoming',
         ];
-dd($code, $state, json_encode($data));
         $endpoint = 'https://discordapp.com/api/oauth2/token';
-        $headers = 'Content-Type application/x-www-form-urlencoded';
+        $headers = collect((object)[
+            'Content-Type' => 'application/x-www-form-urlencoded',
+        ]);
+
+//dd($code, $state, json_encode($data), json_encode($headers));
+
+
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $endpoint);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
