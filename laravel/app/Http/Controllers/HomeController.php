@@ -101,9 +101,7 @@ class HomeController extends Controller
             'scope' => 'bot webhook.incoming',
         ];
         $endpoint = 'https://discordapp.com/api/oauth2/token';
-        $headers = collect((object)[
-            'Content-Type' => 'application/x-www-form-urlencoded',
-        ]);
+        $headers = (['Content-Type' => 'application/x-www-form-urlencoded']);
 
 //dd($code, $state, json_encode($data), json_encode($headers));
 
