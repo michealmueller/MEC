@@ -1,0 +1,8 @@
+{
+  'name': 'M.E.C Bot',
+  'version': '0.1',
+  'description': 'Event Notification Assistant',
+  'main': 'bot.js',
+  'author': 'Arthmael',
+  'dependencies': {}
+}
