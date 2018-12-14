@@ -10,9 +10,7 @@ client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvShZg.l2osvDJI-vSmnfOyShbIXf7WWFM") // R
 })*/
 
 client.on('message', (receivedMessage) => {
-  if (receivedMessage.author == client.user) { // Prevent bot from responding to its own messages
-    return
-  }
+
     // Check if the bot's user was tagged in the message
     if (receivedMessage.content.includes(client.user.toString())) {
         if (receivedMessage.content.startsWith("!")) {
