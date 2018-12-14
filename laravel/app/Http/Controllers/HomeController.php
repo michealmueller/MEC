@@ -93,14 +93,14 @@ class HomeController extends Controller
         $state = Input::get('state');
 
         $data = [
-            'client_id' => '522885672248279041',
-            'client_secret' => 'IZJfKhbZzF4Jdxv_LdRwgF-3RF7OCqUI',
+            'client_id' => env('DISCORD_CLIENT_ID'),
+            'client_secret' => env('DISCORD_CLIENT_SECRET'),
             'grant_type' => 'authorization_code',
             'code' => $code,
             'redirect_uri' => 'https://events.citizenwarfare.com',
             'scope' => 'bot webhook.incoming',
         ];
-
+dd($code, $state, $data);
         $endpoint = 'https://discordapp.com/api/oauth2/token';
         $headers = 'Content-Type : application/x-www-form-urlencoded';
         $ch = curl_init();
