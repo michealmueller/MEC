@@ -1,19 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-client.on('ready', () => {
-    // List servers the bot is connected to
-    console.log("Servers:")
-    client.guilds.forEach((guild) => {
-        console.log(" - " + guild.name);
-
-        // List all channels
-        guild.channels.forEach((channel) => {
-            console.log(channel);
-            //console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`);
-        })
-    })
-})
 
 client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvShZg.l2osvDJI-vSmnfOyShbIXf7WWFM") // Replace XXXXX with your bot token
 
@@ -21,7 +8,7 @@ client.login("NTIyODg1NjcyMjQ4Mjc5MDQx.DvShZg.l2osvDJI-vSmnfOyShbIXf7WWFM") // R
     var generalChannel = client.channels.get("123456789") // Replace with known channel ID
     generalChannel.send("Hello, world!")
 })*/
-/*
+
 client.on('message', (receivedMessage) => {
   if (receivedMessage.author == client.user) { // Prevent bot from responding to its own messages
     return
@@ -64,6 +51,17 @@ function setupCommand(arguments, receivedMessage) {
     receivedMessage.channel.send('Thank you for using me, the Mec Bot, Your Event Assistant!!');
     receivedMessage.channel.send('First thing we will do is get you a webhook, this way i can reliably receive notifications and forward those to you.');
     receivedMessage.channel.send('Setting up the webhook now.');
+//first set the bots channel
+    client.guilds.forEach((guild) => {
+        // List all channels
+        guild.channels.forEach((channel) => {
+            if (channel.type === 'text') {
+                receivedMessage.channel.send(` -- ${channel.name} ${channel.id}`);
+            }
+        })
+    })
+}
+/*
 //Create the webhook and take care of user error and spaces
     const nameAvatar = args.join(" ");
     const linkCheck = /https?:\/\/.+\.(?:png|jpg|jpeg)/gi;
@@ -84,4 +82,5 @@ function setupCommand(arguments, receivedMessage) {
         receivedMessage.channel.send("It looks like you might need help with " + arguments)
     } else {
         receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
-    }*/
+    }
+    */
