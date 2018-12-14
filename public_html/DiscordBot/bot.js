@@ -5,11 +5,11 @@ client.on('ready', () => {
     // List servers the bot is connected to
     console.log("Servers:")
     client.guilds.forEach((guild) => {
-        var organizations = (" - " + guild.name);
+        console.log(" - " + guild.name);
 
         // List all channels
         guild.channels.forEach((channel) => {
-            var channels = ` -- ${channel.name} (${channel.type}) - ${channel.id}`
+            console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`);
         })
     })
 })
