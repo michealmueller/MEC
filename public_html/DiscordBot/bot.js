@@ -1,13 +1,13 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const channel = '';
-const keys = require('vars.js');
+const keys = require('token');
 
 client.on('ready', () => {
     console.log("Connected as " + client.user.tag)
 })
 
-client.login(keys.token); // Replace XXXXX with your bot token
+client.login(keys); // Replace XXXXX with your bot token
 
 /*client.on('ready', () => {
     var generalChannel = client.channels.get("123456789") // Replace with known channel ID
