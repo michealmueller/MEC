@@ -97,7 +97,7 @@ class HomeController extends Controller
             'client_secret' => 'IZJfKhbZzF4Jdxv_LdRwgF-3RF7OCqUI',
             'grant_type' => 'authorization_code',
             'code' => $code,
-            'redirect_uri' => 'https://events.citizenwarfare.com/bot/discord/',
+            'redirect_uri' => 'https://events.citizenwarfare.com',
             'scope' => 'bot webhook.incoming',
         ];
 
