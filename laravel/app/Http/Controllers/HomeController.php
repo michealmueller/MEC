@@ -102,7 +102,7 @@ class HomeController extends Controller
         ];
 //dd($code, $state, $data);
         $endpoint = 'https://discordapp.com/api/oauth2/token';
-        $headers = 'Content-Type : application/x-www-form-urlencoded';
+        $headers = 'Content-Type application/x-www-form-urlencoded';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $endpoint);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
