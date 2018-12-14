@@ -9,7 +9,8 @@ client.on('ready', () => {
 
         // List all channels
         guild.channels.forEach((channel) => {
-            console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`);
+            console.log(channel);
+            //console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`);
         })
     })
 })
@@ -60,18 +61,20 @@ function helpCommand(arguments, receivedMessage) {
 }
 
 function setupCommand(arguments, receivedMessage) {
-    receivedMessage.channel.send('Thank you for using the me, the Mec Bot, Your Event Assistant!!');
-    receivedMessage.channel.send('First thing we will do is get you a webhook, this way i can reliably recieve notifications and forward those to you.');
+    receivedMessage.channel.send('Thank you for using me, the Mec Bot, Your Event Assistant!!');
+    receivedMessage.channel.send('First thing we will do is get you a webhook, this way i can reliably receive notifications and forward those to you.');
     receivedMessage.channel.send('Setting up the webhook now.');
 //Create the webhook and take care of user error and spaces
     const nameAvatar = args.join(" ");
     const linkCheck = /https?:\/\/.+\.(?:png|jpg|jpeg)/gi;
-    if (!linkCheck.test(nameAvatar)) return message.reply("You must supply an image link.");
+    if (!linkCheck.test(nameAvatar)) return receivedMessage.reply("You must supply an image link.");
     const avatar = nameAvatar.match(linkCheck)[0];
     const name = nameAvatar.replace(linkCheck, "");
 
-    Webhook = receivedMessage.channel.createWebhook(name, avatar).then(wb => receivedMessage.channel.send(
-        'Here is you webhook link, https://discordapp.com/api/webhooks/${wb.id}/${wb.token}')).catch(console.error)
+    Webhook = receivedMessage.channel.createWebhook(name, avatar)
+        .then(webhook => webhook.edit(name, avatar)
+        .then(wb => receivedMessage.channel.send('Here is you webhook link, https://discordapp.com/api/webhooks/${wb.id}/${wb.token}'))
+            .catch(console.error)
         receivedMessage.channel.send('Webhook created successfully!')
 
         receivedMessage.channel.send('there was an issue creating the WebHook, Contact my creator [Ω] Arthmael#9572 , and notify him of this please.')
