@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const channel = '';
-const keys = require('/vars.js');
+const keys = require('./vars');
 
 client.on('ready', () => {
     console.log("Connected as " + client.user.tag)
