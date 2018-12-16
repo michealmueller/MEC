@@ -1,9 +1,9 @@
-<header id="js-header" class="u-header u-header--abs-top u-header--show-hide u-header--change-appearance u-header--untransitioned" data-header-fix-moment="100" data-header-fix-effect="slide">
+<header id="js-header" class="u-header u-header--show-hide u-header--change-appearance u-header--untransitioned" data-header-fix-moment="100" data-header-fix-effect="slide">
     <div class="u-header__section u-header__section--dark g-transition-0_3 g-py-5 g-bg-black-opacity-0_7" data-header-fix-moment-exclude="g-bg-black-opacity-0_7" data-header-fix-moment-classes="g-bg-black">
         <nav class="navbar navbar-expand-lg no-gutters g-pa-0">
             <div class="container">
                 <!-- Responsive Toggle Button -->
-                <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0"
+                <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-10 g-right-0"
                         type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
               <span class="hamburger hamburger--slider">
             <span class="hamburger-box">
@@ -13,7 +13,9 @@
                 </button>
                 <!-- End Responsive Toggle Button -->
                 <!-- Logo -->
-                <a class="navbar-brand text-uppercase" href="/">M<span class="g-color-primary">EC</span></a>
+                @if(Route::current()->getName() != 'home')
+                    <a class="navbar-brand text-uppercase" href="/"><img height="80" src="/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png"></a>
+                @endif
                 <!-- End Logo -->
 
                 <!-- Navigation --
