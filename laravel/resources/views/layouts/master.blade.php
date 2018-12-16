@@ -302,23 +302,23 @@
             // --- common properties ---
 
             this.autoStart = true;          // Whether the snow should start automatically or not.
-            this.excludeMobile = false;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
-            this.flakesMax = 256;           // Limit total amount of snow made (falling + sticking)
-            this.flakesMaxActive = 128;      // Limit amount of snow falling at once (less = lower CPU use)
-            this.animationInterval = 50;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
+            this.excludeMobile = true;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
+            this.flakesMax = 128;           // Limit total amount of snow made (falling + sticking)
+            this.flakesMaxActive = 64;      // Limit amount of snow falling at once (less = lower CPU use)
+            this.animationInterval = 20;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
             this.useGPU = true;             // Enable transform-based hardware acceleration, reduce CPU load.
-            this.className = 'snowing';          // CSS class name for further customization on snow elements
-            this.excludeMobile = false;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
+            this.className = null;          // CSS class name for further customization on snow elements
+            this.excludeMobile = true;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
             this.flakeBottom = 0;        // Integer for Y axis snow limit, 0 or null for "full-screen" snow effect
             this.followMouse = false;        // Snow movement can respond to the user's mouse
             this.snowColor = '#fff';        // Don't eat (or use?) yellow snow.
             this.snowCharacter = '&bull;';  // &bull; = bullet, &middot; is square on some systems etc.
-            this.snowStick = false;          // Whether or not snow should "stick" at the bottom. When off, will never collect.
-            this.targetElement = 'snowing';      // element which snow will be appended to (null = document.body) - can be an element ID eg. 'myDiv', or a DOM node reference
+            this.snowStick = true;          // Whether or not snow should "stick" at the bottom. When off, will never collect.
+            this.targetElement = null;      // element which snow will be appended to (null = document.body) - can be an element ID eg. 'myDiv', or a DOM node reference
             this.useMeltEffect = true;      // When recycling fallen snow (or rarely, when falling), have it "melt" and fade out if browser supports it
-            this.useTwinkleEffect = false;  // Allow snow to randomly "flicker" in and out of view while falling
+            this.useTwinkleEffect = true;  // Allow snow to randomly "flicker" in and out of view while falling
             this.usePositionFixed = true;  // true = snow does not shift vertically when scrolling. May increase CPU load, disabled by default - if enabled, used only where supported
-            this.usePixelPosition = false;  // Whether to use pixel values for snow top/left vs. percentages. Auto-enabled if body is position:relative or targetElement is specified.
+            this.usePixelPosition = true;  // Whether to use pixel values for snow top/left vs. percentages. Auto-enabled if body is position:relative or targetElement is specified.
 
             // --- less-used bits ---
 

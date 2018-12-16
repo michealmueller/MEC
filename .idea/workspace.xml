@@ -2,290 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/storage/framework/sessions/6Ctd1sLEdpGEguwH5jNU8hPXZHWvemFpl7S9nG26" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/coverage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/async-throttle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/async-throttle/index.js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/sort-arrow-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov-report/sorter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/coverage/lcov.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/async-limiter/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/.tern-project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/Client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/ClientDataManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/ClientDataResolver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/ClientManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/WebhookClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/Action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/ActionsManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/ChannelCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/ChannelDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/ChannelUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildBanRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildChannelsPositionUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildEmojiCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildEmojiDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildEmojiUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildEmojisUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildMemberGet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildMemberRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildRoleCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildRoleDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildRoleUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildRolesPositionUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildSync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/GuildUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageDeleteBulk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageReactionAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageReactionRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageReactionRemoveAll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/MessageUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/UserGet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/UserNoteUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/actions/UserUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/APIRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/DiscordAPIError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/RESTManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/RESTMethods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/RequestHandlers/Burst.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/RequestHandlers/RequestHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/RequestHandlers/Sequential.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/rest/UserAgentManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/ClientVoiceManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/VoiceBroadcast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/VoiceConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/VoiceUDPClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/VoiceWebSocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/dispatcher/StreamDispatcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/opus/BaseOpusEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/opus/NodeOpusEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/opus/OpusEngineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/opus/OpusScriptEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/player/AudioPlayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/receiver/VoiceReadable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/receiver/VoiceReceiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/util/SecretKey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/util/Secretbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/voice/util/VolumeInterface.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/WebSocketConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/WebSocketManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/WebSocketPacketManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/AbstractHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/ChannelCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/ChannelDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/ChannelPinsUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/ChannelUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildBanAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildBanRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildEmojisUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildMemberAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildMemberRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildMemberUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildMembersChunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildRoleCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildRoleDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildRoleUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildSync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/GuildUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageCreate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageDeleteBulk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageReactionAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageReactionRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageReactionRemoveAll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/MessageUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/PresenceUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/Ready.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/RelationshipAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/RelationshipRemove.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/Resumed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/TypingStart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/UserGuildSettingsUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/UserNoteUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/UserSettingsUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/UserUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/VoiceServerUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/client/websocket/packets/handlers/VoiceStateUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/sharding/Shard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/sharding/ShardClientUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/sharding/ShardingManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Attachment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/CategoryChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Channel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ClientUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ClientUserChannelOverride.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ClientUserGuildSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ClientUserSettings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/DMChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Emoji.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/GroupDMChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Guild.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/GuildAuditLogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/GuildChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/GuildMember.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Invite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/MessageAttachment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/MessageCollector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/MessageEmbed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/MessageMentions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/MessageReaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/OAuth2Application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/PartialGuild.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/PartialGuildChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/PermissionOverwrites.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Presence.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ReactionCollector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/ReactionEmoji.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/RichEmbed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/TextChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/UserConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/UserProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/VoiceChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/VoiceRegion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/Webhook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/interfaces/Collector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/structures/shared/resolvePermissions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/util/Collection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/util/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/util/Permissions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/util/Snowflake.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/src/util/Util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/discord.js-test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/discord.js/typings/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/dist/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/dist/long.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/long/src/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/output.opus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/Prism.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/opus/OggOpus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/transcoders/MediaTranscoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/transcoders/ffmpeg/Ffmpeg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/transcoders/ffmpeg/FfmpegProcess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/src/util/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/test/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/prism-media/test/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/safe-buffer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/safe-buffer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/safe-buffer/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/safe-buffer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/safe-buffer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/docs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/esm.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/scripts/travis-deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/scripts/travis-test.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/FormData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/mime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/mimeOfBuffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/mimes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/transports/ResponseStream.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/transports/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/node/transports/http2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/src/qs_mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/browser/http1.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/browser/http2.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/browser/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/interop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/file.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/http1.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/http2.test.js.disabled" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/sync.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/node/util.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/test/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/snekfetch/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/AUTHORS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/nacl-fast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/nacl-fast.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/nacl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/nacl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/nacl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/tweetnacl/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/buffer-util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/event-target.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/extension.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/permessage-deflate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/receiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/sender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/websocket-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/lib/websocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/node_modules/ws/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/assets/images/ollisar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/assets/images/ollisarx-mas.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/notification.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/DiscordBot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/DiscordBot/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/modern-business.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/modern-business.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/modern-business.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/modern-business.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/sessions/6Ctd1sLEdpGEguwH5jNU8hPXZHWvemFpl7S9nG26" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/storage/framework/sessions/6Ctd1sLEdpGEguwH5jNU8hPXZHWvemFpl7S9nG26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/images/ollisarx-mas.png" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/images/ollisarx-mas.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -308,21 +29,6 @@
       <set />
     </option>
     <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="admin_events@citizenwarfare.com" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="admin_events@citizenwarfare.com" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="admin_events@citizenwarfare.com" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="admin_events: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="admin_events@localhost" type="feb32156:DbDataSourceImpl" />
@@ -473,12 +179,12 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="92" />
-          <entry key="Blade" value="11801" />
+          <entry key="Blade" value="11898" />
           <entry key="CSS" value="63" />
           <entry key="HTML" value="10" />
           <entry key="JSON" value="226" />
           <entry key="JavaScript" value="7422" />
-          <entry key="PHP" value="11671" />
+          <entry key="PHP" value="11697" />
           <entry key="PLAIN_TEXT" value="489" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="64" />
@@ -492,14 +198,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="7" />
-          <entry key="Blade" value="67" />
+          <entry key="Blade" value="68" />
           <entry key="CSS" value="15" />
-          <entry key="Database Element" value="47" />
+          <entry key="Database Element" value="51" />
           <entry key="Git file" value="1" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="13" />
           <entry key="JavaScript" value="6" />
-          <entry key="PHP" value="124" />
+          <entry key="PHP" value="128" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
           <entry key="tsconfig" value="1" />
@@ -539,14 +245,14 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64228934">
+    <splitter split-orientation="horizontal" split-proportion="0.56057864">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+                <state relative-caret-position="383">
+                  <caret line="315" column="59" selection-start-line="315" selection-start-column="59" selection-end-line="315" selection-end-column="59" />
                   <folding>
                     <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
                     <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
@@ -565,28 +271,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/emails/activation.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
                   <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="56" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="56" />
                 </state>
               </provider>
             </entry>
@@ -600,11 +288,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+                  <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
                   <folding>
                     <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
                   </folding>
@@ -621,20 +309,19 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public_html/assets/css/modern-business.min.css">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="411" selection-start-line="4" selection-start-column="411" selection-end-line="4" selection-end-column="411" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public_html/assets/css/custom.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+                <state relative-caret-position="714">
+                  <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#2600#4480#0#HTML" />
+                    <element signature="e#4501#7767#0#HTML" />
+                    <element signature="e#7788#10753#0#HTML" />
+                    <element signature="e#10816#13844#0#HTML" />
+                    <element signature="e#13865#15981#0#HTML" />
+                    <element signature="e#16002#17811#0#HTML" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -642,127 +329,78 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.81304693">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="34">
-                      <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="918">
-                      <caret line="474" column="9" selection-start-line="474" selection-start-column="9" selection-end-line="474" selection-end-column="9" />
-                      <folding>
-                        <element signature="e#33#47#0#PHP" expanded="true" />
-                        <element signature="e#912#26561#1#PHP" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="2006">
-                      <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
-                      <folding>
-                        <element signature="e#40#54#0#PHP" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/auth.json">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="34">
-                      <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/package.json">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="119">
-                      <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="547">
-                      <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-                      <folding>
-                        <element signature="n#!!block;n#helpCommand#0" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/vars.js">
-                  <provider selected="true" editor-type-id="text-editor" />
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="2091">
-                      <caret line="135" column="60" selection-start-line="135" selection-start-column="60" selection-end-line="135" selection-end-column="60" />
-                      <folding>
-                        <element signature="e#45#58#0#PHP" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/laravel/app/User.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="442">
-                      <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-                      <folding>
-                        <element signature="e#121#2240#0#PHP" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/public_html/assets/css/modern-business.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/vars.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="17">
-                      <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="918">
+                  <caret line="474" column="9" selection-start-line="474" selection-start-column="9" selection-end-line="474" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#33#47#0#PHP" expanded="true" />
+                    <element signature="e#912#26561#1#PHP" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2006">
+                  <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#40#54#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="547">
+                  <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+                  <folding>
+                    <element signature="n#!!block;n#helpCommand#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/vars.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#40#61#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2091">
+                  <caret line="135" column="60" selection-start-line="135" selection-start-column="60" selection-end-line="135" selection-end-column="60" />
+                  <folding>
+                    <element signature="e#45#58#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -805,8 +443,8 @@
       <find>”</find>
       <find>'</find>
       <find>var</find>
-      <find>body</find>
       <find>modern-bus</find>
+      <find>body</find>
     </findStrings>
     <replaceStrings>
       <replace>/../</replace>
@@ -843,7 +481,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/public_html/assets/css/unify-components.css" />
@@ -854,7 +491,6 @@
         <option value="$PROJECT_DIR$/laravel/app/ReferenceCode.php" />
         <option value="$PROJECT_DIR$/laravel/app/Organization.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/faq.blade.php" />
         <option value="$PROJECT_DIR$/laravel/config/vars.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php" />
@@ -889,11 +525,13 @@
         <option value="$PROJECT_DIR$/public_html/DiscordBot/bot.js" />
         <option value="$PROJECT_DIR$/public_html/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/modern-business.min.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/notification.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/modern-business.css" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/database/migrations/2018_12_16_015809_add_webhook_field_to_organizations.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
       </list>
     </option>
   </component>
@@ -955,6 +593,19 @@
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MEC" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MEC" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -963,22 +614,6 @@
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
@@ -1036,7 +671,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profile.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;home.blade&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;Kern&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Kernel.php&#10;providerre&#9;null&#9;null&#10;view&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Providers/ViewServiceProvider.php&#10;app.ph&#9;FILE&#9;file://D:/Work Projects/Event/laravel/config/app.php&#10;admincontroller&#9;null&#9;null&#10;user&#9;null&#9;null&#10;regi&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;custom.c&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/custom.css&#10;Event&#9;null&#9;null&#10;registersuser&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/OrganizationController.php&#10;USEr&#9;null&#9;null&#10;notifica&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/notification.blade.php&#10;orgcalend&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/OrgCalendar.php&#10;profil&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/ProfileController.php&#10;Register&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;unify-glo&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-globals.css&#10;unify-cor&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css&#10;welcom&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/welcome.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profile.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;home.blade&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;Kern&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Kernel.php&#10;providerre&#9;null&#9;null&#10;view&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Providers/ViewServiceProvider.php&#10;app.ph&#9;FILE&#9;file://D:/Work Projects/Event/laravel/config/app.php&#10;admincontroller&#9;null&#9;null&#10;user&#9;null&#9;null&#10;regi&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;custom.c&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/custom.css&#10;Event&#9;null&#9;null&#10;registersuser&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/OrganizationController.php&#10;USEr&#9;null&#9;null&#10;notifica&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/notification.blade.php&#10;orgcalend&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/OrgCalendar.php&#10;profil&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/ProfileController.php&#10;Register&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;unify-glo&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-globals.css&#10;unify-cor&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/unify-core.css" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -1178,14 +813,7 @@
       <workItem from="1544707407766" duration="2281000" />
       <workItem from="1544716464992" duration="29715000" />
       <workItem from="1544796177440" duration="12069000" />
-      <workItem from="1544816902951" duration="36567000" />
-    </task>
-    <task id="LOCAL-00085" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.">
-      <created>1544652130833</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1544652130833</updated>
+      <workItem from="1544816902951" duration="39038000" />
     </task>
     <task id="LOCAL-00086" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.">
       <created>1544652903828</created>
@@ -1523,17 +1151,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544816653170</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.">
+      <created>1544924688037</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1544924688037</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596476000" />
+    <option name="totallyTimeSpent" value="598947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12082671" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12082671" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1621,30 +1256,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Listeners/NewUserListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/organizations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/password_resets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Mail/VerificationEmail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1729,24 +1340,10 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf1f7b45-cd77-4809-a109-2f7603c244ec/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/organizations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1840,9 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/vars.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
@@ -1862,20 +1456,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/storage/app/logos/Citizen_Warfare_Logo_White.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1926,24 +1506,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/css/modern-business.min.css">
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_23_145341_add_field_is_admin_to_users.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_18_154923_add_field_to_event_org_id.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="411" selection-start-line="4" selection-start-column="411" selection-end-line="4" selection-end-column="411" />
+        <state relative-caret-position="289">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/css/modern-business.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state relative-caret-position="153">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/organizations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/organizations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/css/modern-business.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="366" selection-start-line="4" selection-start-column="366" selection-end-line="4" selection-end-column="366" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_12_16_015809_add_webhook_field_to_organizations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/vars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+        <state relative-caret-position="383">
+          <caret line="315" column="59" selection-start-line="315" selection-start-column="59" selection-end-line="315" selection-end-column="59" />
           <folding>
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
@@ -1954,9 +1589,24 @@
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
+          <folding>
+            <element signature="e#2600#4480#0#HTML" />
+            <element signature="e#4501#7767#0#HTML" />
+            <element signature="e#7788#10753#0#HTML" />
+            <element signature="e#10816#13844#0#HTML" />
+            <element signature="e#13865#15981#0#HTML" />
+            <element signature="e#16002#17811#0#HTML" />
           </folding>
         </state>
       </provider>

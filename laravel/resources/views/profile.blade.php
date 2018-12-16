@@ -51,6 +51,9 @@
                     <li class="nav-item">
                         <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Generate Ref. Code</a>
                     </li>
+                    <!--<li class="nav-item">
+                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Discord Bot</a>
+                    </li>-->
                     @endif
                 </ul>
                 <div class="tab-content py-4">
@@ -292,6 +295,7 @@
                                 <div class="col-lg-2 order-lg-1 text-center"></div>
                             </div>
                     </div>
+                        <!--<div class="tab-pane" id="edit"></div>-->
                     @endif
                 </div>
             </div>
