@@ -76,6 +76,9 @@ function processCommand(receivedMessage) {
         case 'setup':
             setupCommand(client, receivedMessage, args, con);
             break;
+        case 'test':
+            test(client, receivedMessage, args, con);
+            break;
         default:
             receivedMessage.channel.send("I don't understand the command. Try `!help``")
     }
@@ -84,20 +87,28 @@ function processCommand(receivedMessage) {
 async function setupCommand(client, receivedMessage, args, con)
 {
     const Format = require('date-format');
-    if (args.length === 0) {
-        receivedMessage.channel.send('Thank you for using CitizenWarfare Bot, Your Premier Event Assistant!!');
-        receivedMessage.channel.send('to make this as simple as possible this command is going to be a culmination of a few things.');
-        receivedMessage.channel.send('First, the information i need is a channel id, and your organizations name.');
-        receivedMessage.channel.send('if your organizations name has a space in it like this Omega Corporation, then you need to enter it like so Omega_Corporation');
-        receivedMessage.channel.send('capitalization does not matter, the org name must be as it is on the event site.');
-        receivedMessage.channel.send('So to recap, your command will look like this !setup {channel id} {channel 2 id} {organization_name');
-
-        await receivedMessage.channel.send('Here is a list of channels, this may take a few seconds to fully iterate.');
+    if(args.length === 2){
         receivedMessage.guild.channels.forEach((channel) => {
-            if (channel.type === 'text') {
-                receivedMessage.channel.send(` -- ${channel.name} ${channel.id}`);
+            if(channel.name === args[0]){
+                client.channelID = channel.id;
+                console.log(client.channelID);
             }
         });
+    }else if(args.length === 3){
+        receivedMessage.guild.channels.forEach((channel) => {
+            if(channel.name === args[0]){
+                client.channelID = channel.id;
+            }
+            if(channel.name === args[1]){
+                client.channel2ID = channel.id;
+            }
+        });
+    }
+    if (args.length === 0) {
+        receivedMessage.channel.send('Thank you for using CitizenWarfare Bot, Your Premier Event Assistant!!');
+        receivedMessage.channel.send('if your organizations name has a space in it like this Omega Corporation, then you need to enter it like so Omega_Corporation');
+        receivedMessage.channel.send('capitalization does not matter, the org name must be as it is on the event site.');
+        receivedMessage.channel.send('So to recap, your command will look like this !setup {channel} {channel} {organization_name');
     }else if (args.length >= 2) {
         con = mysql.createConnection({
             host:botSettings.dbhost,
@@ -185,7 +196,7 @@ async function setupCommand(client, receivedMessage, args, con)
                     .then(wb => {
                         //save pub and private channels along with webhooks
                         publicWebHook = `https://discordapp.com/api/webhooks/${wb.id}/${wb.token}`;
-                        let sql_pub = (`UPDATE discordbot SET public_channel_id = '${args[0]}', public_webhook_url = '${publicWebHook}' WHERE organization_id = '${client.orgID}'`);
+                        let sql_pub = (`UPDATE discordbot SET public_channel_id = '${client.channelID}', public_webhook_url = '${publicWebHook}' WHERE organization_id = '${client.orgID}'`);
 
                         con.query(sql_pub, err => {
                             if (err) throw err;
@@ -272,7 +283,7 @@ async function setupCommand(client, receivedMessage, args, con)
 
                         publicWebHook = `https://discordapp.com/api/webhooks/${wb.id}/${wb.token}`;
                         console.log(publicWebHook);
-                        let sql_pub = (`UPDATE discordbot SET public_channel_id = '${args[0]}', public_webhook_url = '${publicWebHook}' WHERE organization_id = '${client.orgID}'`);
+                        let sql_pub = (`UPDATE discordbot SET public_channel_id = '${client.channelID}', public_webhook_url = '${publicWebHook}' WHERE organization_id = '${client.orgID}'`);
                         //let sql_pubhook = (`UPDATE discordbot SET public_webhook_url = '${publicWebHook}' WHERE id = '${client.orgID}'`);
 
                         con.query(sql_pub, err => {
@@ -293,7 +304,7 @@ async function setupCommand(client, receivedMessage, args, con)
                 // This will get the bot to DM you the webhook
                     .then(wb => {
                         privateWebHook = `https://discordapp.com/api/webhooks/${wb.id}/${wb.token}`;
-                        sql_priv = (`UPDATE discordbot SET private_channel_id = '${args[1]}', private_webhook_url = '${privateWebHook}' WHERE organization_id = ${client.orgID}`);
+                        sql_priv = (`UPDATE discordbot SET private_channel_id = '${client.channel2ID}', private_webhook_url = '${privateWebHook}' WHERE organization_id = ${client.orgID}`);
 
                         con.query(sql_priv, err => {
                             if (err) throw err;
@@ -312,4 +323,13 @@ async function setupCommand(client, receivedMessage, args, con)
         console.log(`${Format('yyyy-MM-dd',new Date())} : no args???`);
         receivedMessage.channel.send('something is wrong!')
     }
+}
+
+function test(client, receivedMessage, args, con){
+    receivedMessage.guild.channels.forEach((channel) => {
+        if(channel.name === args[0]){
+            client.channelID = channel.id;
+            console.log(client.channelID);
+        }
+    });
 }
