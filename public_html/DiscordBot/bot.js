@@ -32,17 +32,6 @@ let con;
 
 client.on('ready', () => {
     console.log(Format('yyyy-MM-dd',new Date()) + " Connected as " + client.user.tag);
-
-    con = mysql.createConnection({
-        host:botSettings.dbhost,
-        user:botSettings.dbuser,
-        password:botSettings.dbpass,
-        database:botSettings.dbdatabase
-    });
-    con.connect(err => {
-        if (err) throw err;
-        console.log(Format('yyyy-MM-dd',new Date()) + " Connected to DB");
-    });
 });
 
 client.login(botSettings.token); // Replace XXXXX with your bot token
@@ -110,6 +99,17 @@ async function setupCommand(client, receivedMessage, args, con)
             }
         });
     }else if (args.length >= 2) {
+        con = mysql.createConnection({
+            host:botSettings.dbhost,
+            user:botSettings.dbuser,
+            password:botSettings.dbpass,
+            database:botSettings.dbdatabase
+        });
+        con.connect(err => {
+            if (err) throw err;
+            console.log(Format('yyyy-MM-dd',new Date()) + " Connected to DB");
+        });
+
         console.log(`${Format('yyyy-MM-dd',new Date())}: Do not panic this may take a second, check your event channel(s)`);
         await receivedMessage.channel.send('Do not panic this may take a second, check your event channel(s) :wink:');
         if (args.length === 2){
@@ -194,6 +194,7 @@ async function setupCommand(client, receivedMessage, args, con)
 
                     })
                     .catch(console.error));
+            con.end();
         }
         else if (args.length === 3){
             //TODO::handle organization first then hooks.
@@ -302,7 +303,7 @@ async function setupCommand(client, receivedMessage, args, con)
                     .catch(err => {
                         console.log(err.stack);
                     }));
-            //privateWebHook  = new Discord.WebhookClient(privateWebhookID, privateWebhookToken);
+            con.end();
         }
         else{
             receivedMessage.channel.send('you gave to many parameters.')
