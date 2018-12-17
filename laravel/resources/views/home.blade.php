@@ -167,7 +167,7 @@
                                             Receive public and private event notifications in one or two channels
                                         </li>
                                     </ul>
-                                    <button class="btn btn-md rounded-0 u-btn-primary" >Order Now</button>
+                                    <button class="btn btn-md rounded-0 u-btn-primary" disabled>Order Now</button>
                                 </div>
                             </article>
                             <!-- End Article -->
@@ -199,7 +199,7 @@
                                             Receive public and private event notifications in one or two channels
                                         </li>
                                     </ul>
-                                    <button class="btn btn-md rounded-0 u-btn-primary" >Order Now</button>
+                                    <button class="btn btn-md rounded-0 u-btn-primary" disabled>Order Now</button>
                                 </div>
                             </article>
                             <!-- End Article -->
