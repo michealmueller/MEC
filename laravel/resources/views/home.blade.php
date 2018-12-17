@@ -135,7 +135,7 @@
         <div class="shortcode-html">
             <div class="row align-items-center">
                 <div class="col-lg-5 text-center g-mb-40 g-mb-0--lg g-pr-60--lg">
-                    <img class="g-width-250--lg mx-auto g-mb-30" src="/assets/images/Bot_Preview.png" alt="Image Description">
+                    <img class="g-mb-30" width="320" src="/assets/images/Bot_Preview.png" alt="Image Description">
                     <blockquote class="u-blockquote-v3 g-font-size-16 g-mb-20">Custom built Discord bot to make your life easier, no more cross posting in multiple discords to get your event traction.</blockquote>
                 </div>
 

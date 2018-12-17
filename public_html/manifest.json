@@ -1,12 +1,12 @@
 {
-  "short_name": "M.E.C",
-  "name": "Multi-Organization Event Calendar",
+  "short_name": "CitWar",
+  "name": "CitizenWarfare",
   "icons": [
     {
-      "src": "favicon.ico",
-      "type": "image/ico",
+      "src": "/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png",
+      "type": "image/png",
       "sizes": "192x192"
-    },
+    }
   ],
   "start_url": "/login",
   "background_color": "#3367D6",

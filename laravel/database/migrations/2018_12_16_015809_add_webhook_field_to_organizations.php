@@ -14,7 +14,10 @@ class AddWebhookFieldToOrganizations extends Migration
     public function up()
     {
         //
-        Schema::table('organizations', function(Blueprint $table){
+        Schema::create('discordbot', function(Blueprint $table){
+            $table->increments('id')->unique();
+            $table->integer('organization_id')->unique();
+            $table->string('organization_name')->unique();
             $table->string('public_webhook_url')->nullable();
             $table->string('private_webhook_url')->nullable();
             $table->string('public_channel_id')->nullable();
