@@ -15,7 +15,10 @@ class AddWebhookFieldToOrganizations extends Migration
     {
         //
         Schema::table('organizations', function(Blueprint $table){
-            $table->string('webhook_url')->nullable();
+            $table->string('public_webhook_url')->nullable();
+            $table->string('private_webhook_url')->nullable();
+            $table->string('public_channel_id')->nullable();
+            $table->string('private_channel_id')->nullable();
         });
     }
 

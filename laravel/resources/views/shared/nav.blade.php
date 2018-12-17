@@ -14,46 +14,9 @@
                 <!-- End Responsive Toggle Button -->
                 <!-- Logo -->
                 @if(Route::current()->getName() != 'home')
-                    <a class="navbar-brand text-uppercase" href="/"><img height="80" src="/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png"></a>
+                    <a class="navbar-brand text-uppercase" href="/"><img height="50" src="/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png"></a>
                 @endif
                 <!-- End Logo -->
-
-                <!-- Navigation --
-                <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--sm" id="navBar">
-                    <ul class="navbar-nav text-uppercase g-font-weight-600 mx-auto">
-                        <li class="nav-item g-mx-25--lg">
-                            <a href="#!" class="nav-link px-0">Home
-
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg">
-                            <a href="#!" class="nav-link px-0">Features
-
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg active">
-                            <a href="#!" class="nav-link px-0">Shortcodes
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg">
-                            <a href="#!" class="nav-link px-0">Pages
-
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg">
-                            <a href="#!" class="nav-link px-0">Demos
-
-                            </a>
-                        </li>
-                        <li class="nav-item g-mx-25--lg g-mr-0--lg">
-                            <a href="#!" class="nav-link px-0">What's New
-
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- End Navigation -->
 
                 @if(Auth::check())
                     <div class="collapse navbar-collapse two" id="navBar">

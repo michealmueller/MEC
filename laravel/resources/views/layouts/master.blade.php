@@ -254,8 +254,15 @@
     <script>
         function ajaxRequest(url, element=0, type, data=0)
         {
-            if (element != 0) {
-                $('#' + element).html('Generating!');
+            switch(element){
+                case 'refHash':
+                    $('#' + element).html('Generating!');
+                    break;
+                case 'bot':
+                    $('#'+element).val('Adding');
+                    break;
+                case 'save':
+                    $('#'+element).html('Saved');
             }
             $.ajax({
                 headers: {
@@ -266,8 +273,10 @@
                 data: {'id' : data}, // a JSON object to send back
                 success: function(response) { // What to do if we succeed
                     $('#' + response.selector).html(response.replaceText);
-                    if (type == 'ref'){
-                        $('#' + response.selector + '2').html(response.replaceText);
+                    switch (type) {
+                        case 'ref':
+                            $('#' + response.selector + '2').html(response.replaceText);
+                            break;
                     }
                     $.notify({
                         message: response.notificationMsg,

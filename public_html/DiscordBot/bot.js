@@ -1,7 +1,30 @@
-const Discord = require('discord.js')
-const client = new Discord.Client();
-const Guild = new Discord.Guild();
-const keys = require('./vars');
+const Discord = require('discord.js');
+const botSettings = require('./botSettings');
+const fs = require('fs');
+
+const client = new Discord.Client({disableEveryone:true});
+const mysql = require('mysql');
+const prefix = botSettings.prefix;
+
+client.commands = new Discord.Collection();
+
+fs.readdir('./commands/', (err, files) =>{
+    if(err) console.error(err);
+
+    let jsfiles = files.filter(f => f.split(".").pop() === 'js');
+    if(jsfiles.length <= 0){
+        console.log('there are no files!');
+        return;
+    }
+
+    console.log(`Loading ${jsfiles.length} commands.`);
+
+    jsfiles.forEach((f,i) =>{
+       let props = require(`./commands/${f}`);
+       console.log(`${i + 1}: ${f} loaded!`);
+       client.commands.set(props.help.name, props);
+    });
+});
 
 let myChannelPublic;
 let myChannelPrivate;
@@ -12,139 +35,50 @@ let privateWebhookToken;
 let publicWebHook;
 let privateWebHook;
 let numEventChans;
+let organizationID;
+let con;
+
 
 client.on('ready', () => {
-    console.log("Connected as " + client.user.tag)
+    console.log("Connected as " + client.user.tag);
+
+    con = mysql.createConnection({
+        host:botSettings.dbhost,
+        user:botSettings.dbuser,
+        password:botSettings.dbpass,
+        database:botSettings.dbdatabase
+    });
+
+    con.connect(err => {
+        if (err) throw err;
+        console.log("Connected to DB");
+    });
 });
 
-client.login(keys.token); // Replace XXXXX with your bot token
+client.login(botSettings.token); // Replace XXXXX with your bot token
 
 
-client.on('message', (receivedMessage) => {
-    if (receivedMessage.content.startsWith("!")) {
-        processCommand(receivedMessage)
+client.on('message', (receivedMessage)=> {
+    if(receivedMessage.author.bot) return;
+    if(receivedMessage.channel.type === 'dm') return;
+
+    let messageArray = receivedMessage.content.split(/\s+/g);
+    let command = messageArray[0];
+    let args = messageArray.slice(1);
+
+    if(!command.startsWith(prefix)) return;
+
+    if(command === 'set-organization'){
+        setOrganization(client, receivedMessage, args);
+        return;
     }
+
+    let cmd = client.commands.get(command.slice(prefix.length));
+    if(cmd) cmd.run(client, receivedMessage, args, con);
+    //console.log('this is bot.js!');
+    //console.log(client.organizationID);
+
 });
-
-function processCommand(receivedMessage) {
-    let fullCommand = receivedMessage.content.substr(1); // Remove the leading exclamation mark
-    let splitCommand = fullCommand.split(" "); // Split the message up in to pieces for each space
-    let primaryCommand = splitCommand[0]; // The first word directly after the exclamation is the command
-    let args = splitCommand.slice(1); // All other words are args/parameters/options for the command
-
-    //console.log("Command received: " + primaryCommand);
-    //console.log("Arguments: " + args); // There may not be any args
-
-    switch(primaryCommand){
-        case 'help':
-            helpCommand(args, receivedMessage);
-            break;
-        case 'setup':
-            setupCommand(args, receivedMessage);
-            break;
-        case 'set-channel':
-            setchannelCommand(args, receivedMessage, myChannelPublic, myChannelPrivate);
-            break;
-        case 'test':
-            testCommand(WebhookToken, WebhookID, myChannel);
-            break;
-        default:
-            receivedMessage.channel.send("I don't understand the command. Try `!help``")
-    }
-}
-
-
-function helpCommand(args, receivedMessage)
-{
-    if (arguments.length > 0) {
-        receivedMessage.channel.send("It looks like you might need help with " + arguments)
-    } else {
-        receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
-    }
-}
-
-function setupCommand(args, receivedMessage)
-{
-    if(args <= 0) {
-        receivedMessage.channel.send('Thank you for using CitizenWarfare Bot, Your Premier Event Assistant!!');
-        receivedMessage.channel.send('Do you want to split the events up into public and private? this will require 2 channels.');
-        receivedMessage.channel.send('The first channel will be the public events and the second will be private events.');
-        receivedMessage.channel.send('private channels are generally used for inner organization events, those that you would not want other orgs to see / know about.')
-        receivedMessage.channel.send('use !setup 1 or !setup 2, 1 for a single event channel or 2 for dual event channels.');
-        if (args) {
-            if (args == '1') {
-                numEventChans = 1;
-            } else if (args == '2') {
-                numEventChans = 2;
-            } else if (args >= 3) {
-                receivedMessage.channel.send('you can only choose 1 or 2 at this time.')
-            }
-        }
-    }else if(args > 0) {
-//CHANNEL LISTING
-//first set the bots channel
-// List all channels
-        receivedMessage.channel.send('First lets specify what channels you want me to focus on, here is a list of the channels with there ID\'s, this may take a min.')
-        receivedMessage.guild.channels.forEach((channel) => {
-            if (channel.type === 'text') {
-                receivedMessage.channel.send(` -- ${channel.name} ${channel.id}`);
-            }
-        })
-        receivedMessage.channel.send('Please use the command "!set-channel {channel id} {channel id}" to inform me of your choice.');
-    }
-}
-
-function setchannelCommand(args, receivedMessage, myChannelPublic, myChannelPrivate)
-{
-    if (args.length > 2) {
-        receivedMessage.channel.send('Sorry, i can only use up to 2 channels.')
-    } else {
-        if(args.length > 1){
-            chans = {
-                "public":args[0],
-                "private": args[1]
-            }
-        }
-        receivedMessage.channel.send('Great!, so you want me to post in the channel with the id of ' + args +' all future messages will be in that / those channel(s).');
-//set the channel to use and send all messages there now .
-
-        myChannelPublic = client.channels.get(`${args[0]}`);
-        myChannelPrivate = client.channels.get(`${args[1]}`);
-        myChannelPublic.send('I\'m Over here now ! :D');
-        myChannelPrivate.send('And here now ! :D');
-        myChannelPublic.send('so now that we have established my home. lets set the webhook up so that i can start being useful!');
-        myChannelPublic.send('this one is easy, all i need is a single command. type !webhook-setup');
-    }
-//WEBHOOK SETUP
-    if(receivedMessage.channel.id == myChannelPublic.id || receivedMessage.channel.id == myChannelPrivate.id){
-// This will create the webhook with the name "Example Webhook" and an example avatar.
-        myChannelPublic.createWebhook("CitizenWarfare Public Event", "https://i.imgur.com/p2qNFag.png")
-        // This will actually set the webhooks avatar, as mentioned at the start of the guide.
-            .then(webhook => webhook.edit("M.E.C Public Event", "https://i.imgur.com/p2qNFag.png")
-            // This will get the bot to DM you the webhook
-                .then(wb => {
-                    myChannelPublic.messages.get(myChannelPublic.lastMessageID).author.send(`DO NOT MAKE THIS LINK PUBLIC!, Here is your Public Events webhook https://canary.discordapp.com/api/webhooks/${wb.id}/${wb.token}`)
-                    publicWebhookID = wb.id;
-                    publicWebhookToken = wb.token;
-                    myChannelPublic.messages.get(myChannelPublic.lastMessageID).author.send('Now that we have this webhook, what i need you to do is copy the link and set this in your profile on https://events.citizenwarfare.com/profile')
-                })
-                .catch(console.error));
-//private setup
-        myChannelPrivate.createWebhook("CitizenWarfare Private Event", "https://i.imgur.com/p2qNFag.png")
-        // This will actually set the webhooks avatar, as mentioned at the start of the guide.
-            .then(webhook => webhook.edit("M.E.C Private Event", "https://i.imgur.com/p2qNFag.png")
-            // This will get the bot to DM you the webhook
-                .then(wb => {
-                    myChannelPrivate.messages.get(myChannelPrivate.lastMessageID).author.send(`DO NOT MAKE THIS LINK PUBLIC!, Here is your Private Events webhook https://canary.discordapp.com/api/webhooks/${wb.id}/${wb.token}`)
-                    privateWebhookID = wb.id;
-                    privateWebhookToken = wb.token;
-                    myChannelPrivate.messages.get(myChannelPrivate.lastMessageID).author.send('Now that we have this webhook, what i need you to do is copy the link and set this in your profile on https://events.citizenwarfare.com/profile')
-                })
-                .catch(console.error));
-        publicWebHook  = new Discord.WebhookClient(publicWebhookID, publicWebhookToken);
-        privateWebHook  = new Discord.WebhookClient(privateWebhookID, privateWebhookToken);
-    }
-}
 
 function testCommand(args, WebhookToken, WebhookID)
 {

@@ -131,43 +131,84 @@
 
     <section class="container g-pt-100 g-pb-10 ">
 
-        <div class="row justify-content-center text-center g-mb-50">
-            <div class="col-lg-9">
-                <h1 class="h2 g-color-white g-font-weight-600 mb-2">CountDown To CitizenCon 20<span class="g-color-primary">49</span></h1>
-                <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+
+        <div class="shortcode-html">
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center g-mb-40 g-mb-0--lg g-pr-60--lg">
+                    <img class="g-width-250--lg mx-auto g-mb-30" src="/assets/images/Bot_Preview.png" alt="Image Description">
+                    <blockquote class="u-blockquote-v3 g-font-size-16 g-mb-20">Custom built Discord bot to make your life easier, no more cross posting in multiple discords to get your event traction.</blockquote>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row no-gutters align-items-center justify-content-center">
+                        <div class="col-md-6 g-mb-30 g-z-index-2">
+                            <!-- Article -->
+                            <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
+                                <div class="g-bg-gray-light-v5 g-px-15 g-py-50">
+                                    <!-- Article Title -->
+                                    <h4 class="text-uppercase g-color-gray-dark-v3 g-font-weight-500 g-mb-10">Yearly</h4>
+                                    <!-- End Article Title -->
+                                    <!--<em class="g-font-style-normal">Yearly</em>-->
+
+                                    <hr class="g-brd-gray-light-v4 g-my-20">
+
+                                    <div class="g-color-primary g-my-30">
+                                        <strong class="d-block g-font-size-30 g-line-height-1_2">$21.00</strong> per Year <small>@ $1.75/Month</small>
+                                    </div>
+
+                                    <hr class="g-brd-gray-light-v4 g-mt-20 g-mb-10">
+
+                                    <ul class="list-unstyled g-mb-25">
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">CitizenWarfare Bot Presence in Discord.</li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            <b>99.9%</b> Uptime
+                                        </li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            Receive public and private event notifications in one or two channels
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-md rounded-0 u-btn-primary" >Order Now</button>
+                                </div>
+                            </article>
+                            <!-- End Article -->
+                        </div>
+
+                        <div class="col-md-6 g-mb-30">
+                            <!-- Article -->
+                            <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
+                                <div class="g-bg-gray-light-v5 g-pa-30">
+                                    <!-- Article Title -->
+                                    <h4 class="text-uppercase g-color-gray-dark-v3 g-font-weight-500 g-mb-10">Monthly</h4>
+                                    <!-- End Article Title -->
+                                    <!--<em class="g-font-style-normal">Ed feugiat porttitor nunc, non</em>-->
+
+                                    <hr class="g-brd-gray-light-v4 g-my-10">
+
+                                    <div class="g-color-primary g-my-20">
+                                        <strong class="d-block g-font-size-30 g-line-height-1_2">$2.00</strong> per month
+                                    </div>
+
+                                    <hr class="g-brd-gray-light-v4 g-mt-10 mb-0">
+
+                                    <ul class="list-unstyled g-mb-25">
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">CitizenWarfare Bot Presence in Discord.</li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            <b>99.9%</b> Uptime
+                                        </li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            Receive public and private event notifications in one or two channels
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-md rounded-0 u-btn-primary" >Order Now</button>
+                                </div>
+                            </article>
+                            <!-- End Article -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="js-countdown u-countdown-v1 text-center text-uppercase g-color-white g-line-height-1" data-end-date="2019/10/10 10:00" data-month-format="%m" data-days-format="%d" data-hours-format="%H" data-minutes-format="%M" data-seconds-format="%S">
-            <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
-                <div class="js-cd-month g-font-weight-700 g-font-size-40"></div>
-                <hr class="g-brd-white-opacity-0_5 my-2">
-                <span class="g-font-size-12">Month</span>
-            </div>
 
-            <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
-                <div class="js-cd-days g-font-weight-700 g-font-size-40"></div>
-                <hr class="g-brd-white-opacity-0_5 my-2">
-                <span class="g-font-size-12">Days</span>
-            </div>
-
-            <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
-                <div class="js-cd-hours g-font-weight-700 g-font-size-40"></div>
-                <hr class="g-brd-white-opacity-0_5 my-2">
-                <span class="g-font-size-12">Hours</span>
-            </div>
-
-            <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
-                <div class="js-cd-minutes g-font-weight-700 g-font-size-40"></div>
-                <hr class="g-brd-white-opacity-0_5 my-2">
-                <span class="g-font-size-12">Minutes</span>
-            </div>
-
-            <div class="d-inline-block g-bg-black g-brd-around g-brd-black g-pa-20 g-mx-15 g-mb-30">
-                <div class="js-cd-seconds g-font-weight-700 g-font-size-40"></div>
-                <hr class="g-brd-white-opacity-0_5 my-2">
-                <span class="g-color-white g-font-size-12">Seconds</span>
-            </div>
-        </div>
     </section>
 
 

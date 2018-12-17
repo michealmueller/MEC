@@ -23,7 +23,7 @@
 
                 <!-- Footer Content -->
                 <div class="col-lg-3 g-mt-15--md">
-                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20 ">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Useful Links</h2>
                     </div>
                     <nav class="text-uppercase1">
@@ -46,11 +46,11 @@
 
                 <!-- Footer Content -->
                 <div class="col-lg-3 g-mt-15--md">
-                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
+                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20 ">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Our Contacts</h2>
                     </div>
 
-                    <address class="g-bg-no-repeat g-font-size-12 mb-0" style="height: 100%; background-image: url('/assets/maps/map2.png');">
+                    <address class="g-bg-no-repeat g-font-size-12 g-mb-50 " style="height: 100%; background-image: url('/assets/maps/map2.png');">
                         <!-- Location -->
                         <div class="d-flex g-mb-20">
                             <div class="g-mr-10">
@@ -69,7 +69,7 @@
                         <!-- End Phone -->
 
                         <!-- Email and Website -->
-                        <div class="d-flex g-mb-20">
+                        <div class="d-flex g-mb-20 g-ml-50--sm">
                             <div class="g-mr-10">
                               <span class="u-icon-v3 u-icon-size--xs g-bg-white-opacity-0_1 g-color-white-opacity-0_6">
                                 <i class="fa fa-globe"></i>
@@ -77,8 +77,6 @@
                             </div>
                             <p class="mb-0">
                                 <a class="g-color-white-opacity-0_8 g-color-white--hover" href="mailto:support@citizenwarfare.com">support@citizenwarfare.com</a>
-                                <br>
-                                <a class="g-color-white-opacity-0_8 g-color-white--hover" href="https://muellertek.com">www.Muellertek.com</a>
                             </p>
                         </div>
                         <!-- End Email and Website -->

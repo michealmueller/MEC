@@ -1,10 +1,11 @@
 {
-  "name": "MEC-Bot",
+  "name": "CitizenWarfare Bot",
   "version": "1.0.0",
   "description": "Event Notification Assistant",
   "main": "bot.js",
   "author": "Arthmael",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "mysql": "^2.16.0"
   }
 }

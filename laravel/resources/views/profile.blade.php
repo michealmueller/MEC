@@ -51,9 +51,9 @@
                     <li class="nav-item">
                         <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Generate Ref. Code</a>
                     </li>
-                    <!--<li class="nav-item">
-                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Discord Bot</a>
-                    </li>-->
+                    <li class="nav-item">
+                        <a href="" data-target="#discord" data-toggle="tab" class="nav-link">Discord Bot</a>
+                    </li>
                     @endif
                 </ul>
                 <div class="tab-content py-4">
@@ -295,7 +295,53 @@
                                 <div class="col-lg-2 order-lg-1 text-center"></div>
                             </div>
                     </div>
-                        <!--<div class="tab-pane" id="edit"></div>-->
+                    <div class="tab-pane" id="discord">
+                        <ul>
+                            <li>#1: Click on Add Bot, to add the bot to your discord.</li>
+                            <li>#2: once the bot is in your Discord, follow these steps
+                                <ul>
+                                    <li>Type !setup and follow the instructions.</li>
+                                </ul>
+                            </li>
+                            <li>#3: when you get the DM with a link copy that link and past it here.</li>
+                        </ul>
+
+                        <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <h3>Coming Soon!</h3>
+                                        <!--<a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889344&scope=bot" target="_blank">Add Bot</a>-->
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
+
+                                <!--<hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
+
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <h4>Discord Links</h4>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="public_webhook_url">Public Link</label>
+                                        <input name="public_webhook_url" type="text" class="form-control" value="{{ $user->organization->public_webhook_url }}" disabled>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="private_webhook_url">Private Link</label>
+                                        <input name="private_webhook_url" type="text" class="form-control" value="{{ $user->organization->public_webhook_url }}" disabled>
+                                    </div>
+                                </div>
+                                <button id="save" class="btn btn-primary btn-block" name="save" onclick="ajaxRequest('/profile/save/hook', 'save')" disabled>Save</button>-->
+                            </div>
+                        </div>
+                    </div>
                     @endif
                 </div>
             </div>
