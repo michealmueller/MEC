@@ -24,13 +24,14 @@ module.exports.run = (client, receivedMessage, args, con) =>{
             myChannelPrivate.send('And here now ! :D');
         }}
 //WEBHOOK SETUP
-    if(receivedMessage.channel.id.toString() === myChannelPublic.id.toString()){
+    if(receivedMessage.channel.id == myChannelPublic.id){
 // This will create the webhook with the name "Example Webhook" and an example avatar.
         myChannelPublic.createWebhook("CitizenWarfare Public Event", "https://i.imgur.com/p2qNFag.png")
         // This will actually set the webhooks avatar, as mentioned at the start of the guide.
-            .then(webhook => webhook.edit("M.E.C Public Event", "https://i.imgur.com/p2qNFag.png")
+            .then(webhook => webhook.edit("CitizenWarfare Public Event", "https://i.imgur.com/p2qNFag.png")
             // This will get the bot to DM you the webhook
                 .then(wb => {
+                    console.log(client.organizationID);
                     //save pub and private channels along with webhooks
                     sql_pubchan = (`UPDATE organizations SET public_channel_id = '${args[0]}' WHERE id = '${client.organizationID}'`);
 
@@ -55,7 +56,7 @@ module.exports.run = (client, receivedMessage, args, con) =>{
     if(args.length === 2 && receivedMessage.channel.id === myChannelPrivate.id){
         myChannelPrivate.createWebhook("CitizenWarfare Private Event", "https://i.imgur.com/p2qNFag.png")
         // This will actually set the webhooks avatar, as mentioned at the start of the guide.
-            .then(webhook => webhook.edit("M.E.C Private Event", "https://i.imgur.com/p2qNFag.png")
+            .then(webhook => webhook.edit("CitizenWarfare Private Event", "https://i.imgur.com/p2qNFag.png")
             // This will get the bot to DM you the webhook
                 .then(wb => {
                     sql_privchan = (`UPDATE organizations SET private_channel_id = '${args[1]}'`);
