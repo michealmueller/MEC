@@ -166,7 +166,7 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 
                     $result = curl_exec($ch);
-                    dd($ch, $hook, $request->radGroup1_2, $data, $result, curl_error($ch));
+
                     curl_close($ch);
                 }
                 if ($result) {
