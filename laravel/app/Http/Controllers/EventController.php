@@ -150,12 +150,12 @@ class EventController extends Controller
                     ],
                 ],
             ];
-            dd($hook, $request->radGroup1_2, $data);
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
+
                 if(isset($ch)) {
                     $data = json_encode($data);
-
+dd($ch, $hook, $request->radGroup1_2, $data);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
