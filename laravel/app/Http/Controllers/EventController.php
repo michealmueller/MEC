@@ -150,7 +150,7 @@ class EventController extends Controller
                     ],
                 ],
             ];
-//dd($request, $data, json_encode($data));
+//
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
 
@@ -164,7 +164,7 @@ class EventController extends Controller
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     $result = curl_exec($ch);
-
+                    dd($request, $data, json_encode($data), curl_error($ch));
                     curl_close($ch);
                 }
                 if ($result) {
