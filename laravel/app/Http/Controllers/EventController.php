@@ -12,11 +12,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
+use App\Organization;
+
 class EventController extends Controller
 {
 
     private $data;
     private $rss;
+    private $org;
     /**
      * Create a new controller instance.
      *
@@ -28,6 +31,7 @@ class EventController extends Controller
             'timezonedata' => self::getTimeZone(),
             'eventData' => self::getEventInfo(),
         ];
+        $this->org = new Organization;
 
     }
 
@@ -67,6 +71,7 @@ class EventController extends Controller
 
     public function updateEvent(Request $request, $eventID)
     {
+
         $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']->time_zone->name);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
@@ -83,9 +88,93 @@ class EventController extends Controller
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
         $event->creator = Auth::id();
+        if($request->radGroup1_2 == 0){
+            $event->private = 0;
+        }
 
-        $event->update();
+        $save = $event->update();
+        //determine if it public or private, then send it to the webhook.
 
+        if($save) {
+            //get webhook url
+            session()->put('success', 'Event Created!');
+
+            if($request->radGroup1_2 == 0) {
+                $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
+            }
+            elseif($request->radGroup1_2 == 1){
+                $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
+            }
+//dd($hook);
+            $data = [
+                'username' => 'CitizenWarfare-New Public Event',
+                'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
+                'content' => 'A new public event has been posted.',
+                'embeds' =>[
+                    [
+                        'author' =>[
+                            'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
+                            'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
+                            'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            ],
+                        'title' => $request->title,
+                        'url' => 'https://events.citizenwarfare.com/view/event/' . $eventID,
+                        'description' => '',
+                        'color' => hexdec($request->borderColor),
+                        'fields' =>[
+                                [
+                                        'name' => 'Start Date',
+                                        'value' => $request->start_date,
+                                        'inline' => true,
+                                    ],
+                                [
+                                        'name' => 'End Date',
+                                        'value' => $request->end_date,
+                                        'inline' => true,
+                                    ],
+                                [
+                                        'name' => 'Desc',
+                                        'value' => $request->comments,
+                                    ],
+                            ],
+                        'thumbnail' =>
+                        [
+                                'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            ],
+                        'image' =>
+                        [
+                                'url' => 'https://dto9r5vaiz7bu.cloudfront.net/xc7ywq3c0bsnj/tavern_upload_medium.jpg',
+                            ],
+                        'footer' =>
+                        [
+                                'text' => 'Please Consider Donating! --> https://paypal.me/muellertek/',
+                            ],
+                    ],
+                ],
+            ];
+
+            if($hook != '' || $hook != null) {
+                $ch = curl_init($hook);
+                if(isset($ch)) {
+                    $data = json_encode($data);
+
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
+
+                    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+
+                    $result = curl_exec($ch);
+                    curl_close($ch);
+                }
+                if ($result) {
+                    session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
+                }
+            }
+        }
         return redirect('/view/event/'.$eventID);
     }
 
@@ -119,6 +208,83 @@ class EventController extends Controller
         $save = $event->save();
         if($save) {
             session()->put('success', 'Event Created!');
+            //determine if it public or private, then send it to the webhook.
+//get webhook url
+            if($request->radGroup1_2 == 0) {
+                $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
+            }
+            elseif($request->radGroup1_2 == 1){
+                $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
+            }
+
+            $data = [
+                'username' => 'CitizenWarfare-New Public Event',
+                'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
+                'content' => 'A new public event has been posted.',
+                'embeds' =>[
+                    [
+                        'author' =>[
+                            'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
+                            'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
+                            'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                        ],
+                        'title' => $request->title,
+                        'url' => 'https://events.citizenwarfare.com/view/event/' . $event->id,
+                        'description' => '',
+                        'color' => hexdec($request->borderColor),
+                        'fields' =>[
+                            [
+                                'name' => 'Start Date',
+                                'value' => $request->start_date,
+                                'inline' => true,
+                            ],
+                            [
+                                'name' => 'End Date',
+                                'value' => $request->end_date,
+                                'inline' => true,
+                            ],
+                            [
+                                'name' => 'Desc',
+                                'value' => $request->comments,
+                            ],
+                        ],
+                        'thumbnail' =>
+                            [
+                                'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            ],
+                        'image' =>
+                            [
+                                'url' => 'https://dto9r5vaiz7bu.cloudfront.net/xc7ywq3c0bsnj/tavern_upload_medium.jpg',
+                            ],
+                        'footer' =>
+                            [
+                                'text' => 'Please Consider Donating! --> https://paypal.me/muellertek/',
+                            ],
+                    ],
+                ],
+            ];
+
+            if($hook != '' || $hook != null) {
+                $ch = curl_init($hook);
+                if(isset($ch)) {
+                    $data = json_encode($data);
+
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
+
+                    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+
+                    $result = curl_exec($ch);
+                    curl_close($ch);
+                }
+                if ($result) {
+                    session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
+                }
+            }
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
 

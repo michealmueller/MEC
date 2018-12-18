@@ -90,23 +90,23 @@
                                 <textarea class="form-control" id="content" name="comments"></textarea>
                             </div>
                         </div>
-                        <!--<div class="form-group row g-mb-25">
+                        <div class="form-group row g-mb-25">
                             <label for="example-text-input" class="col-2 col-form-label">Customize</label>
                             <div class="col-10">
                                 <div class="form-group row g-mb-25">
                                     <label for="example-text-input" class="col-2 col-form-label">Border Color</label>
                                     <input class="form-control rounded-0" type="color" value="#563d7c" name="borderColor" style="width: 50%;"><br>
                                 </div>
-                                <div class="form-group row g-mb-25">
+                        <!--        <div class="form-group row g-mb-25">
                                     <label for="example-text-input" class="col-2 col-form-label">Text Color</label>
                                     <input class="form-control rounded-0" type="color" value="#563d7c" name="textColor" style="width: 50%;"><br>
                                 </div>
                                 <div class="form-group row g-mb-25">
                                     <label for="example-text-input" class="col-2 col-form-label">Background Color</label>
                                     <input class="form-control rounded-0" type="color" value="#563d7c" name="backgroundColor" style="width: 50%;"><br>
-                                </div>
+                                </div>-->
                             </div>
-                        </div>-->
+                        </div>
                         <div class="form-group row g-mb-25">
                             <!-- Left Column -->
                             <label for="example-text-input" class="col-2 col-form-label">Make this event Public or Private?</label>

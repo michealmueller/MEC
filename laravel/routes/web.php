@@ -59,7 +59,5 @@ Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 
 Route::get('find', 'SearchController@find');
-
-Route::get('/bot/discord', 'HomeController@discord');
 //event view routes.
 

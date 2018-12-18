@@ -313,8 +313,7 @@
                                 <div class="row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
-                                        <h3>Coming Soon!</h3>
-                                        <!--<a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889344&scope=bot" target="_blank">Add Bot</a>-->
+                                        <a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889344&scope=bot" target="_blank">Add Bot</a>
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>
