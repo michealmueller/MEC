@@ -53,9 +53,11 @@ class EventController extends Controller
     public function viewEvent($eventId)
     {
         //$this->data['user'] = Auth::user();
-        $eventSingle = Event::whereId($eventId)->get();
+        $eventSingle = Event::whereId($eventId)->get()->first();
 
-        return view('viewEvent')->with( 'eventData',$eventSingle[0]);
+        //$eventSingle = str_replace('\r\n', "\r\n", $eventSingle);
+
+        return view('viewEvent')->with( 'eventData',$eventSingle);
     }
 
     public function editEvent($eventId)
@@ -71,9 +73,6 @@ class EventController extends Controller
 
     public function updateEvent(Request $request, $eventID)
     {
-//dd($request);
-        $comments = str_replace("\r\n","\\r\\n",$request->comments);
-
         $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']->time_zone->name);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
@@ -85,7 +84,7 @@ class EventController extends Controller
         $event->start_date = $start_date->setTimezone('UTC');
         $event->end_date = $end_date->setTimezone('UTC');
         $event->brief_url = $request->brief;
-        $event->comments = $comments;
+        $event->comments = $request->comments;
         $event->backgroundColor = $request->backgroundColor;
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
@@ -134,7 +133,7 @@ class EventController extends Controller
                             ],
                             [
                                 'name' => 'Desc',
-                                'value' => $comments,
+                                'value' => $request->comments,
                             ],
                         ],
                         'thumbnail' =>
@@ -152,8 +151,7 @@ class EventController extends Controller
                     ],
                 ],
             ];
-
-
+            dd(json_encode($data));
 
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
@@ -188,8 +186,6 @@ class EventController extends Controller
     public function createEvent(Request $request)
     {
 
-        $comments = str_replace("\r\n","\\r\\n",$request->comments);
-
         //get the users timezone and convert it to UTC then save to DB.
         $timezoneDTZ = new \DateTimeZone($request->timezone);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
@@ -200,7 +196,7 @@ class EventController extends Controller
         $event->start_date = $start_date->setTimezone('UTC');
         $event->end_date = $end_date->setTimezone('UTC');
         $event->brief_url = $request->brief;
-        $event->comments = $comments;
+        $event->comments = $request->comments;
         $event->backgroundColor = $request->backgroundColor;
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
@@ -249,7 +245,7 @@ class EventController extends Controller
                             ],
                             [
                                 'name' => 'Desc',
-                                'value' => $comments,
+                                'value' => $request->comments,
                             ],
                         ],
                         'thumbnail' =>
