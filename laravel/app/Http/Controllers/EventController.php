@@ -71,7 +71,7 @@ class EventController extends Controller
 
     public function updateEvent(Request $request, $eventID)
     {
-
+//dd($request);
         $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']->time_zone->name);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
@@ -150,6 +150,7 @@ class EventController extends Controller
                     ],
                 ],
             ];
+dd($request, $data);
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
 
@@ -162,9 +163,6 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-
                     $result = curl_exec($ch);
 
                     curl_close($ch);
