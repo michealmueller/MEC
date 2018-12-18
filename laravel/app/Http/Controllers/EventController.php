@@ -164,11 +164,11 @@ class EventController extends Controller
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     $result = curl_exec($ch);
-                    dd($request, $data, json_encode($data), curl_error($ch));
-                    curl_close($ch);
+
                 }
                 if ($result) {
                     session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
+                    curl_close($ch);
                 }
             }
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
@@ -277,10 +277,11 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 
                     $result = curl_exec($ch);
-                    curl_close($ch);
+
                 }
                 if ($result) {
                     session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
+                    curl_close($ch);
                 }
             }
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
