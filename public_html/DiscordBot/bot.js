@@ -8,13 +8,13 @@ const mysql = require('mysql');
 const prefix = botSettings.prefix;
 
 client.commands = new Discord.Collection();
-
+/*
 fs.readdir('./commands/', (err, files) =>{
     if(err) console.error(err);
 
     let jsfiles = files.filter(f => f.split(".").pop() === 'js');
     if(jsfiles.length <= 0){
-        console.log(Format('yyyy-MM-dd',new Date()) + ' there are no files!');
+        console.log(Format('yy-MM-dd hh:mm',new Date()) + ' there are no files!');
         return;
     }
 
@@ -22,16 +22,16 @@ fs.readdir('./commands/', (err, files) =>{
 
     jsfiles.forEach((f,i) =>{
        let props = require(`./commands/${f}`);
-       console.log(Format('yyyy-MM-dd',new Date()) + ` ${i + 1}: ${f} loaded!`);
+       console.log(Format('yy-MM-dd hh:mm',new Date()) + ` ${i + 1}: ${f} loaded!`);
        client.commands.set(props.help.name, props);
     });
 });
-
+*/
 let con;
 
 
 client.on('ready', () => {
-    console.log(Format('yyyy-MM-dd',new Date()) + " Connected as " + client.user.tag);
+    console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Connected as ${client.user.tag}`);
 });
 
 client.login(botSettings.token); // Replace XXXXX with your bot token
@@ -49,9 +49,9 @@ client.on('message', async (receivedMessage)=> {
 
     let cmd = client.commands.get(command.slice(prefix.length));
     if(cmd){
-        console.log(`${Format('yyyy-MM-dd',new Date())}: Starting command ${cmd[0]}`);
+        console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Starting command ${cmd[0]}`);
         await cmd.run(client, receivedMessage, args, con);
-        console.log(`${Format('yyyy-MM-dd',new Date())}: finished command ${cmd}`);
+        console.log(`${Format('yy-MM-dd hh:mm',new Date())}: finished command ${cmd}`);
     }*/
 
     if (receivedMessage.content.startsWith("!")) {
@@ -86,12 +86,10 @@ function processCommand(receivedMessage) {
 
 async function setupCommand(client, receivedMessage, args, con)
 {
-    const Format = require('date-format');
     if(args.length === 2){
         receivedMessage.guild.channels.forEach((channel) => {
             if(channel.name === args[0]){
                 client.channelID = channel.id;
-                console.log(client.channelID);
             }
         });
     }else if(args.length === 3){
@@ -118,10 +116,10 @@ async function setupCommand(client, receivedMessage, args, con)
         });
         con.connect(err => {
             if (err) throw err;
-            console.log(Format('yyyy-MM-dd',new Date()) + " Connected to DB");
+            console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Connected to DB`);
         });
 
-        console.log(`${Format('yyyy-MM-dd',new Date())}: Do not panic this may take a second, check your event channel(s)`);
+        console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Do not panic this may take a second, check your event channel(s)`);
         await receivedMessage.channel.send('Do not panic this may take a second, check your event channel(s) :wink:');
         if (args.length === 2){
             //TODO::handle organization first then hooks.
@@ -140,7 +138,9 @@ async function setupCommand(client, receivedMessage, args, con)
                             resolve(result[0].id);
                         }
                     });
-                }).catch(console.error());
+                }).catch(err =>{
+                    throw new Error(`Bigf error -- ${err}`)
+                });
 
             }
 
@@ -160,31 +160,33 @@ async function setupCommand(client, receivedMessage, args, con)
                                     if (err){
                                         reject(err);
                                     } else{
-                                        resolve(' Added Organization to DB.')
+                                        resolve(`${Format('yy-MM-dd hh:mm',new Date())}: Added Organization to DB.`)
                                     }
                                 });
                             }else{
-                                console.log(`${Format('yyyy-MM-dd',new Date())} this organization has already been added! Org name => ${org}`);
+                                console.log(`${Format('yy-MM-dd hh:mm',new Date())} this organization has already been added! Org name => ${org}`);
                                 receivedMessage.channel.send('You have already ran this command and your information has been saved.');
                             }
                         }
                     });
-                }).catch(console.error());
+                }).catch(err =>{
+                    throw new Error(`Bigf error -- ${err}`)
+                });
             }
 
-            let orgId = await getData().catch(`${Format('yyyy-MM-dd',new Date())}: there was an error FETCHING the data!`);
+            let orgId = await getData().catch(`${Format('yy-MM-dd hh:mm',new Date())}: there was an error FETCHING the data!`);
             if(orgId.err){
-                console.log(`${Format('yyyy-MM-dd',new Date())} : `+console.error);
+                console.log(`${Format('yy-MM-dd hh:mm',new Date())} : `+console.error);
             }else{
-                saved = await saveData(orgId).catch(`${Format('yyyy-MM-dd',new Date())}: there was an error SAVING the data!`);
+                saved = await saveData(orgId).catch(`${Format('yy-MM-dd hh:mm',new Date())}: there was an error SAVING the data!`);
                 client.orgID = orgId;
             }
 
-            console.log(`${Format('yyyy-MM-dd',new Date())}:${saved}`);
+            console.log(`${Format('yy-MM-dd hh:mm',new Date())}:${saved}`);
 //TODO::1 channel and org name
 //TODO::now hanndle the channel id and hooks.
 
-            myChannelPublic = client.channels.get(`${args[0]}`);
+            myChannelPublic = client.channels.get(`${client.channelID}`);
             myChannelPublic.send('I\'m Over here now ! :D');
             myChannelPublic.send('so now that we have established my home. You are DONE!! i will keep an eye on the events and inform you of a new event!');
             //myChannelPublic.send('this one is easy, all i need is a single command. type !webhook-setup');
@@ -200,12 +202,14 @@ async function setupCommand(client, receivedMessage, args, con)
 
                         con.query(sql_pub, err => {
                             if (err) throw err;
-                            console.log(`${Format('yyyy-MM-dd',new Date())}: Updated Public Channel ID and WebHook`)
+                            console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Updated Public Channel ID and WebHook`)
                         });
 
                     })
-                    .catch(console.error));
-            con.end();
+                    .catch(err =>{
+                        throw new Error(err);
+                    }));
+            //con.end();
         }
         else if (args.length === 3){
             //TODO::handle organization first then hooks.
@@ -224,7 +228,9 @@ async function setupCommand(client, receivedMessage, args, con)
                             resolve(result[0].id);
                         }
                     });
-                }).catch(console.error());
+                }).catch(err =>{
+                    throw new Error(`Bigf error -- ${err}`)
+                });
 
             }
 
@@ -248,28 +254,35 @@ async function setupCommand(client, receivedMessage, args, con)
                                     }
                                 });
                             }else{
-                                console.log(`${Format('yyyy-MM-dd',new Date())} this organization has already been added! Org name => ${org}`);
+                                console.log(`${Format('yy-MM-dd hh:mm',new Date())} this organization has already been added! Org name => ${org}`);
                                 receivedMessage.channel.send('You have already ran this command and your information has been saved.');
                             }
                         }
                         //client.orgID = result[0].id;
                     });
-                }).catch(console.error());
+                }).catch(err =>{
+                    throw new Error(`Bigf error -- ${err}`)
+                });
             }
 
-            let orgId = await getData().catch(`${Format('yyyy-MM-dd',new Date())}: there was an error FETCHING the data!`);
+            let orgId = await getData().catch(`${Format('yy-MM-dd hh:mm',new Date())}: there was an error FETCHING the data!`);
             if(orgId.err){
-                console.log(`${Format('yyyy-MM-dd',new Date())} : `+console.error);
+                console.log(`${Format('yy-MM-dd hh:mm',new Date())} : `+console.error);
             }else{
-                saved = await saveData(orgId).catch(`${Format('yyyy-MM-dd',new Date())}: there was an error SAVING the data!`);
+                await saveData(orgId).then(saved =>{
+                    console.log(`${Format('yy-MM-dd hh:mm',new Date())}:${saved}`)
+                }).catch(err =>{
+                    `${Format('yy-MM-dd hh:mm',new Date())}: there was an error SAVING the data! -- ${err}`;
+                    throw new Error(err);
+                });
                 client.orgID = orgId;
             }
 
-            console.log(`${Format('yyyy-MM-dd',new Date())}:${saved}`);
+            ;
 
 //TODO::2 channels and org name
 //TODO:: public channel setup first
-            myChannelPublic = client.channels.get(`${args[0]}`);
+            myChannelPublic = client.channels.get(`${client.channelID}`);
             myChannelPublic.send('I\'m Over here now ! :D');
             myChannelPublic.send('so now that we have established my home. You are DONE!! i will keep an eye on the events and post when there is an public event!');
             //myChannelPublic.send('this one is easy, all i need is a single command. type !webhook-setup');
@@ -288,13 +301,13 @@ async function setupCommand(client, receivedMessage, args, con)
 
                         con.query(sql_pub, err => {
                             if (err) throw err;
-                            console.log(`${Format('yyyy-MM-dd',new Date())}: Updated Public Channel ID and WebHook`)
+                            console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Updated Public Channel ID and WebHook`)
                         });
 
                     })
                     .catch(console.error));
 //TODO::now the private.
-            myChannelPrivate = client.channels.get(`${args[1]}`);
+            myChannelPrivate = client.channels.get(`${client.channel2ID}`);
             myChannelPrivate.send('And here now ! :D');
             myChannelPrivate.send('I will also keep an eye on private events and post them here!');
 
@@ -308,19 +321,19 @@ async function setupCommand(client, receivedMessage, args, con)
 
                         con.query(sql_priv, err => {
                             if (err) throw err;
-                            console.log(`${Format('yyyy-MM-dd',new Date())}: Updated Private Channel ID and WebHook`)
+                            console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Updated Private Channel ID and WebHook`)
                         });
                     })
                     .catch(err => {
                         console.log(err.stack);
                     }));
-            con.end();
+            //con.end();
         }
         else{
             receivedMessage.channel.send('you gave to many parameters.')
         }
     }else{
-        console.log(`${Format('yyyy-MM-dd',new Date())} : no args???`);
+        console.log(`${Format('yy-MM-dd hh:mm',new Date())} : no args???`);
         receivedMessage.channel.send('something is wrong!')
     }
 }
