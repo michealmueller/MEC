@@ -93,19 +93,17 @@ class EventController extends Controller
         }
 
         $save = $event->update();
-        //determine if it public or private, then send it to the webhook.
-
         if($save) {
-            //get webhook url
             session()->put('success', 'Event Created!');
-
+            //determine if it public or private, then send it to the webhook.
+//get webhook url
             if($request->radGroup1_2 == 0) {
                 $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
             }
             elseif($request->radGroup1_2 == 1){
                 $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
             }
-//dd($hook);
+
             $data = [
                 'username' => 'CitizenWarfare-New Public Event',
                 'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
@@ -116,37 +114,37 @@ class EventController extends Controller
                             'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
                             'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
                             'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
-                            ],
+                        ],
                         'title' => $request->title,
-                        'url' => 'https://events.citizenwarfare.com/view/event/' . $eventID,
+                        'url' => 'https://events.citizenwarfare.com/view/event/' . $event->id,
                         'description' => '',
                         'color' => hexdec($request->borderColor),
                         'fields' =>[
-                                [
-                                        'name' => 'Start Date',
-                                        'value' => $request->start_date,
-                                        'inline' => true,
-                                    ],
-                                [
-                                        'name' => 'End Date',
-                                        'value' => $request->end_date,
-                                        'inline' => true,
-                                    ],
-                                [
-                                        'name' => 'Desc',
-                                        'value' => $request->comments,
-                                    ],
+                            [
+                                'name' => 'Start Date',
+                                'value' => $request->start_date,
+                                'inline' => true,
                             ],
+                            [
+                                'name' => 'End Date',
+                                'value' => $request->end_date,
+                                'inline' => true,
+                            ],
+                            [
+                                'name' => 'Desc',
+                                'value' => $request->comments,
+                            ],
+                        ],
                         'thumbnail' =>
-                        [
+                            [
                                 'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/'.$this->org->findorfail(Auth::user()->organization_id)->org_logo,
                             ],
                         'image' =>
-                        [
+                            [
                                 'url' => 'https://dto9r5vaiz7bu.cloudfront.net/xc7ywq3c0bsnj/tavern_upload_medium.jpg',
                             ],
                         'footer' =>
-                        [
+                            [
                                 'text' => 'Please Consider Donating! --> https://paypal.me/muellertek/',
                             ],
                     ],
@@ -174,6 +172,7 @@ class EventController extends Controller
                     session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
                 }
             }
+            return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
         return redirect('/view/event/'.$eventID);
     }
