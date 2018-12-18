@@ -72,6 +72,8 @@ class EventController extends Controller
     public function updateEvent(Request $request, $eventID)
     {
 //dd($request);
+        $comments = str_replace("\r\n","\\r\\n",$request->comments);
+
         $timezoneDTZ = new \DateTimeZone($this->data['timezonedata']->time_zone->name);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
         $end_date = Carbon::parse($request->end_date, $timezoneDTZ);
@@ -83,7 +85,7 @@ class EventController extends Controller
         $event->start_date = $start_date->setTimezone('UTC');
         $event->end_date = $end_date->setTimezone('UTC');
         $event->brief_url = $request->brief;
-        $event->comments = $request->comments;
+        $event->comments = $comments;
         $event->backgroundColor = $request->backgroundColor;
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
@@ -132,7 +134,7 @@ class EventController extends Controller
                             ],
                             [
                                 'name' => 'Desc',
-                                'value' => $request->comments,
+                                'value' => $comments,
                             ],
                         ],
                         'thumbnail' =>
@@ -150,7 +152,9 @@ class EventController extends Controller
                     ],
                 ],
             ];
-//
+
+
+
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
 
@@ -184,6 +188,8 @@ class EventController extends Controller
     public function createEvent(Request $request)
     {
 
+        $comments = str_replace("\r\n","\\r\\n",$request->comments);
+
         //get the users timezone and convert it to UTC then save to DB.
         $timezoneDTZ = new \DateTimeZone($request->timezone);
         $start_date = Carbon::parse($request->start_date, $timezoneDTZ);
@@ -194,7 +200,7 @@ class EventController extends Controller
         $event->start_date = $start_date->setTimezone('UTC');
         $event->end_date = $end_date->setTimezone('UTC');
         $event->brief_url = $request->brief;
-        $event->comments = $request->comments;
+        $event->comments = $comments;
         $event->backgroundColor = $request->backgroundColor;
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
@@ -243,7 +249,7 @@ class EventController extends Controller
                             ],
                             [
                                 'name' => 'Desc',
-                                'value' => $request->comments,
+                                'value' => $comments,
                             ],
                         ],
                         'thumbnail' =>
