@@ -89,6 +89,7 @@ async function setupCommand(client, receivedMessage, args, con)
     if(args.length === 2){
         receivedMessage.guild.channels.forEach((channel) => {
             if(channel.name === args[0]){
+
                 client.channelID = channel.id;
             }
         });
@@ -119,9 +120,8 @@ async function setupCommand(client, receivedMessage, args, con)
             console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Connected to DB`);
         });
 
-        console.log(`${Format('yy-MM-dd hh:mm',new Date())}: Do not panic this may take a second, check your event channel(s)`);
-        await receivedMessage.channel.send('Do not panic this may take a second, check your event channel(s) :wink:');
         if (args.length === 2){
+            await receivedMessage.channel.send('Do not panic this may take a second, check your event channel(s) :wink:');
             //TODO::handle organization first then hooks.
             async function getData()
             {
@@ -212,6 +212,7 @@ async function setupCommand(client, receivedMessage, args, con)
             //con.end();
         }
         else if (args.length === 3){
+            await receivedMessage.channel.send('Do not panic this may take a second, check your event channel(s) :wink:');
             //TODO::handle organization first then hooks.
             async function getData()
             {
@@ -277,8 +278,6 @@ async function setupCommand(client, receivedMessage, args, con)
                 });
                 client.orgID = orgId;
             }
-
-            ;
 
 //TODO::2 channels and org name
 //TODO:: public channel setup first

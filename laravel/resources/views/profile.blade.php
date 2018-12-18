@@ -301,6 +301,7 @@
                             <li>#2: once the bot is in your Discord, follow these steps
                                 <ul>
                                     <li>Type !setup and follow the instructions.</li>
+                                    <li>Example: !setup publicChan privateChan </li>
                                 </ul>
                             </li>
                             <li>#3: when you get the DM with a link copy that link and past it here.</li>
