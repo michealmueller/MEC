@@ -103,7 +103,7 @@ class EventController extends Controller
             elseif($request->radGroup1_2 == 1){
                 $hook = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
             }
-dd($hook, $request->radGroup1_2);
+
             $data = [
                 'username' => 'CitizenWarfare-New Public Event',
                 'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
@@ -150,7 +150,7 @@ dd($hook, $request->radGroup1_2);
                     ],
                 ],
             ];
-
+            dd($hook, $request->radGroup1_2, $data);
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
                 if(isset($ch)) {
