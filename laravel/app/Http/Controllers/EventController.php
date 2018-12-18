@@ -150,7 +150,7 @@ class EventController extends Controller
                     ],
                 ],
             ];
-dd($request, $data, json_encode($data));
+//dd($request, $data, json_encode($data));
             if($hook != '' || $hook != null) {
                 $ch = curl_init($hook);
 
