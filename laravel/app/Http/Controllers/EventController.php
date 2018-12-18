@@ -122,12 +122,12 @@ class EventController extends Controller
                         'fields' =>[
                             [
                                 'name' => 'Start Date',
-                                'value' => Carbon::parse($request->start_date)->format('Y-m-d H:i:s'),
+                                'value' => Carbon::parse($request->start_date)->format('Y-m-d H:i:s').' UTC',
                                 'inline' => true,
                             ],
                             [
                                 'name' => 'End Date',
-                                'value' => Carbon::parse($request->end_date)->format('Y-m-d H:i:s'),
+                                'value' => Carbon::parse($request->end_date)->format('Y-m-d H:i:s').' UTC',
                                 'inline' => true,
                             ],
                             [
