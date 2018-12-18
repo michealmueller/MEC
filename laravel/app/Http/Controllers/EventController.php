@@ -160,7 +160,7 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
+                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json'));
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     $result = curl_exec($ch);
@@ -168,7 +168,7 @@ class EventController extends Controller
                 }
                 if ($result) {
                     session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
-                    curl_close($ch);
+                    //curl_close($ch);
                 }
             }
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
@@ -270,7 +270,7 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
+                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json'));
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
@@ -281,7 +281,7 @@ class EventController extends Controller
                 }
                 if ($result) {
                     session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
-                    curl_close($ch);
+                    //curl_close($ch);
                 }
             }
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
