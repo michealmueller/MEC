@@ -158,12 +158,12 @@ class EventController extends Controller
                 if(isset($ch)) {
                     $data = json_encode($data);
 
-                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                    curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
                     curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data)));
 
-                    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 
@@ -279,7 +279,6 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 
                     $result = curl_exec($ch);
-                    dd($result, $ch, curl_error($ch));
                     curl_close($ch);
                 }
                 if ($result) {
