@@ -95,7 +95,7 @@
                             <div class="col-10">
                                 <div class="form-group row g-mb-25">
                                     <label for="example-text-input" class="col-2 col-form-label">Border Color</label>
-                                    <input class="form-control rounded-0" type="color" value="#563d7c" name="borderColor" style="width: 50%;"><br>
+                                    <input class="form-control rounded-0" type="color" value="{{ $eventData->borderColor }}" name="borderColor" style="width: 50%;"><br>
                                 </div>
                                 <!--        <div class="form-group row g-mb-25">
                                             <label for="example-text-input" class="col-2 col-form-label">Text Color</label>
