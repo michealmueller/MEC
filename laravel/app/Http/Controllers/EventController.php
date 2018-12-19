@@ -165,7 +165,7 @@ class EventController extends Controller
 
         $ch = curl_init();
         //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
-        $endpoint = 'http://api.timezonedb.com/v2.1/get-time-zone?key=GVTHQ0CIN7EL&format=json&by=ip&ip='.$ip.'&fields=zoneName';
+        $endpoint = 'http://www.geoplugin.net/json.gp?ip='.$ip;
         //dd($endpoint, $ch);
 
         curl_setopt($ch, CURLOPT_URL, $endpoint);
@@ -177,15 +177,14 @@ class EventController extends Controller
         ));
 
         $response = curl_exec($ch);
-        dd(json_decode($response), $ip);
+
         curl_close($ch);
-/*
-        if($response == false && isset($_GET['timezone'])){
-            session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
+        if($response == true){
+            //session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
             $response = collect([
                     'data' =>(object)[
                         'time_zone' => (object) [
-                            'name' => $_GET['timezone']
+                            'name' => json_decode($response)->geoplugin_timezone
                         ]
                     ]
                 ]
@@ -203,7 +202,7 @@ class EventController extends Controller
                 ]
             );
             return $response['data'];
-        }*/
+        }
         return json_decode($response);
     }
 
