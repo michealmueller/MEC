@@ -207,6 +207,7 @@ class EventController extends Controller
 
     public function pushToBot($request, $eventType, $eventId, $start, $end)
     {
+
         //get the orgs that have been shared
         $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
 //dd($share);
@@ -217,14 +218,18 @@ class EventController extends Controller
         foreach ($ids as $org){
                 //get hook url
             if ($eventType == 0) {
-                $hooks[] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
+                $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
+                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
             } elseif ($eventType == 1) {
-                $hooks[] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
+                $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
+                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
             }
         }
+        //add self to hooks list
 
+        //dd($share, $ids, $hooks);
         $data = [
-            'username' => 'CitizenWarfare-New Public Event',
+            'username' => 'CitizenWarfare-New Event',
             'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
             'content' => 'A new event has been posted.',
             'embeds' => [
@@ -270,22 +275,34 @@ class EventController extends Controller
             ],
         ];
 
-        foreach($hooks as $hook) {
-            if ($hook != '' || $hook != null) {
-                $ch = curl_init($hook);
+        $data = json_encode($data);
+        foreach($hooks as $k=>$v) {
+
+            if ($v != '' || $v != null) {
+                $ch = curl_init($v);
 
                 if (isset($ch)) {
-                    $data = json_encode($data);
-
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json'));
+                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json Content-Length: '.strlen($data)));
 
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    $result = curl_exec($ch);
-
+                    $result[$k] = curl_exec($ch);
                 }
+                if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 200){
+                    if(curl_error($ch)) {
+                        $result[$k]['error'] = curl_error($ch);
+                    }
+                    abort('404','There was an issue with Curl, I could not send the data to Discord, please contact support at support@citizenwarfare.com');
+                }
+
+            }
+        }
+        //dd($result, $hooks);
+        foreach($result as $k=>$v){
+            if($v){
+                dd($v);
             }
         }
         if ($result) {

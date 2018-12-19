@@ -3,6 +3,7 @@ module.exports.run = async (client, receivedMessage, args, con) =>{
     const Discord = require('discord.js');
     const Format = require('date-format');
     const mysql = require('mysql');
+
     let botSettings = require('../botSettings');
     if(args.length === 2){
         receivedMessage.guild.channels.forEach((channel) => {

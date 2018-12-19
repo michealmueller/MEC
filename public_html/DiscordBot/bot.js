@@ -36,6 +36,8 @@ client.on('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(`${Format('yy-MM-dd hh:mm',new Date())}: ${guild.name}`);
     })
+
+
 });
 
 client.login(botSettings.token); // Replace XXXXX with your bot token

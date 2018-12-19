@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="Moved bot commands to seperate files for cleaner look, fixed incorrect conversion of event times.">
+    <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public_html/DiscordBot/Controllers/DiscordPushController" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/DiscordBot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/DiscordBot/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,13 +181,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="92" />
-          <entry key="Blade" value="14069" />
+          <entry key="Blade" value="14168" />
           <entry key="CSS" value="63" />
           <entry key="Git file" value="48" />
           <entry key="HTML" value="10" />
           <entry key="JSON" value="279" />
-          <entry key="JavaScript" value="19608" />
-          <entry key="PHP" value="15472" />
+          <entry key="JavaScript" value="19681" />
+          <entry key="PHP" value="16532" />
           <entry key="PLAIN_TEXT" value="863" />
           <entry key="SQL" value="20" />
           <entry key="Scratch" value="181" />
@@ -196,13 +201,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="8" />
-          <entry key="Blade" value="73" />
+          <entry key="Blade" value="74" />
           <entry key="CSS" value="15" />
-          <entry key="Database Element" value="80" />
+          <entry key="Database Element" value="82" />
           <entry key="Git file" value="7" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="25" />
+          <entry key="JavaScript" value="26" />
           <entry key="PHP" value="140" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="10" />
@@ -243,14 +248,23 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4263914">
+    <splitter split-orientation="horizontal" split-proportion="0.42055655">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3808">
-                  <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
+                <state relative-caret-position="272">
+                  <caret line="190" selection-start-line="190" selection-end-line="190" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/discordbot">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -258,7 +272,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Organization.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1156">
+                <state relative-caret-position="850">
                   <caret line="69" selection-start-line="69" selection-end-line="69" />
                 </state>
               </provider>
@@ -269,24 +283,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="173">
                   <caret line="240" column="60" selection-start-line="240" selection-start-column="60" selection-end-line="240" selection-end-column="60" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="39" column="83" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/editEvent.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1530">
-                  <caret line="95" column="68" selection-start-line="95" selection-start-column="68" selection-end-line="95" selection-end-column="68" />
                 </state>
               </provider>
             </entry>
@@ -303,12 +299,21 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="50" selection-start-line="50" selection-end-line="50" />
+                <state relative-caret-position="255">
+                  <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
                   <folding>
                     <element signature="e#364#880#0" />
                     <element signature="n#!!block;n#processCommand#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/Controllers/DiscordPushController">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="16" selection-start-column="16" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -323,10 +328,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/laravel/.gitignore">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+                <state relative-caret-position="615">
+                  <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/shared">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -351,8 +365,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="251" column="47" selection-start-line="251" selection-start-column="47" selection-end-line="251" selection-end-column="47" />
+                <state relative-caret-position="442">
+                  <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
                 </state>
               </provider>
             </entry>
@@ -360,8 +374,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="48" />
+                <state relative-caret-position="17">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -369,8 +383,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/help.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+                <state relative-caret-position="323">
+                  <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -408,29 +422,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/botSettings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+                <state relative-caret-position="119">
+                  <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public_html/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="229">
-                  <caret line="216" column="31" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="31" />
+                <state relative-caret-position="343">
+                  <caret line="284" column="54" lean-forward="true" selection-start-line="284" selection-start-column="54" selection-end-line="284" selection-end-column="54" />
                   <folding>
                     <element signature="e#40#53#0#PHP" expanded="true" />
                     <element signature="e#4323#4487#0#PHP" />
@@ -526,8 +531,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/app/Events/NewRegistration.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Listeners/NewUserListener.php" />
         <option value="$PROJECT_DIR$/laravel/app/Mail/VerificationEmail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
@@ -569,14 +572,16 @@
         <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/public_html/DiscordBot/commands/test.js" />
-        <option value="$PROJECT_DIR$/public_html/DiscordBot/bot.js" />
         <option value="$PROJECT_DIR$/public_html/DiscordBot/commands/help.js" />
-        <option value="$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
-        <option value="$PROJECT_DIR$/public_html/DiscordBot/botSettings.js" />
-        <option value="$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js" />
         <option value="$PROJECT_DIR$/laravel/.gitignore" />
         <option value="$PROJECT_DIR$/public_html/DiscordBot/botSettings.json" />
+        <option value="$PROJECT_DIR$/public_html/DiscordBot/botSettings.js" />
+        <option value="$PROJECT_DIR$/public_html/DiscordBot/bot.js" />
+        <option value="$PROJECT_DIR$/public_html/DiscordBot/Controllers/DiscordPushController" />
+        <option value="$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js" />
+        <option value="$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
       </list>
     </option>
   </component>
@@ -708,6 +713,13 @@
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="DiscordBot" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MEC" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -734,14 +746,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profile.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;home.blade&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;Kern&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Kernel.php&#10;providerre&#9;null&#9;null&#10;view&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Providers/ViewServiceProvider.php&#10;app.ph&#9;FILE&#9;file://D:/Work Projects/Event/laravel/config/app.php&#10;admincontroller&#9;null&#9;null&#10;user&#9;null&#9;null&#10;regi&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;custom.c&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/custom.css&#10;Event&#9;null&#9;null&#10;registersuser&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/OrganizationController.php&#10;USEr&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profile.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;home.blade&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;Kern&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Kernel.php&#10;providerre&#9;null&#9;null&#10;view&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Providers/ViewServiceProvider.php&#10;app.ph&#9;FILE&#9;file://D:/Work Projects/Event/laravel/config/app.php&#10;admincontroller&#9;null&#9;null&#10;user&#9;null&#9;null&#10;regi&#9;null&#9;null&#10;mast&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/layouts/master.blade.php&#10;custom.c&#9;FILE&#9;file://D:/Work Projects/Event/public_html/assets/css/custom.css&#10;Event&#9;null&#9;null&#10;registersuser&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work Projects/Event/laravel/resources/views/shared/nav.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work Projects/Event/laravel/app/Http/Controllers/OrganizationController.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/public_html/DiscordBot/vars.js&#10;D:/Work/MEC/laravel/vendor/maddhatter/laravel-fullcalendar/src/views/script.blade.php&#10;D:/Work Projects/Event/laravel/vendor/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/public_html/DiscordBot/vars.js&#10;D:/Work/MEC/laravel/vendor/maddhatter/laravel-fullcalendar/src/views/script.blade.php&#10;D:/Work Projects/Event/laravel/vendor/maddhatter/laravel-fullcalendar/src/MaddHatter/LaravelFullcalendar/Calendar.php&#10;D:/Work/MEC/public_html/DiscordBot/botSettings.js" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.14.2" />
@@ -880,14 +892,7 @@
       <workItem from="1545160693730" duration="12446000" />
       <workItem from="1545179726129" duration="533000" />
       <workItem from="1545183609219" duration="2795000" />
-      <workItem from="1545224990208" duration="7721000" />
-    </task>
-    <task id="LOCAL-00126" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.">
-      <created>1544808119591</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1544808119591</updated>
+      <workItem from="1545224990208" duration="15314000" />
     </task>
     <task id="LOCAL-00127" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.">
       <created>1544812472347</created>
@@ -1225,17 +1230,24 @@
       <option name="project" value="LOCAL" />
       <updated>1545232799946</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Moved bot commands to seperate files for cleaner look, fixed incorrect conversion of event times.">
+      <created>1545233514646</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1545233514646</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="713475000" />
+    <option name="totallyTimeSpent" value="721068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11446741" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11446741" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1323,16 +1335,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Moved bot commands to seperate files for cleaner look, fixed incorrect conversion of event times." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/storage/app/logos/Citizen_Warfare_Logo_White.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1480,38 +1482,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/discordbot">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/organizations">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/shared">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3808">
-          <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Organization.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
@@ -1556,20 +1530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="240" column="60" selection-start-line="240" selection-start-column="60" selection-end-line="240" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/help.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1598,48 +1558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+    <entry file="file://$PROJECT_DIR$/public_html/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="216" column="31" selection-start-line="216" selection-start-column="31" selection-end-line="216" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-            <element signature="e#4323#4487#0#PHP" />
-            <element signature="e#4493#4597#0#PHP" />
-            <element signature="e#4603#6594#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#364#880#0" />
-            <element signature="n#!!block;n#processCommand#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="251" column="47" selection-start-line="251" selection-start-column="47" selection-end-line="251" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1650,10 +1572,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/.gitignore">
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/botSettings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/bot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="e#364#880#0" />
+            <element signature="n#!!block;n#processCommand#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/Class/mysql.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/Controllers/DiscordPushController">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="240" column="60" selection-start-line="240" selection-start-column="60" selection-end-line="240" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Organization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/commands/setup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1667,10 +1649,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/DiscordBot/botSettings.js">
+    <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/discordbot">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/shared">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="615">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="284" column="54" lean-forward="true" selection-start-line="284" selection-start-column="54" selection-end-line="284" selection-end-column="54" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#4323#4487#0#PHP" />
+            <element signature="e#4493#4597#0#PHP" />
+            <element signature="e#4603#6594#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
