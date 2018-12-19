@@ -164,8 +164,8 @@ class EventController extends Controller
 //dd($ip);
 
         $ch = curl_init();
-        $endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
-        //$endpoint = 'https://timezoneapi.io/api/ip/?token=';
+        //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
+        $endpoint = 'http://api.timezonedb.com/v2.1/get-time-zone?key=GVTHQ0CIN7EL&format=json&by=ip&ip='.$ip.'&fields=zoneName';
         //dd($endpoint, $ch);
 
         curl_setopt($ch, CURLOPT_URL, $endpoint);
@@ -176,9 +176,10 @@ class EventController extends Controller
             "Accept: application/json"
         ));
 
-        json_encode($response = curl_exec($ch));
+        $response = curl_exec($ch);
+        dd(json_decode($response), $ip);
         curl_close($ch);
-
+/*
         if($response == false && isset($_GET['timezone'])){
             session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
             $response = collect([
@@ -202,7 +203,7 @@ class EventController extends Controller
                 ]
             );
             return $response['data'];
-        }
+        }*/
         return json_decode($response);
     }
 
