@@ -290,19 +290,14 @@ class EventController extends Controller
                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                     $result[$k] = curl_exec($ch);
                 }
-                if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 200){
+                if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
+                    //dd($result, $hooks);
                     if(curl_error($ch)) {
                         $result[$k]['error'] = curl_error($ch);
                     }
                     abort('404','There was an issue with Curl, I could not send the data to Discord, please contact support at support@citizenwarfare.com');
                 }
 
-            }
-        }
-        //dd($result, $hooks);
-        foreach($result as $k=>$v){
-            if($v){
-                dd($v);
             }
         }
         if ($result) {
