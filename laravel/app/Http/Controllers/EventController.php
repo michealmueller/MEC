@@ -189,6 +189,7 @@ class EventController extends Controller
                     ]
                 ]
             );
+            session()->put('timezone', json_decode($response)->geoplugin_timezone);
             return $response['data'];
 
         }elseif($response == false && !isset($_GET['timezone'])){

@@ -463,7 +463,7 @@ class ViewServiceProvider extends ServiceProvider
 
         //set the timezone in the session
 
-        session()->put('timezone', $this->data['timezonedata']->time_zone->name);
+        //session()->put('timezone', $this->data['timezonedata']->time_zone->name);
 
         //remove outdated public events
         $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
