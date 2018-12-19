@@ -1,6 +1,6 @@
 module.exports = {
-    token : 'NTIyODg1NjcyMjQ4Mjc5MDQx.DvhA6Q.VrMdtEWlM0SW7q_CWJiEWFw72s4',
-    prefix:'!',
+    token : 'NTI0OTM2ODc1NjUyNDE1NDk5.DvvVTQ.yINN5fS6T0vOIBnLF3QYt_IGMLg',
+    prefix:'!!',
     dbhost:"localhost",
     dbuser:"admin_events",
     dbpass:"RUBwrJiyoN",

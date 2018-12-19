@@ -92,12 +92,11 @@ class EventController extends Controller
         if($request->radGroup1_2 == 0){
             $event->private = 0;
         }
-
         $save = $event->update();
         if($save) {
             session()->put('success', 'Event Created!');
 
-            $this->pushToBot($request, $request->radGroup1_2, $eventID);
+            $this->pushToBot($request, $request->radGroup1_2, $eventID, $start_date, $end_date);
 
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
@@ -134,7 +133,7 @@ class EventController extends Controller
         $save = $event->save();
         if($save) {
             session()->put('success', 'Event Created!');
-            $this->pushToBot($request, $request->radGroup1_2, $event->id);
+            $this->pushToBot($request, $request->radGroup1_2, $event->id, $start_date, $end_date);
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
 
@@ -156,7 +155,6 @@ class EventController extends Controller
 
     public function getTimeZone()
     {
-
         $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
         if($ip == '::1'){
             $ip = '71.60.23.77';
@@ -207,7 +205,7 @@ class EventController extends Controller
         return json_decode($response);
     }
 
-    public function pushToBot($request, $eventType, $eventId)
+    public function pushToBot($request, $eventType, $eventId, $start, $end)
     {
         //get the orgs that have been shared
         $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
@@ -243,12 +241,12 @@ class EventController extends Controller
                     'fields' => [
                         [
                             'name' => 'Start Date',
-                            'value' => Carbon::parse($request->start_date)->format('Y-m-d H:i:s') . ' UTC',
+                            'value' => $start->setTimezone('UTC')->format('Y-m-d H:i:s') . ' UTC',
                             'inline' => true,
                         ],
                         [
                             'name' => 'End Date',
-                            'value' => Carbon::parse($request->end_date)->format('Y-m-d H:i:s') . ' UTC',
+                            'value' => $end->setTimezone('UTC')->format('Y-m-d H:i:s') . ' UTC',
                             'inline' => true,
                         ],
                         [

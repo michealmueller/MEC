@@ -304,7 +304,7 @@
                                     <li>Example: !setup publicChan privateChan </li>
                                 </ul>
                             </li>
-                            <li>#3: when you get the DM with a link copy that link and past it here.</li>
+                            <li>#3: When the bot sends a message to the channel(s) you specified you are good to go!</li>
                         </ul>
 
                         <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
@@ -314,7 +314,7 @@
                                 <div class="row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
-                                        <a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889344&scope=bot" target="_blank">Add Bot</a>
+                                        <a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889360&scope=bot" target="_blank">Add Bot</a>
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>
