@@ -177,7 +177,7 @@ class EventController extends Controller
         ));
 
         $response = curl_exec($ch);
-
+        session()->put('timezone', json_decode($response)->geoplugin_timezone);
         curl_close($ch);
         if($response == true){
             //session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
@@ -189,7 +189,7 @@ class EventController extends Controller
                     ]
                 ]
             );
-            session()->put('timezone', json_decode($response)->geoplugin_timezone);
+
             return $response['data'];
 
         }elseif($response == false && !isset($_GET['timezone'])){
