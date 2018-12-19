@@ -220,14 +220,14 @@ class EventController extends Controller
             if ($eventType == 0) {
                 $hooks[] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
             } elseif ($eventType == 1) {
-                $hook[] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
+                $hooks[] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
             }
         }
 
         $data = [
             'username' => 'CitizenWarfare-New Public Event',
             'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
-            'content' => 'A new public event has been posted.',
+            'content' => 'A new event has been posted.',
             'embeds' => [
                 [
                     'author' => [
