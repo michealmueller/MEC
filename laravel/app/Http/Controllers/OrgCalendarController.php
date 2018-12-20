@@ -69,7 +69,7 @@ class OrgCalendarController extends Controller
 
                 //dd($date->settimezone('UTC'));
                 $events[] = Calendar::event(
-                    $value->title .' - ' . User::findOrFail($value->creator)->organization->org_name,
+                    $value->title ,
                     false,
                     new \DateTime($start_date),
                     new \DateTime($end_date),
@@ -91,8 +91,7 @@ class OrgCalendarController extends Controller
                 $(view.el[0]).find(".fc-day[data-date="+dateString+"]")
                 .css("background-image","url(/storage/app/org_logos/"+event.avatar+")")
                 .css("background-repeat","no-repeat")
-                .css("background-size", "100%")
-                .css("opacity",".5");
+                .css("background-size", "100%");
             }'
 
         ]);
