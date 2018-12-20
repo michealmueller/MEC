@@ -51,6 +51,14 @@ Route::group(['middleware'=>'auth'], function() {
         });
 
     Route::get('/request/{id}/{organization_id}/{user_id}', 'OrganizationController@requests');
+
+    Route::get('/subscription/new', 'SubscriptionController@index');
+    Route::post('/subscription/new/monthly', 'SubscriptionController@monthly')->name('subMonthly');
+    Route::post('/subscription/new/yearly', 'SubscriptionController@yearly')->name('subYearly');
+
+    Route::group(['middleware' => 'isSubscribed'], function(){
+        Route::get('/subscription/monthly/cancel', 'SubscriptionController@cancelSubscription');
+    });
 });
 Route::get('/join/ref/{refHash}', 'ReferenceController@verifyRefCode');
 Route::post('/join/ref/{refHash}', 'ReferenceController@registerToOrg');
@@ -61,3 +69,11 @@ Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 Route::get('find', 'SearchController@find');
 //event view routes.
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

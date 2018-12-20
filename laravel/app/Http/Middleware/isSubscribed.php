@@ -2,11 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use App\Admin;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class isAdmin
+class isSubscribed
 {
     /**
      * Handle an incoming request.
@@ -17,10 +16,10 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->isAdmin === 1){
+        if(Auth::user()->subscribed('prod_EBezTZOsApxwwb') || Auth::user()->subscribed('prod_EBaPJtFVdyzYel')){
             return $next($request);
         }
-        session()->put('error', 'Sorry you are not an Administrator');
-        return redirect('/');
+        session()->put('info', 'You do not have a subscription to cancel.');
+        return route('profile');
     }
 }

@@ -87,7 +87,7 @@
                         <div class="form-group row g-mb-25">
                             <label for="example-text-input" class="col-2 col-form-label">Description</label>
                             <div class="col-10">
-                                <textarea class="form-control text-center"  name="comments" rows="15" >{{ $eventData->comments }}</textarea>
+                                <textarea id="content" class="form-control text-center"  name="comments" rows="15" >{{ $eventData->comments }}</textarea>
                             </div>
                         </div>
                         <div class="form-group row g-mb-25">

@@ -161,13 +161,13 @@
                                     <ul class="list-unstyled g-mb-25">
                                         <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">CitizenWarfare Bot Presence in Discord.</li>
                                         <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
-                                            <b>99.9%</b> Uptime
-                                        </li>
-                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
                                             Receive public and private event notifications in one or two channels
                                         </li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            Development takes time, Adopt early for benifits down the road!, There is always More to <b>Come</b>
+                                        </li>
                                     </ul>
-                                    <button class="btn btn-md rounded-0 u-btn-primary" disabled>Order Now</button>
+                                    <a href="/subscription/new" class="btn btn-primary">Learn More</a>
                                 </div>
                             </article>
                             <!-- End Article -->
@@ -193,13 +193,13 @@
                                     <ul class="list-unstyled g-mb-25">
                                         <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">CitizenWarfare Bot Presence in Discord.</li>
                                         <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
-                                            <b>99.9%</b> Uptime
-                                        </li>
-                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
                                             Receive public and private event notifications in one or two channels
                                         </li>
+                                        <li class="g-brd-bottom g-brd-gray-light-v4 g-py-12">
+                                            Development takes time, Adopt early for benifits down the road!, There is always More to <b>Come</b>
+                                        </li>
                                     </ul>
-                                    <button class="btn btn-md rounded-0 u-btn-primary" disabled>Order Now</button>
+                                    <a href="/subscription/new" class="btn btn-primary">Learn More</a>
                                 </div>
                             </article>
                             <!-- End Article -->

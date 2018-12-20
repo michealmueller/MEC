@@ -85,9 +85,9 @@
                             </div>
                         </div>
                         <div class="form-group row g-mb-25">
-                            <label for="example-text-input" class="col-2 col-form-label">Description</label>
+                            <label for="example-text-input" class="col-2 col-form-label">Description<small><div id="textarea_feedback"></div></small></label>
                             <div class="col-10">
-                                <textarea class="form-control" id="content" name="comments"></textarea>
+                                <textarea maxlength="850" class="form-control" id="content" name="comments"></textarea>
                             </div>
                         </div>
                         <div class="form-group row g-mb-25">

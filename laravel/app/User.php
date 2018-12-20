@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Cashier\Billable;
 
 /**
  * App\User
@@ -45,6 +46,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    use Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -72,5 +74,10 @@ class User extends Authenticatable
     public function events()
     {
         return $this->belongsToMany(Event::class);
+    }
+
+    public function subed()
+    {
+        return $this->hasOne(Subscription::class);
     }
 }

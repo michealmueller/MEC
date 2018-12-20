@@ -35,7 +35,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Multi Organization Event Calendar</title>
+    <title>CitizenWarfare - Multi Organization Event Calendar</title>
 
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="manifest" href="/manifest.json">
@@ -88,6 +88,35 @@
         });
 
     </script>
+
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=yk0w5uo6s4e2mh0gs1q66i4kzwx60jwlw3wz762nkeoc7vau"></script>
+    <!--<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->
+    <script>
+       /* tinymce.init({
+            selector: '#content',
+            toolbar: [
+                'undo redo | styleselect | bold italic underline strikethrough | link image',
+                'alignleft aligncenter alignright'
+            ],
+            //plugins:wordcount,
+            //wordcount_countregex: /[\w\u2019\x27\-\u00C0-\u1FFF]+/g,
+            menubar:false
+        });*/
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var text_max = 800;
+            $('#textarea_feedback').html(text_max + ' characters remaining');
+
+            $('#content').keyup(function() {
+                var text_length = $('#content').val().length;
+                var text_remaining = text_max - text_length;
+
+                $('#textarea_feedback').html(text_remaining + ' characters remaining');
+            });
+        });
+    </script>
 </head>
 <body>
     <main>
@@ -138,8 +167,6 @@
     <script src="/assets/js/components/hs.tabs.js"></script>
     <script src="/assets/js/components/hs.counter.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
-    <script  src="/assets/vendor/jquery.countdown.min.js"></script>
-    <script  src="assets/js/components/hs.countdown.js"></script>
     <script src="/vendor/plyr/dist/plyr.js"></script>
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
@@ -158,25 +185,7 @@
 
             // initialization of tabs
             $.HSCore.components.HSTabs.init('[role="tablist"]');
-
-            // initialization of scroll animation
-            $.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
-
-            // initialization of go to
-            $.HSCore.components.HSGoTo.init('.js-go-to');
         });
-
-        /*$(document).on('ready', function () {
-            // initialization of countdowns
-            var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown', {
-                yearsElSelector: '.js-cd-years',
-                monthElSelector: '.js-cd-month',
-                daysElSelector: '.js-cd-days',
-                hoursElSelector: '.js-cd-hours',
-                minutesElSelector: '.js-cd-minutes',
-                secondsElSelector: '.js-cd-seconds'
-            });
-        });*/
     </script>
 
     <script >
@@ -961,7 +970,6 @@
         }(window, document));
 
     </script>
-
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}

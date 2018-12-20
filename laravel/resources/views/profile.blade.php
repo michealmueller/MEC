@@ -68,7 +68,7 @@
                                 @if($status['founder'])
                                     <span class="badge badge-danger"><i class="fa fa-user"></i> Founder</span>
                                 @endif
-                                @if($status['sub'])
+                                @if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel'))
                                     <span class="badge badge-primary"><i class="fa fa-money"></i> Subscriber</span>
                                 @endif
                             </div>
@@ -300,8 +300,18 @@
                             <li>#1: Click on Add Bot, to add the bot to your discord.</li>
                             <li>#2: once the bot is in your Discord, follow these steps
                                 <ul>
-                                    <li>Type !setup and follow the instructions.</li>
-                                    <li>Example: !setup publicChan privateChan </li>
+                                    <li>#2a. When the bot is added it creates a Role that only it can have, you need to set that role's permissions in the channel(s) you want the bot to announce in.</li>
+                                    <ul>
+                                        <li><b>At a minimum the bot needs these permissions</b></li>
+                                        <li>Send Messages</li>
+                                        <li>Read Messages</li>
+                                        <li>Manage Webhooks</li>
+                                        <li>Embed Links</li>
+                                    </ul>
+                                        <li>#2b. Type !setup and follow the instructions.</li>
+                                    <ul>
+                                        <li>Example: !setup publicChan privateChan </li>
+                                    </ul>
                                 </ul>
                             </li>
                             <li>#3: When the bot sends a message to the channel(s) you specified you are good to go!</li>
@@ -318,27 +328,6 @@
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>
-
-                                <!--<hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
-
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4">
-                                        <h4>Discord Links</h4>
-                                    </div>
-                                    <div class="col-md-4"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="public_webhook_url">Public Link</label>
-                                        <input name="public_webhook_url" type="text" class="form-control" value="{{ $user->organization->public_webhook_url }}" disabled>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="private_webhook_url">Private Link</label>
-                                        <input name="private_webhook_url" type="text" class="form-control" value="{{ $user->organization->public_webhook_url }}" disabled>
-                                    </div>
-                                </div>
-                                <button id="save" class="btn btn-primary btn-block" name="save" onclick="ajaxRequest('/profile/save/hook', 'save')" disabled>Save</button>-->
                             </div>
                         </div>
                     </div>
