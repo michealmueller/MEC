@@ -51,9 +51,11 @@
                     <li class="nav-item">
                         <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Generate Ref. Code</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#discord" data-toggle="tab" class="nav-link">Discord Bot</a>
-                    </li>
+                        @if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel'))
+                        <li class="nav-item">
+                            <a href="" data-target="#discord" data-toggle="tab" class="nav-link">Discord Bot</a>
+                        </li>
+                        @endif
                     @endif
                 </ul>
                 <div class="tab-content py-4">
@@ -295,6 +297,7 @@
                                 <div class="col-lg-2 order-lg-1 text-center"></div>
                             </div>
                     </div>
+                    @if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel'))
                     <div class="tab-pane" id="discord">
                         <ul>
                             <li>#1: Click on Add Bot, to add the bot to your discord.</li>
@@ -331,6 +334,7 @@
                             </div>
                         </div>
                     </div>
+                        @endif
                     @endif
                 </div>
             </div>
