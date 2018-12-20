@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\newUser;
 use App\User;
 use App\OrgCalendar;
 use App\Organization;
@@ -10,7 +11,6 @@ use App\Events\OrganizationRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -62,6 +62,7 @@ class RegisterController extends Controller
             'avatar' => 'required|image|mimes:jpeg,jpg,png,gif|max:1024',
             'username' => 'required|max:255|unique:users,username',
             'email' => 'required|email|max:255|unique:users,email',
+            'org_rsi_site' => 'required|url|unique:organizations,org_rsi_site',
             'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
 
@@ -108,18 +109,17 @@ class RegisterController extends Controller
         }else{
             $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
 
-            foreach($orgMembers as $member){
+            foreach($orgMembers as $member) {
                 //fire request event
-                $eventFired = event(new OrganizationRequest($member, $exists[0]));
+                event(new OrganizationRequest($member, $exists[0]));
+
             }
-
             session()->put('info', 'Your request to join this organization has been sent, Watch your email for more info.');
-
             $request = DB::table('requests')->insert([
-                'user_id' => $user->id,
-                'organization_id' => $exists[0]->id,
-                'created_at' => Carbon::now(),
-            ]);
+                    'user_id' => $user->id,
+                    'organization_id' => $exists[0]->id,
+                    'created_at' => Carbon::now(),
+                ]);
 
             return $user;
         }
@@ -143,8 +143,9 @@ class RegisterController extends Controller
                 'public' => 0,
             ]);
         }
-
-        Event::fire('NewRegistration', $user);
+//dd($user, Organization::findorfail($user->organization_id));
+        $user = User::findOrFail($user->id);
+        event(new newUser($user, $user->organization));
         return $user;
     }
 }

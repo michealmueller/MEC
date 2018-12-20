@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Organization;
 use App\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -11,27 +12,30 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class NewRegistration
+class newUser
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $user;
     public $organization;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($user, $organization)
+    public function __construct(User $user, Organization $organization)
     {
+        //
         $this->user = $user;
         $this->organization = $organization;
+
     }
 
     /**
      * Get the channels the event should broadcast on.
      *
-     * @return Channel|array
+     * @return \Illuminate\Broadcasting\Channel|array
      */
     public function broadcastOn()
     {

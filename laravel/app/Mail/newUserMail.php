@@ -9,19 +9,19 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class VerificationEmail extends Mailable
+class newUserMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $user;
+
     public $organization;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user, Organization $organization)
+    public function __construct(Organization $organization)
     {
-        $this->user = $user;
+        //
         $this->organization = $organization;
     }
 
@@ -32,6 +32,9 @@ class VerificationEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.activation')->with('user', $this->user)->with('organization', $this->organization);
+
+        return $this->from('support@citizenwarfare.com')
+                    ->markdown('emails.newUserEmail')
+                    ->with('user', $this->organization);
     }
 }

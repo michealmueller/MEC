@@ -16,6 +16,8 @@
                 <h1 class="h2 g-color-white g-font-weight-600 mb-2">CitizenWarfare Discord Bot</h1>
                 <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
                 <p class="lead mb-0">The Premier Star Citizen Event Notification Discord Bot</p>
+                <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+                <p class="lead mb-0">After payment is complete you will see a Discord Bot tab in your profile where you can add the bot to your server.</p>
             </div>
         </div>
 

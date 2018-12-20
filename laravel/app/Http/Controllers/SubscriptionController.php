@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Subscription;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,7 +38,7 @@ class SubscriptionController extends Controller
             session()->put('success', 'Thank you! You have subscribed!');
             return route('profile');
         }
-        dd($request, $user);
+        //dd($request, $user);
     }
 
     /**
@@ -49,6 +50,7 @@ class SubscriptionController extends Controller
     public function yearly(Request $request)
     {
         //
+        $endingDate = Carbon::now("+1 year");
         $user = Auth::user();
         if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel')){
             session()->put('error', 'You have an active subscription already!');
@@ -58,7 +60,8 @@ class SubscriptionController extends Controller
             session()->put('success', 'Thank you! You have subscribed!');
             return route('profile');
         }
-        dd($request, $user);
+
+        dd($endingDate);
     }
 
     /**
@@ -83,7 +86,7 @@ class SubscriptionController extends Controller
      * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function edit(Subscription $subscription)
+    public function getInvoice(Subscription $subscription)
     {
         //
     }

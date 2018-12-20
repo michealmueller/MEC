@@ -2,13 +2,15 @@
 
 namespace App\Listeners;
 
-use App\Events\OrganizationRequest;
-use App\Mail\OrgRequestEmail;
+use App\Events\newUser;
+use App\Mail\newUserMail;
+use App\Organization;
+use App\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
-class SendRequestEmail
+class newUserListener
 {
     /**
      * Create the event listener.
@@ -23,12 +25,12 @@ class SendRequestEmail
     /**
      * Handle the event.
      *
-     * @param  OrganizationRequest  $event
+     * @param  newUser  $event
      * @return void
      */
-    public function handle(OrganizationRequest $event)
+    public function handle(newUser $event)
     {
         //
-        Mail::to($event->user)->send(new OrgRequestEmail($event->user, $event->organization));
+        Mail::to($event->user)->send(new newUserMail($event->organization));
     }
 }
