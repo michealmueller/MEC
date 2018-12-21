@@ -29,7 +29,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         //
 //TODO::move RSS storing to backend as a cron job, then pull from DB for front page.
-        $this->EventController = new EventController;
+        /*$this->EventController = new EventController;
         $this->rss = new Rss;
         $this->data = [
             'feeddata' => $this->rss->fetch(6),
@@ -476,7 +476,7 @@ class ViewServiceProvider extends ServiceProvider
 
         view()->composer('*', function($view){
            $view->with(['data'=> $this->data, 'user'=>Auth::user()]);
-        });
+        });*/
     }
 
     /**
