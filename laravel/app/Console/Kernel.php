@@ -31,6 +31,7 @@ class Kernel extends ConsoleKernel
         $schedule->call('command:getrssfeeds')
             ->hourly()
             ->runInBackground()
+            ->name('RssStore')
             ->withoutOverlapping();
     }
 
