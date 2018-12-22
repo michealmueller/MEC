@@ -4,7 +4,7 @@
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,8 +183,8 @@
           <entry key="HTML" value="10" />
           <entry key="JSON" value="306" />
           <entry key="JavaScript" value="19681" />
-          <entry key="PHP" value="20531" />
-          <entry key="PLAIN_TEXT" value="1214" />
+          <entry key="PHP" value="20537" />
+          <entry key="PLAIN_TEXT" value="1308" />
           <entry key="SQL" value="20" />
           <entry key="Scratch" value="181" />
         </counts>
@@ -204,7 +204,7 @@
           <entry key="Image" value="2" />
           <entry key="JSON" value="19" />
           <entry key="JavaScript" value="26" />
-          <entry key="PHP" value="197" />
+          <entry key="PHP" value="198" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="10" />
           <entry key="tsconfig" value="1" />
@@ -274,11 +274,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_02_221538_create_events_table.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+                <state relative-caret-position="510">
+                  <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -304,6 +304,15 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="782">
+                  <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Providers/EventServiceProvider.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -320,8 +329,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="36" column="53" lean-forward="true" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+                <state relative-caret-position="289">
+                  <caret line="461" column="35" selection-start-line="461" selection-start-column="35" selection-end-line="461" selection-end-column="35" />
                   <folding>
                     <element signature="e#33#47#0#PHP" expanded="true" />
                     <element signature="e#912#26561#1#PHP" />
@@ -522,7 +531,6 @@
         <option value="$PROJECT_DIR$/laravel/app/User.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/laravel/config/services.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
@@ -548,6 +556,7 @@
         <option value="$PROJECT_DIR$/public_html/assets/css/calendar/fullcalendar.css" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
+        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
       </list>
     </option>
   </component>
@@ -726,7 +735,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value=".env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;calend&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/vendor/calendar/calendar.blade.php&#10;FULLCAL&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/calendar/fullcalendar.css&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;mail.php&#9;FILE&#9;file://D:/Work/MEC/laravel/config/mail.php&#10;event&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;sub&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/sub.blade.php&#10;service&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;edit&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;notificatio&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;api.php&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/api.php&#10;composer.&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;router&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;services.&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json" />
+    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;calend&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/vendor/calendar/calendar.blade.php&#10;FULLCAL&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/calendar/fullcalendar.css&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;mail.php&#9;FILE&#9;file://D:/Work/MEC/laravel/config/mail.php&#10;event&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;sub&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/sub.blade.php&#10;service&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;edit&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;notificatio&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;api.php&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/api.php&#10;composer.&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;router&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;services.&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routes.ph&#9;FILE&#9;file://D:/Work/MEC/laravel/vendor/arkhas/laravel5calendar/src/routes.php&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;resetpass&#9;null&#9;null&#10;password/reset&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/passwords/reset.blade.php&#10;registerCon&#9;null&#9;null&#10;feed.php&#9;FILE&#9;file://D:/Work/MEC/laravel/dg/rssphp/src/Feed.php&#10;v&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;notifi&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;we&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;.en&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;dat&#9;FILE&#9;file://D:/Work/MEC/laravel/config/database.php&#10;composer.jso&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -873,21 +882,7 @@
       <workItem from="1545179726129" duration="533000" />
       <workItem from="1545183609219" duration="2795000" />
       <workItem from="1545224990208" duration="54321000" />
-      <workItem from="1545323508493" duration="3196000" />
-    </task>
-    <task id="LOCAL-00135" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.">
-      <created>1544932352876</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1544932352877</updated>
-    </task>
-    <task id="LOCAL-00136" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.&#10;           &#10;           updated for x-mas! some discord bot features coming.">
-      <created>1545015039535</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1545015039535</updated>
+      <workItem from="1545323508493" duration="4405000" />
     </task>
     <task id="LOCAL-00137" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.&#10;           &#10;           updated for x-mas! some discord bot features coming.">
       <created>1545015192449</created>
@@ -1218,11 +1213,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545437878751</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="change to ViewServiceProvider to fetch only the amount of orgs that are actually in the DB">
+      <created>1545438173723</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1545438173723</updated>
+    </task>
+    <task id="LOCAL-00185" summary="change to ViewServiceProvider to fetch only the amount of orgs that are actually in the DB">
+      <created>1545438210237</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1545438210237</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="763271000" />
+    <option name="totallyTimeSpent" value="764480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1288,7 +1297,6 @@
       <path value="$PROJECT_DIR$/public_html/public/templates/sb-admin-2" />
       <path value="$PROJECT_DIR$/public_html/templates/sb-admin-2" />
     </ignored-roots>
-    <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics" />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes" />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport." />
     <MESSAGE value="BIG Push, lots of features&#10;org logo will display on back of event for easier identification.&#10;&#10;added timezone selection as well as ip and JS based.&#10;&#10;fixed edit/delete menu to show for creator.&#10;&#10;added extra event fields to edit method as well as create.&#10;&#10;small changes, made edit / delete dropdown click instead of hover&#10;added the mission brief url to view page if exists.&#10;&#10;changed up the ip detection to a new more reliable API.&#10;&#10;backend cleaning of code to stop duplication of code.&#10;&#10;changed date number color so that it can be determined on a day with an event.&#10;&#10;changed registration to get all info in one go instead of requiring 2 steps.&#10;&#10;Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;&#10;copied terms, and privacy policies from citizenwarfare.&#10;&#10;updated to font awesome 5.&#10;&#10;added about dev page.&#10;&#10;Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;&#10;changed avatar dimension restriction, set size restriction to 1gig&#10;&#10;Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;&#10;updated font to hopefully allow it to use the zebulon font online, and not just local&#10;&#10;minor tweek to organization migration&#10;&#10;stopped ignoring org_logos x2&#10;&#10;scope issue fixes x4&#10;&#10;added google analytics&#10;&#10;made calendars private by requiring an account and being logged in.&#10;&#10;other QOL changes&#10;&#10;Added Public Event ticker to bottom of viewport.&#10;&#10;fix for IP issue" />
@@ -1313,7 +1321,8 @@
     <MESSAGE value="subscriptions are working, need more error handling! after push setting keys to live." />
     <MESSAGE value="registration email fixed&#10;&#10;subscriptions can be created and canceled&#10;&#10;Stripe subscription webhook should be functional." />
     <MESSAGE value="color changes to calendar for x-mas time!" />
-    <option name="LAST_COMMIT_MESSAGE" value="color changes to calendar for x-mas time!" />
+    <MESSAGE value="change to ViewServiceProvider to fetch only the amount of orgs that are actually in the DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to ViewServiceProvider to fetch only the amount of orgs that are actually in the DB" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/composer.json">
@@ -1425,13 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2165">
           <caret line="336" column="30" selection-start-line="336" selection-start-column="30" selection-end-line="336" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="58" column="103" selection-start-line="58" selection-start-column="103" selection-end-line="58" selection-end-column="103" />
         </state>
       </provider>
     </entry>
@@ -1560,13 +1562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/emails/newUserEmail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Providers/EventServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1671,21 +1666,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_02_221538_create_events_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="53" lean-forward="true" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        <state relative-caret-position="289">
+          <caret line="461" column="35" selection-start-line="461" selection-start-column="35" selection-end-line="461" selection-end-column="35" />
           <folding>
             <element signature="e#33#47#0#PHP" expanded="true" />
             <element signature="e#912#26561#1#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2018_08_02_221538_create_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/emails/newUserEmail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>

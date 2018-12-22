@@ -70,12 +70,3 @@ Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 
 Route::get('find', 'SearchController@find');
 //event view routes.
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
