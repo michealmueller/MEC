@@ -459,7 +459,7 @@ class ViewServiceProvider extends ServiceProvider
                 'Pacific/Tongatapu' => '(UTC+13:00) Tongatapu',
                 'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
             ],
-            'org_list' => Organization::all()->random(5),
+            'org_list' => $org_list,
             'timezonedata' =>  $this->EventController->getTimeZone(),
             'org_list_full' => Organization::all(),
             //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id),
