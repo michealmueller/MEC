@@ -29,6 +29,11 @@ class ViewServiceProvider extends ServiceProvider
     {
         //
 //TODO::move RSS storing to backend as a cron job, then pull from DB for front page.
+        if(count(Organization::all()) >= 5){
+            $org_list = Organization::all()->random(5);
+        }else{
+            $org_list = Organization::all()->random(count(Organization::all()));
+        }
         $this->EventController = new EventController;
         $this->rss = new Rss;
         $this->data = [
