@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        Commands\getrssfeeds::class,
     ];
 
     /**
@@ -27,10 +28,9 @@ class Kernel extends ConsoleKernel
         //TODO::RSS, NesLetter,
 
         //get and store RSS Feeds.
-        $schedule->call('App\Http\Controllers\RssConroller@store')
+        $schedule->call('command:getrssfeeds')
             ->hourly()
             ->runInBackground()
-            ->name('RssStore')
             ->withoutOverlapping();
     }
 
