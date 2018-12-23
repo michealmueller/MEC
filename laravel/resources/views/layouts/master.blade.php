@@ -54,6 +54,10 @@
     <link rel="stylesheet" href="/assets/css/calendar/fullcalendar.min.css"/>
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
+    <link rel="stylesheet" href="/assets/vendor/animate.css">
+    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 
     <!-- CSS Unify -->
     <!--<link rel="stylesheet" href="/assets/css/unify-admin.css">-->

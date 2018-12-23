@@ -17,12 +17,13 @@
 */
 html,
 body {
-    height: 100%;
     background-color: #000000;
-    background-image: url("../img/gridbg_glow.png"),url('../images/bg-stars-2560.jpg');
-    background-position: left top;
+    background: url("../images/astronomy.jpg") 0 100% repeat;
+    background: url("../images/astronomy.jpg") 70% 100% repeat;
     background-repeat: repeat;
-    background-size: 50px, 2560px;
+    background-size:50% ;
+    background-position: left top;
+    background-attachment: fixed;
 }
 
 body {
@@ -157,13 +158,6 @@ body>header {
     text-align: center;
     color: #fff;
     width: 100%;
-    background-color: #c9c9c9;
-    background-image: url('../images/ollisar.jpg');
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 }
 
 body>header .header-content {

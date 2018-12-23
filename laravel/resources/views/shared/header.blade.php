@@ -6,7 +6,6 @@
  * Time: 1:27 PM
  */
 ?>
-
-    <section id="snowing" class="g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_3--after snowing" style="background-image: url('/assets/images/ollisarx-mas.png');padding-top:25rem;padding-bottom:1.5rem;">
-
-    </section>
+<section class="container justify-content-center text-center g-mb-50">
+    <img class="w-100" src="/storage/app/logos/Citizen_Warfare_Logo_Xmas.png" >
+</section>
