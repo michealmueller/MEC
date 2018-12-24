@@ -18,10 +18,8 @@
 html,
 body {
     background-color: #000000;
-    background: url("../images/astronomy.jpg") 0 100% repeat;
-    background: url("../images/astronomy.jpg") 70% 100% repeat;
-    background-repeat: repeat;
-    background-size:50% ;
+    background: url("../images/abstract-astro.jpg");
+    background-size:125% ;
     background-position: left top;
     background-attachment: fixed;
 }
