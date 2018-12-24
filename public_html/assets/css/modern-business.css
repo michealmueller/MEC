@@ -18,9 +18,9 @@
 html,
 body {
     background-color: #000000;
-    background: url("../images/abstract-astro.jpg");
-    background-size:125% ;
-    background-position: left top;
+    background: url("../images/astronomy-dark.png");
+    background-size:100% ;
+    background-position: center;
     background-attachment: fixed;
 }
 
