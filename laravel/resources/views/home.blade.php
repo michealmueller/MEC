@@ -231,6 +231,7 @@
         </div>
         <!-- End Heading -->
         <div class="row">
+            @if(isset($data['feeddata']) && $data['feeddata'] != null)
             @foreach($data['feeddata'] as $post)
                 <div class="col-sm-6 col-lg-4 g-mb-30">
                     <!-- Blog Grid Overlap Blocks -->
@@ -251,6 +252,7 @@
                     <!-- End Blog Grid Overlap Blocks -->
                 </div>
             @endforeach
+            @endif
         </div>
     </section>
 

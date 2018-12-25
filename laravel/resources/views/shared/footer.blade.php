@@ -9,7 +9,7 @@
                     <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Latest From Star Citizen</h2>
                     </div>
-
+                    @if(isset($data['feeddata']) && $data['feeddata'] != null)
                     @foreach($data['feeddata'] as $rssItem)
                     <article>
                         <h3 class="h6 g-mb-2">
@@ -18,6 +18,7 @@
                         <div class="small g-color-white-opacity-0_6">{{ $rssItem->rss_pubDate }}</div>
                     </article>
                     @endforeach
+                    @endif
                 </div>
                 <!-- End Footer Content -->
 
@@ -28,6 +29,7 @@
                     </div>
                     <nav class="text-uppercase1">
                         <ul class="list-unstyled g-mt-minus-10 mb-0">
+                            @if(isset($data['org_list']) && $data['org_list'] != null)
                             @foreach($data['org_list'] as $org)
                                 <li class="g-pos-rel g-brd-bottom g-brd-white-opacity-0_1 g-py-10">
                                     <h4 class="h6 g-pr-20 mb-0">
@@ -39,6 +41,7 @@
                                     </h4>
                                 </li>
                             @endforeach
+                            @endif
                         </ul>
                     </nav>
                 </div>
