@@ -54,6 +54,9 @@ class EventController extends Controller
     {
         //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get()->first();
+        if($eventSingle == null){
+            abort('404');
+        }
         if(Auth::check()) {
             $user_id = Auth::user()->id;
 
