@@ -79,6 +79,7 @@
         <item url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/js/sly.min.js" />
+        <item url="file://$PROJECT_DIR$/public_html/assets/js/snow.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/appear.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.js" />
         <item url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.min.js" />
@@ -1638,6 +1639,7 @@
       <root url="file://$PROJECT_DIR$/public_html/assets/js/scripts.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/select2.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/js/sly.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/js/snow.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/appear.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/assets/vendor/bloodhound-js/js/bloodhound.min.min.js" />

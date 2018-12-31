@@ -30,7 +30,7 @@
 
                 <div class="col-lg-7">
                     <div class="row no-gutters align-items-center justify-content-center">
-                        <div class="col-md-6 g-mb-30 g-z-index-2">
+                        {{--<div class="col-md-6 g-mb-30 g-z-index-2">
                             <!-- Article -->
                             <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
                                 <div class="g-bg-gray-light-v5 g-px-15 g-py-50">
@@ -77,7 +77,7 @@
                                 </div>
                             </article>
                             <!-- End Article -->
-                        </div>
+                        </div>--}}
 
                         <div class="col-md-6 g-mb-30">
                             <!-- Article -->
@@ -91,7 +91,7 @@
                                     <hr class="g-brd-gray-light-v4 g-my-10">
 
                                     <div class="g-color-primary g-my-20">
-                                        <strong class="d-block g-font-size-30 g-line-height-1_2">$2.00</strong> per month
+                                        <strong class="d-block g-font-size-30 g-line-height-1_2">$0.00</strong> per month
                                     </div>
 
                                     <hr class="g-brd-gray-light-v4 g-mt-10 mb-0">
@@ -105,7 +105,7 @@
                                             Development takes time, Adopt early for benifits down the road!, There is always More to <b>Come</b>
                                         </li>
                                     </ul>
-                                    <form action="{{ route('subMonthly') }}" method="POST">
+                                    {{--<form action="{{ route('subMonthly') }}" method="POST">
                                         {{ csrf_field() }}
                                         <script
                                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -122,7 +122,8 @@
                                                 @endif
                                         >
                                         </script>
-                                    </form>
+                                    </form>--}}
+                                    Go to <a href="/profile">Profile</a> to add the bot to your discord!
                                 </div>
                             </article>
                             <!-- End Article -->

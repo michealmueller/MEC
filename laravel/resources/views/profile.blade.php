@@ -30,35 +30,35 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-lg-8 order-lg-2">
-                <ul class="nav nav-tabs" id="tabMenu">
+            <div class="col-lg-8 order-lg-2 ">
+                <ul class="nav nav-tabs " id="tabMenu">
                     <li class="nav-item">
-                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5 active">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Edit</a>
                     </li>
                     @if($user->lead == 1)
                     <li class="nav-item">
-                        <a href="" data-target="#members" data-toggle="tab" class="nav-link">Members</a>
+                        <a href="" data-target="#members" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Members</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link">Sharing</a>
+                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Sharing</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link">Requests</a>
+                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Requests</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link">Generate Ref. Code</a>
+                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Generate Ref. Code</a>
                     </li>
-                        @if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel'))
+
                         <li class="nav-item">
-                            <a href="" data-target="#discord" data-toggle="tab" class="nav-link">Discord Bot</a>
+                            <a href="" data-target="#discord" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Discord Bot</a>
                         </li>
-                        @endif
+
                     @endif
                 </ul>
-                <div class="tab-content py-4">
+                <div class="tab-content py-4 g-pa-10">
                     <div class="tab-pane active" id="profile">
                         <h5 class="mb-3">{{$user->username}}'s Profile</h5>
                         <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
@@ -132,7 +132,6 @@
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label"></label>
                                 <div class="col-lg-9">
-                                    <input type="reset" class="btn btn-secondary" value="Cancel">
                                     <input type="submit" class="btn btn-primary" value="Save Changes">
                                 </div>
                             </div>
@@ -171,9 +170,9 @@
                                                 @if($member->lead == 1)
                                                 <span class="u-label u-label-warning g-color-white">Event Lead</span>
                                                 <br>
-                                                <a href="#" onclick="ajaxRequest('/profile/remove/lead',0,'lead', {{ $member->id }})"><span class="fa fa-remove" ></span>Remove Event Lead</a>
+                                                <a href="" onclick="ajaxRequest('/profile/remove/lead',0,'lead', {{ $member->id }})"><span class="fa fa-remove" ></span>Remove Event Lead</a>
                                                 @else
-                                                <a href="#" onclick="ajaxRequest('/profile/add/lead',0,'lead', {{$member->id}})"><span class="fa fa-check" ></span>Make Event Lead</a>
+                                                <a href="" onclick="ajaxRequest('/profile/add/lead',0,'lead', {{$member->id}})"><span class="fa fa-check" ></span>Make Event Lead</a>
                                                 @endif
                                             </td>
                                         </tr>
@@ -200,9 +199,11 @@
 
                                 <div class="col-md-4">
                                     <select class="form-control" multiple id='lstBox1' style="height: 150px; width: 100%;">
-                                        @foreach($org_list as $org)
-                                            <option value="{{ $org->id }}">{{ $org->org_name }}</option>
-                                        @endforeach
+                                        @if(isset($org_list))
+                                            @foreach($org_list as $org)
+                                                <option value="{{ $org->id }}">{{ $org->org_name }}</option>
+                                            @endforeach
+                                        @endif
                                     </select>
                                 </div>
                                 <div class="col-md-2 justify-content-center text-center">
@@ -297,7 +298,7 @@
                                 <div class="col-lg-2 order-lg-1 text-center"></div>
                             </div>
                     </div>
-                    @if($user->subscribed('prod_EBezTZOsApxwwb') || $user->subscribed('prod_EBaPJtFVdyzYel'))
+
                     <div class="tab-pane" id="discord">
                         <ul>
                             <li>#1: Click on Add Bot, to add the bot to your discord.</li>
@@ -313,11 +314,12 @@
                                     </ul>
                                         <li>#2b. Type !setup and follow the instructions.</li>
                                     <ul>
-                                        <li>Example: !setup publicChan privateChan </li>
+                                        <li>Example: !setup publicChan privateChan organization_name</li>
                                     </ul>
                                 </ul>
                             </li>
                             <li>#3: When the bot sends a message to the channel(s) you specified you are good to go!</li>
+                            <li>#4: if you need further help, join the <a href="https://discord.gg/z6xBKJd">Discord!</a></li>
                         </ul>
 
                         <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
@@ -334,7 +336,6 @@
                             </div>
                         </div>
                     </div>
-                        @endif
                     @endif
                 </div>
             </div>

@@ -76,6 +76,7 @@
                                             <span class="media-body align-self-center">Upgrade Plan</span>
                                         </a>
                                     </li>-->
+                                    @if($user->lead == 1)
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/create-event">
                                             <span class="d-flex align-self-center g-mr-12">
@@ -84,7 +85,7 @@
                                             <span class="media-body align-self-center">Create an Event</span>
                                         </a>
                                     </li>
-
+                                    @endif
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/faq">
                                             <span class="d-flex align-self-center g-mr-12">

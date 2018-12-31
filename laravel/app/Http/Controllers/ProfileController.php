@@ -201,12 +201,17 @@ class ProfileController extends Controller
             $list[] = $org->id;
         }
         $notShared = array_diff($list, $sharedOrgsArray);
+        //unset the users organization so that it cannot be selected.
+        $userOrg = array_search(Auth::user()->organization_id, $notShared);
+        unset($notShared[$userOrg]);
 
-        foreach($notShared as $org_id){
-            $notSharedOrgs[] = Organization::whereId($org_id)->get()->first();
+        if(count($notShared) >=1) {
+            foreach ($notShared as $org_id) {
+                $notSharedOrgs[] = Organization::whereId($org_id)->get()->first();
+            }
+            return $notSharedOrgs;
         }
 
-        return $notSharedOrgs;
     }
 
     public function determineFounderSub($user)

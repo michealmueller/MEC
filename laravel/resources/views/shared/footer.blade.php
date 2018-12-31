@@ -49,11 +49,11 @@
 
                 <!-- Footer Content -->
                 <div class="col-lg-3 g-mt-15--md">
-                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20 ">
+                    <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-0 ">
                         <h2 class="u-heading-v2__title h6 text-uppercase mb-0">Our Contacts</h2>
                     </div>
 
-                    <address class="g-bg-no-repeat g-font-size-12 g-mb-50 " style="height: 100%; background-image: url('/assets/maps/map2.png');">
+                    <address class="g-bg-no-repeat g-font-size-12 g-mb- " style="height: 100%; background-image: url('/assets/maps/map2.png');">
                         <!-- Location -->
                         <div class="d-flex g-mb-20">
                             <div class="g-mr-10">

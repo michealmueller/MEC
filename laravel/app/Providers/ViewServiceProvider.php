@@ -471,7 +471,9 @@ class ViewServiceProvider extends ServiceProvider
             session()->put('timezone', $this->data['timezonedata']->time_zone->name);
 
             //remove outdated public events
-            $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
+            if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
+                $today = Carbon::now()->setTimezone('America/New_York')->format('Y-m-d');
+            }
             foreach ($this->data['pubEvents'] as $k => $event) {
                 $parsed = Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d');
                 if ($parsed < $today) {

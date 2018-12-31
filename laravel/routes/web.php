@@ -32,6 +32,8 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/profile/remove/lead', 'OrgCalendarController@removeLead');
 
 
+    Route::post('/event/updateAttendance', 'AttendanceController@create');
+
 
     Route::get('/create-event', 'EventController@newEvent');
     Route::post('/create-event', 'EventController@createEvent');
@@ -67,6 +69,10 @@ Route::post('/join/ref/{refHash}', 'ReferenceController@registerToOrg');
 
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
+
+Route::get('/merch/store', function(){
+    return view('merchandise');
+});
 
 Route::get('find', 'SearchController@find');
 //event view routes.

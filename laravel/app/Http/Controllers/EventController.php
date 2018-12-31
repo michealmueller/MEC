@@ -54,10 +54,25 @@ class EventController extends Controller
     {
         //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get()->first();
+        if(Auth::check()) {
+            $user_id = Auth::user()->id;
 
-        //$eventSingle = str_replace('\r\n', "\r\n", $eventSingle);
+            $attenData = [
+                'user_id' => $user_id,
+                'event_id' => $eventSingle->id,
+            ];
+        }
+        //get attendance
+        $attenData = [];
+        $attendees = [];
+        foreach($eventSingle->attending as $attendee){
+            $attendees[$attendee->status] = User::findOrFail($attendee->user_id);
+        }
 
-        return view('viewEvent')->with( 'eventData',$eventSingle);
+        return view('viewEvent')
+            ->with( 'eventData',$eventSingle)
+            ->with('attenData', json_encode($attenData))
+            ->with('attendees', $attendees);
     }
 
     public function editEvent($eventId)
@@ -155,59 +170,71 @@ class EventController extends Controller
 
     public function getTimeZone()
     {
-        $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-        if($ip == '::1'){
-            $ip = '71.60.23.77';
-        }
-//dd($ip);
-
-        $ch = curl_init();
-        //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
-        $endpoint = 'http://www.geoplugin.net/json.gp?ip='.$ip;
-        //dd($endpoint, $ch);
-
-        curl_setopt($ch, CURLOPT_URL, $endpoint);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            "Accept: application/json"
-        ));
-
-        $response = curl_exec($ch);
-        session()->put('timezone', json_decode($response)->geoplugin_timezone);
-        curl_close($ch);
-        if($response == true){
-            //session()->put('info', 'Sorry I could not determine your timezone, setting your requested timezone to '. $_GET['timezone']);
+        if(env('APP_ENV') === 'development'){
+            session()->put('info', 'You are in Development Enviroment - Setting TZ to EST');
             $response = collect([
-                    'data' =>(object)[
-                        'time_zone' => (object) [
-                            'name' => json_decode($response)->geoplugin_timezone
-                        ]
-                    ]
-                ]
-            );
-
-            return $response['data'];
-
-        }elseif($response == false && !isset($_GET['timezone'])){
-            session()->put('info', 'Sorry I could not determine your timezone, setting timezone to America/New_York! -- EST');
-            $response = collect([
-                    'data' =>(object)[
-                        'time_zone' => (object) [
+                    'data' => (object)[
+                        'time_zone' => (object)[
                             'name' => 'America/New_York'
                         ]
                     ]
                 ]
             );
             return $response['data'];
+        }else {
+            $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
+            if ($ip == '::1') {
+                $ip = '71.60.23.77';
+            }
+            //dd($ip);
+
+            $ch = curl_init();
+            //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
+            $endpoint = 'http://www.geoplugin.net/json.gp?ip=' . $ip;
+            //dd($endpoint, $ch);
+
+            curl_setopt($ch, CURLOPT_URL, $endpoint);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                "Accept: application/json"
+            ));
+
+            $response = curl_exec($ch);
+            curl_close($ch);
+            if (json_decode($response)->geoplugin_timezone) {
+                session()->put('timezone', json_decode($response)->geoplugin_timezone);
+                $response = collect([
+                        'data' => (object)[
+                            'time_zone' => (object)[
+                                'name' => json_decode($response)->geoplugin_timezone
+                            ]
+                        ]
+                    ]
+                );
+
+                return $response['data'];
+
+            } elseif (!json_decode($response)->geoplugin_timezone && !isset($_GET['timezone'])) {
+                session()->put('info', 'Sorry I could not determine your timezone, setting timezone to America/New_York! -- EST');
+                $response = collect([
+                        'data' => (object)[
+                            'time_zone' => (object)[
+                                'name' => 'America/New_York'
+                            ]
+                        ]
+                    ]
+                );
+                return $response['data'];
+            }
+            return json_decode($response);
         }
-        return json_decode($response);
     }
 
     public function pushToBot($request, $eventType, $eventId, $start, $end)
     {
-
+        $orgSetTZ = '';
         //get the orgs that have been shared
         $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
 //dd($share);
@@ -225,6 +252,13 @@ class EventController extends Controller
                 $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
             }
         }
+        $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
+        //check org set timezone for null and set to UTC if null
+
+        if($orgSetTZ == null){
+            $orgSetTZ = 'UTC';
+        }
+
         //add self to hooks list
 
         //dd($share, $ids, $hooks);
@@ -246,12 +280,12 @@ class EventController extends Controller
                     'fields' => [
                         [
                             'name' => 'Start Date',
-                            'value' => $start->setTimezone('UTC')->format('Y-m-d H:i:s') . ' UTC',
+                            'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d H:i A'). ' '. $orgSetTZ,
                             'inline' => true,
                         ],
                         [
                             'name' => 'End Date',
-                            'value' => $end->setTimezone('UTC')->format('Y-m-d H:i:s') . ' UTC',
+                            'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d H:i A') . ' '.$orgSetTZ,
                             'inline' => true,
                         ],
                         [

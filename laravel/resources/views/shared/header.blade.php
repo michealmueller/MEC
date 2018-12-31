@@ -7,5 +7,5 @@
  */
 ?>
 <section class="container justify-content-center text-center g-mb-50">
-    <img class="w-100" src="/storage/app/logos/Citizen_Warfare_Logo_Xmas.png" >
+    <img class="w-100" src="/storage/app/logos/Citizen_Warfare_Logo_White.png" >
 </section>
