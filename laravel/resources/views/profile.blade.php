@@ -312,9 +312,9 @@
                                         <li>Manage Webhooks</li>
                                         <li>Embed Links</li>
                                     </ul>
-                                        <li>#2b. Type !setup and follow the instructions.</li>
+                                        <li>#2b. Type cw_setup and follow the instructions.</li>
                                     <ul>
-                                        <li>Example: !setup publicChan privateChan organization_name</li>
+                                        <li>Example: cw_setup publicChan privateChan organization_name</li>
                                     </ul>
                                 </ul>
                             </li>
