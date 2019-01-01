@@ -324,12 +324,12 @@
 
                         <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
 
-                        <div class="row" id="botFrame">
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
-                                        <button onclick="addBot('https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536954896&scope=bot')" class="btn btn-primary btn-block">Add Bot</button>
+                                        <a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536954896&scope=bot" target="_blank">Add Bot</a>
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>
