@@ -134,8 +134,8 @@ class OrgCalendarController extends Controller
                 'notificationMsg' => 'Successfully set user '. $user->username .' as an event lead',
 
                 'replaceText' => '<span class="u-label u-label-warning g-color-white">Event Lead</span><br>
-                                <a href="#" onclick="ajaxRequest(\'/profile/remove/lead\',0,\'lead\', '.$request->id.')">
-                                Remove Event Lead</a>',
+                                <button class="btn btn-xs btn-danger" onclick="ajaxRequest(\'/profile/remove/lead\',\'\',\'save\',\'\', '.$request->id.')">
+                                Remove Event Lead</button>',
 
                 'errorMsg' => 'Could not add user '. $user->username .' as an Event lead.'
             ]);
@@ -153,8 +153,8 @@ class OrgCalendarController extends Controller
                 'selector' => 'lead'.$request->id,
                 'notificationType' => 'danger',
                 'notificationMsg' => 'Removed user '. $user->username .' as an event lead',
-                'replaceText' => '<a href="#" onclick="ajaxRequest(\'/profile/add/lead\',0,\'lead\', '.$request->id.')">
-                               Make Event Lead</a>',
+                'replaceText' => '<button class="btn btn-xs btn-success" onclick="ajaxRequest(\'/profile/add/lead\',\'\',\'save\',\'\', '.$request->id.')">
+                               Make Event Lead</button>',
                 'errorMsg' => 'Could not add user '. $user->username .' as an Event lead.'
             ]);
         return $response;

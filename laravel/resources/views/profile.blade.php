@@ -170,9 +170,9 @@
                                                 @if($member->lead == 1)
                                                 <span class="u-label u-label-warning g-color-white">Event Lead</span>
                                                 <br>
-                                                <a href="" onclick="ajaxRequest('/profile/remove/lead',0,'lead', {{ $member->id }})"><span class="fa fa-remove" ></span>Remove Event Lead</a>
+                                                <button class="btn btn-xs btn-danger" onclick="ajaxRequest('/profile/remove/lead', '', 'save', '', {{ $member->id }})"><span class="fa fa-icon-remove  " ></span>Remove Event Lead</button>
                                                 @else
-                                                <a href="" onclick="ajaxRequest('/profile/add/lead',0,'lead', {{$member->id}})"><span class="fa fa-check" ></span>Make Event Lead</a>
+                                                <button class="btn btn-xs btn-success" onclick="ajaxRequest('/profile/add/lead', '', 'save', '', {{$member->id}})"><span class="fa fa-check" ></span>Make Event Lead</button>
                                                 @endif
                                             </td>
                                         </tr>
@@ -324,12 +324,12 @@
 
                         <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
 
-                        <div class="row">
+                        <div class="row" id="botFrame">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
-                                        <a class="btn btn-primary btn-block" href="https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536889360&scope=bot" target="_blank">Add Bot</a>
+                                        <button onclick="addBot('https://discordapp.com/oauth2/authorize?client_id=522885672248279041&permissions=536954896&scope=bot')" class="btn btn-primary btn-block">Add Bot</button>
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>

@@ -33,7 +33,7 @@
         <meta name="robots" content="noindex, nofollow" />
     @endif
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!--<meta name="csrf-token" content="{ csrf_token() }">-->
 
     <title>CitizenWarfare - Multi Organization Event Calendar</title>
 
@@ -271,29 +271,36 @@
     </script>
 
     <script>
-        function ajaxRequest(url, element=[], type, status, inputData=[])
+        function ajaxRequest(url, element='', type, status='', inputData='')
         {
-            console.log(status);
-            console.log(inputData);
+            /*console.log(status);
+            console.log(inputData);*/
             let myData ='';
             switch(type){
                 case 'ref':
                     $('#' + element).html('Generating!');
+                    myData = {
+                        _token:"{{ csrf_token() }}"
+                    };
                     break;
                 case 'save':
-                    $('#'+element).html('Saved');
-                     myData = {'id': inputData[0]};
+                     myData = {
+                         _token:"{{ csrf_token() }}",
+                         id: inputData};
                     break;
                 case 'attendance':
                     $('#'+element).html('<small>Updating</small>');
-                     myData = {'user_id':inputData.user_id, 'event_id':inputData.event_id, 'status':status};
+                     myData = {
+                         _token:"{{ csrf_token() }}",
+                         user_id:inputData.user_id,
+                         event_id:inputData.event_id,
+                         status:status,
+                         url:url,
+                     };
                      console.log(myData);
                      break;
             }
             $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
                 method: 'POST', // Type of response and matches what we said in the route
                 url: url, // This is the url we gave in the route
                 data: myData, // a JSON object to send back
@@ -304,9 +311,10 @@
                             $(`#${response.selector}2`).html(`${response.replaceText2}`);
                             break;
                         case 'attendance':
-                            $(`#${response.selector}2`).append(`${response.replaceText2}`);
-                            $(`#${response.selector}`).html();
+                            $(`#${response.selector2}`).html(response.replaceText2);
                             break;
+                        case 'save':
+                            $(`#${response.selector}`).html(response.replaceText);
                     }
                     $.notify({
                         message: response.notificationMsg,
@@ -316,10 +324,32 @@
                     });
 
                 },
-                error: function(response) { // What to do if we fail
-                    alert(response.errorMsg+' '+response);
+                error: function (jqXHR, exception) {
+                    var msg = '';
+                    if (jqXHR.status === 0) {
+                        msg = 'Not connect.\n Verify Network.';
+                    } else if (jqXHR.status == 404) {
+                        msg = 'Requested page not found. [404]';
+                    } else if (jqXHR.status == 500) {
+                        msg = 'Internal Server Error [500].';
+                    } else if (exception === 'parsererror') {
+                        msg = 'Requested JSON parse failed.';
+                    } else if (exception === 'timeout') {
+                        msg = 'Time out error.';
+                    } else if (exception === 'abort') {
+                        msg = 'Ajax request aborted.';
+                    } else {
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                    }
+                    alert(`${msg}`);
                 }
             });
+        }
+    </script>
+
+    <script>
+        function addBot(src){
+            $('#botFrame').html(`<iframe src="${src}" height="1000px" width="1000px"></iframe>`)
         }
     </script>
 

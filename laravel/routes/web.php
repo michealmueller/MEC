@@ -30,7 +30,7 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('/profile/generate', 'ProfileController@genRefCode');
     Route::post('/profile/add/lead', 'OrgCalendarController@giveLead');
     Route::post('/profile/remove/lead', 'OrgCalendarController@removeLead');
-
+    Route::post('/profile/add/discord_bot', 'ProfileController@addDiscordBot');
 
     Route::post('/event/updateAttendance', 'AttendanceController@create');
 

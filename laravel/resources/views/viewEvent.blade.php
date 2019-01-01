@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div id="atend" class="col-md-4">
+            <div id="attend" class="col-md-4">
                 <div class="text-center">
                     <h5 class="g-color-white">Attendance:</h5><div id="divStatus"></div>
                 </div>

@@ -57,6 +57,7 @@ class EventController extends Controller
         if($eventSingle == null){
             abort('404');
         }
+        $attenData = [];
         if(Auth::check()) {
             $user_id = Auth::user()->id;
 
@@ -66,16 +67,19 @@ class EventController extends Controller
             ];
         }
         //get attendance
-        $attenData = [];
         $attendees = [];
-        foreach($eventSingle->attending as $attendee){
-            $attendees[$attendee->status] = User::findOrFail($attendee->user_id);
+        if(isset($eventSingle->attending)) {
+            foreach ($eventSingle->attending as $attendee) {
+                $attendees[$attendee->status] = User::findOrFail($attendee->user_id);
+            }
+            return view('viewEvent')
+                ->with( 'eventData',$eventSingle)
+                ->with('attenData', json_encode($attenData))
+                ->with('attendees', $attendees);
         }
-
         return view('viewEvent')
             ->with( 'eventData',$eventSingle)
-            ->with('attenData', json_encode($attenData))
-            ->with('attendees', $attendees);
+            ->with('attenData', json_encode($attenData));
     }
 
     public function editEvent($eventId)

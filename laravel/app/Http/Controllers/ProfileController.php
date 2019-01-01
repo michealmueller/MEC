@@ -151,6 +151,11 @@ class ProfileController extends Controller
         return $response;
     }
 
+    public function addDiscordBot(Request $request)
+    {
+
+    }
+
     public function updateShare(Request $request)
     {
         $sharedOrgsArray = [];
