@@ -144,7 +144,7 @@ class ProfileController extends Controller
                 'selector2' => 'refHash2',
                 'notificationType' => 'info',
                 'notificationMsg' => 'Successfully created your new reference code',
-                'replaceText' => '<a href="https://events.citizenwarfare.com/join/ref/'.$refHash.'">/join/ref/'.$refHash.'</a>',
+                'replaceText' => '<a href="https://events.citizenwarfare.com/join/ref/'.$refHash.'">'.$refHash.'</a>',
                 'errorMsg' =>'Error While generating your new reference code'
         ]);
 
@@ -224,7 +224,7 @@ class ProfileController extends Controller
         //Founder should be before jan 1st 2019
         $regDate = Carbon::parse($user->created_at);
 
-        if($regDate->year < 2019){
+        if($regDate->year <= 2019){
             $status['founder'] = true;
         }
 

@@ -16,6 +16,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
 
+    protected $except = [
+        '/event/updateAttendance',
+    ];
     /**
      * Define your route model bindings, pattern filters, etc.
      *

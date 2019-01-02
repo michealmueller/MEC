@@ -347,11 +347,6 @@
         }
     </script>
 
-    <script>
-        function addBot(src){
-            $('#botFrame').html(`<iframe src="${src}" height="1000px" width="1000px"></iframe>`)
-        }
-    </script>
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}
