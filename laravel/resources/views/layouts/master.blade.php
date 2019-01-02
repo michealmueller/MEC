@@ -33,7 +33,7 @@
         <meta name="robots" content="noindex, nofollow" />
     @endif
 
-    <!--<meta name="csrf-token" content="{ csrf_token() }">-->
+    <meta name="csrf-token" content="{ csrf_token() }">
 
     <title>CitizenWarfare - Multi Organization Event Calendar</title>
 
@@ -301,8 +301,10 @@
                      break;
             }
             $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 method: 'POST', // Type of response and matches what we said in the route
-                contentType : "application/json",
                 url: url, // This is the url we gave in the route
                 data: myData, // a JSON object to send back
             success: function(response) { // What to do if we succeed
