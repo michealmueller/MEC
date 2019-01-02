@@ -287,12 +287,12 @@ class EventController extends Controller
                     'fields' => [
                         [
                             'name' => 'Start Date',
-                            'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d H:i A'). ' '. $orgSetTZ,
+                            'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d g:iA'). ' '. $orgSetTZ,
                             'inline' => true,
                         ],
                         [
                             'name' => 'End Date',
-                            'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d H:i A') . ' '.$orgSetTZ,
+                            'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' '.$orgSetTZ,
                             'inline' => true,
                         ],
                         [
