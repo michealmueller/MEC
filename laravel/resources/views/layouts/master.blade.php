@@ -302,6 +302,7 @@
             }
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
+                contentType : "application/json",
                 url: url, // This is the url we gave in the route
                 data: myData, // a JSON object to send back
             success: function(response) { // What to do if we succeed
