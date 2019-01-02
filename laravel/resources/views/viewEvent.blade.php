@@ -42,13 +42,13 @@
                                              style="animation-duration: 300ms; left: 0px;background-color: #000000;border: 3px solid #FFFFFF;color:#FFFFFF">
                                             <ul class="list-unstyled g-nowrap mb-0 text-center">
                                                 <li class="g-mb-5" >
-                                                    <a href="#" onclick="ajaxRequest('/event/updateAttendance', 'divStatus', 'attendance', 'Yes', {{ $attenData }})" class="btn btn-sm btn-success">Yes</a>
+                                                    <a href="#" onclick="ajaxRequest('{{route('updateAttendance')}}', 'divStatus', 'attendance', 'Yes', {{ $attenData }})" class="btn btn-sm btn-success">Yes</a>
                                                 </li>
                                                 <li class="g-mb-5">
-                                                    <a href="#" onclick="ajaxRequest('/event/updateAttendance', 'divStatus', 'attendance', 'Maybe', {{ $attenData }})" class="btn btn-sm btn-info">Maybe</a>
+                                                    <a href="#" onclick="ajaxRequest('{{route('updateAttendance')}}', 'divStatus', 'attendance', 'Maybe', {{ $attenData }})" class="btn btn-sm btn-info">Maybe</a>
                                                 </li>
                                                 <li class="g-mb-5">
-                                                    <a href="#" onclick="ajaxRequest('/event/updateAttendance', 'divStatus', 'attendance', 'No', {{ $attenData }})" class="btn btn-sm btn-danger">No</a>
+                                                    <a href="#" onclick="ajaxRequest('{{route('updateAttendance')}}', 'divStatus', 'attendance', 'No', {{ $attenData }})" class="btn btn-sm btn-danger">No</a>
                                                 </li>
                                             </ul>
                                         </div>
