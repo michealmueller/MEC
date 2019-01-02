@@ -70,8 +70,12 @@ class EventController extends Controller
         $attendees = [];
         if(isset($eventSingle->attending)) {
             foreach ($eventSingle->attending as $attendee) {
-                $attendees[$attendee->status] = User::findOrFail($attendee->user_id);
-            }
+                $attendees[] =[
+                    'user' => User::findOrFail($attendee->user_id),
+                    'status' => $attendee->status,
+            ];
+            };
+            //dd($attendees);
             return view('viewEvent')
                 ->with( 'eventData',$eventSingle)
                 ->with('attenData', json_encode($attenData))

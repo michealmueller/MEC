@@ -34,6 +34,8 @@ Route::group(['middleware'=>'auth'], function() {
 
     Route::post('/event/updateAttendance', 'AttendanceController@create')->name('updateAttendance');
 
+    Route::get('/event/get/attendance/{event_id}', 'AttendanceController@read');
+
 
     Route::get('/create-event', 'EventController@newEvent');
     Route::post('/create-event', 'EventController@createEvent');

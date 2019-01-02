@@ -95,43 +95,44 @@
                 </div>
             </div>
 
-            <div id="attend" class="col-md-4">
+            <div class="col-md-4">
                 <div class="text-center">
                     <h5 class="g-color-white">Attendance:</h5><div id="divStatus"></div>
                 </div>
-                @if(isset($attendees) && $attendees != null)
-                    @foreach($attendees as $status=>$attendee)
-                        <ul class="list-unstyled g-pt-0">
-                            <li class="d-flex justify-content-start g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
-                                <div class="g-pos-rel g-mr-5">
-                                    <img class="g-width-50 g-height-50 rounded" src="/storage/app/org_logos/{{$attendee->organization->org_logo}}" alt="Image Description">
-                                </div>
 
-                                <div class="align-self-center g-px-10">
-                                    <h5 class="h6 g-font-weight-600 g-color-white g-mb-3">
-                                        <span class="g-mr-5">{{ $attendee->username}}</span>
-                                    </h5>
-                                </div>
-                                <div class="align-self-center ml-auto">
-                                    <span class="u-label u-label--sm g-rounded-20 g-px-10
-                                        @switch($status)
-                                            @case ('No')
-                                                badge-danger">Not Coming
-                                                @break
-                                            @case ('Maybe')
-                                                badge-info">Tentative
-                                                @break
-                                            @case ('Yes')
-                                                badge-success">Attending
-                                                @break
-                                            @default
-                                        @endswitch
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    @endforeach
-                @endif
+                    <ul  id="attend" class="list-unstyled g-pt-0">
+                    @if(isset($attendees) && $attendees != null)
+                        @foreach($attendees as $attendee)
+                        <li class="d-flex justify-content-start g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
+                            <div class="g-pos-rel g-mr-5">
+                                <img class="g-width-50 g-height-50 rounded" src="/storage/app/org_logos/{{$attendee['user']->organization->org_logo}}" alt="Image Description">
+                            </div>
+
+                            <div class="align-self-center g-px-10">
+                                <h5 class="h6 g-font-weight-600 g-color-white g-mb-3">
+                                    <span class="g-mr-5">{{ $attendee['user']->username}}</span>
+                                </h5>
+                            </div>
+                            <div class="align-self-center ml-auto">
+                                <span class="u-label u-label--sm g-rounded-20 g-px-10
+                                    @switch($attendee['status'])
+                                        @case ('No')
+                                            badge-danger">Not Coming
+                                            @break
+                                        @case ('Maybe')
+                                            badge-info">Tentative
+                                            @break
+                                        @case ('Yes')
+                                            badge-success">Attending
+                                            @break
+                                        @default
+                                    @endswitch
+                                </span>
+                            </div>
+                        </li>
+                        @endforeach
+                    @endif
+                    </ul>
             </div>
         </div>
     </section>

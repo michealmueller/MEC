@@ -33,7 +33,7 @@
         <meta name="robots" content="noindex, nofollow" />
     @endif
 
-    <meta name="csrf-token" content="{ csrf_token() }">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>CitizenWarfare - Multi Organization Event Calendar</title>
 
@@ -308,6 +308,7 @@
                 url: url, // This is the url we gave in the route
                 data: myData, // a JSON object to send back
             success: function(response) { // What to do if we succeed
+
                     $(`#${response.selector}`).html(`${response.replaceText}`);
                     switch (type) {
                         case 'ref':
@@ -326,9 +327,11 @@
                         delay:'10000'
                     });
 
+                getAttendance(myData.event_id);
+
                 },
                 error: function (jqXHR, exception) {
-                    var msg = '';
+                    let msg = '';
                     if (jqXHR.status === 0) {
                         msg = 'Not connect.\n Verify Network.';
                     } else if (jqXHR.status == 404) {
@@ -349,7 +352,14 @@
             });
         }
     </script>
-
+<script>
+    function getAttendance(event_id){
+        $.get(`/event/get/attendance/${event_id}`, function(response){
+            $('#divStatus').html('');
+            $('#attend').html(`${response}`);
+            });
+    }
+</script>
 
 @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}
