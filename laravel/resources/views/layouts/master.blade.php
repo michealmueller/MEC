@@ -92,22 +92,6 @@
         });
 
     </script>
-
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=yk0w5uo6s4e2mh0gs1q66i4kzwx60jwlw3wz762nkeoc7vau"></script>
-    <!--<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->
-    <script>
-       /* tinymce.init({
-            selector: '#content',
-            toolbar: [
-                'undo redo | styleselect | bold italic underline strikethrough | link image',
-                'alignleft aligncenter alignright'
-            ],
-            //plugins:wordcount,
-            //wordcount_countregex: /[\w\u2019\x27\-\u00C0-\u1FFF]+/g,
-            menubar:false
-        });*/
-    </script>
-
     <script>
         $(document).ready(function() {
             var text_max = 800;

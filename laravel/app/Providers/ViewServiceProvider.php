@@ -32,9 +32,9 @@ class ViewServiceProvider extends ServiceProvider
         if(DB::table('organizations')->exists()) {
             if (count(Organization::all()) >= 5) {
                 $org_list = Organization::all()->random(5);
-            } else {
+            } /*else {
                 $org_list = Organization::all()->random(count(Organization::all()));
-            }
+            }*/
                 $this->EventController = new EventController;
                 $this->rss = new Rss;
                 $this->data = [

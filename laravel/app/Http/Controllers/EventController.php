@@ -162,7 +162,7 @@ class EventController extends Controller
             $this->pushToBot($request, $request->radGroup1_2, $event->id, $start_date, $end_date);
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
-
+        session()->put('error', 'something went wrong when creating the event, if this happened on mobile please inform me !');
         return back();
     }
 
