@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/discord-test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +157,7 @@
     <session id="254734441">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="43" />
+          <entry key="project.closed" value="44" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="3" />
@@ -171,26 +170,26 @@
           <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="2" />
-          <entry key="project.open.time.28" value="4" />
+          <entry key="project.open.time.28" value="5" />
           <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.9" value="6" />
-          <entry key="project.opened" value="47" />
+          <entry key="project.opened" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="318" />
-          <entry key="Blade" value="22038" />
+          <entry key="Blade" value="22061" />
           <entry key="CSS" value="576" />
           <entry key="Git file" value="48" />
           <entry key="HTML" value="14" />
           <entry key="JSON" value="306" />
           <entry key="JavaScript" value="19682" />
-          <entry key="PHP" value="24809" />
-          <entry key="PLAIN_TEXT" value="1751" />
+          <entry key="PHP" value="25041" />
+          <entry key="PLAIN_TEXT" value="1835" />
           <entry key="SQL" value="20" />
           <entry key="Scratch" value="275" />
         </counts>
@@ -203,14 +202,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="22" />
-          <entry key="Blade" value="127" />
+          <entry key="Blade" value="132" />
           <entry key="CSS" value="19" />
-          <entry key="Database Element" value="119" />
+          <entry key="Database Element" value="122" />
           <entry key="Git file" value="8" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="19" />
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="242" />
+          <entry key="PHP" value="246" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="10" />
           <entry key="tsconfig" value="1" />
@@ -261,32 +260,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
+                <state relative-caret-position="204">
+                  <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Console/Commands/getrssfeeds.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="155" column="152" selection-start-line="155" selection-start-column="152" selection-end-line="155" selection-end-column="152" />
+                <state relative-caret-position="51">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+                  <folding>
+                    <element signature="e#40#79#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="357" column="24" selection-start-line="357" selection-start-column="24" selection-end-line="357" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/attendance">
+            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
               <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
                 <state>
                   <filtering enabled="true" />
@@ -294,10 +287,28 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/register.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="41" column="83" lean-forward="true" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1513">
+                  <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/config/session.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
+                <state relative-caret-position="2788">
                   <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
                 </state>
               </provider>
@@ -315,8 +326,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/footer.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-711">
-                  <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+                <state relative-caret-position="1768">
+                  <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="108" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1564">
+                  <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="10" column="19" selection-start-line="8" selection-end-line="10" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -328,19 +357,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="146" column="102" selection-start-line="146" selection-start-column="102" selection-end-line="146" selection-end-column="102" />
-                  <folding>
-                    <element signature="e#4743#6254#0#PHP" />
-                    <element signature="e#6260#7026#0#PHP" />
-                    <element signature="e#7460#7596#0#PHP" />
-                    <element signature="e#7601#7662#0#PHP" />
-                    <element signature="e#7668#7822#0#PHP" />
-                    <element signature="e#7827#7888#0#PHP" />
-                    <element signature="e#7894#8090#0#PHP" />
-                    <element signature="e#8095#8176#0#PHP" />
-                    <element signature="e#8182#8330#0#PHP" />
-                  </folding>
+                <state relative-caret-position="493">
+                  <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
                 </state>
               </provider>
             </entry>
@@ -348,93 +366,38 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="461" column="22" selection-start-line="461" selection-start-column="22" selection-end-line="461" selection-end-column="22" />
+                <state relative-caret-position="408">
+                  <caret line="40" column="55" lean-forward="true" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
                   <folding>
-                    <element signature="e#1235#30244#1#PHP" />
+                    <element signature="e#1239#30248#1#PHP" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="918">
-                  <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#40#59#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="178" column="40" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/User.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="782">
-                  <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#23#63#0#PHP" expanded="true" />
-                    <element signature="e#151#2270#0#PHP" />
-                  </folding>
+                <state relative-caret-position="544">
+                  <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#5417#7967#0#PHP" />
-                  </folding>
+                <state relative-caret-position="629">
+                  <caret line="92" column="49" lean-forward="true" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="292">
-                  <caret line="299" column="41" selection-start-line="299" selection-start-column="41" selection-end-line="299" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Providers/RouteServiceProvider.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="117" column="64" lean-forward="true" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
+                <state relative-caret-position="442">
+                  <caret line="88" column="62" lean-forward="true" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
@@ -454,7 +417,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modern-bus</find>
       <find>body</find>
       <find>keys</find>
       <find>async</find>
@@ -484,6 +446,7 @@
       <find>main</find>
       <find>make event</find>
       <find>bootstrap.min.js</find>
+      <find>jstz</find>
     </findStrings>
     <replaceStrings>
       <replace>/../</replace>
@@ -525,16 +488,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/SubscriptionController.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Events/NewRegistration.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/emails/activation.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Events/NewUser.php" />
         <option value="$PROJECT_DIR$/laravel/app/Mail/VerificationEmail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Mail/newUserEmail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Listeners/SendRequestEmail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Listeners/NewUserListener.php" />
         <option value="$PROJECT_DIR$/laravel/app/Providers/EventServiceProvider.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Events/newUser.php" />
         <option value="$PROJECT_DIR$/laravel/app/Listeners/newUserListener.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/emails/newUserEmail.blade.php" />
@@ -553,7 +512,6 @@
         <option value="$PROJECT_DIR$/laravel/database/migrations/2018_12_29_192708_add_timezone_field_to_discordbot_table.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/header.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/js/snow.js" />
-        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/merchandise.blade.php" />
@@ -571,11 +529,16 @@
         <option value="$PROJECT_DIR$/laravel/.env" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_02_165747_update_attendance_table_make_username_unique.php" />
-        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/discord-test.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
       </list>
     </option>
   </component>
@@ -658,13 +621,6 @@
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -693,7 +649,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="routeco&#9;null&#9;null&#10;config/ses&#9;FILE&#9;file://D:/Work/MEC/laravel/config/session.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;routeserv&#9;null&#9;null&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;footer&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/footer.blade.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;header&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/header.blade.php&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;viewevent&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;createeve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;Rss&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/RssController.php&#10;bot.js&#9;FILE&#9;file://D:/Work/MEC/public_html/DiscordBot/bot.js&#10;4471&#9;FILE&#9;file://D:/Work/MEC/laravel/storage/framework/views/4471e91e57077c3f868d51801305b6b519280425.php&#10;appservicepr&#9;null&#9;null&#10;calend&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/vendor/calendar/calendar.blade.php&#10;FULLCAL&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/calendar/fullcalendar.css&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;mail.php&#9;FILE&#9;file://D:/Work/MEC/laravel/config/mail.php&#10;event&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;sub&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/sub.blade.php&#10;service&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;edit&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;notificatio&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;api.php&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/api.php&#10;composer.&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;router&#9;null&#9;null&#10;services.&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;homecontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;app&#9;FILE&#9;file://D:/Work/MEC/laravel/config/app.php&#10;profi&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php" />
+    <property name="SearchEverywhereHistoryKey" value="register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;registercon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;getrssfeeds&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Console/Commands/getrssfeeds.php&#10;homecontroller&#9;null&#9;null&#10;routeco&#9;null&#9;null&#10;config/ses&#9;FILE&#9;file://D:/Work/MEC/laravel/config/session.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;routeserv&#9;null&#9;null&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;footer&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/footer.blade.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;header&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/header.blade.php&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;viewevent&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;createeve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;Rss&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/RssController.php&#10;bot.js&#9;FILE&#9;file://D:/Work/MEC/public_html/DiscordBot/bot.js&#10;4471&#9;FILE&#9;file://D:/Work/MEC/laravel/storage/framework/views/4471e91e57077c3f868d51801305b6b519280425.php&#10;appservicepr&#9;null&#9;null&#10;calend&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/vendor/calendar/calendar.blade.php&#10;FULLCAL&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/calendar/fullcalendar.css&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;mail.php&#9;FILE&#9;file://D:/Work/MEC/laravel/config/mail.php&#10;event&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/EventServiceProvider.php&#10;sub&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/sub.blade.php&#10;service&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;edit&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;notificatio&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/notification.blade.php&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;api.php&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/api.php&#10;composer.&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;router&#9;null&#9;null&#10;services.&#9;FILE&#9;file://D:/Work/MEC/laravel/config/services.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organization&#9;null&#9;null&#10;createe&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;editev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;composer.j&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;mod&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;modern&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;nav.bla&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -848,21 +804,8 @@
       <workItem from="1545833458028" duration="3316000" />
       <workItem from="1546095163396" duration="14101000" />
       <workItem from="1546182218407" duration="39356000" />
-      <workItem from="1546283674839" duration="35842000" />
-    </task>
-    <task id="LOCAL-00159" summary="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications.&#10;           &#10;           updated for x-mas! some discord bot features coming.&#10;           &#10;           Added Discord push to bot ability, next is to put it behind a paywall.">
-      <created>1545169277469</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1545169277469</updated>
-    </task>
-    <task id="LOCAL-00160" summary="Testing Discord Bot to site">
-      <created>1545169408009</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1545169408009</updated>
+      <workItem from="1546283674839" duration="41264000" />
+      <workItem from="1546551068510" duration="2092000" />
     </task>
     <task id="LOCAL-00161" summary="Testing Discord Bot to site">
       <created>1545169453122</created>
@@ -1193,17 +1136,31 @@
       <option name="project" value="LOCAL" />
       <updated>1546444447053</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="ajx requests fixed, added the ability to change your attendance status!">
+      <created>1546453266896</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1546453266897</updated>
+    </task>
+    <task id="LOCAL-00209" summary="ajx requests fixed, added the ability to change your attendance status!">
+      <created>1546522725395</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1546522725395</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="875074000" />
+    <option name="totallyTimeSpent" value="882588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15500794" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15620032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1239,7 +1196,6 @@
       <path value="$PROJECT_DIR$/public_html/public/templates/sb-admin-2" />
       <path value="$PROJECT_DIR$/public_html/templates/sb-admin-2" />
     </ignored-roots>
-    <MESSAGE value="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails." />
     <MESSAGE value="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates." />
     <MESSAGE value="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job." />
     <MESSAGE value="BIG Push, lots of features&#10;           org logo will display on back of event for easier identification.&#10;           &#10;           added timezone selection as well as ip and JS based.&#10;           &#10;           fixed edit/delete menu to show for creator.&#10;           &#10;           added extra event fields to edit method as well as create.&#10;           &#10;           small changes, made edit / delete dropdown click instead of hover&#10;           added the mission brief url to view page if exists.&#10;           &#10;           changed up the ip detection to a new more reliable API.&#10;           &#10;           backend cleaning of code to stop duplication of code.&#10;           &#10;           changed date number color so that it can be determined on a day with an event.&#10;           &#10;           changed registration to get all info in one go instead of requiring 2 steps.&#10;           &#10;           Added all contractor orgs to a DB with logo's and RSI links for footer, and cross use on citizenwarfare.&#10;           &#10;           copied terms, and privacy policies from citizenwarfare.&#10;           &#10;           updated to font awesome 5.&#10;           &#10;           added about dev page.&#10;           &#10;           Added HotJar for tracking and feedback! - adjusted code to below js declaration&#10;           &#10;           changed avatar dimension restriction, set size restriction to 1gig&#10;           &#10;           Total overhaul of code, organizations now have there own private calendar, they can share this with other orgs org keep it private, they can also share specific events while keeping others under wraps.&#10;           &#10;           updated font to hopefully allow it to use the zebulon font online, and not just local&#10;           &#10;           minor tweek to organization migration&#10;           &#10;           stopped ignoring org_logos x2&#10;           &#10;           scope issue fixes x4&#10;           &#10;           added google analytics&#10;           &#10;           made calendars private by requiring an account and being logged in.&#10;           &#10;           other QOL changes&#10;           &#10;           Added Public Event ticker to bottom of viewport.&#10;           &#10;           fix for IP issue&#10;           &#10;           update to notifications to make them hang out for a sec&#10;           &#10;           small update to frontend.&#10;           &#10;           added admin section user/visitor tracking&#10;           &#10;           fixed issues with timezone if API dies (use ?timezone={your_timezone_name} )&#10;           &#10;           fixed organization request to show all requests, not just 1 at a time.&#10;           &#10;           Revamp of organization member registration&#10;           &#10;           Normalized HTML, enhanced backend code.&#10;           &#10;           simple typo&#10;           &#10;           fixed reference generation&#10;           &#10;           added template to lost password emails.&#10;           &#10;           Async with ajax for most profile updates.&#10;           &#10;           moved RSS feed updates to background cron job.&#10;           &#10;           testing live push notifications." />
@@ -1264,51 +1220,10 @@
     <MESSAGE value="updated ajax, added iframe for adding discord bot, updated other code for ease" />
     <MESSAGE value="fixed bug with time not converting to 12h" />
     <MESSAGE value="possible fix for ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="possible fix for ajax" />
+    <MESSAGE value="ajx requests fixed, added the ability to change your attendance status!" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajx requests fixed, added the ability to change your attendance status!" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/storage/framework/views/4471e91e57077c3f868d51801305b6b519280425.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="233" column="55" selection-start-line="233" selection-start-column="55" selection-end-line="233" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/css/calendar/fullcalendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Events/OrganizationRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Tracker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/tracker.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1320,13 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Console/Commands/getrssfeeds.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1410,13 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3009">
@@ -1438,13 +1339,6 @@
           <folding>
             <element signature="e#110#2989#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
@@ -1487,97 +1381,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="146" column="102" selection-start-line="146" selection-start-column="102" selection-end-line="146" selection-end-column="102" />
-          <folding>
-            <element signature="e#4743#6254#0#PHP" />
-            <element signature="e#6260#7026#0#PHP" />
-            <element signature="e#7460#7596#0#PHP" />
-            <element signature="e#7601#7662#0#PHP" />
-            <element signature="e#7668#7822#0#PHP" />
-            <element signature="e#7827#7888#0#PHP" />
-            <element signature="e#7894#8090#0#PHP" />
-            <element signature="e#8095#8176#0#PHP" />
-            <element signature="e#8182#8330#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="461" column="22" selection-start-line="461" selection-start-column="22" selection-end-line="461" selection-end-column="22" />
-          <folding>
-            <element signature="e#1235#30244#1#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="178" column="40" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="155" column="152" selection-start-line="155" selection-start-column="152" selection-end-line="155" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2017_12_13_150000_fix_query_arguments.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_02_165747_update_attendance_table_make_username_unique.php">
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_02_165747_update_attendance_table_make_username_unique.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="80" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="299" column="41" selection-start-line="299" selection-start-column="41" selection-end-line="299" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
+        <state relative-caret-position="2448">
+          <caret line="155" column="152" selection-start-line="155" selection-start-column="152" selection-end-line="155" selection-end-column="152" />
         </state>
       </provider>
     </entry>
@@ -1588,30 +1399,159 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="164" column="23" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="108" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="117" column="64" lean-forward="true" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
+        <state relative-caret-position="85">
+          <caret line="10" column="19" selection-start-line="8" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf1f7b45-cd77-4809-a109-2f7603c244ec/schema/admin_events/table/rsses">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="40" column="55" lean-forward="true" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+          <folding>
+            <element signature="e#1239#30248#1#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="178" column="40" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="181" column="33" selection-start-line="181" selection-start-column="33" selection-end-line="181" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        <state relative-caret-position="510">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
           <folding>
             <element signature="e#40#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/rsses">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/RssController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+        <state relative-caret-position="442">
+          <caret line="88" column="62" lean-forward="true" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/discord-test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Console/Commands/getrssfeeds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#5417#7967#0#PHP" />
+            <element signature="e#40#79#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="83" lean-forward="true" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="92" column="49" lean-forward="true" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
         </state>
       </provider>
     </entry>

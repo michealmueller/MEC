@@ -65,7 +65,6 @@ class RegisterController extends Controller
             'org_rsi_site' => 'required|url|unique:organizations,org_rsi_site',
             'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
-
         ]);
     }
 

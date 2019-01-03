@@ -88,41 +88,6 @@ class HomeController extends Controller
 
     public function discord()
     {
-        //token url https://discordapp.com/api/oauth2/token
-        $code = Input::get('code');
-        $state = Input::get('state');
-
-        $data = [
-            'client_id' => env('DISCORD_CLIENT_ID'),
-            'client_secret' => env('DISCORD_CLIENT_SECRET'),
-            'grant_type' => 'authorization_code',
-            'code' => $code,
-            'redirect_uri' => 'https://events.citizenwarfare.com',
-            'scope' => 'bot',
-        ];
-        $endpoint = 'https://discordapp.com/api/oauth2/authorize';
-        $headers = (['Content-Type' => 'application/x-www-form-urlencoded']);
-
-//dd($code, $state, json_encode($data), json_encode($headers));
-
-
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $endpoint);
-        //curl_setopt($ch, CURLOPT_HEADER, 'Content-Type: application/x-www-form-urlencoded');
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-
-        $result = curl_exec($ch);
-
-        if($result != false){
-            dd($result);
-        }else{
-            dd('no idea!', $result);
-        }
-
-
-
+        return view('discord-test');
     }
 }

@@ -59,7 +59,7 @@ class RssController extends Controller implements ShouldQueue
     {
         $feeds = [
             'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
-            'relay' => 'https://relay.sc/feed/rss',
+            //'relay' => 'https://relay.sc/feed/rss',
         ];
 
         //TODO::move this to Laravel cron later.
@@ -67,10 +67,9 @@ class RssController extends Controller implements ShouldQueue
 //dd($Feed->load($feeds['relay']));
         foreach($feeds as $rss) {
                 $feedData = $Feed->load($rss)->toArray();
-
             if (isset($feedData) && $feedData != null) {
                 foreach ($feedData['item'] as $post) {
-                    if (DB::table('rsses')->where('rss_title', $post['title'])->count() <= 0) {
+                    if (DB::table('rsses')->where('rss_title', $post['link'])->get()->count() <= 0) {
                         //if the title does not exist add to DB
                         //fix date first then add
                         if($rss === 'https://robertsspaceindustries.com/comm-link/rss') {
