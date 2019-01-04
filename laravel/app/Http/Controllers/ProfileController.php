@@ -163,8 +163,15 @@ class ProfileController extends Controller
         foreach($sharedOrgs as $k=>$v){
             $sharedOrgsArray[] = $sharedOrgs[$k]->shared_id;
         }
-        $add = array_diff($request['share'],$sharedOrgsArray); //needs Added to DB
-        $remove = array_diff($sharedOrgsArray, $request['share']); //needs removed from DB
+        //dd($sharedOrgs, $sharedOrgsArray, $request['share']);
+        //check if form value is null ( happens when all items are removed from right listbox.
+        if(!is_null($request['share'])) {
+            $add = array_diff($request['share'], $sharedOrgsArray); //needs Added to DB
+            $remove = array_diff($sharedOrgsArray, $request['share']); //needs removed from DB
+        }else{
+            $add = [];
+            $remove = $sharedOrgsArray;
+        }
         //dd($add, $remove, $request['share'], $sharedOrgs, $sharedOrgsArray);
 
         if(count($add) > 0){

@@ -254,15 +254,20 @@ class EventController extends Controller
         }
 
         foreach ($ids as $org){
-                //get hook url
+                //get all shared hook urls
             if ($eventType == 0) {
                 $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
-                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
             } elseif ($eventType == 1) {
                 $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
-                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
             }
         }
+        //get your organizations hook url
+        if ($eventType == 0) {
+            $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
+        } elseif ($eventType == 1) {
+            $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
+        }
+
         $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
         //check org set timezone for null and set to UTC if null
 
@@ -314,7 +319,7 @@ class EventController extends Controller
                         ],
                     'footer' =>
                         [
-                            'text' => 'Please Consider Donating! --> https://paypal.me/muellertek/',
+                            'text' => 'Please Consider Donating --> https://paypal.me/muellertek/',
                         ],
                 ],
             ],
@@ -323,7 +328,9 @@ class EventController extends Controller
         $data = json_encode($data);
         foreach($hooks as $k=>$v) {
 
-            if ($v != '' || $v != null) {
+            if ($v == '' || $v == null || $v == 'undefined') {
+                unset($hooks[$k]);
+            }else{
                 $ch = curl_init($v);
 
                 if (isset($ch)) {
@@ -336,13 +343,13 @@ class EventController extends Controller
                     $result[$k] = curl_exec($ch);
                 }
                 if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
-                    //dd($result, $hooks);
+                    dd($result, $hooks, $k, $v);
                     if(curl_error($ch)) {
                         $result[$k]['error'] = curl_error($ch);
                     }
                     abort('404','There was an issue with Curl, I could not send the data to Discord, please contact support at support@citizenwarfare.com');
+                    die;
                 }
-
             }
         }
         if ($result) {
