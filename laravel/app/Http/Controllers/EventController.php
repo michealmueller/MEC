@@ -123,7 +123,6 @@ class EventController extends Controller
             session()->put('success', 'Event Created!');
 
             $this->pushToBot($request, $request->radGroup1_2, $eventID, $start_date, $end_date);
-
             return redirect('/'.Auth::user()->organization->org_name.'/calendar');
         }
         return redirect('/view/event/'.$eventID);
@@ -257,8 +256,6 @@ class EventController extends Controller
                 //get all shared hook urls
             if ($eventType == 0) {
                 $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
-            } elseif ($eventType == 1) {
-                $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('private_webhook_url');
             }
         }
         //get your organizations hook url
