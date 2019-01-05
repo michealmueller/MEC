@@ -92,10 +92,13 @@ class RegisterController extends Controller
             'password' => password_hash($data['password'], PASSWORD_BCRYPT),
             'hash' => Hash::make($data['email']),
         ]);
-
+        //save avatar
         $data['avatar']->storeAs('org_logos', $avatarName);
+        //send email to users email address.
+        event(new newUser($user, $user->organization));
+        return $user;
 
-        //create the Organization
+        /*//create the Organization
         if(count($exists) == 0){
             $organization = Organization::create([
              'org_logo' => $avatarName,
@@ -144,7 +147,7 @@ class RegisterController extends Controller
         }
 //dd($user, Organization::findorfail($user->organization_id));
         $user = User::findOrFail($user->id);
-        event(new newUser($user, $user->organization));
-        return $user;
+
+        return $user;*/
     }
 }

@@ -59,6 +59,11 @@
     <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
     <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
 
+    <link rel="stylesheet" href="/assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-etlinefont/style.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-hs/style.css">
     <!-- CSS Unify -->
     <!--<link rel="stylesheet" href="/assets/css/unify-admin.css">-->
     <link rel="stylesheet" href="/assets/css/unify-core.min.css">

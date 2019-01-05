@@ -22,7 +22,7 @@ Route::get('/terms', 'HomeController@Terms');
 Route::get('/about-dev', 'HomeController@Dev');
 Route::get('/faq', 'HomeController@Faq');
 
-Route::group(['middleware'=>'auth'], function() {
+Route::group(['middleware'=>['auth', 'verified']], function() {
 
 
     Route::get('/profile', 'ProfileController@index');

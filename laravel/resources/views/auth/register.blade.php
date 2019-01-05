@@ -12,7 +12,7 @@
                 <div class="col-md-6 col-lg-5 flex-md-unordered align-self-center g-mb-80">
                     <div class="u-shadow-v21 g-color-white rounded g-pa-25 g-brd-around g-brd-gray-light-v4 rounded">
                         <header class="text-center mb-4">
-                            <h2 class="h2 g-color-white g-font-weight-600">New Organization Sign-up</h2>
+                            <h2 class="h2 g-color-white g-font-weight-600">New User Sign-up</h2>
                         </header>
 
                         <!-- Form -->
@@ -42,7 +42,7 @@
                                     <input class="form-control text-center " name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
                                 </div>
                             </div>
-                            <div class="mb-4">
+                            {{--<div class="mb-4">
                                 <div class="input-group">
                                     <input class="form-control search-input text-center" type="text" name="q" placeholder="Organization" autocomplete="off" value="{{ old('q') }}" required>
                                 </div>
@@ -60,7 +60,7 @@
                                         <input class="form-control text-center" name="org_discord" type="text" placeholder="Organization Discord(Optional)" value="{{ old('org_discord') }}">
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
 
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6 mb-4">
@@ -154,7 +154,7 @@
                             <div class="media mb-5">
                                 <div class="d-flex mr-4">
                     <span class="align-self-center u-icon-v1 u-icon-size--lg g-color-primary">
-                      <i class="icon-finance-193 u-line-icon-pro"></i>
+                      <i class="icon-pu u-line-icon-pro"></i>
                     </span>
                                 </div>
                                 <div class="media-body align-self-center">
