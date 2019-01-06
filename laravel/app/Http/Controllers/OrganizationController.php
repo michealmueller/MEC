@@ -183,7 +183,7 @@ class OrganizationController extends Controller
      */
     public function join(Request $request)
     {
-        //TODO:: finish joining and organization.
+        /*//TODO:: finish joining and organization.
         $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
 
         foreach ($orgMembers as $member) {
@@ -198,7 +198,7 @@ class OrganizationController extends Controller
             'created_at' => Carbon::now(),
         ]);
 
-        return $user;
+        return $user;*/
     }
 
     protected function updateValidator($data, $org_id)
