@@ -37,7 +37,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/profile';
 
     /**
      * Create a new controller instance.
@@ -93,59 +93,12 @@ class RegisterController extends Controller
             'hash' => Hash::make($data['email']),
         ]);
         //save avatar
-        $data['avatar']->storeAs('org_logos', $avatarName);
+        $data['avatar']->storeAs('avatars', $avatarName);
         //send email to users email address.
         event(new newUser($user, $user->organization));
         return $user;
 
-        /*//create the Organization
-        if(count($exists) == 0){
-            $organization = Organization::create([
-             'org_logo' => $avatarName,
-                'org_name'=> $data['q'],
-                'org_rsi_site' => $data['org_rsi_site'],
-                'org_discord' => $data['org_discord'],
-         ]);
-            $data['avatar']->storeas('org_logos', $avatarName);
-            $user->lead = 1;
-        }else{
-            $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
-
-            foreach($orgMembers as $member) {
-                //fire request event
-                event(new OrganizationRequest($member, $exists[0]));
-
-            }
-            session()->put('info', 'Your request to join this organization has been sent, Watch your email for more info.');
-            $request = DB::table('requests')->insert([
-                    'user_id' => $user->id,
-                    'organization_id' => $exists[0]->id,
-                    'created_at' => Carbon::now(),
-                ]);
-
-            return $user;
-        }
-
-        if(isset($organization->id)){
-            $user->organization_id = $organization->id;
-        }else{
-            $user->organization_id = $exists[0]->id;
-        }
-        $user->update();
-
-        //create the ref code for use in the email.
-        $organization = new OrganizationController;
-        $organization->generateHash($user->organization_id);
-
-        if(count($exists) == 0) {
-            //Create the calendar
-            $calendar = OrgCalendar::create([
-                'cal_url' => '/' . Organization::findorfail($user->organization_id)->org_name . '/calendar',
-                'organization_id' => $user->organization_id,
-                'public' => 0,
-            ]);
-        }
-//dd($user, Organization::findorfail($user->organization_id));
+        /*
         $user = User::findOrFail($user->id);
 
         return $user;*/

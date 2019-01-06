@@ -35,44 +35,13 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        if(!Auth::user()->organization_id){
-            session()->put('info', 'You must wait to be approved.');
-            return redirect('/');
-        }
         $status = self::determineFounderSub(Auth::user());
-        $sharing = [];
-        $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();
-        if(count($shared) > 0){
-            $sharing = $shared;
-            foreach($sharing as $k=>$v)
-            {
-                $org_name = Organization::whereId($v->shared_id)->value('org_name');
-                $sharing[$k]->org_name = $org_name;
-            }
-        }
-        $notSharedOrgs = self::getNotSharedOrgs($shared);
 
-        $org_requests = self::getOrgRequests(Auth::user()->organization_id);
-
-        $OrgController = new OrganizationController;
-
-        $members = Auth()->user()->organization->users;
-
-        return view('profile')->with(['sharing'=>$sharing, 'org_list'=>$notSharedOrgs, 'org_requests' => $org_requests,
-            'status'=>$status, 'members' => $members]);
+        $orgs = Organization::all();
+        return view('profile')->with(['status'=> $status, 'org_list' => $orgs]);
     }
 
-    public function getOrgRequests($org_id)
-    {
-        $requestsData = [];
-        $orgRequests = DB::table('requests')->where('organization_id', $org_id)->get();
 
-        foreach($orgRequests as $req){
-            $requestsData[] = User::whereId($req->user_id)->get()->first();
-        }
-
-        return $requestsData;
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -102,128 +71,24 @@ class ProfileController extends Controller
                 'password' => 'min:6|confirmed'
             ]);
 
-            if (Auth::check()) {
-                $user = Auth::user();
-                $organization = Organization::whereId($user->organization->id)->get();
-                $organization = $organization[0];
-            }
 
-            if (!$request->hasFile('avatar')) {
-                $user->email = $request['email'];
-                $user->username = $request['username'];
-            }
+        $user = Auth::user();
 
-            if ($request->hasFile('avatar')) {
-                $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
-                $request->avatar->storeAs('org_logos', $avatarName);
-                //$user->avatar = $avatarName;
+        $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
+        $request->avatar->storeAs('avatars', $avatarName);
 
-                //update organization info
+        $user->email = $request['email'];
+        $user->username = $request['username'];
+        $user->avatar = $avatarName;
+        $user->email = $request['email'];
 
-                $organization->org_logo = $avatarName;
-            }
-
-            $user->email = $request['email'];
-
-            if ($user->save() && $organization->save()) {
-                session()->put('success', 'Profile updated');
-                return back()->withInput(['tab' => 'edit']);
-            }
-
+        if($user->save()) {
+            session()->put('success', 'Profile updated');
+            return back();
+        }else {
             session()->put('error', 'Something went wrong!');
-            return back()->withInput(['tab' => 'edit']);
-    }
-
-    public function genRefCode(Request $request)
-    {
-        $org = new OrganizationController;
-        $refHash = $org->generateHash(Auth::user()->organization_id);
-        $response = collect(
-            (object)[
-                'selector' => 'refHash',
-                'selector2' => 'refHash2',
-                'notificationType' => 'info',
-                'notificationMsg' => 'Successfully created your new reference code',
-                'replaceText' => '<a href="https://events.citizenwarfare.com/join/ref/'.$refHash.'">'.$refHash.'</a>',
-                'errorMsg' =>'Error While generating your new reference code'
-        ]);
-
-        return $response;
-    }
-
-    public function addDiscordBot(Request $request)
-    {
-
-    }
-
-    public function updateShare(Request $request)
-    {
-        $sharedOrgsArray = [];
-        $sharedOrgs = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get()->toArray();
-        foreach($sharedOrgs as $k=>$v){
-            $sharedOrgsArray[] = $sharedOrgs[$k]->shared_id;
+            return back();
         }
-        //dd($sharedOrgs, $sharedOrgsArray, $request['share']);
-        //check if form value is null ( happens when all items are removed from right listbox.
-        if(!is_null($request['share'])) {
-            $add = array_diff($request['share'], $sharedOrgsArray); //needs Added to DB
-            $remove = array_diff($sharedOrgsArray, $request['share']); //needs removed from DB
-        }else{
-            $add = [];
-            $remove = $sharedOrgsArray;
-        }
-        //dd($add, $remove, $request['share'], $sharedOrgs, $sharedOrgsArray);
-
-        if(count($add) > 0){
-            foreach($add as $share){
-                DB::table('shared')
-                    ->insert([
-                        'organization_id' => Auth::user()->organization->id,
-                        'shared_id' => $share,
-                    ]);
-            }
-        }
-        if(count($remove) > 0){
-            foreach($remove as $share){
-                DB::table('shared')
-                    ->where('organization_id', Auth::user()->organization->id)
-                    ->where('shared_id', $share)
-                    ->delete();
-            }
-        }
-        session()->put('success', 'Updated Share Settings.');
-        return back();
-        /*dd($request);
-        foreach($request->share as $share) {
-            $updated = DB::table('shared')->insert([
-                'organization_id' => Auth::user()->organization->id,
-                'shared_id' => $share
-            ]);
-        }*/
-    }
-
-    public function getNotSharedOrgs($shared)
-    {
-        $sharedOrgsArray = [];
-        foreach($shared as $k=>$v){
-            $sharedOrgsArray[] = $shared[$k]->shared_id;
-        }
-        $orgs = Organization::all();
-        foreach ($orgs as $org){
-            $list[] = $org->id;
-        }
-        $notShared = array_diff($list, $sharedOrgsArray);
-        //unset the users organization so that it cannot be selected.
-        $userOrg = array_search(Auth::user()->organization_id, $notShared);
-        unset($notShared[$userOrg]);
-
-        if(count($notShared) >=1) {
-            foreach ($notShared as $org_id) {
-                $notSharedOrgs[] = Organization::whereId($org_id)->get()->first();
-            }
-            return $notSharedOrgs;
-        }
-
     }
 
     public function determineFounderSub($user)

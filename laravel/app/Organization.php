@@ -65,7 +65,7 @@ class Organization extends Model
 
     public function calendars()
     {
-        return $this->hasMany(OrgCalendar::class);
+        return $this->hasOne(OrgCalendar::class);
     }
 
 }

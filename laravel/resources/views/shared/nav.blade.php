@@ -34,7 +34,7 @@
                                          @if($user->organization_id != null)
                                          src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
                                          @else
-                                         src="/storage/app/org_logos/{{ $user->avatar}}"
+                                         src="/storage/app/avatars/{{ $user->avatar}}"
                                          @endif
                                     >
                                 </span>

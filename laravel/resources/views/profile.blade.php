@@ -5,15 +5,19 @@
         <div class="row my-2">
             <div class="col-lg-4 order-lg-1 text-center">
                 <div class="col-sm-12" style="margin-bottom:20px;">
-                    <img
-                            @if($user->organization->org_logo)
-                            src="/storage/app/org_logos/{{ $user->organization->org_logo }}"
-                            @else
-                            src="//placehold.it/100"
-                            @endif
-                            class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
+                    <img src="/storage/app/avatars/{{$user->avatar}}" class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="avatar">
                 </div>
-                <h3>{{ $user->organization->org_name}}</h3>
+                <div class="row">
+                    @if(isset($user->organization->org_logo))
+                    <div class="col-md-4">
+                            <img class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="50px" src="/storage/app/org_logos/{{$user->organization->org_logo}}">
+                    </div>
+                    <div class="col-md-4">
+                        <h5>{{ $user->organization->org_name}}</h5>
+                    </div>
+                    @endif
+                </div>
+
                 <table>
                     <tr>
                         <th>IP TZ:</th>
@@ -25,10 +29,14 @@
                         <th>System TZ:</th>
                         <td>&nbsp;</td>
                         <td id="systemtz">
-
                         </td>
                     </tr>
                 </table>
+                @if(!isset($user->organization))
+                <div class="col-md-12 g-pt-30">
+                    <p>To create or join an organization go to the organization tab.</p>
+                </div>
+                @endif
             </div>
             <div class="col-lg-8 order-lg-2 ">
                 <ul class="nav nav-tabs " id="tabMenu">
@@ -38,32 +46,21 @@
                     <li class="nav-item">
                         <a href="" data-target="#edit" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Edit</a>
                     </li>
-                    @if($user->lead == 1)
                     <li class="nav-item">
-                        <a href="" data-target="#members" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Members</a>
+                        <a href="" data-target="#organization" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Organization</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Sharing</a>
+                        <a href="" data-target="#discord" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Discord Bot</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Requests</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Generate Ref. Code</a>
-                    </li>
-
-                        <li class="nav-item">
-                            <a href="" data-target="#discord" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Discord Bot</a>
-                        </li>
-
-                    @endif
                 </ul>
                 <div class="tab-content py-4 g-pa-10">
                     <div class="tab-pane active" id="profile">
                         <h5 class="mb-3">{{$user->username}}'s Profile</h5>
-                        <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
-                        @if(isset($user->organization->refHash) && $user->organization->refHash != '')
-                            <h6 class="g-pa-15--md">Reference Code Link: <span id="refHash2"><a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">/join/ref/{{ $user->organization->refHash }}</a></span></h6>
+                        @if(isset($user->organization->org_name))
+                            <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
+                            @if(isset($user->organization->refHash) && $user->organization->refHash != '')
+                                <h6 class="g-pa-15--md">Reference Code Link: <span id="refHash2"><a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">/join/ref/{{ $user->organization->refHash }}</a></span></h6>
+                            @endif
                         @endif
                         <div class="row">
                             <div class="col-md-6">
@@ -95,17 +92,10 @@
                             {{csrf_field()}}
                             <!-- Begin Avatar -->
                             <div class="row">
-                                @if($user->lead == 1)
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
                                 <div class="col-lg-4 order-lg-1 text-center">
                                     <div class="col-sm-12" style="margin-bottom:20px;">
-                                        <img id="avatar"
-                                             @if($user->organization->org_logo)
-                                                src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
-                                             @else
-                                                src="//placehold.it/100"
-                                             @endif
-                                             class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
+                                        <img id="avatar"src="/storage/app/avatars/{{$user->avatar}}"class="mx-auto g-mb-10--md img-fluid img-circle d-block" alt="avatar">
                                         <label  class="btn-bs-file btn btn-block btn-primary ">
                                             Browse
                                             <input id="avatarUp" type="file" name="avatar" style="display: none;">
@@ -113,7 +103,6 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 order-lg-1 text-center"></div>
-                                @endif
                             </div>
                             <!-- End Avatar -->
                             <input type="hidden" name="user_id" value="{{$user->id}}">
@@ -137,168 +126,22 @@
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane" id="members">
-
-                        <div class="shortcode-html">
-                            <!-- Hover Rows -->
-                            <div class="card g-brd-primary rounded-0 g-mb-30">
-                                <h3 class="card-header g-bg-primary g-brd-transparent g-color-white g-font-size-16 rounded-0 mb-0">
-                                    <i class="fa fa-gear g-mr-5"></i>
-                                    Organization Members
-                                </h3>
-
-                                <div class="table-responsive">
-                                    <table class="table table-hover u-table--v1 mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th class="hidden-md">Avatar</th>
-                                            <th>Username</th>
-                                            <th class="hidden-sm">Email</th>
-                                            <th>Join Date</th>
-                                            <th>Lead</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody>
-                                        @foreach($members as $member)
-                                        <tr>
-                                            <th scope="row"><img height="50" src="/storage/app/org_logos/{{ $member->avatar }}" /></th>
-                                            <td>{{ $member->username }}</td>
-                                            <td class="hidden-sm">{{ $member->email }}</td>
-                                            <td>{{ $member->created_at }}</td>
-                                            <td id="lead{{$member->id}}">
-                                                @if($member->lead == 1)
-                                                <span class="u-label u-label-warning g-color-white">Event Lead</span>
-                                                <br>
-                                                <button class="btn btn-xs btn-danger" onclick="ajaxRequest('/profile/remove/lead', '', 'save', '', {{ $member->id }})"><span class="fa fa-icon-remove  " ></span>Remove Event Lead</button>
-                                                @else
-                                                <button class="btn btn-xs btn-success" onclick="ajaxRequest('/profile/add/lead', '', 'save', '', {{$member->id}})"><span class="fa fa-check" ></span>Make Event Lead</button>
-                                                @endif
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
+                    <div class="tab-pane" id="organization">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-md-6 g-brd-right--md ">
+                                <h5>Create your very own Organization.</h5>
+                                <a href="/profile/create/organization" class="btn btn-primary">Create Now</a>
                             </div>
-                            <!-- End Hover Rows -->
-                        </div>
-
-                    </div>
-                    @if($user->lead == 1)
-                    <div class="tab-pane" id="sharing">
-                        <div class="row">
-                            <div class="col-md-12 justify-content-center text-center row">
-
-                                <div class="justify-content-center text-center g-pa-15">
-                                    <p>By moving an organization from the left list to the right list, you are giving them the ability
-                                            to view your public events on there organization calendar.</p>
-                                </div>
-
-                                <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
-
-                                <div class="col-md-4">
-                                    <select class="form-control" multiple id='lstBox1' style="height: 150px; width: 100%;">
-                                        @if(isset($org_list))
-                                            @foreach($org_list as $org)
-                                                <option value="{{ $org->id }}">{{ $org->org_name }}</option>
-                                            @endforeach
-                                        @endif
-                                    </select>
-                                </div>
-                                <div class="col-md-2 justify-content-center text-center">
-                                    <div class="col-md-2">&nbsp;</div>
-                                    <div class="col-md-2">
-                                        <input class="btn btn-primary " type='button' id='btnRight' value ='  >>  '/>
-                                    </div>
-                                    <div class="col-md-2">&nbsp;</div>
-                                    <div class="col-md-2">
-                                        <input class="btn btn-primary " type='button' id='btnLeft' value ='  <<  '/>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <form method="post" action="/update/share" enctype="multipart/form-data">
-                                        {{csrf_field()}}
-                                        <select class="form-control" multiple="multiple" id='lstBox2' name="share[]" style="height: 150px; width: 100%;">
-                                            @if(isset($sharing))
-                                                @foreach($sharing as $shared)
-                                                <option value="{{ $shared->shared_id }}">{{ $shared->org_name }}</option>
-                                                @endforeach
-                                            @endif
-                                        </select>
-                                        <br>
-                                        <input id="sharing" type="submit" class="btn btn-primary btn-block" onclick="selectAll()" value="Save">
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="requests">
-                        <p>These are the requests that come in from users that have not used the reference code to register to the organization. a.k.a "the randoms"</p>
-
-                        <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
-
-                        <!-- Table Inverse -->
-                        <div class="table-responsive">
-                            <table class="table table-dark">
-                                <thead>
-                                <tr>
-                                    <th>Username</th>
-                                    <th class="hidden-sm">email</th>
-                                    <th>Requested On</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                @foreach($org_requests as $joinReq)
-                                <tr>
-                                    <td>
-                                        @if(isset($joinReq->username))
-                                            {{$joinReq->username}}
-                                        @endif
-                                    </td>
-                                    <td>{{ $joinReq->email }}</td>
-                                    <td>{{ $joinReq->created_at->format('Y-m-d H:m:s') }}</td>
-                                    <td>
-                                        <a href="/request/1/{{ $user->organization_id }}/{{ $joinReq->id }}"><button type="button" class="btn btn-primary btn-block">Approve</button></a>
-                                        <a href="/request/0/{{ $user->organization_id }}/{{ $joinReq->id }}"><button type="button" class="btn btn-danger btn-block">Deny</button></a>
-                                    </td>
-                                </tr>
+                            <div class="col-md-6">
+                                <h5>Join an Organization</h5>
+                                <ul style="list-style: none ">
+                                @foreach($org_list as $org)
+                                        <li><a href="/profile/organization/{{ $org->id }}"><img src="/storage/app/org_logos/{{ $org->org_logo }}" width="25px">{{ $org->org_name }}</a></li>
                                 @endforeach
-                                </tbody>
-                            </table>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="refcode">
-                        <p>You can use this code to allow organization members to join simply and quickly.</p>
-                        <p>This code will change and be saved in the DB on each button click.</p>
-                        <p>until i get a custom algorithm try to avoid periods and slashed in the code.</p>
-
-                        <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-50">
-
-                        <div class="row">
-                            <div class="col-md-4 text-center center-v center-block">Reference Code:</div>
-                            <div class="col-md-4">
-                                @if(isset($user->organization->refHash))
-                                    <p><h3><b id="refHash"><a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash }}">{{ $user->organization->refHash }}</a></b></h3></p>
-                                @else
-                                    <p>Click Generate!</p>
-                                @endif
-                            </div>
-                            <div class="col-md-4"></div>
-                        </div>
-                            {{ csrf_field() }}
-                            <div class="row">
-                                <div class="col-lg-2 order-lg-1 text-center"></div>
-                                <div class="col-lg-8 order-lg-1 text-center">
-                                    <button class="btn btn-primary btn-block" name="generate" onclick="ajaxRequest('/profile/generate', 'refHash', 'ref')">Generate</button>
-                                </div>
-                                <div class="col-lg-2 order-lg-1 text-center"></div>
-                            </div>
-                    </div>
-
                     <div class="tab-pane" id="discord">
                         <ul>
                             <li>#1: Click on Add Bot, to add the bot to your discord.</li>
@@ -336,7 +179,6 @@
                             </div>
                         </div>
                     </div>
-                    @endif
                 </div>
             </div>
         </div>

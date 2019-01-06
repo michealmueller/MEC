@@ -42,25 +42,6 @@
                                     <input class="form-control text-center " name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
                                 </div>
                             </div>
-                            {{--<div class="mb-4">
-                                <div class="input-group">
-                                    <input class="form-control search-input text-center" type="text" name="q" placeholder="Organization" autocomplete="off" value="{{ old('q') }}" required>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 mb-4">
-                                    <div class="input-group">
-                                        <input class="form-control text-center " name="org_rsi_site" type="url" placeholder="RSI Organization URL" value="{{ old('org_rsi_site') }}" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 mb-4">
-                                    <div class="input-group">
-                                        <input class="form-control text-center" name="org_discord" type="text" placeholder="Organization Discord(Optional)" value="{{ old('org_discord') }}">
-                                    </div>
-                                </div>
-                            </div>--}}
 
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6 mb-4">
