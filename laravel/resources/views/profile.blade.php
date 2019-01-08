@@ -128,6 +128,13 @@
                         </form>
                     </div>
                     <div class="tab-pane" id="organization">
+                        @if(!isset($user->organiation))
+                            <div class="row justify-content-center text-center">
+                                <div class="col-md-6 g-brd-right--md ">
+                                    <a href="/profile/organization/{{$user->organization->id}}"><button class="btn btn-primary" >Go To Your Organization Profile.</button></a>
+                                </div>
+                            </div>
+                        @else
                         <div class="row justify-content-center text-center">
                             <div class="col-md-6 g-brd-right--md ">
                                 <h5>Create your very own Organization.</h5>
@@ -142,6 +149,7 @@
                                 </ul>
                             </div>
                         </div>
+                        @endif
                     </div>
                     <div class="tab-pane" id="discord">
                         <ul>

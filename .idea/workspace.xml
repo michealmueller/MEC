@@ -2,174 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/_ide_helper_models.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationRequestsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/app/OrganizationRequests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/config/geoip/GeoLite2-City.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/config/geoip/GeoLite2-City.mmdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/config/geoip/GeoLite2-City.mmdb.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/config/prologue/alerts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/database/migrations/2019_01_06_201509_add_orgrequestid_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/ar/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/bg/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/da_DK/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/de/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/el/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/en/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/es/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/fr/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/fr_CA/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/it/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/lv/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/nl/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/pt/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/pt_br/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/ro/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/ru/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/tr/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/zh-Hant/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/lang/vendor/backpack/zh-cn/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/400.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/401.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/403.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/405.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/408.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/429.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/500.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/503.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/errors/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/vendor/backpack/base/inc/sidebar_content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/vendor/backpack/base/inc/topbar_left_content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/vendor/backpack/base/inc/topbar_right_content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Attendance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Event.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Events/OrganizationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/OrganizationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Events/newUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/newUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Listeners/newUserListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Listeners/newUserListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Mail/newUserMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Mail/newUserMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Organization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/RecentActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/RecentActivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Subscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Tracker.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Tracker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/config/tracker.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/config/tracker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/emails/newUserEmail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/emails/newUserEmail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/faq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/organizationProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/organizationProfile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/firebase/citizenwarfare-firebase-adminsdk-5ng1m-55e47bc951.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_Xmas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542337822.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542338210.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542338329.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542333185.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542333765.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542353119.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/26_avatar1545310551.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/600i.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/IHI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/Skylark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/Synch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/ancientz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/ancientz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534721597.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534722099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534722400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534723049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534726057.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534804506.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534820395.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534822466.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534866310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534879460.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534881742.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534883343.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534884637.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534885002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534885728.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534888303.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535555175.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535704894.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535739289.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1536874745.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1542251090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545310524.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545310870.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311253.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311634.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311696.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311797.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312272.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312447.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312507.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312779.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312885.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313524.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313575.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313679.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313813.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313851.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545322631.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545322750.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323326.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323392.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323959.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324248.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324373.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324618.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325338.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325467.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325835.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326452.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326565.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326639.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326658.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326763.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326918.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327252.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327269.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327321.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327361.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327520.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327760.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328183.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328212.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328284.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328326.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/omega_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/modern-business.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/modern-business.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/images/4k_space-field2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/images/4k_space-field2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/flot-data.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/morris-data.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/css/sb-admin-2.min.css" afterDir="false" />
@@ -430,16 +266,16 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="318" />
-          <entry key="Blade" value="25305" />
+          <entry key="Blade" value="25560" />
           <entry key="CSS" value="721" />
           <entry key="Git file" value="49" />
           <entry key="HTML" value="14" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19682" />
           <entry key="PHP" value="30682" />
-          <entry key="PLAIN_TEXT" value="2405" />
+          <entry key="PLAIN_TEXT" value="2437" />
           <entry key="SQL" value="20" />
-          <entry key="Scratch" value="372" />
+          <entry key="Scratch" value="374" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -449,10 +285,10 @@
       <usages-collector id="statistics.php.rename.constructor" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="23" />
-          <entry key="Blade" value="158" />
+          <entry key=".env file" value="24" />
+          <entry key="Blade" value="160" />
           <entry key="CSS" value="30" />
-          <entry key="Database Element" value="142" />
+          <entry key="Database Element" value="143" />
           <entry key="Git file" value="10" />
           <entry key="Image" value="37" />
           <entry key="JSON" value="24" />
@@ -508,35 +344,31 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/composer.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/config/tracker.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="350" column="6" selection-start-line="350" selection-start-column="6" selection-end-line="350" selection-end-column="6" />
+                <state relative-caret-position="289">
+                  <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/laravel/.gitignore">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+                <state relative-caret-position="-286">
+                  <caret line="104" column="45" lean-forward="true" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="137" column="76" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+                  <folding>
+                    <element signature="e#2793#4856#0#HTML" />
+                    <element signature="e#4877#7582#0#HTML" />
+                    <element signature="e#8630#11023#0#HTML" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -548,8 +380,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+                <state relative-caret-position="544">
+                  <caret line="32" selection-start-line="32" selection-end-line="32" />
                 </state>
               </provider>
             </entry>
@@ -679,20 +511,20 @@
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_06_201509_add_orgrequestid_to_users_table.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/custom.min.css" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/modern-business.css" />
         <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/faq.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Models/User.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/Vendor/Laravel/Models/Base.php" />
         <option value="$PROJECT_DIR$/laravel/composer.json" />
         <option value="$PROJECT_DIR$/laravel/config/tracker.php" />
         <option value="$PROJECT_DIR$/laravel/.gitignore" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
       </list>
     </option>
   </component>
@@ -758,124 +590,7 @@
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Mail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="prologue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
@@ -896,7 +611,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;organization&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php&#10;vieweve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;reg&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;profile.b&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;organizationControl&#9;null&#9;null&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;USer&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;registercon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;getrssfeeds&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Console/Commands/getrssfeeds.php&#10;homecontroller&#9;null&#9;null&#10;routeco&#9;null&#9;null&#10;config/ses&#9;FILE&#9;file://D:/Work/MEC/laravel/config/session.php&#10;routeserv&#9;null&#9;null&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;footer&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/footer.blade.php&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;header&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/header.blade.php&#10;viewevent&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;createeve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;Rss&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/RssController.php&#10;bot.js&#9;FILE&#9;file://D:/Work/MEC/public_html/DiscordBot/bot.js&#10;4471&#9;FILE&#9;file://D:/Work/MEC/laravel/storage/framework/views/4471e91e57077c3f868d51801305b6b519280425.php&#10;appservicepr&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;organization&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php&#10;vieweve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;reg&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Organization.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;profile.b&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;organizationControl&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;USer&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;eve&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;register&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/register.blade.php&#10;registercon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;getrssfeeds&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Console/Commands/getrssfeeds.php&#10;homecontroller&#9;null&#9;null&#10;routeco&#9;null&#9;null&#10;config/ses&#9;FILE&#9;file://D:/Work/MEC/laravel/config/session.php&#10;routeserv&#9;null&#9;null&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;footer&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/footer.blade.php&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;header&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/header.blade.php&#10;viewevent&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;createeve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;Rss&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/RssController.php&#10;bot.js&#9;FILE&#9;file://D:/Work/MEC/public_html/DiscordBot/bot.js&#10;4471&#9;FILE&#9;file://D:/Work/MEC/laravel/storage/framework/views/4471e91e57077c3f868d51801305b6b519280425.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -1062,14 +777,7 @@
       <workItem from="1546785359663" duration="19998000" />
       <workItem from="1546869591774" duration="9670000" />
       <workItem from="1546888989115" duration="292000" />
-      <workItem from="1546909199259" duration="4028000" />
-    </task>
-    <task id="LOCAL-00167" summary="Testing Discord Bot to site">
-      <created>1545173522643</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1545173522643</updated>
+      <workItem from="1546909199259" duration="4992000" />
     </task>
     <task id="LOCAL-00168" summary="Testing Discord Bot to site">
       <created>1545179750853</created>
@@ -1407,17 +1115,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546794696442</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements">
+      <created>1546914013441</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1546914013441</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="944151000" />
+    <option name="totallyTimeSpent" value="945115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16176471" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16176471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1453,7 +1168,6 @@
       <path value="$PROJECT_DIR$/public_html/public/templates/sb-admin-2" />
       <path value="$PROJECT_DIR$/public_html/templates/sb-admin-2" />
     </ignored-roots>
-    <MESSAGE value="Testing Discord Bot to site" />
     <MESSAGE value="fix for private envets, typo as usual" />
     <MESSAGE value="perminate fix for timezone issues." />
     <MESSAGE value="fix for timezone issues" />
@@ -1478,16 +1192,10 @@
     <MESSAGE value="removed getting shared private hook urls, will never need to get shared hook urls when the event is private." />
     <MESSAGE value="updateing before running make:auth so i can revert" />
     <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;seperated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;seperated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!" />
+    <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/app/Events/newUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/viewEvent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-969" />
@@ -1574,13 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/css/custom.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1626,13 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1674,13 +1368,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Middleware/CheckIfAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1775,24 +1462,10 @@
     <entry file="file://$PROJECT_DIR$/laravel/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1810,10 +1483,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/.env">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="137" column="76" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+          <folding>
+            <element signature="e#2793#4856#0#HTML" />
+            <element signature="e#4877#7582#0#HTML" />
+            <element signature="e#8630#11023#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="104" column="45" lean-forward="true" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
         </state>
       </provider>
     </entry>

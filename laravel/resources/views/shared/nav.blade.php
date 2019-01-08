@@ -19,7 +19,7 @@
                 <!-- End Logo -->
 
                 @if(Auth::check())
-                    <div class="collapse navbar-collapse text-center two" id="navBar">
+                    <div class="collapse navbar-collapse two" id="navBar">
 
                         <div class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
                             <div class="g-pos-rel g-px-10--lg">
@@ -59,6 +59,14 @@
                                             <span class="media-body align-self-center">View Calendar</span>
                                         </a>
                                     </li>
+                                        <li class="g-mb-10">
+                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile/organization/{{$user->organization->id}}/calendar">
+                                        <span class="d-flex align-self-center g-mr-12">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                                <span class="media-body align-self-center">Organization Profile</span>
+                                            </a>
+                                        </li>
                                     @endif
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile">
@@ -92,7 +100,7 @@
                                             <span class="d-flex align-self-center g-mr-12">
                                                 <i class="fa fa-building"></i>
                                             </span>
-                                                <span class="media-body align-self-center">Create an Orgnaization</span>
+                                                <span class="media-body align-self-center">Create an Organization</span>
                                             </a>
                                         </li>
                                     @endif
