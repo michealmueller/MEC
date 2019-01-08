@@ -19,10 +19,9 @@ class newUserMail extends Mailable
      *
      * @return void
      */
-    public function __construct(Organization $organization)
+    public function __construct()
     {
         //
-        $this->organization = $organization;
     }
 
     /**
@@ -34,7 +33,6 @@ class newUserMail extends Mailable
     {
 
         return $this->from('support@citizenwarfare.com')
-                    ->markdown('emails.newUserEmail')
-                    ->with('user', $this->organization);
+                    ->markdown('emails.newUserEmail');
     }
 }

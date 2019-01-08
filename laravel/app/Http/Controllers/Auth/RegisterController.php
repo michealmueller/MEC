@@ -62,8 +62,6 @@ class RegisterController extends Controller
             'avatar' => 'required|image|mimes:jpeg,jpg,png,gif|max:1024',
             'username' => 'required|max:255|unique:users,username',
             'email' => 'required|email|max:255|unique:users,email',
-            'org_rsi_site' => 'required|url|unique:organizations,org_rsi_site',
-            'q' => 'required|max:255', //org_name
             'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -76,8 +74,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $exists = Organization::where('org_name', $data['q'])->get();
-//dd($exists[0]->id);
         if(!$data['avatar']) {
             $avatarName = 'avatar' . time() . '.' . $data['org_logo']->getClientOriginalExtension();
         }else {
@@ -95,7 +91,7 @@ class RegisterController extends Controller
         //save avatar
         $data['avatar']->storeAs('avatars', $avatarName);
         //send email to users email address.
-        event(new newUser($user, $user->organization));
+        event(new newUser($user));
         return $user;
 
         /*

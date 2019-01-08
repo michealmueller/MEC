@@ -43,6 +43,26 @@ use Laravel\Cashier\Billable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereIsAdmin($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUsername($value)
+ * @property string|null $email_verified_at
+ * @property string|null $stripe_id
+ * @property string|null $braintree_id
+ * @property string|null $paypal_email
+ * @property string|null $card_brand
+ * @property string|null $card_last_four
+ * @property string|null $trial_ends_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Attendance[] $attending
+ * @property-read \App\OrganizationRequests $request
+ * @property-read \App\Subscription $subed
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Cashier\Subscription[] $subscriptions
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereBraintreeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCardBrand($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCardLastFour($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePaypalEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereStripeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereTrialEndsAt($value)
+ * @property int $organization_requests_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOrganizationRequestsId($value)
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -55,7 +75,15 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'avatar', 'email', 'password', 'org_name', 'username', 'organization_id', 'q', 'org_rsi_site', 'org_discord'
+        'avatar',
+        'email',
+        'password',
+        'org_name',
+        'username',
+        'organization_id',
+        'q',
+        'org_rsi_site',
+        'org_discord',
     ];
 
     /**
@@ -85,5 +113,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function attending()
     {
         return $this->belongsToMany(Attendance::class);
+    }
+
+    public function request()
+    {
+        return $this->hasOne(OrganizationRequests::class);
     }
 }

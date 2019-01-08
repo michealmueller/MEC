@@ -24,11 +24,10 @@ class newUser
      *
      * @return void
      */
-    public function __construct(User $user, Organization $organization)
+    public function __construct(User $user)
     {
         //
         $this->user = $user;
-        $this->organization = $organization;
 
     }
 

@@ -20,7 +20,7 @@
                             <img class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="50px" src="/storage/app/org_logos/{{$organization->org_logo}}">
                         </div>
                         <div class="col-md-8">
-                            <h4>{{ $organization->org_name}}'s Profile</h4>
+                            <h5>{{ $organization->org_name}}'s Profile</h5>
                         </div>
                     @endif
                 </div>
@@ -279,7 +279,7 @@
         </div>
     </div>
     @else
-        <section class="g-py-200--md g-py-80 g-color-white">
+        <section class="g-py-40 g-color-white">
             <div class="container text-center">
                 <div style="background: url('/storage/app/org_logos/{{ $organization->org_logo }}') no-repeat center;background-size: contain ">
                 </div>
@@ -291,10 +291,14 @@
                         </h2>
 
                         <p class="lead g-mb-40">You are currently viewing this organizations public profile page.</p>
-                        <p >To join this organization click the send request button bellow!</p>
-
-                        <button onclick="ajaxRequest()" class="btn btn-primary">Request to Join</button>
-
+                        @if(!$requested)
+                            <div id="answer">
+                                <p >To join this organization click the send request button bellow!</p>
+                                <button id="requestButton" onclick="ajaxRequest('/join/organization/request', 'answer', 'request', '',{{$arrData}})" class="btn btn-primary">Request to Join</button>
+                            </div>
+                        @else
+                            <div id="answer"><h4>Request Already Sent</h4></div>
+                        @endif
                         <p>Current Members Include:</p>
                         <div class="table-responsive">
                             <table class="table table-striped u-table--v1 table-dark mb-0">

@@ -20,7 +20,7 @@ Route::get('/change/timezone', 'EventController@index');
 Route::get('/privacy', 'HomeController@Privacy');
 Route::get('/terms', 'HomeController@Terms');
 Route::get('/about-dev', 'HomeController@Dev');
-Route::get('/faq', 'HomeController@Faq');
+Route::get('/faq', 'HomeController@faq');
 Route::get('/join/ref/{refHash}', 'ReferenceController@verifyRefCode');
 Route::post('/join/ref/{refHash}', 'ReferenceController@registerToOrg');
 Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
@@ -31,7 +31,7 @@ Route::group(['middleware'=>['auth', 'verified']], function() {
     //Profile Routes
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
-    Route::post('/profile/generate', 'ProfileController@genRefCode');
+    Route::post('/profile/generate', 'OrganizationController@genRefCode');
     Route::post('/profile/add/lead', 'OrgCalendarController@giveLead');
     Route::post('/profile/remove/lead', 'OrgCalendarController@removeLead');
     Route::post('/profile/add/discord_bot', 'ProfileController@addDiscordBot');
@@ -41,10 +41,10 @@ Route::group(['middleware'=>['auth', 'verified']], function() {
     //Organization Routes
     Route::get('/profile/organization/{organization}', 'OrganizationController@profile');
     Route::post('/profile/organization/{organization}', 'OrganizationController@update');
-    Route::get('/request/{id}/{organization_id}/{user_id}', 'OrganizationController@requests');
+    Route::post('/join/organization/request', 'OrganizationController@join');
+    Route::get('/request/{id}/{organization}/{user}', 'OrganizationController@requests');
     Route::post('/update/share', 'OrganizationController@updateShare');
     Route::get('/{organization}/calendar', 'OrgCalendarController@index')->name('calendar');
-
     //Event Routes
     Route::post('/event/updateAttendance', 'AttendanceController@create')->name('updateAttendance');
     Route::get('/event/get/attendance/{event_id}', 'AttendanceController@read');

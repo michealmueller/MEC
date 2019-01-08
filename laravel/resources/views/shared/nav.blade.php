@@ -19,7 +19,7 @@
                 <!-- End Logo -->
 
                 @if(Auth::check())
-                    <div class="collapse navbar-collapse two" id="navBar">
+                    <div class="collapse navbar-collapse text-center two" id="navBar">
 
                         <div class="navbar-nav text-uppercase g-font-weight-600 ml-auto">
                             <div class="g-pos-rel g-px-10--lg">
@@ -29,7 +29,7 @@
 
                                     @if(Auth::check())
                                         <span class="g-pos-rel" >
-                                    <span class="u-badge-v2--xs u-badge--top-right g-hidden-sm-up g-bg-lightblue-v5 g-mr-5"></span>
+                                    <span class="g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
                                          @if($user->organization_id != null)
                                          src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
@@ -40,7 +40,7 @@
                                 </span>
 
                                         <span class="g-pos-rel g-top-2">
-                                    <span class="g-hidden-sm-down">@if(isset($user->username)){{ $user->username }}@else{{ $user->organization->org_name }}@endif</span>
+                                    <span class="">@if(isset($user->username)){{ $user->username }}@else{{ $user->organization->org_name }}@endif</span>
                                     <i class="hs-admin-angle-down g-pos-rel g-top-2 g-ml-10"></i>
                                 </span>
                                     @endif
@@ -50,16 +50,16 @@
                                 <ul id="profileMenu" class="g-pos-abs g-left-20 g-width-100x--md g-nowrap g-font-size-12 g-py-20
                             g-mt-17 rounded u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="profileMenuInvoker"
                                     style="animation-duration: 300ms; left: 0px;background-color: #000000">
-
+                                    @if($user->organization)
                                     <li class="g-mb-10">
-                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/@if($user->organization_id != null){{$user->organization->org_name}}/calendar">@endif
+                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/{{$user->organization->org_name}}/calendar">
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="fa fa-calendar"></i>
                                         </span>
                                             <span class="media-body align-self-center">View Calendar</span>
                                         </a>
                                     </li>
-
+                                    @endif
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile">
                                         <span class="d-flex align-self-center g-mr-12">
@@ -85,6 +85,16 @@
                                             <span class="media-body align-self-center">Create an Event</span>
                                         </a>
                                     </li>
+                                    @endif
+                                    @if(!$user->organization)
+                                        <li class="g-mb-10">
+                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile/create/organization">
+                                            <span class="d-flex align-self-center g-mr-12">
+                                                <i class="fa fa-building"></i>
+                                            </span>
+                                                <span class="media-body align-self-center">Create an Orgnaization</span>
+                                            </a>
+                                        </li>
                                     @endif
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/faq">

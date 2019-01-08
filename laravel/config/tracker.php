@@ -5,7 +5,7 @@ return [
     /*
      * Enable it?
      */
-    'enabled' => false,
+    'enabled' => true,
 
     /*
      * Enable cache?
@@ -20,13 +20,14 @@ return [
     /*
      * Robots should be tracked?
      */
-    'do_not_track_robots' => false,
+    'do_not_track_robots' => true,
 
     /*
      * Which environments are not trackable?
      */
     'do_not_track_environments' => [
         // defaults to none
+        'development',
     ],
 
     /*
@@ -232,7 +233,7 @@ return [
      * A cookie may be created on your visitor device, so you can have information
      * on everything made using that device on your site.	 *
      */
-    'store_cookie_tracker' => false,
+    'store_cookie_tracker' => true,
 
     /*
      * If you are storing cookies, you better change it to a name you of your own.

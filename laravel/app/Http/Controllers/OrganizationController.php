@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Events\AuthorizeRequest;
 use App\Organization;
+use App\OrganizationRequests;
 use App\OrgCalendar;
-use App\Traits\ValidateInputTrait;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -19,13 +19,11 @@ class OrganizationController extends Controller
 {
     const CRYPT_STD_DES = 1;
 
-    public function requests($id, $organization_id, $user_id)
+    public function requests($id, Organization $organization, User $user)
     {
         if($id == 1){
-            $user = User::whereId($user_id)->get();
-            $user = $user[0];
-
-            $user->organization_id = $organization_id;
+            //update user
+            $user->organization_id = $organization->id;
             $updated = $user->update();
 
             if($updated){
@@ -35,23 +33,29 @@ class OrganizationController extends Controller
                     //add user to members DB
                     DB::table('members')->insert([
                         'user_id' => $user->id,
-                        'organization_id' => $user->organization_id,
+                        'organization_id' => $organization->id,
                         'created_at' => Carbon::now(),
                     ]);
-                    DB::table('requests')
-                        ->where('user_id', $user_id)
-                        ->where('organization_id', $organization_id)
+                    $requests = new OrganizationRequests;
+                    $requests->where('user_id', $user->id)
+                        ->where('organization_id', $organization->id)
                         ->delete();
+
+                    $user->organization_requests_id = null;
+                    $user->update();
                     return back();
                 }
             }
             session()->put('error', 'There was an error approving the user, <b>notification was not sent.</b>');
             return back();
         }else{
-            DB::table('requests')
-                ->where('user_id', $user_id)
-                ->where('organization_id', $organization_id)
+            $requests = new OrganizationRequests;
+            $requests->where('user_id', $user->id)
+                ->where('organization_id', $organization->id)
                 ->delete();
+
+            $user->organization_requests_id = null;
+            $user->update();
         }
         return back();
     }
@@ -81,34 +85,54 @@ class OrganizationController extends Controller
     {
         //
         return view('createOrganization');
+
     }
 
     public function profile(Organization $organization)
     {
-        $profileController = new ProfileController();
-        $org_requests = self::getOrgRequests($organization->id);
         $members = $organization->users;
 
-        $sharing = [];
-        $shared = DB::table('shared')->where('organization_id', Auth::user()->organization->id)->get();
-        if (count($shared) > 0) {
-            $sharing = $shared;
-            foreach ($sharing as $k => $v) {
-                $org_name = Organization::whereId($v->shared_id)->value('org_name');
-                $sharing[$k]->org_name = $org_name;
-            }
-        }
-        $notSharedOrgs = self::getNotSharedOrgs($shared);
+        if(Auth::check() && isset(Auth::user()->organization)){
+            $org_requests = self::getOrgRequests($organization);
 
-        return view('organizationProfile')->with([
-            'orgid' => $organization->id,
-            'user' => Auth::user(),
-            'organization' => $organization,
-            'members' => $members,
-            'org_requests' => $org_requests,
-            'sharing' => $sharing,
-            'org_list' =>$notSharedOrgs,
-        ]);
+            $sharing = [];
+            $shared = DB::table('shared')->where('organization_id', $organization->id)->get();
+            if (count($shared) > 0) {
+                $sharing = $shared;
+                foreach ($sharing as $k => $v) {
+                    $org_name = Organization::whereId($v->shared_id)->value('org_name');
+                    $sharing[$k]->org_name = $org_name;
+                }
+            }
+            $notSharedOrgs = self::getNotSharedOrgs($shared);
+
+            return view('organizationProfile')->with([
+                'orgid' => $organization->id,
+                'user' => Auth::user(),
+                'organization' => $organization,
+                'members' => $members,
+                'org_requests' => $org_requests,
+                'sharing' => $sharing,
+                'org_list' =>$notSharedOrgs,
+            ]);
+        }else{
+            if(count(DB::table('requests')->where('user_id', Auth::user()->id)->get()) > 0){
+                $requested = true;
+            }else{
+                $requested = false;
+            }
+            return view('organizationProfile')->with([
+                'orgid' => $organization->id,
+                'user' => Auth::user(),
+                'organization' => $organization,
+                'members' => $members,
+                'requested' => $requested,
+                'arrData' =>json_encode([
+                    'org_id'=> $organization->id,
+                    'user_id' => Auth::user()->id,
+                ])
+            ]);
+        }
     }
 
     protected function validator(array $data)
@@ -138,25 +162,7 @@ class OrganizationController extends Controller
                 'org_rsi_site' => $request->org_rsi_site,
                 'org_discord' => $request->org_discord,
             ]);
-            /*} else {
-                $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
 
-                foreach ($orgMembers as $member) {
-                    //fire request event
-                    event(new OrganizationRequest($member, $exists[0]));
-
-                }
-                session()->put('info', 'Your request to join this organization has been sent, Watch your email for more info.');
-                $request = DB::table('requests')->insert([
-                    'user_id' => $user->id,
-                    'organization_id' => $exists[0]->id,
-                    'created_at' => Carbon::now(),
-                ]);
-
-                return $user;
-            }*/
-
-            //set use information after creating organization.
             $user = Auth::user();
             $user->organization_id = $organization->id;
             $user->lead = 1;
@@ -183,22 +189,38 @@ class OrganizationController extends Controller
      */
     public function join(Request $request)
     {
-        /*//TODO:: finish joining and organization.
-        $orgMembers = User::whereOrganizationId($exists[0]->id)->where('lead', 1)->get();
+        //get admins to notify them
+        $orgLeads = User::whereOrganizationId($request->user_id)->where('lead', 1)->get();
 
-        foreach ($orgMembers as $member) {
+        foreach ($orgLeads as $leads) {
             //fire request event
-            event(new OrganizationRequest($member, $exists[0]));
+            event(new OrganizationRequest($leads, Organization::findOrFail($request->org_id) ));
 
         }
         session()->put('info', 'Your request to join this organization has been sent, Watch your email for more info.');
-        $request = DB::table('requests')->insert([
-            'user_id' => $user->id,
-            'organization_id' => $exists[0]->id,
-            'created_at' => Carbon::now(),
+        $saved = OrganizationRequests::create([
+            'user_id' => $request->user_id,
+            'organization_id' => $request->org_id,
         ]);
 
-        return $user;*/
+
+        if($saved){
+            //update user table
+            $user = Auth::user();
+            $user->organization_requests_id = $saved->id;
+            $user->update();
+
+            $response = collect(
+                (object)[
+                    'selector' => 'answer',
+                    'selector2' => '',
+                    'notificationType' => 'success',
+                    'notificationMsg' => 'Successfully Requested Membership.',
+                    'replaceText' => '<h4>Request Sent</h4>',
+                    'errorMsg' =>'Error while sending your request'
+                ]);
+            return $response;
+        }
     }
 
     protected function updateValidator($data, $org_id)
@@ -240,48 +262,16 @@ class OrganizationController extends Controller
             }
         }
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Organization  $organization
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Organization $organization)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Organization  $organization
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Organization $organization)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Organization  $organization
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Organization $organization)
-    {
-        //
-    }
-
-    public function getOrgRequests($org_id)
+    public function getOrgRequests(Organization $organization)
     {
         $requestsData = [];
-        $orgRequests = DB::table('requests')->where('organization_id', $org_id)->get();
+        $orgRequests = $organization->requests;
 
         foreach($orgRequests as $req){
-            $requestsData[] = User::whereId($req->user_id)->get()->first();
-        }
 
+            $requestsData[] = $req->user;
+        }
         return $requestsData;
     }
 

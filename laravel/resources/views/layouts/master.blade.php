@@ -112,7 +112,7 @@
     </script>
 </head>
 <body>
-    <main>
+<main>
 
         @include('shared.nav')
         @include('notification')
@@ -286,8 +286,14 @@
                          status:status,
                          url:url,
                      };
-                     console.log(myData);
                      break;
+                case 'request':
+                    $(`#answer`).val('Sending Notificiations');
+                    myData = {
+                        _token:"{{ csrf_token() }}",
+                        user_id:inputData.user_id,
+                        org_id:inputData.org_id,
+                    };
             }
             $.ajax({
                 headers: {
@@ -305,8 +311,12 @@
                             break;
                         case 'attendance':
                             $(`#${response.selector2}`).html(response.replaceText2);
+                            getAttendance(myData.event_id);
                             break;
                         case 'save':
+                            $(`#${response.selector}`).html(response.replaceText);
+                            break;
+                        case 'request':
                             $(`#${response.selector}`).html(response.replaceText);
                     }
                     $.notify({
@@ -315,9 +325,6 @@
                     },{
                         delay:'10000'
                     });
-
-                getAttendance(myData.event_id);
-
                 },
                 error: function (jqXHR, exception) {
                     let msg = '';
@@ -350,7 +357,7 @@
     }
 </script>
 
-@if(\Route::current()->getName() == 'calendar')
+    @if(\Route::current()->getName() == 'calendar')
     {!! $calendar->script() !!}
 @endif
 </body>

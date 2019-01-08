@@ -31,6 +31,6 @@ class newUserListener
     public function handle(newUser $event)
     {
         //
-        Mail::to($event->user)->send(new newUserMail($event->organization));
+        Mail::to($event->user)->send(new newUserMail());
     }
 }

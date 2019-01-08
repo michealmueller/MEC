@@ -54,6 +54,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Event query()
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Attendance[] $attending
  */
 class Event extends Model
 {

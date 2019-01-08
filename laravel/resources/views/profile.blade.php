@@ -38,21 +38,22 @@
                 </div>
                 @endif
             </div>
-            <div class="col-lg-8 order-lg-2 ">
-                <ul class="nav nav-tabs " id="tabMenu">
-                    <li class="nav-item">
-                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5 active">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Edit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#organization" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Organization</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" data-target="#discord" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Discord Bot</a>
-                    </li>
-                </ul>
+
+            <div class="col-lg-8 order-lg-2">
+                    <ul class="nav nav-tabs" id="tabMenu ">
+                        <li class="nav-itemn">
+                            <a href="" data-target="#profile" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5 active">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" data-target="#edit" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Edit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" data-target="#organization" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Organization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" data-target="#discord" data-toggle="tab" class="nav-link g-brd-gray-light-v4 g-mx-5">Discord Bot</a>
+                        </li>
+                    </ul>
                 <div class="tab-content py-4 g-pa-10">
                     <div class="tab-pane active" id="profile">
                         <h5 class="mb-3">{{$user->username}}'s Profile</h5>

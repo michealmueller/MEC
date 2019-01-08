@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.19 on 2018-12-19 23:38:29.
+ * Generated for Laravel 5.7.19 on 2019-01-06 20:45:33.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -13583,7 +13583,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Get the browser name.
          *
-         * @param null $userAgent
+         * @param string|null $userAgent
          * @return string 
          * @static 
          */ 
@@ -13595,7 +13595,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Get the platform name.
          *
-         * @param string $userAgent
+         * @param string|null $userAgent
          * @return string 
          * @static 
          */ 
@@ -13607,7 +13607,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Get the device name.
          *
-         * @param string $userAgent
+         * @param string|null $userAgent
          * @return string 
          * @static 
          */ 
@@ -13619,7 +13619,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Check if the device is a desktop computer.
          *
-         * @param string $userAgent deprecated
+         * @param string|null $userAgent deprecated
          * @param array $httpHeaders deprecated
          * @return bool 
          * @static 
@@ -13632,7 +13632,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Check if the device is a mobile phone.
          *
-         * @param string $userAgent deprecated
+         * @param string|null $userAgent deprecated
          * @param array $httpHeaders deprecated
          * @return bool 
          * @static 
@@ -13645,7 +13645,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Get the robot name.
          *
-         * @param string $userAgent
+         * @param string|null $userAgent
          * @return string|bool 
          * @static 
          */ 
@@ -13657,7 +13657,7 @@ namespace Jenssegers\Agent\Facades {
         /**
          * Check if device is a robot.
          *
-         * @param string $userAgent
+         * @param string|null $userAgent
          * @return bool 
          * @static 
          */ 

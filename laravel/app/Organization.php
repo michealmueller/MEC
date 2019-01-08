@@ -35,6 +35,9 @@ use Nicolaslopezj\Searchable\SearchableTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization whereRefHash($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\OrganizationRequests[] $requests
+ * @property int $organization_requests_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Organization whereOrganizationRequestsId($value)
  */
 class Organization extends Model
 {
@@ -68,4 +71,8 @@ class Organization extends Model
         return $this->hasOne(OrgCalendar::class);
     }
 
+    public function requests()
+    {
+        return $this->hasMany(OrganizationRequests::class);
+    }
 }
