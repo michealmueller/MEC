@@ -60,7 +60,7 @@
                                         </a>
                                     </li>
                                         <li class="g-mb-10">
-                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile/organization/{{$user->organization->id}}/calendar">
+                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile/organization/{{$user->organization->id}}">
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="fa fa-calendar"></i>
                                         </span>
