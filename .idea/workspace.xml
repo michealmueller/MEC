@@ -2,11 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/firebase/citizenwarfare-firebase-adminsdk-5ng1m-55e47bc951.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_White.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_Xmas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542337822.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542338210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/1_avatar1542338329.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542333185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542333765.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/20_avatar1542353119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/26_avatar1545310551.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/600i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/IHI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/Skylark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/Synch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/ancientz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/ancientz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534721597.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534722099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534722400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534723049.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534726057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534804506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534820395.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534822466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534866310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534879460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534881742.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534883343.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534884637.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534885002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534885728.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1534888303.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535555175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535704894.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1535739289.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1536874745.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1542251090.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545310524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545310870.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311253.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311634.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311696.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545311797.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312447.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312507.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312779.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545312885.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313575.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313679.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313813.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545313851.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545322631.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545322750.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323392.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545323959.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324248.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545324618.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325070.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325467.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545325835.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326452.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326565.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326639.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326763.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545326918.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327252.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327269.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327361.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327520.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545327760.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328212.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328284.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/avatar1545328326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/app/org_logos/omega_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/storage/logs/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/flot-data.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/data/morris-data.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/templates/sb-admin-2/dist/css/sb-admin-2.min.css" afterDir="false" />
@@ -274,7 +362,7 @@
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19682" />
           <entry key="PHP" value="30751" />
-          <entry key="PLAIN_TEXT" value="2437" />
+          <entry key="PLAIN_TEXT" value="2585" />
           <entry key="SQL" value="20" />
           <entry key="Scratch" value="379" />
         </counts>
@@ -394,8 +482,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+                <state relative-caret-position="527">
+                  <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -413,7 +501,7 @@
             <entry file="file://$PROJECT_DIR$/laravel/app/Providers/RouteServiceProvider.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
-                  <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+                  <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -422,7 +510,7 @@
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Kernel.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="136">
-                  <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+                  <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -852,14 +940,7 @@
       <workItem from="1546869591774" duration="9670000" />
       <workItem from="1546888989115" duration="292000" />
       <workItem from="1546909199259" duration="6004000" />
-      <workItem from="1547035605679" duration="1665000" />
-    </task>
-    <task id="LOCAL-00170" summary="fix for private envets, typo as usual">
-      <created>1545184790560</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1545184790560</updated>
+      <workItem from="1547035605679" duration="1900000" />
     </task>
     <task id="LOCAL-00171" summary="fix for private envets, typo as usual">
       <created>1545185748642</created>
@@ -1197,11 +1278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546915300449</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="Changes:&#10;udpated home page to be accessible to guests (not sure why it was not before, possible change from laravel update.&#10;&#10;added google adsence.">
+      <created>1547038073188</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1547038073188</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="947792000" />
+    <option name="totallyTimeSpent" value="948027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1228,7 +1316,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.3298887" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21025437" />
+      <window_info anchor="right" id="Database" order="4" weight="0.21025437" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1243,7 +1331,6 @@
       <path value="$PROJECT_DIR$/public_html/public/templates/sb-admin-2" />
       <path value="$PROJECT_DIR$/public_html/templates/sb-admin-2" />
     </ignored-roots>
-    <MESSAGE value="fix for private envets, typo as usual" />
     <MESSAGE value="perminate fix for timezone issues." />
     <MESSAGE value="fix for timezone issues" />
     <MESSAGE value="Moved bot commands to seperate files for cleaner look, fixed incorrect conversion of event times." />
@@ -1268,7 +1355,8 @@
     <MESSAGE value="updateing before running make:auth so i can revert" />
     <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;seperated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!" />
     <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements" />
+    <MESSAGE value="Changes:&#10;udpated home page to be accessible to guests (not sure why it was not before, possible change from laravel update.&#10;&#10;added google adsence." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;udpated home page to be accessible to guests (not sure why it was not before, possible change from laravel update.&#10;&#10;added google adsence." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/organizationProfile.blade.php">
@@ -1576,21 +1664,21 @@
     <entry file="file://$PROJECT_DIR$/laravel/app/Providers/RouteServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="527">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>
