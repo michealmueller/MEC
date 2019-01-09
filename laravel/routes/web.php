@@ -12,8 +12,7 @@
 */
 
 //Misc
-Auth::routes(['verify' => true]);
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware(['guest','auth']);
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/change/timezone', 'EventController@index');
@@ -27,7 +26,9 @@ Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 Route::get('find', 'SearchController@find');
 
-Route::group(['middleware'=>['auth', 'verified']], function() {
+Auth::routes();
+
+Route::group(['middleware'=>['auth', 'verify'=>true]], function() {
     //Profile Routes
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
