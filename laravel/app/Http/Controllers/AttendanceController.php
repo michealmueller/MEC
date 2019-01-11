@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Attendance;
+use App\Event;
+use App\RecentActivity;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +13,7 @@ class AttendanceController extends Controller
 {
     //
 
-    protected function create(Request $request)
+    public function create(Request $request)
     {
         $attendance = new Attendance;
 
@@ -33,6 +35,11 @@ class AttendanceController extends Controller
             ]);
         }
         if($saved) {
+            $recent = new RecentActivity;
+            $recent->create([
+                'user_id' => Auth::user()->id,
+                'message' => 'Attendance marked as '.$request->status.' for '. Event::findOrFail($request->event_id)->title
+                ]);
             switch($request->status){
                 case 'No';
                     $statusHTML = '<span class="u-label u-label--sm badge-danger g-rounded-20 g-px-10">Not Attending</span></div>';
@@ -45,6 +52,12 @@ class AttendanceController extends Controller
                 break;
             }
 
+            if(Auth::user()->organization) {
+                $img = '<img class="g-width-50 g-height-50 rounded" src = "/storage/app/org_logos/'.Auth::user()->organization->org_logo.'" alt = "'.Auth::user()->organization->org_name.' Logo" >';
+            }else {
+                $img = '<img class="g-width-50 g-height-50 rounded" src = "/storage/app/avatars/'.Auth::user()->avatar.'" alt = "'.Auth::user()->username .'Avatar Image" >';
+            }
+
             $response = collect(
                 (object)[
                     'selector' => 'status',
@@ -52,18 +65,17 @@ class AttendanceController extends Controller
                     'notificationType' => 'info',
                     'notificationMsg' => 'Attendance for this event has been saved',
                     'replaceText' => 'Updating',
-                    'replaceText2' => '<li class="d-flex justify-content-start g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
+                    'replaceText2' => '<li class="d-flex justify-content-start g-bg-gray-dark-v1 g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
                                         <div class="g-pos-rel g-mr-5">
-                                            <img class="g-width-50 g-height-50 rounded" src="/storage/app/org_logos/'.Auth::user()->organization->org_logo.'" alt="Image Description">
+                                            '.$img.'
                                         </div>
         
                                         <div class="align-self-center g-px-10">
                                             <h5 class="h6 g-font-weight-600 g-color-white g-mb-3">
-                                                <span class="g-mr-5">'.User::findOrFail($request->user_id)->username.'</span>
+                                                <span class="g-mr-5">'.Auth::user()->username.'</span>
                                             </h5>
                                         </div>
                                         <div class="align-self-center ml-auto">'.$statusHTML.'</li>',
-
                 ]);
             return $response;
         }else{
@@ -77,10 +89,10 @@ class AttendanceController extends Controller
         }
     }
 
-    public function read($event_id){
+    public function read(Event $event){
         $attendance = new Attendance;
         //dd();
-        $result = $attendance->where('event_id', $event_id)->get()->all();
+        $result = $event; //$attendance->where('event_id', $event_id)->get()->all();
 
         $response = '';
         foreach($result as $attendee){

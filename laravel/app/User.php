@@ -119,4 +119,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(OrganizationRequests::class);
     }
+
+    public function recent()
+    {
+        return $this->hasMany(RecentActivity::class);
+    }
 }

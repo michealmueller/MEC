@@ -14,13 +14,24 @@
         <div class="row g-pt-15--md">
             <div class="col-md-8 g-pt-36 g-pt-30">
                 <div class="card g-brd-gray-light-v7 g-rounded-3 g-mb-30">
-                    <header class="card-header g-bg-black-opacity-0_5 g-pa-15">
+                    <header class="card-header g-bg-gray-dark-v1 g-pa-15">
                         <div class="media">
                             <div class="d-flex align-self-center">
                                 <div class="media">
                                     <div class="media-body align-self-center">
                                         <h3 class="g-font-weight-300 g-font-size-16 g-color-orange g-mb-5">{{ $eventData->title }}</h3>
-                                        <em class="d-block g-font-style-normal g-font-weight-300 g-color-white">Event Date: <label>{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }} - {{ \Carbon\Carbon::parse($eventData->end_date)->setTimezone($data['timezonedata']->time_zone->name)->format('m-d-Y g:ia') }}</label></em>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <em class="d-block g-font-style-normal g-font-weight-300 g-color-white">Event Start/End:</em>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label>{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone(session()->get('timezone'))->format('m-d-Y g:ia') }}
+                                                    <br>
+                                                    {{ \Carbon\Carbon::parse($eventData->end_date)->setTimezone(session()->get('timezone'))->format('m-d-Y g:ia') }}
+                                                </label>
+                                            </div>
+                                        </div>
+
                                         @if($eventData->brief_url != null)
                                             <em class="d-block g-font-style-normal g-font-weight-300 g-color-white"><a target="_blank" href="{{$eventData->brief_url}}">View Mission Brief</a></em>
                                         @endif
@@ -53,8 +64,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                @if($user->lead == 1)
-                                    <div class="col-md-5">
+                                @if($user->lead == 1 || $user->creator = Auth::user()->id)
+                                        <div class="col-md-5">
                                         <div class="g-pos-rel g-z-index-2">
                                             <a id="profileMenuInvoker" class="u-link-v5 g-line-height-0 g-font-size-12 g-color-white g-color-lightblue-v3--hover g-ml-10 g-ml-20--md"
                                                href="#!" aria-controls="dropDown7" aria-haspopup="true" aria-expanded="false"
@@ -83,13 +94,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div>
+                                        <label style="display: none" id="copyMe">https://events.citizenwarfare.com/view/event/{{ $eventData->id }}</label>
+                                        <button class="btn btn-primary" onclick="copyToClipboard('#copyMe')">Share</button>
+                                    </div>
                                 </div>
                             @endif
                             @endif
                         </div>
                     </header>
 
-                    <div class="card-block g-pa-15 g-pa-5--md g-bg-black-opacity-0_5">
+                    <div class="card-block g-pa-15 g-bg-gray-dark-v1 g-pa-5--md">
                         <p class="g-font-weight-300 g-color-white mb-0">{!! nl2br($eventData->comments) !!}</p>
                     </div>
                 </div>
@@ -103,9 +118,13 @@
                     <ul  id="attend" class="list-unstyled g-pt-0">
                     @if(isset($attendees) && $attendees != null)
                         @foreach($attendees as $attendee)
-                        <li class="d-flex justify-content-start g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
+                        <li class="d-flex justify-content-start g-bg-gray-dark-v1 g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
                             <div class="g-pos-rel g-mr-5">
-                                <img class="g-width-50 g-height-50 rounded" src="/storage/app/org_logos/{{$attendee['user']->organization->org_logo}}" alt="Image Description">
+                                @if($attendee['user']->organization)
+                                    <img class="g-width-50 g-height-50 rounded" src="/storage/app/org_logos/{{$attendee['user']->organization->org_logo}}" alt="{{ $attendee['user']->organization->org_name }} Logo">
+                                @else
+                                    <img class="g-width-50 g-height-50 rounded" src="/storage/app/avatars/{{$attendee['user']->avatar}}" alt="{{ $attendee['user']->username }} Avatar Image">
+                                @endif
                             </div>
 
                             <div class="align-self-center g-px-10">

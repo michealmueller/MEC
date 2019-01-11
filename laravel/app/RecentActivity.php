@@ -15,4 +15,14 @@ use Illuminate\Database\Eloquent\Model;
 class RecentActivity extends Model
 {
     //
+    protected $table = 'recent_activity';
+    protected $fillable = [
+        'user_id',
+        'message',
+    ];
+
+    public function user()
+    {
+        $this->hasOne(User::class);
+    }
 }

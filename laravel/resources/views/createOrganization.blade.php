@@ -10,10 +10,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <section class="g-py-80--md g-py-80">
+    <section class="g-py-80--md g-py-80 ">
         <div class="container text-center">
             <div class="row">
-                <div class="col-md-10 ml-md-auto mr-md-auto">
+                <div class="col-md-10 ml-md-auto mr-md-auto g-bg-gray-dark-v1">
                     <h3 class="h5 text-uppercase g-font-weight-700 g-mb-20">Create Organization</h3>
                     <p class="lead g-mb-40">Create your organization by filling out the form below.</p>
                     <!-- Form -->

@@ -18,13 +18,24 @@
                                 <input class="form-control text-center" name="email" type="text" placeholder="Email">
                             </div>
                         </div>
-
-
                         <div class="mb-4">
                             <div class="input-group">
                                 <input class="form-control text-center " name="password" type="password" placeholder="Password">
                             </div>
                         </div>
+                        <div class="text-center mb-4">
+                                <p><a href="/password/reset">Forgot your Password?</a></p>
+                        </div>
+                        {{--<div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="g-mb-10">
+                                    <div class="g-recaptcha" data-sitekey="6LdLoogUAAAAANqS_d8JJdc979_0VWd3BhmQuqOW"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>--}}
+
 
                         <button class="btn btn-md btn-block u-btn-primary rounded-0 g-py-15 mb-5" type="submit">Login</button>
 

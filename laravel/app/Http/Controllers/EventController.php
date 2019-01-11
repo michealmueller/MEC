@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
-
-use Calendar;
 use App\Event;
+use Carbon\Carbon;
+use App\Organization;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Input;
-
-use App\Organization;
 
 class EventController extends Controller
 {
@@ -52,8 +48,8 @@ class EventController extends Controller
 
     public function viewEvent($eventId)
     {
-        //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get()->first();
+
         if($eventSingle == null){
             abort('404');
         }
@@ -151,15 +147,25 @@ class EventController extends Controller
         $event->borderColor = $request->borderColor;
         $event->textColor = $request->textColor;
         $event->creator = Auth::id();
-        $event->organization_id = Auth::user()->organization->id;
-        if($request->radGroup1_2 == 0){
+        if(Auth::user()->organization) {
+            $event->organization_id = Auth::user()->organization->id;
+            if($request->radGroup1_2 == 0){
+                $event->private = 0;
+            }
+        }else{
+            $event->user_id = Auth::user()->id;
             $event->private = 0;
         }
+
         $save = $event->save();
         if($save) {
             session()->put('success', 'Event Created!');
             $this->pushToBot($request, $request->radGroup1_2, $event->id, $start_date, $end_date);
-            return redirect('/'.Auth::user()->organization->org_name.'/calendar');
+            if(Auth::user()->organization) {
+                return redirect('/' . Auth::user()->organization->org_name . '/calendar');
+            }else{
+                return redirect('/' . Auth::user()->id . '/calendar');
+            }
         }
         session()->put('error', 'something went wrong when creating the event, if this happened on mobile please inform me !');
         return back();
@@ -246,45 +252,99 @@ class EventController extends Controller
     {
         $orgSetTZ = '';
         //get the orgs that have been shared
-        $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
+        if(Auth::user()->organization) {
+            $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
 //dd($share);
-        foreach($share as $orgID){
-            $ids[] = $orgID->shared_id;
-        }
-
-        foreach ($ids as $org){
-                //get all shared hook urls
-            if ($eventType == 0) {
-                $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
+            foreach ($share as $orgID) {
+                $ids[] = $orgID->shared_id;
             }
-        }
-        //get your organizations hook url
-        if ($eventType == 0) {
-            $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
-        } elseif ($eventType == 1) {
-            $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
-        }
 
-        $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
-        //check org set timezone for null and set to UTC if null
+            foreach ($ids as $org) {
+                //get all shared hook urls
+                if ($eventType == 0) {
+                    $hooks[$org] = DB::table('discordbot')->where('organization_id', $org)->value('public_webhook_url');
+                }
+            }
+            //get your organizations hook url
+            if ($eventType == 0) {
+                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('public_webhook_url');
+            } elseif ($eventType == 1) {
+                $hooks[Auth::user()->organization_id] = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('private_webhook_url');
+            }
 
-        if($orgSetTZ == null){
-            $orgSetTZ = 'UTC';
-        }
+            $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
+            //check org set timezone for null and set to UTC if null
 
-        //add self to hooks list
+            if ($orgSetTZ == null) {
+                $orgSetTZ = 'UTC';
+            }
 
-        //dd($share, $ids, $hooks);
-        $data = [
-            'username' => 'CitizenWarfare-New Event',
-            'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
-            'content' => 'A new event has been posted.',
-            'embeds' => [
+            //add self to hooks list
+
+            //dd($share, $ids, $hooks);
+            $data = [
+                'username' => 'CitizenWarfare-New Event',
+                'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
+                'content' => 'A new event has been posted.',
+                'embeds' => [
+                    [
+                        'author' => [
+                            'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
+                            'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
+                            'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                        ],
+                        'title' => $request->title,
+                        'url' => 'https://events.citizenwarfare.com/view/event/' . $eventId,
+                        'description' => '',
+                        'color' => hexdec($request->borderColor),
+                        'fields' => [
+                            [
+                                'name' => 'Start Date',
+                                'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' ' . $orgSetTZ,
+                                'inline' => true,
+                            ],
+                            [
+                                'name' => 'End Date',
+                                'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' ' . $orgSetTZ,
+                                'inline' => true,
+                            ],
+                            [
+                                'name' => 'Desc',
+                                'value' => $request->comments,
+                            ],
+                        ],
+                        'thumbnail' =>
+                            [
+                                'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            ],
+                        'image' =>
+                            [
+                                'url' => 'https://dto9r5vaiz7bu.cloudfront.net/xc7ywq3c0bsnj/tavern_upload_medium.jpg',
+                            ],
+                        'footer' =>
+                            [
+                                'text' => 'Please Consider Donating --> https://paypal.me/muellertek/',
+                            ],
+                    ],
+                ],
+            ];
+        }else {
+            $hooks = [];
+            $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
+            //check org set timezone for null and set to UTC if null
+
+            if ($orgSetTZ == null) {
+                $orgSetTZ = 'UTC';
+            }
+            $data = ['username' => 'CitizenWarfare-New Event',
+                'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
+                'content' => 'A new event has been posted.',
+                'embeds' => [
                 [
                     'author' => [
-                        'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
-                        'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
-                        'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                        'name' => Auth::user()->username,
+                        'url' => '',
+                        'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
                     ],
                     'title' => $request->title,
                     'url' => 'https://events.citizenwarfare.com/view/event/' . $eventId,
@@ -293,12 +353,12 @@ class EventController extends Controller
                     'fields' => [
                         [
                             'name' => 'Start Date',
-                            'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d g:iA'). ' '. $orgSetTZ,
+                            'value' => $start->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' ' . $orgSetTZ,
                             'inline' => true,
                         ],
                         [
                             'name' => 'End Date',
-                            'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' '.$orgSetTZ,
+                            'value' => $end->setTimezone($orgSetTZ)->format('Y-m-d g:iA') . ' ' . $orgSetTZ,
                             'inline' => true,
                         ],
                         [
@@ -308,7 +368,7 @@ class EventController extends Controller
                     ],
                     'thumbnail' =>
                         [
-                            'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
                         ],
                     'image' =>
                         [
@@ -318,11 +378,12 @@ class EventController extends Controller
                         [
                             'text' => 'Please Consider Donating --> https://paypal.me/muellertek/',
                         ],
+                    ],
                 ],
-            ],
-        ];
-
+            ];
+        }
         $data = json_encode($data);
+        $result = null;
         foreach($hooks as $k=>$v) {
 
             if ($v == '' || $v == null || $v == 'undefined') {
@@ -349,9 +410,11 @@ class EventController extends Controller
                 }
             }
         }
-        if ($result) {
+        if ($result != null) {
             session()->put('success', 'Event has been pushed to CitizenWarfare Bot');
             //curl_close($ch);
+        }else{
+            session()->put('info', 'Your event may have been created, but was not pushed to the bot.');
         }
     }
 }

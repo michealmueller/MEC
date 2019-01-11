@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 use App\Http\Controllers\EventController as EventController;
-use test\Mockery\TestWithParameterAndReturnType;
 
 class OrgCalendarController extends Controller
 {
@@ -96,6 +95,85 @@ class OrgCalendarController extends Controller
 
         ]);
         return view('welcome')->with(['calendar'=>$calendar, 'selectedTZ'=>$timezone]);
+    }
+
+    public function userCal(User $user)
+    {
+
+        /*//todo::put this into middleware
+        if(Auth::user()->organization->id != Organization::whereOrgName($organization)->value('id')){
+            session()->put('error', 'Sorry but you do not have permission to view this Organizations Private Calendar');
+            return back();
+        }*/
+
+        //$tz = Input::get('timezone');
+        $timezone = session()->get('timezone');
+        $events = [];
+
+        $data = self::getUserEvents($user);
+
+        if($data->count()){
+
+            foreach ($data as $key => $value) {
+                //create carbon object with timezone information so that it can be converted to the users TZ
+                //time that is stored in DB is converted from user time to UTC so we need to take it from UTC to user TZ
+                $timezoneDTZ = new \DateTimeZone($timezone);
+                $start_date = Carbon::parse($value->start_date)->setTimezone('UTC');
+                $end_date = Carbon::parse($value->end_date)->setTimezone('UTC');
+
+                $start_date = Carbon::parse($value->start_date)->setTimezone($timezoneDTZ);
+                $end_date = Carbon::parse($value->end_date)->setTimezone($timezoneDTZ);
+
+                //dd($date->settimezone('UTC'));
+                $events[] = Calendar::event(
+                    $value->title ,
+                    false,
+                    new \DateTime($start_date),
+                    new \DateTime($end_date),
+                    $value->id,
+                    [
+                        'BackgroundColor' => $value->backgroundColor,
+                        'TextColor' => $value->textColor,
+                        'BorderColor' => $value->borderColor,
+                        'url' => '/view/event/'.$value->id,
+                        //'avatar'=> User::findOrFail($value->creator)->organization->org_logo,
+                    ]
+                );
+            }
+        }
+        $calendar = Calendar::addEvents($events)->setCallbacks([
+            'eventRender'=>'function(event,element,view){
+                var dateString = event.start.format("YYYY-MM-DD");
+                
+                $(view.el[0]).find(".fc-day[data-date="+dateString+"]")
+                .css("background-image","url(/storage/app/org_logos/"+event.avatar+")")
+                .css("background-repeat","no-repeat")
+                .css("background-size", "100%");
+            }'
+
+        ]);
+        return view('welcome')->with(['calendar'=>$calendar, 'selectedTZ'=>$timezone]);
+    }
+
+    public function getUserEvents($user)
+    {
+        $userEvents = Event::where('user_id', $user->id)->get();
+        //get events that have been shared to us.
+        /*$sharedOrgs = DB::table('shared')->where('shared_id', Auth::user()->organization->id)->get()->toArray();
+
+        foreach($sharedOrgs as $k=>$v){
+            $sharedOrgsArray[] = $sharedOrgs[$k]->organization_id;
+        }
+        foreach($sharedOrgsArray as $k=>$v){
+            $event = Event::where('organization_id', $v)->where('private', 0)->get();
+
+            if(count($event)) {
+                foreach($event as $key=>$val){
+                    $data->push($val);
+                }
+            }
+        }*/
+        return $userEvents;
     }
 
     public function getEventsAndSharedOrgEvents()

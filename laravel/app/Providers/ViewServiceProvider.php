@@ -18,6 +18,7 @@ class ViewServiceProvider extends ServiceProvider
     protected $data;
     protected $rss;
     protected $event;
+    protected $sorted;
     protected $feeds;
     protected $userdata;
     /**
@@ -472,17 +473,29 @@ class ViewServiceProvider extends ServiceProvider
 
             //remove outdated public events
             if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
-                $today = Carbon::now()->setTimezone('America/New_York')->format('Y-m-d');
+                $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
             }
+            //dd($this->data['pubEvents']);
             foreach ($this->data['pubEvents'] as $k => $event) {
                 $parsed = Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d');
                 if ($parsed < $today) {
                     unset($this->data['pubEvents'][$k]);
                 }
+                //sort for front page and profile.
+                $weekStart = Carbon::getWeekStartsAt();
+                $weekEnd = Carbon::getWeekEndsAt();
+
+                if(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d') < $weekEnd && $event > $weekStart){
+                    $this->sorted['thisWeek'][] = $event;
+                }elseif(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('m') === Carbon::now()->setTimezone(session()->get('timezone'))->format('m')){
+                    $this->sorted['thisMonth'][] = $event;
+                }elseif(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d') === Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
+                    $this->sorted['today'][] = $event;
+                }
             }
 
             view()->composer('*', function ($view) {
-                $view->with(['data' => $this->data, 'user' => Auth::user()]);
+                $view->with(['data' => $this->data, 'user' => Auth::user(), 'sorted' => $this->sorted]);
             });
         }
     }

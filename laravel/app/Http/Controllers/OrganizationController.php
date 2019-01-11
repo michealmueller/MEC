@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Events\AuthorizeRequest;
 use App\Organization;
+use App\OrganizationRequest;
 use App\OrganizationRequests;
 use App\OrgCalendar;
+use App\RecentActivity;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -94,7 +96,6 @@ class OrganizationController extends Controller
 
         if(Auth::check() && isset(Auth::user()->organization)){
             $org_requests = self::getOrgRequests($organization);
-
             $sharing = [];
             $shared = DB::table('shared')->where('organization_id', $organization->id)->get();
             if (count($shared) > 0) {
@@ -178,6 +179,11 @@ class OrganizationController extends Controller
                 'organization_id' => $organization->id,
                 'public' => 0,
             ]);
+            $recent = new RecentActivity;
+            $recent->create([
+                'user_id' => Auth::user()->id,
+                'message' => 'You created the Organization '.$user->organization->org_name,
+            ]);
         }
     }
 
@@ -219,6 +225,12 @@ class OrganizationController extends Controller
                     'replaceText' => '<h4>Request Sent</h4>',
                     'errorMsg' =>'Error while sending your request'
                 ]);
+
+            $recent = new RecentActivity;
+            $recent->create([
+                'user_id' => Auth::user()->id,
+                'message' => 'You joined the Organization '.$user->organization->org_name,
+            ]);
             return $response;
         }
     }
@@ -266,11 +278,9 @@ class OrganizationController extends Controller
     public function getOrgRequests(Organization $organization)
     {
         $requestsData = [];
-        $orgRequests = $organization->requests;
-
+        $orgRequests = $organization->requests->all();
         foreach($orgRequests as $req){
-
-            $requestsData[] = $req->user;
+            $requestsData[] = User::findOrFail($req->user_id);
         }
         return $requestsData;
     }

@@ -11,8 +11,8 @@
 |
 */
 
+Auth::routes(['verify'=>true]);
 //Misc
-Route::get('/home', 'HomeController@index')->name('home')->middleware(['guest','auth']);
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/change/timezone', 'EventController@index');
@@ -22,13 +22,12 @@ Route::get('/about-dev', 'HomeController@Dev');
 Route::get('/faq', 'HomeController@faq');
 Route::get('/join/ref/{refHash}', 'ReferenceController@verifyRefCode');
 Route::post('/join/ref/{refHash}', 'ReferenceController@registerToOrg');
-Route::get('/view/event/{id}', 'EventController@viewEvent')->name('view');
+Route::get('/view/event/{eventId}', 'EventController@viewEvent')->name('view');
 Route::get('/change_log', 'gitCommitsLog@index')->name('changelog');
 Route::get('find', 'SearchController@find');
 
-Auth::routes();
 
-Route::group(['middleware'=>['auth', 'verify'=>true]], function() {
+Route::group(['middleware'=>['auth', 'verified']], function() {
     //Profile Routes
     Route::get('/profile', 'ProfileController@index');
     Route::post('/profile', 'ProfileController@store');
@@ -39,6 +38,9 @@ Route::group(['middleware'=>['auth', 'verify'=>true]], function() {
     Route::get('/profile/create/organization', 'OrganizationController@index');
     Route::post('/profile/create/organization', 'OrganizationController@create');
 
+    //Single User Routes
+    Route::get('/{user}/calendar', 'OrgCalendarController@userCal')->name('userCalendar');
+
     //Organization Routes
     Route::get('/profile/organization/{organization}', 'OrganizationController@profile');
     Route::post('/profile/organization/{organization}', 'OrganizationController@update');
@@ -46,9 +48,10 @@ Route::group(['middleware'=>['auth', 'verify'=>true]], function() {
     Route::get('/request/{id}/{organization}/{user}', 'OrganizationController@requests');
     Route::post('/update/share', 'OrganizationController@updateShare');
     Route::get('/{organization}/calendar', 'OrgCalendarController@index')->name('calendar');
+
     //Event Routes
     Route::post('/event/updateAttendance', 'AttendanceController@create')->name('updateAttendance');
-    Route::get('/event/get/attendance/{event_id}', 'AttendanceController@read');
+    Route::get('/event/get/attendance/{event}', 'AttendanceController@read');
     Route::get('/create-event', 'EventController@newEvent');
     Route::post('/create-event', 'EventController@createEvent');
     Route::get('/edit/event/{id}', 'EventController@editEvent')->name('edit');

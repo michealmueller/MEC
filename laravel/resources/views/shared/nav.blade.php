@@ -67,6 +67,15 @@
                                                 <span class="media-body align-self-center">Organization Profile</span>
                                             </a>
                                         </li>
+                                    @else
+                                        <li class="g-mb-10">
+                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/{{$user->id}}/calendar">
+                                        <span class="d-flex align-self-center g-mr-12">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                                <span class="media-body align-self-center">My Calendar</span>
+                                            </a>
+                                        </li>
                                     @endif
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile">
@@ -76,15 +85,6 @@
                                             <span class="media-body align-self-center">My Profile</span>
                                         </a>
                                     </li>
-                                    <!--<li class="g-mb-10">
-                                        <a class="media g-color-orange--hover g-py-5 g-px-20" href="/upgrade">
-                                        <span class="d-flex align-self-center g-mr-12">
-                                            <i class="hs-admin-rocket"></i>
-                                        </span>
-                                            <span class="media-body align-self-center">Upgrade Plan</span>
-                                        </a>
-                                    </li>-->
-                                    @if($user->lead == 1)
                                     <li class="g-mb-10">
                                         <a class="media g-color-orange--hover g-py-5 g-px-20" href="/create-event">
                                             <span class="d-flex align-self-center g-mr-12">
@@ -93,7 +93,6 @@
                                             <span class="media-body align-self-center">Create an Event</span>
                                         </a>
                                     </li>
-                                    @endif
                                     @if(!$user->organization)
                                         <li class="g-mb-10">
                                             <a class="media g-color-orange--hover g-py-5 g-px-20" href="/profile/create/organization">

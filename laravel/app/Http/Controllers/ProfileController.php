@@ -4,21 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Organization;
 use App\Profile;
+use App\RecentActivity;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\RssController as Rss;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
-use App\Http\Controllers\OrganizationController as OrganizationController;
 
 class ProfileController extends Controller
 {
 
-    private $data;
-    private $rss;
     /**
      * Create a new controller instance.
      *
@@ -26,6 +22,7 @@ class ProfileController extends Controller
      */
     public function __construct()
     {
+        $this->middleware(['auth', 'verified']);
     }
 
     /**
@@ -36,12 +33,15 @@ class ProfileController extends Controller
     public function index()
     {
         $status = self::determineFounderSub(Auth::user());
-
         $orgs = Organization::all();
-        return view('profile')->with(['status'=> $status, 'org_list' => $orgs]);
+        $recent = new RecentActivity;
+        $requests = null;
+        $recentActivity = $recent->where('user_id', Auth::user()->id)->orderBy('created_at', 'DESC')->get()->all();
+        if(Auth::user()->organization){
+            $requests = Auth::user()->organization->requests->all();
+        }
+        return view('profile2')->with(['status'=> $status, 'org_list' => $orgs, 'recent'=>$recentActivity, 'requests' => $requests]);
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -74,16 +74,23 @@ class ProfileController extends Controller
 
         $user = Auth::user();
 
-        $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
-        $request->avatar->storeAs('avatars', $avatarName);
+        if($request->hasFile('avatar')) {
+            $avatarName = $user->id . '_avatar' . time() . '.' . $request->avatar->getClientOriginalExtension();
+            $request->avatar->storeAs('avatars', $avatarName);
+            $user->avatar = $avatarName;
+        }
 
         $user->email = $request['email'];
         $user->username = $request['username'];
-        $user->avatar = $avatarName;
         $user->email = $request['email'];
 
         if($user->save()) {
             session()->put('success', 'Profile updated');
+            $recent = new RecentActivity;
+            $recent->create([
+               'user_id' => Auth::user()->id,
+               'message' => 'Profile Updated.'
+            ]);
             return back();
         }else {
             session()->put('error', 'Something went wrong!');

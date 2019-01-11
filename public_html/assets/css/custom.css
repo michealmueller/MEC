@@ -1,10 +1,11 @@
 .nav-link{
     color: #ffffff;
 }
-
-
 .merchstore{
     height: 100%;
     width: 100%;
 }
 
+.list-group-item{
+    background-color: #111; !important;
+}

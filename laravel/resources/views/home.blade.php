@@ -70,9 +70,13 @@
                                 @if(isset($sorted['today']))
                                     @if(count($sorted['today']) > 0)
                                         <ul>
-                                        @foreach($sorted['today'] as $item)
-                                                <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
-                                        @endforeach
+                                            @foreach($sorted['thisMonth'] as $item)
+                                                @if($item->user_id)
+                                                    <li><img class="g-pr-5" width="25" src="/storage/app/avatars/{{ \App\User::findorfail($item->user_id)->avatar }}"><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> -<a href="/view/event/{{ $item->id }}"> {{ $item->title }} </a></li>
+                                                @else
+                                                    <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                                @endif
+                                            @endforeach
                                         </ul>
                                     @else
                                         Nothing on the books for today
@@ -92,9 +96,13 @@
                             @if(isset($sorted['thisWeek']))
                                 @if(count($sorted['thisWeek']) > 0)
                                     <ul>
-                                    @foreach($sorted['thisWeek'] as $item)
-                                        <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
-                                    @endforeach
+                                        @foreach($sorted['thisMonth'] as $item)
+                                            @if($item->user_id)
+                                                <li><img class="g-pr-5" width="25" src="/storage/app/avatars/{{ \App\User::findorfail($item->user_id)->avatar }}"><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> -<a href="/view/event/{{ $item->id }}"> {{ $item->title }} </a></li>
+                                            @else
+                                                <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 @else
                                     Nothing on the books for this week
@@ -114,7 +122,11 @@
                             @if(count($sorted['thisMonth']) > 0)
                                 <ul>
                                     @foreach($sorted['thisMonth'] as $item)
-                                        <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                        @if($item->user_id)
+                                            <li><img class="g-pr-5" width="25" src="/storage/app/avatars/{{ \App\User::findorfail($item->user_id)->avatar }}"><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> -<a href="/view/event/{{ $item->id }}">{{ $item->title }}</a> </li>
+                                        @else
+                                            <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                        @endif
                                     @endforeach
                                 </ul>
                             @else

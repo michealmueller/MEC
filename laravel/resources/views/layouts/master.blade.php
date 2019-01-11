@@ -29,6 +29,7 @@
             enable_page_level_ads: true
         });
     </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,10 +63,6 @@
     <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
     <link rel="stylesheet" href="/assets/vendor/animate.css">
-    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsparallaxer.css">
-    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
-    <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
-
     <link rel="stylesheet" href="/assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/vendor/icon-line/css/simple-line-icons.css">
     <link rel="stylesheet" href="/assets/vendor/icon-etlinefont/style.css">
@@ -77,12 +74,15 @@
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
     <link rel="stylesheet" href="/assets/css/select2.min.css"/>
+    <link rel="stylesheet" href="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
 
     <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
     <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
@@ -92,7 +92,7 @@
     <script src="/assets/js/fullcalendar.js"></script>
 
     <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
-    <script src="/assets/js/select2.min.js"></script>
+
     <script src="/assets/js/jstz.min.js"></script>
     <script language="javascript">
         $(document).on('ready', function(){
@@ -117,6 +117,7 @@
             });
         });
     </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
 <body>
 <main>
@@ -150,27 +151,23 @@
             </div>
         endif-->
     </main>
-
-    <script>
-        $('#select2').select2();
-        $('.select2').select2();
-    </script>
     <!-- JS Implementing Plugins -->
     <script src="/vendor/appear.js"></script>
     <script src="/vendor/hs-megamenu/src/hs.megamenu.js"></script>
     <script src="/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-
+    <script src="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- JS Unify -->
-    <script src="/assets/js/hs.core.js"></script>
-    <script src="/assets/js/components/hs.header.js"></script>
-    <script src="/assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="/assets/js/components/hs.tabs.js"></script>
-    <script src="/assets/js/components/hs.counter.js"></script>
+    <script src="/assets/js/hs.core.min.js"></script>
+    <script src="/assets/js/components/hs.header.min.js"></script>
+    <script src="/assets/js/helpers/hs.hamburgers.min.js"></script>
+    <script src="/assets/js/components/hs.tabs.min.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
+    <script src="/assets/js/components/hs.scrollbar.min.js"></script>
     <script src="/vendor/plyr/dist/plyr.js"></script>
     <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
     <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     <!-- JS Customization -->
     <script src="/assets/js/custom.js"></script>
@@ -185,13 +182,16 @@
 
             // initialization of tabs
             $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+            // initialization of HSScrollBar component
+            $.HSCore.components.HSScrollBar.init( $('.js-scrollbar') );
         });
-/*
+
         $(window).on('resize', function () {
             setTimeout(function () {
                 $.HSCore.components.HSTabs.init('[role="tablist"]');
             }, 200);
-        });*/
+        });
     </script>
 
     <script >
@@ -309,14 +309,16 @@
                 method: 'POST', // Type of response and matches what we said in the route
                 url: url, // This is the url we gave in the route
                 data: myData, // a JSON object to send back
-            success: function(response) { // What to do if we succeed
 
+            success: function(response) { // What to do if we succeed
+                console.log(response);
                     $(`#${response.selector}`).html(`${response.replaceText}`);
                     switch (type) {
                         case 'ref':
                             $(`#${response.selector}2`).html(`${response.replaceText2}`);
                             break;
                         case 'attendance':
+                            console.log(response.selector2);
                             $(`#${response.selector2}`).html(response.replaceText2);
                             getAttendance(myData.event_id);
                             break;
@@ -334,6 +336,7 @@
                     });
                 },
                 error: function (jqXHR, exception) {
+                    console.log(response);
                     let msg = '';
                     if (jqXHR.status === 0) {
                         msg = 'Not connect.\n Verify Network.';
@@ -361,10 +364,28 @@
             $('#divStatus').html('');
             $('#attend').html(`${response}`);
             });
+
     }
 </script>
 
-    @if(\Route::current()->getName() == 'calendar')
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        $.notify({
+            message: 'Link Copied to Clipboard!',
+            type:'success-solid-active'
+        },{
+            delay:'1000'
+        });
+    }
+
+</script>
+
+    @if(\Route::current()->getName() == 'calendar' || \Route::current()->getName() == 'userCalendar')
     {!! $calendar->script() !!}
 @endif
 </body>

@@ -47,6 +47,9 @@
 .g-bg-white-gradient-v1--after::after {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)); }
 
+/* Dark Gray v1 */
+.g-bg-dark-gray-gradient-v1--after::after {
+  background: linear-gradient(to bottom, rgba(204, 204, 204, 0.5), rgba(17, 17, 17, 0.9)); }
 /* Linear Gradients
 ------------------------------------*/
 /* Gray Gradient */
