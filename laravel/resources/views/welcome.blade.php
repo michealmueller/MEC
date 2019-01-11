@@ -12,7 +12,7 @@
                                 @if($selectedTZ !=null)
                                     <option selected value="{{ $selectedTZ}}">{{ $selectedTZ}}</option>
                                 @else
-                                    <option selected value="{{$data['timezonedata']->time_zone->name}}">{{ $data['timezonedata']->time_zone->name}}</option>
+                                    <option selected value="{{session()->get('timezone')}}">{{ session()->get('timezone')}}</option>
                                 @endif
 
                                 @foreach($data['timezones'] as $k=>$v)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\RecentActivity;
 use App\User;
 use App\Event;
 use Carbon\Carbon;
@@ -119,7 +120,11 @@ class EventController extends Controller
             session()->put('success', 'Event Created!');
 
             $this->pushToBot($request, $request->radGroup1_2, $eventID, $start_date, $end_date);
-            return redirect('/'.Auth::user()->organization->org_name.'/calendar');
+            if(Auth::user()->organization) {
+                return redirect('/' . Auth::user()->organization->org_name . '/calendar');
+            }else{
+                return redirect('/user/' . Auth::user()->id . '/calendar');
+            }
         }
         return redirect('/view/event/'.$eventID);
     }
@@ -164,7 +169,7 @@ class EventController extends Controller
             if(Auth::user()->organization) {
                 return redirect('/' . Auth::user()->organization->org_name . '/calendar');
             }else{
-                return redirect('/' . Auth::user()->id . '/calendar');
+                return redirect('/user/' . Auth::user()->id . '/calendar');
             }
         }
         session()->put('error', 'something went wrong when creating the event, if this happened on mobile please inform me !');
@@ -254,7 +259,7 @@ class EventController extends Controller
         //get the orgs that have been shared
         if(Auth::user()->organization) {
             $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
-//dd($share);
+
             foreach ($share as $orgID) {
                 $ids[] = $orgID->shared_id;
             }

@@ -31,14 +31,13 @@
                                         <span class="g-pos-rel" >
                                     <span class="g-bg-lightblue-v5 g-mr-5"></span>
                                     <img class="g-width-30 g-width-40--md g-height-30 g-height-40--md rounded-circle g-mr-10--sm"
-                                         @if($user->organization_id != null)
+                                         @if($user->organization)
                                          src="/storage/app/org_logos/{{ $user->organization->org_logo}}"
                                          @else
                                          src="/storage/app/avatars/{{ $user->avatar}}"
                                          @endif
                                     >
                                 </span>
-
                                         <span class="g-pos-rel g-top-2">
                                     <span class="">@if(isset($user->username)){{ $user->username }}@else{{ $user->organization->org_name }}@endif</span>
                                     <i class="hs-admin-angle-down g-pos-rel g-top-2 g-ml-10"></i>
@@ -69,7 +68,7 @@
                                         </li>
                                     @else
                                         <li class="g-mb-10">
-                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/{{$user->id}}/calendar">
+                                            <a class="media g-color-orange--hover g-py-5 g-px-20" href="/user/{{$user->id}}/calendar">
                                         <span class="d-flex align-self-center g-mr-12">
                                             <i class="fa fa-calendar"></i>
                                         </span>

@@ -66,19 +66,16 @@
 
                 <!-- Sidebar Navigation -->
                 <div class="list-group list-group-border-0 g-mb-40 ">
-
                     <!-- Profile -->
                     <a href="" data-target="#profile" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between active">
                         <span><i class="icon-cursor g-pos-rel g-top-1 g-mr-8"></i> Profile</span>
                     </a>
                     <!-- End Profile -->
-
                     <!-- Edit -->
                     <a href="" data-target="#edit" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
                         <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Edit </span>
                     </a>
                     <!-- End Edit -->
-
                     <!-- Organization -->
                     <a @if($user->organization) href="/profile/organization/{{ $user->organization->id }}"  @else href="" data-target="#organization" data-toggle="tab" @endif class="nav-link list-group-item list-group-item-action justify-content-between">
                         <span><i class="icon-layers g-pos-rel g-top-1 g-mr-8"></i> Organization</span>
@@ -112,7 +109,6 @@
                             </h6>
                         </div>
                         <!-- End Member Since-->
-
                         <!-- Calendar Link -->
                         @if($user->organization)
                         <div class="g-mb-20">
@@ -134,7 +130,6 @@
                             </div>
                         @endif
                         <!-- End Calendar Link -->
-
                         <!-- Unify Project -->
                         @if($user->organization)
                         <div class="g-mb-20">

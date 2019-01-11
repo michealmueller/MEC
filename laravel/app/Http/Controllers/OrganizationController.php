@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
-use App\Http\Controllers\ProfileController as ProfileController;
-
 class OrganizationController extends Controller
 {
     const CRYPT_STD_DES = 1;
@@ -45,6 +43,12 @@ class OrganizationController extends Controller
 
                     $user->organization_requests_id = null;
                     $user->update();
+
+                    $recent = new RecentActivity;
+                    $recent->create([
+                        'organization_id' => $organization->id,
+                        'message' => 'Approved User Request.',
+                    ]);
                     return back();
                 }
             }
@@ -80,6 +84,11 @@ class OrganizationController extends Controller
                 'refHash' => $hash
             ]);
 
+            $recent = new RecentActivity;
+            $recent->create([
+                'organization_id' => $organization->id,
+                'message' => 'Generated a new Reference code.',
+            ]);
             return $hash;
     }
 
@@ -93,6 +102,8 @@ class OrganizationController extends Controller
     public function profile(Organization $organization)
     {
         $members = $organization->users;
+        $recent = new RecentActivity;
+        $recentActivity = $recent->where('organization_id', $organization->id)->orderBy('created_at', 'DESC')->get()->all();
 
         if(Auth::check() && isset(Auth::user()->organization)){
             $org_requests = self::getOrgRequests($organization);
@@ -107,7 +118,7 @@ class OrganizationController extends Controller
             }
             $notSharedOrgs = self::getNotSharedOrgs($shared);
 
-            return view('organizationProfile')->with([
+            return view('organizationProfile2')->with([
                 'orgid' => $organization->id,
                 'user' => Auth::user(),
                 'organization' => $organization,
@@ -115,6 +126,7 @@ class OrganizationController extends Controller
                 'org_requests' => $org_requests,
                 'sharing' => $sharing,
                 'org_list' =>$notSharedOrgs,
+                'recent' => $recentActivity,
             ]);
         }else{
             if(count(DB::table('requests')->where('user_id', Auth::user()->id)->get()) > 0){
@@ -122,7 +134,7 @@ class OrganizationController extends Controller
             }else{
                 $requested = false;
             }
-            return view('organizationProfile')->with([
+            return view('organizationProfile2')->with([
                 'orgid' => $organization->id,
                 'user' => Auth::user(),
                 'organization' => $organization,
@@ -131,7 +143,8 @@ class OrganizationController extends Controller
                 'arrData' =>json_encode([
                     'org_id'=> $organization->id,
                     'user_id' => Auth::user()->id,
-                ])
+                ]),
+                'recent' => $recentActivity,
             ]);
         }
     }
@@ -231,6 +244,10 @@ class OrganizationController extends Controller
                 'user_id' => Auth::user()->id,
                 'message' => 'You joined the Organization '.$user->organization->org_name,
             ]);
+            $recent->create([
+                'organization_id' => $request->org_id,
+                'message' => 'There is a new Recruitment Request'
+            ]);
             return $response;
         }
     }
@@ -255,10 +272,13 @@ class OrganizationController extends Controller
     public function update(Request $request, Organization $organization)
     {
         //
+        //dd($request->org_logo->getClientOriginalExtension());
         if($this->updateValidator($request->all(), $organization->id)->validate()) {
             if($request->hasFile('org_logo')){
-                $request->org_logo->storeas('org_logos', $request->org_logo);
-                $organization->org_logo = $request->org_logo;
+                $logoName = $organization->id.'_logo.'.$request->org_logo->getClientOriginalExtension();
+
+                $request->org_logo->storeAs('org_logos', $logoName);
+                $organization->org_logo = $logoName;
             }
             $organization->org_name = $request->org_name;
             $organization->org_rsi_site = $request->org_rsi_site;
@@ -266,6 +286,11 @@ class OrganizationController extends Controller
 
             $save = $organization->update();
             if($save){
+                $recent = new RecentActivity;
+                $recent->create([
+                    'organization_id' => $organization->id,
+                    'message' => 'Updated Organization Information.',
+                ]);
                 //set notification
                 session()->put('success', 'Organization Information Updated!');
                 //set recent activity

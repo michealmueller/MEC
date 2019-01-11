@@ -39,7 +39,7 @@ Route::group(['middleware'=>['auth', 'verified']], function() {
     Route::post('/profile/create/organization', 'OrganizationController@create');
 
     //Single User Routes
-    Route::get('/{user}/calendar', 'OrgCalendarController@userCal')->name('userCalendar');
+    Route::get('/user/{user}/calendar', 'OrgCalendarController@userCal')->name('userCalendar');
 
     //Organization Routes
     Route::get('/profile/organization/{organization}', 'OrganizationController@profile');
