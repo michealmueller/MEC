@@ -3,7 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/laravel/vendor/laracasts/generators" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public_html/vendor/crumbleJS" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public_html/vendor/introjs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public_html/templates/sb-admin-2" vcs="Git" />
   </component>
 </project>
