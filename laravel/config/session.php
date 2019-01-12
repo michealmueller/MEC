@@ -13,7 +13,7 @@ return [
     |            "memcached", "redis", "array"
     |
     */
-    'driver' => env('SESSION_DRIVER', 'file'),
+    'driver' => env('SESSION_DRIVER', 'database'),
     /*
     |--------------------------------------------------------------------------
     | Session Lifetime
@@ -58,7 +58,7 @@ return [
     | correspond to a connection in your database configuration options.
     |
     */
-    'connection' => null,
+    'connection' => 'mysql',
     /*
     |--------------------------------------------------------------------------
     | Session Database Table
