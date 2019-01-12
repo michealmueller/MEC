@@ -111,7 +111,7 @@
 
                         </p>
                         <!--<a class="g-color-main g-color-primary--hover g-font-weight-600 g-font-size-12 g-text-underline--none--hover text-uppercase" href="#!">Learn More</a>-->
-                    </div>
+                    </div>.
                 </div>
                 <!-- End Icon Blocks -->
                 <div class="col-md-4 media g-mb-15">

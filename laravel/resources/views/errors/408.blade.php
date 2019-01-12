@@ -1,4 +1,4 @@
-@extends('errors.layout')
+
 
 @php
   $error_number = 408;
