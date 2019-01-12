@@ -189,6 +189,15 @@ class EventController extends Controller
         return $eventData;
     }
 
+    protected function is_bot($user_agent) {
+
+        $botRegexPattern = "(googlebot\/|Googlebot\-Mobile|Googlebot\-Image|Google favicon|Mediapartners\-Google|bingbot|slurp|java|wget|curl|Commons\-HttpClient|Python\-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST\-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub\.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum\.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips\-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail\.RU_Bot|discobot|heritrix|findthatfile|europarchive\.org|NerdByNature\.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb\-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web\-archive\-net\.com\.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks\-robot|it2media\-domain\-crawler|ip\-web\-crawler\.com|siteexplorer\.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki\-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e\.net|GrapeshotCrawler|urlappendbot|brainobot|fr\-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf\.fr_bot|A6\-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive\.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j\-asr|Domain Re\-Animator Bot|AddThis|YisouSpider|BLEXBot|YandexBot|SurdotlyBot|AwarioRssBot|FeedlyBot|Barkrowler|Gluten Free Crawler|Cliqzbot)";
+
+
+        return preg_match("/{$botRegexPattern}/", $user_agent);
+
+    }
+
     public function getTimeZone()
     {
         if(env('APP_ENV') === 'development'){
@@ -203,42 +212,40 @@ class EventController extends Controller
             );
             return $response['data'];
         }else {
-            $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-            if ($ip == '::1') {
-                $ip = '71.60.23.77';
-            }
-            //dd($ip);
+            if (!self::is_bot($_SERVER['HTTP_USER_AGENT'])) {
+                $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
+                //dd($ip);
 
-            $ch = curl_init();
-            //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
-            $endpoint = 'http://www.geoplugin.net/json.gp?ip=' . $ip;
-            //dd($endpoint, $ch);
+                $ch = curl_init();
+                //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
+                $endpoint = 'http://www.geoplugin.net/json.gp?ip=' . $ip;
+                //dd($endpoint, $ch);
 
-            curl_setopt($ch, CURLOPT_URL, $endpoint);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, FALSE);
+                curl_setopt($ch, CURLOPT_URL, $endpoint);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                "Accept: application/json"
-            ));
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                    "Accept: application/json"
+                ));
 
-            $response = curl_exec($ch);
-            curl_close($ch);
-            if (json_decode($response)->geoplugin_timezone) {
-                session()->put('timezone', json_decode($response)->geoplugin_timezone);
-                $response = collect([
-                        'data' => (object)[
-                            'time_zone' => (object)[
-                                'name' => json_decode($response)->geoplugin_timezone
+                $response = curl_exec($ch);
+                curl_close($ch);
+                if (json_decode($response)->geoplugin_timezone) {
+                    session()->put('timezone', json_decode($response)->geoplugin_timezone);
+                    $response = collect([
+                            'data' => (object)[
+                                'time_zone' => (object)[
+                                    'name' => json_decode($response)->geoplugin_timezone
+                                ]
                             ]
                         ]
-                    ]
-                );
+                    );
 
-                return $response['data'];
+                    return $response['data'];
 
-            } elseif (!json_decode($response)->geoplugin_timezone && !isset($_GET['timezone'])) {
-                session()->put('info', 'Sorry I could not determine your timezone, setting timezone to America/New_York! -- EST');
+                }
+            }else{
                 $response = collect([
                         'data' => (object)[
                             'time_zone' => (object)[
@@ -249,7 +256,6 @@ class EventController extends Controller
                 );
                 return $response['data'];
             }
-            return json_decode($response);
         }
     }
 
