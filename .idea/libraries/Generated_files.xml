@@ -3926,7 +3926,7 @@
       <root url="file://$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/morrisjs/morris.min.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/raphael/raphael.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/templates/sb-admin-2/vendor/raphael/raphael.min.min.js" />
-      <root url="file://$PROJECT_DIR$/public_html/vendor/bootstrap-notify/js/bootstrap-notify.min.js" />
+      <root url="file://$PROJECT_DIR$/public_html/assets/vendor/bootstrap-notify/js/bootstrap-notify.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/vendor/hs-bg-video/hs-bg-video.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/vendor/hs-megamenu/src/hs.megamenu.min.js" />
       <root url="file://$PROJECT_DIR$/public_html/vendor/jstimezone/jstz.min.js" />

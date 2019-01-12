@@ -380,28 +380,28 @@
                     <!-- Sidebar Navigation -->
                     <div class="list-group list-group-border-0 g-mb-40 ">
                         <!-- Profile -->
-                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between active">
+                        <a href="" data-target="#profile" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between active">
                             <span><i class="icon-cursor g-pos-rel g-top-1 g-mr-8"></i> Profile</span>
                         </a>
                         <!-- End Profile -->
                         <!-- Edit -->
                         @if($user->lead == 1)
-                        <a href="" data-target="#members" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
+                        <a href="" data-target="#members" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Members </span>
                         </a>
-                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Edit </span>
                         </a>
-                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
+                        <a href="" data-target="#sharing" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Sharing </span>
                         </a>
-                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
+                        <a href="" data-target="#requests" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Requests </span>
                             @if(isset($requests) && $requests != null)
                                 <span class="u-label g-font-size-11 g-bg-primary g-rounded-20 g-px-10">{{count($requests)}}</span>
                             @endif
                         </a>
-                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link list-group-item list-group-item-action justify-content-between">
+                        <a href="" data-target="#refcode" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Generate Ref. Code </span>
                         </a>
                         @endif

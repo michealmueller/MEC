@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/assets/css/calendar/fullcalendar.min.css"/>
-    <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
+    <link rel="stylesheet" href="/assets/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
     <link rel="stylesheet" href="/assets/vendor/animate.css">
     <link rel="stylesheet" href="/assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/vendor/icon-line/css/simple-line-icons.css">
@@ -80,18 +80,18 @@
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
 
-    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-    <script src="/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="/assets/js/moment.js"></script>
     <script src="/assets/js/fullcalendar.js"></script>
 
-    <script src="/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
+    <script src="/assets/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
 
     <script src="/assets/js/jstz.min.js"></script>
     <script language="javascript">
@@ -152,9 +152,9 @@
         endif-->
     </main>
     <!-- JS Implementing Plugins -->
-    <script src="/vendor/appear.js"></script>
-    <script src="/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+    <script src="/assets/vendor/appear.js"></script>
+    <script src="/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
     <script src="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- JS Unify -->
     <script src="/assets/js/hs.core.min.js"></script>
@@ -163,9 +163,6 @@
     <script src="/assets/js/components/hs.tabs.min.js"></script>
     <script src="/assets/js/components/hs.dropdown.min.js"></script>
     <script src="/assets/js/components/hs.scrollbar.min.js"></script>
-    <script src="/vendor/plyr/dist/plyr.js"></script>
-    <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
-    <script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
