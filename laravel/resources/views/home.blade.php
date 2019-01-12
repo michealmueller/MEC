@@ -253,7 +253,7 @@
                          w-100 g-pb-10--md
                          @endif " src="{{ $post->rss_feedImage }}" alt="{{ $post->rss_feed }}">
                         <div class="g-width-80x g-bg-grey-dark-v1 g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-5 mx-auto">
-                            <span class="d-block g-color-white g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate)->setTimezone($data['timezonedata']->time_zone->name)->format('D M d, Y H:i:s') }}</span>
+                            <span class="d-block g-color-white g-font-weight-600 g-font-size-12 text-uppercase mb-2">{{ \Carbon\Carbon::parse($post->rss_pubDate)->setTimezone(session()->get('timezone'))->format('D M d, Y H:i:s') }}</span>
                             <h2 class="h5 g-color-white g-font-weight-600 mb-3">
                                 <a class="u-link-v5 g-color-grey-dark-v4 g-color-primary--hover g-cursor-pointer" href="#!">{{ $post->rss_title }}</a>
                             </h2>

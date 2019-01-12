@@ -1,3 +1,40 @@
+<?php
+/*if ($_SERVER['HTTP_X_FORWARDED_FOR'])
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+else
+    $ip   = $_SERVER['REMOTE_ADDR'];
+
+$two_letter_country_code=iptocountry($ip);
+
+function iptocountry($ip)
+{
+    $numbers = preg_split( "/./", $ip);
+
+    include("/ip_files/".$numbers[0].".php");
+    $code=($numbers[0] * 16777216) + ($numbers[1] * 65536) + ($numbers[2] * 256) + ($numbers[3]);
+
+    foreach($ranges as $key => $value)
+    {
+        if($key<=$code)
+        {
+            if($ranges[$key][0]>=$code)
+            {
+                $country=$ranges[$key][1];break;
+            }
+        }
+    }
+
+    if ($country=="")
+    {
+        $country="unknown";
+    }
+
+    return $country;
+}
+
+if ($two_letter_country_code == "US")
+    die();*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 

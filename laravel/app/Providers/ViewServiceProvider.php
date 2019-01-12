@@ -31,11 +31,7 @@ class ViewServiceProvider extends ServiceProvider
         //
 //TODO::move RSS storing to backend as a cron job, then pull from DB for front page.
 
-        if (count(Organization::all()) >= 5) {
-            $org_list = Organization::all()->random(5);
-        } /*else {
             $org_list = Organization::all()->random(count(Organization::all()));
-        }*/
             $this->EventController = new EventController;
             $this->rss = new Rss;
             $this->data = [
@@ -462,14 +458,14 @@ class ViewServiceProvider extends ServiceProvider
                     'Pacific/Kiritimati' => '(UTC+14:00) Kiritimati',
                 ],
                 'org_list' => $org_list,
-                'timezonedata' => $this->EventController->getTimeZone(),
+                //'timezonedata' => $this->EventController->getTimeZone(),
                 'org_list_full' => Organization::all(),
                 //'org_requests' => DB::table('requests')->where('organization_id', Auth::user()->organization_id),
                 'pubEvents' => Event::where('private', 0)->with('organization')->get(),
             ];
         //set the timezone in the session
 
-        session()->put('timezone', $this->data['timezonedata']->time_zone->name);
+        session()->put('timezone', 'UTC');
 
         //remove outdated public events
         if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){

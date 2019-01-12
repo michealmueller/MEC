@@ -149,7 +149,7 @@ return [
     | the HTTP protocol. You are free to modify this option if needed.
     |
     */
-    'http_only' => true,
+    'http_only' => false,
     /*
     |--------------------------------------------------------------------------
     | Same-Site Cookies
