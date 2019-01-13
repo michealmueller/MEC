@@ -16,7 +16,7 @@
                                     <option selected value="{{session()->get('timezone')}}">{{ session()->get('timezone')}}</option>
                                 @endif
 
-                                @foreach($timezone as $k=>$v)
+                                @foreach($timezones as $k=>$v)
                                     <option value="{{ $k }}">{{$k}}</option>
                                 @endforeach
                         </select>
