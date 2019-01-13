@@ -167,7 +167,7 @@
                             <label for="example-text-input" class="col-2 col-form-label">Time Zone:</label>
                             <div class="col-10">
                                 <select class="form-control" id="zone" name="timezone">
-                                    @if($data['timezonedata']!= null)
+                                    @if(session()->get('timezone')!= null)
                                         <option selected value="{{session()->get('timezone')}}">{{session()->get('timezone')}}</option>
                                     @endif
                                     @foreach($data['timezones'] as $k=>$v)
