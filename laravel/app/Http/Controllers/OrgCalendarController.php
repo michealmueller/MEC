@@ -22,8 +22,9 @@ class OrgCalendarController extends Controller
     {
         $event = new EventController;
         $this->data = [
-            'timezonedata' => $event->getTimeZone(),
+            //'timezonedata' => $event->getTimeZone(),
             'eventData' => $event->getEventInfo(),
+            'timezones' => config('timezones.zones'),
         ];
     }
 
@@ -94,7 +95,8 @@ class OrgCalendarController extends Controller
             }'
 
         ]);
-        return view('welcome')->with(['calendar'=>$calendar, 'selectedTZ'=>$timezone]);
+        //dd($this->data, $calendar, $timezone);
+        return view('welcome')->with(['timezone'=>$this->data['timezones'], 'calendar'=>$calendar, 'selectedTZ'=>$timezone]);
     }
 
     public function userCal(User $user)

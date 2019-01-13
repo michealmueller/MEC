@@ -24,8 +24,12 @@ class ReferenceController extends Controller
     //verify reference code and register user under organization.
     public function verifyRefCode($refHash)
     {
+        $events = new EventController();
+        $timezonedata = $events->getTimeZone();
 
-            $organization = Organization::where('refHash', $refHash)->first();
+        session()->put('timezone', $timezonedata->time_zone->name);
+
+        $organization = Organization::where('refHash', $refHash)->first();
 
         if($organization === null){
             abort(404);

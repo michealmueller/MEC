@@ -49,6 +49,12 @@ class EventController extends Controller
 
     public function viewEvent($eventId)
     {
+        $events = new EventController();
+        $timezonedata = $events->getTimeZone();
+        //dd($timezonedata);
+        session()->put('timezone', $timezonedata->time_zone->name);
+
+
         $eventSingle = Event::whereId($eventId)->get()->first();
 
         if($eventSingle == null){
@@ -87,7 +93,8 @@ class EventController extends Controller
     {
         //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get();
-        //dd($eventSingle[0]);
+        $timezones = config('timezones.zones');
+        dd($timezones);
         return view('editEvent')->with([
             'data' => $this->data,
             'eventData'=>$eventSingle[0]
@@ -201,7 +208,7 @@ class EventController extends Controller
     public function getTimeZone()
     {
         if(env('APP_ENV') === 'development'){
-            session()->put('info', 'You are in Development Enviroment - Setting TZ to EST');
+            session()->put('info', 'You are in Development Environment - Setting TZ to EST');
             $response = collect([
                     'data' => (object)[
                         'time_zone' => (object)[
@@ -212,49 +219,37 @@ class EventController extends Controller
             );
             return $response['data'];
         }else {
-            if (!self::is_bot($_SERVER['HTTP_USER_AGENT'])) {
-                $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
-                //dd($ip);
+            $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
+            //dd($ip);
 
-                $ch = curl_init();
-                //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
-                $endpoint = 'http://www.geoplugin.net/json.gp?ip=' . $ip;
-                //dd($endpoint, $ch);
+            $ch = curl_init();
+            //$endpoint = 'https://api.ipdata.co/'.$ip.'?api-key=edf6d2ba1015b406ad11cb762bae85463abf819ceee18f022c50ff5c';
+            $endpoint = 'http://www.geoplugin.net/json.gp?ip=' . $ip;
+            //dd($endpoint, $ch);
 
-                curl_setopt($ch, CURLOPT_URL, $endpoint);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                curl_setopt($ch, CURLOPT_HEADER, FALSE);
+            curl_setopt($ch, CURLOPT_URL, $endpoint);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
-                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                    "Accept: application/json"
-                ));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                "Accept: application/json"
+            ));
 
-                $response = curl_exec($ch);
-                curl_close($ch);
-                if (json_decode($response)->geoplugin_timezone) {
-                    session()->put('timezone', json_decode($response)->geoplugin_timezone);
-                    $response = collect([
-                            'data' => (object)[
-                                'time_zone' => (object)[
-                                    'name' => json_decode($response)->geoplugin_timezone
-                                ]
-                            ]
-                        ]
-                    );
-
-                    return $response['data'];
-
-                }
-            }else{
+            $response = curl_exec($ch);
+            curl_close($ch);
+            if (json_decode($response)->geoplugin_timezone) {
+                session()->put('timezone', json_decode($response)->geoplugin_timezone);
                 $response = collect([
                         'data' => (object)[
                             'time_zone' => (object)[
-                                'name' => 'America/New_York'
+                                'name' => json_decode($response)->geoplugin_timezone
                             ]
                         ]
                     ]
                 );
+
                 return $response['data'];
+
             }
         }
     }

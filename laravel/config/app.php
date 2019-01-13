@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CitizenWarfare'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'Development'),
 
     /*
     |--------------------------------------------------------------------------
@@ -215,6 +215,38 @@ return [
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
         'Feed' => dg\rssphp\src\FeedFacade::class,
         'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
+    ],
+    'debug_blacklist' => [
+        '_ENV' => [
+            'APP_KEY',
+            'DB_PASSWORD',
+            'DB_USERNAME',
+            'DB_HOST',
+            'REDIS_HOST',
+            'REDIS_PASSWORD',
+            'MAIL_HOST',
+            'MAIL_PASSWORD',
+            'STRIPE_KEY',
+            'STRIPE_SECRET',
+            'STRIPE_WEBHOOK_SECRET',
+
+        ],
+
+        '_SERVER' => [
+            'APP_KEY',
+            'DB_PASSWORD',
+            'REDIS_HOST',
+            'REDIS_PASSWORD',
+            'MAIL_HOST',
+            'MAIL_PASSWORD',
+            'STRIPE_KEY',
+            'STRIPE_SECRET',
+            'STRIPE_WEBHOOK_SECRET',
+        ],
+
+        '_POST' => [
+            'password',
+        ],
     ],
 
 ];

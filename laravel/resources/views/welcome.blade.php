@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('content')
@@ -15,8 +16,8 @@
                                     <option selected value="{{session()->get('timezone')}}">{{ session()->get('timezone')}}</option>
                                 @endif
 
-                                @foreach($data['timezones'] as $k=>$v)
-                                    <option value="{{ $k }}">{{$v}}</option>
+                                @foreach($timezone as $k=>$v)
+                                    <option value="{{ $k }}">{{$k}}</option>
                                 @endforeach
                         </select>
                     </div>
