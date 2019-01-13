@@ -154,7 +154,7 @@ class OrgCalendarController extends Controller
             }'
 
         ]);
-        return view('welcome')->with(['timezone'=>$this->data['timezones'],'calendar'=>$calendar, 'selectedTZ'=>$timezone]);
+        return view('welcome')->with(['timezones'=>$this->data['timezones'],'calendar'=>$calendar, 'selectedTZ'=>$timezone]);
     }
 
     public function getUserEvents($user)
