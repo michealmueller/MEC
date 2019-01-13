@@ -212,6 +212,7 @@ class EventController extends Controller
             );
             return $response['data'];
         }else {
+            if (!self::is_bot($_SERVER['HTTP_USER_AGENT'])) {
                 $ip = getenv('HTTP_CLIENT_IP') ?: getenv('HTTP_X_FORWARDED_FOR') ?: getenv('HTTP_X_FORWARDED') ?: getenv('HTTP_FORWARDED_FOR') ?: getenv('HTTP_FORWARDED') ?: getenv('REMOTE_ADDR');
                 //dd($ip);
 
@@ -243,18 +244,18 @@ class EventController extends Controller
 
                     return $response['data'];
 
-                }else{
-                    $response = collect([
-                            'data' => (object)[
-                                'time_zone' => (object)[
-                                    'name' => 'America/New_York'
-                                ]
+                }
+            }else{
+                $response = collect([
+                        'data' => (object)[
+                            'time_zone' => (object)[
+                                'name' => 'America/New_York'
                             ]
                         ]
-                    );
-                    return $response['data'];
-                }
-
+                    ]
+                );
+                return $response['data'];
+            }
         }
     }
 
