@@ -16,20 +16,22 @@
                 <div class="col-lg-4 order-lg-1 text-center">
                     <div class="col-sm-12" style="margin-bottom:20px;">
                         <img
-                                @if($user->organization->org_logo)
+                                @if($user->organization)
                                 src="/storage/app/org_logos/{{ $user->organization->org_logo }}"
                                 @else
-                                src="//placehold.it/100"
+                                src="/storage/app/avatars/{{ $user->avatar }}"
                                 @endif
                                 class="mx-auto g-mb-10--md img-fluid img-circle d-block" width="100px" height="100px" alt="org_logo">
                     </div>
-                    <h3>{{ $user->organization->org_name }}</h3>
+                    @if($user->organization)
+                        <h3>{{ $user->organization->org_name }}</h3>
+                    @endif
                     <table>
                         <tr>
                             <th>IP TZ:</th>
                             <td>&nbsp;</td>
                             <td>
-                                @if($data['timezonedata']!= null)
+                                @if(session()->get('timezone') != null)
                                     {{ session()->get('timezone') }}
                                 @endif
                             </td>
@@ -68,11 +70,11 @@
                             <label for="example-text-input" class="col-2 col-form-label">Time Zone:</label>
                             <div class="col-10">
                                 <select class="form-control" id="zone" name="timezone">
-                                    @if($data['timezonedata']!= null)
+                                    @if(session()->get('timezone') != null)
                                         <option selected value="{{session()->get('timezone')}}">{{session()->get('timezone')}}</option>
                                     @endif
-                                    @foreach($data['timezones'] as $k=>$v)
-                                        <option value="{{ $k }}">{{$v}}</option>
+                                    @foreach($timezones as $k=>$v)
+                                        <option value="{{ $k }}">{{$k}}</option>
                                     @endforeach
 
                                 </select>
@@ -107,6 +109,7 @@
                                         </div>-->
                             </div>
                         </div>
+                        @if($user->organization)
                         <div class="form-group row g-mb-25">
                             <!-- Left Column -->
                             <label for="example-text-input" class="col-2 col-form-label">Make this event Public or Private?</label>
@@ -133,6 +136,7 @@
                                 <!-- End Left Column -->
                             </div>
                         </div>
+                        @endif
                         <div class="g-pa-25--md">
                             <button class="btn btn-md btn-block btn-primary rounded-0 g-py-15 mb-5" type="submit">Update Event!</button>
                         </div>

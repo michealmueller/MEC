@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use App\Organization;
 use App\Profile;
 use App\RecentActivity;
@@ -37,10 +38,37 @@ class ProfileController extends Controller
         $recent = new RecentActivity;
         $requests = null;
         $recentActivity = $recent->where('user_id', Auth::user()->id)->orderBy('created_at', 'DESC')->get()->all();
+
+        $sorted = [];
+        $pubEvents = Event::where('private', 0)->with('organization')->get();
+
+        //remove outdated public events
+        if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
+            $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
+        }
+        //dd($this->data['pubEvents']);
+        foreach ($pubEvents as $k => $event) {
+            $parsed = Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d');
+            if ($parsed < $today) {
+                unset($pubEvents[$k]);
+            }
+            //sort for front page and profile.
+            $weekStart = Carbon::getWeekStartsAt();
+            $weekEnd = Carbon::getWeekEndsAt();
+
+            if(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d') < $weekEnd && $event > $weekStart){
+                $sorted['thisWeek'][] = $event;
+            }elseif(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('m') === Carbon::now()->setTimezone(session()->get('timezone'))->format('m')){
+                $sorted['thisMonth'][] = $event;
+            }elseif(Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d') === Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
+                $sorted['today'][] = $event;
+            }
+        }
+
         if(Auth::user()->organization){
             $requests = Auth::user()->organization->requests->all();
         }
-        return view('profile2')->with(['status'=> $status, 'org_list' => $orgs, 'recent'=>$recentActivity, 'requests' => $requests]);
+        return view('profile2')->with(['sorted', $sorted, 'status'=> $status, 'org_list' => $orgs, 'recent'=>$recentActivity, 'requests' => $requests]);
     }
 
     /**

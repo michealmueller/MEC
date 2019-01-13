@@ -94,10 +94,11 @@ class EventController extends Controller
         //$this->data['user'] = Auth::user();
         $eventSingle = Event::whereId($eventId)->get();
         $timezones = config('timezones.zones');
-        dd($timezones);
+
         return view('editEvent')->with([
             'data' => $this->data,
-            'eventData'=>$eventSingle[0]
+            'eventData'=>$eventSingle[0],
+            'timezones' => $timezones,
         ]);
     }
 
