@@ -30,7 +30,7 @@
                             <td>&nbsp;</td>
                             <td>
                                 @if($data['timezonedata']!= null)
-                                    {{ $data['timezonedata']->time_zone->name }}
+                                    {{ session()->get('timezone') }}
                                 @endif
                             </td>
                         </tr>
@@ -58,10 +58,10 @@
                         <div class="form-group row g-mb-25">
                             <label for="example-text-input" class="col-2 col-form-label">Event Dates:</label>
                             <div class="col-5">
-                                <input class="form-control text-center " name="start_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('Y-m-d\TH:i:s') }}">
+                                <input class="form-control text-center " name="start_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d\TH:i:s') }}">
                             </div>
                             <div class="col-5">
-                                <input class="form-control text-center " name="end_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone($data['timezonedata']->time_zone->name)->format('Y-m-d\TH:i:s') }}">
+                                <input class="form-control text-center " name="end_date" type="datetime-local" value="{{ \Carbon\Carbon::parse($eventData->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d\TH:i:s') }}">
                             </div>
                         </div>
                         <div class="form-group row g-mb-25">
@@ -69,7 +69,7 @@
                             <div class="col-10">
                                 <select class="form-control" id="zone" name="timezone">
                                     @if($data['timezonedata']!= null)
-                                        <option selected value="{{$data['timezonedata']->time_zone->name}}">{{$data['timezonedata']->time_zone->name}}</option>
+                                        <option selected value="{{session()->get('timezone')}}">{{session()->get('timezone')}}</option>
                                     @endif
                                     @foreach($data['timezones'] as $k=>$v)
                                         <option value="{{ $k }}">{{$v}}</option>

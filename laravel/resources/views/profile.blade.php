@@ -22,7 +22,7 @@
                     <tr>
                         <th>IP TZ:</th>
                         <td>&nbsp;</td>
-                        <td>{{ $data['timezonedata']->time_zone->name }}</td>
+                        <td>{{ session()->get('timezone') }}</td>
                     </tr>
                     <tr></tr>
                     <tr>
