@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/config/timezones.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,14 +181,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="329" />
-          <entry key="Blade" value="30915" />
+          <entry key="Blade" value="30921" />
           <entry key="CSS" value="849" />
           <entry key="Git file" value="51" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19705" />
-          <entry key="PHP" value="35228" />
-          <entry key="PLAIN_TEXT" value="3110" />
+          <entry key="PHP" value="35256" />
+          <entry key="PLAIN_TEXT" value="3209" />
           <entry key="SQL" value="22" />
           <entry key="Scratch" value="422" />
         </counts>
@@ -213,7 +206,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="30" />
-          <entry key="Blade" value="207" />
+          <entry key="Blade" value="208" />
           <entry key="CSS" value="38" />
           <entry key="Database Element" value="169" />
           <entry key="Git file" value="12" />
@@ -271,8 +264,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+                <state relative-caret-position="327">
+                  <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
                 </state>
               </provider>
             </entry>
@@ -280,8 +273,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+                <state relative-caret-position="476">
+                  <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="377">
+                  <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -332,11 +334,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="95" column="47" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="47" />
+                <state relative-caret-position="528">
+                  <caret line="144" column="66" lean-forward="true" selection-start-line="144" selection-start-column="66" selection-end-line="144" selection-end-column="66" />
                   <folding>
                     <element signature="e#40#63#0#PHP" expanded="true" />
                   </folding>
@@ -353,11 +355,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+                <state relative-caret-position="-119">
+                  <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="53" />
                   <folding>
                     <element signature="e#40#61#0#PHP" expanded="true" />
                   </folding>
@@ -505,7 +507,6 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_12_215537_create_sessions_table.php" />
         <option value="$PROJECT_DIR$/laravel/config/session.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9311c420-6003-4b7a-af69-ed34032eb1b6/console.sql" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/laravel/.env" />
@@ -513,9 +514,10 @@
         <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/config/app.php" />
         <option value="$PROJECT_DIR$/laravel/config/timezones.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
       </list>
     </option>
   </component>
@@ -617,7 +619,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;homecontrol&#9;null&#9;null&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php&#10;vieweve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;reg&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;profile.b&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;organizationControl&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;homecontrol&#9;null&#9;null&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;profilecon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php&#10;vieweve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;reg&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php&#10;profile&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;404&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/errors/404.blade.php&#10;profile.b&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;organizationControl&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -791,21 +793,7 @@
       <workItem from="1547087582052" duration="49000" />
       <workItem from="1547128968456" duration="33917000" />
       <workItem from="1547252823557" duration="2799000" />
-      <workItem from="1547319104503" duration="15060000" />
-    </task>
-    <task id="LOCAL-00186" summary="changes to route file">
-      <created>1545439373221</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1545439373222</updated>
-    </task>
-    <task id="LOCAL-00187" summary="changes to route file">
-      <created>1545439528192</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1545439528192</updated>
+      <workItem from="1547319104503" duration="15853000" />
     </task>
     <task id="LOCAL-00188" summary="updated rss feed fetch to be artisan command and added to scheduler">
       <created>1545488512329</created>
@@ -1136,11 +1124,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547404432812</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="Changes:removing deps on api and setting tz from the index and only on pages that require it.">
+      <created>1547406816434</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1547406816434</updated>
+    </task>
+    <task id="LOCAL-00236" summary="Changes:removing deps on api and setting tz from the index and only on pages that require it.">
+      <created>1547406970933</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1547406970933</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1023981000" />
+    <option name="totallyTimeSpent" value="1024774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1207,7 +1209,6 @@
       <path value="$PROJECT_DIR$/public_html/vendor/crumbleJS" />
       <path value="$PROJECT_DIR$/public_html/vendor/introjs" />
     </ignored-roots>
-    <MESSAGE value="updated images for CIG asset removal" />
     <MESSAGE value="updated background image again." />
     <MESSAGE value="Added attendance to events, as well as a new bot command to set the TZ of the notifications." />
     <MESSAGE value="updated error when going to no existant event." />
@@ -1232,7 +1233,8 @@
     <MESSAGE value="Changes:disabled ip detection temporarily, all time is UTC!" />
     <MESSAGE value="Changes:switched to database sessions." />
     <MESSAGE value="Changes:turned ip detection back on" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:turned ip detection back on" />
+    <MESSAGE value="Changes:removing deps on api and setting tz from the index and only on pages that require it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:removing deps on api and setting tz from the index and only on pages that require it." />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/recent_activity">
@@ -1457,13 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="187" column="48" lean-forward="true" selection-start-line="187" selection-start-column="48" selection-end-line="187" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/ip2location_db11">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1523,16 +1518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="95" column="47" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/timezones.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1543,27 +1528,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="327">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state relative-caret-position="-119">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="53" />
           <folding>
             <element signature="e#40#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        <state relative-caret-position="528">
+          <caret line="144" column="66" lean-forward="true" selection-start-line="144" selection-start-column="66" selection-end-line="144" selection-end-column="66" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

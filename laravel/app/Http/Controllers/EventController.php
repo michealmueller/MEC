@@ -137,8 +137,12 @@ class EventController extends Controller
     }
 
     public function newEvent(){
-        //$this->data['user'] = Auth::user();
-        return view('createEvent');
+        $events = new EventController();
+        $timezonedata = $events->getTimeZone();
+        //dd($timezonedata);
+        session()->put('timezone', $timezonedata->time_zone->name);
+        $timezones = config('timezones.zones');
+        return view('createEvent')->with('timezones', $timezones);
     }
 
     public function createEvent(Request $request)
