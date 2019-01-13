@@ -191,21 +191,24 @@
                                         <div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
                                             <ul class="list-unstyled">
                                                 @if(isset($sorted['thisMonth']))
-                                                @foreach($sorted['thisMonth'] as $item)
-                                                <li class="media g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-blue-left rounded g-pa-20 g-mb-10">
-                                                    <div class="media-body">
-                                                        <div class="d-flex justify-content-between">
-                                                            <h5 class="h6 g-font-weight-600 g-color-white"><a href="/view/event/{{ $item->id }}">{{ $item->title }}</a></h5>
-                                                            @if($user->organization)
-                                                            <a href="/profile/organization/{{ $item->organization->id }}"><span class="small text-nowrap g-color-blue">{{ $item->organization->org_name }}</span></a>
-                                                            @else
-                                                            <span class="small text-nowrap g-color-blue">{{ \App\User::findorfail($item->user_id)->username}}</span></a>
-                                                            @endif
+                                                    @foreach($sorted['thisMonth'] as $item)
+                                                        @php
+                                                        //dd($sorted);
+                                                        @endphp
+                                                    <li class="media g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-blue-left rounded g-pa-20 g-mb-10">
+                                                        <div class="media-body">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h5 class="h6 g-font-weight-600 g-color-white"><a href="/view/event/{{ $item->id }}">{{ $item->title }}</a></h5>
+                                                                @if($item->organization_id)
+                                                                <a href="/profile/organization/{{ $item->organization->id }}"><span class="small text-nowrap g-color-blue">{{ $item->organization->org_name }}</span></a>
+                                                                @else
+                                                                <span class="small text-nowrap g-color-blue">{{ \App\User::findorfail($item->user_id)->username}}</span></a>
+                                                                @endif
+                                                            </div>
+                                                            <p>{{ str_limit($item->comments, $limit=150, $end='...') }}<a href="/view/event/{{ $item->id}}">More</a></p>
                                                         </div>
-                                                        <p>{{ str_limit($item->comments, $limit=150, $end='...') }}<a href="/view/event/{{ $item->id}}">More</a></p>
-                                                    </div>
-                                                </li>
-                                                @endforeach
+                                                    </li>
+                                                    @endforeach
                                                 @else
                                                     <div class="text-center">
                                                         <p> There are no Upcoming Public Events.<br> Why don't you <a href="/create-event">Create</a> one now!</p>

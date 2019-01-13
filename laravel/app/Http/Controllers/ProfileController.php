@@ -40,13 +40,13 @@ class ProfileController extends Controller
         $recentActivity = $recent->where('user_id', Auth::user()->id)->orderBy('created_at', 'DESC')->get()->all();
 
         $sorted = [];
-        $pubEvents = Event::where('private', 0)->with('organization')->get();
+        $pubEvents = Event::where('private', 0)->orderBy('start_date', 'DESC')->get()->all();
 
         //remove outdated public events
         if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
             $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
         }
-        //dd($this->data['pubEvents']);
+
         foreach ($pubEvents as $k => $event) {
             $parsed = Carbon::parse($event->start_date)->setTimezone(session()->get('timezone'))->format('Y-m-d');
             if ($parsed < $today) {
@@ -64,11 +64,10 @@ class ProfileController extends Controller
                 $sorted['today'][] = $event;
             }
         }
-
         if(Auth::user()->organization){
             $requests = Auth::user()->organization->requests->all();
         }
-        return view('profile2')->with(['sorted', $sorted, 'status'=> $status, 'org_list' => $orgs, 'recent'=>$recentActivity, 'requests' => $requests]);
+        return view('profile2')->with(['sorted' =>$sorted, 'status'=> $status, 'org_list' => $orgs, 'recent'=>$recentActivity, 'requests' => $requests]);
     }
 
     /**

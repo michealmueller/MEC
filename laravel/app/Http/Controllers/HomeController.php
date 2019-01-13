@@ -29,8 +29,8 @@ class HomeController extends Controller
 
         $events = new EventController();
         $timezonedata = $events->getTimeZone();
-        //dd($timezonedata);
         session()->put('timezone', $timezonedata->time_zone->name);
+
         //remove outdated public events
         if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){
             $today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d');
