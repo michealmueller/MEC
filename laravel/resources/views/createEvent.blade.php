@@ -168,7 +168,7 @@
                             <div class="col-10">
                                 <select class="form-control" id="zone" name="timezone">
                                     @if($data['timezonedata']!= null)
-                                        <option selected value="{{$data['timezonedata']->time_zone->name}}">{{$data['timezonedata']->time_zone->name}}</option>
+                                        <option selected value="{{session()->get('timezone')}}">{{session()->get('timezone')}}</option>
                                     @endif
                                     @foreach($data['timezones'] as $k=>$v)
                                         <option value="{{ $k }}">{{$v}}</option>
