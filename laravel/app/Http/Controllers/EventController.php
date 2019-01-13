@@ -340,7 +340,8 @@ class EventController extends Controller
                 ],
             ];
         }else {
-            $hooks = [];
+            $hooks = DB::table('discordbot')->where('public_webhook_url', '!=', 'null')->get()->all();
+            //dd($hooks);
             $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
             //check org set timezone for null and set to UTC if null
 
@@ -397,10 +398,10 @@ class EventController extends Controller
         $result = null;
         foreach($hooks as $k=>$v) {
 
-            if ($v == '' || $v == null || $v == 'undefined') {
+            if ($v->public_webhook_url == '' || $v->public_webhook_url == null || $v->public_webhook_url == 'undefined') {
                 unset($hooks[$k]);
             }else{
-                $ch = curl_init($v);
+                $ch = curl_init($v->public_webhook_url);
 
                 if (isset($ch)) {
                     curl_setopt($ch, CURLOPT_POST, 1);
@@ -412,7 +413,7 @@ class EventController extends Controller
                     $result[$k] = curl_exec($ch);
                 }
                 if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
-                    dd($result, $hooks, $k, $v);
+                    dd($result, $hooks, $k, $v->public_webhook_url);
                     if(curl_error($ch)) {
                         $result[$k]['error'] = curl_error($ch);
                     }
