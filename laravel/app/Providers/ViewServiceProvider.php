@@ -12,6 +12,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\RssController as Rss;
 use App\Http\Controllers\EventController as EventController;
 use App\Event as Event;
+use SEO;
 
 class ViewServiceProvider extends ServiceProvider
 {

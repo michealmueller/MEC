@@ -2,8 +2,205 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/profile2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/profile2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/unify-globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/unify-globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/css/bootstrap-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/css/bootstrap-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/css/bootstrap-select.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/css/bootstrap-select.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/bootstrap-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/bootstrap-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/bootstrap-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/bootstrap-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ar_AR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ar_AR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ar_AR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ar_AR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-bg_BG.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-bg_BG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-bg_BG.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-bg_BG.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cro_CRO.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cro_CRO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cro_CRO.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cro_CRO.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cs_CZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cs_CZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cs_CZ.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-cs_CZ.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-da_DK.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-da_DK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-da_DK.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-da_DK.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-de_DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-de_DE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-de_DE.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-de_DE.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-en_US.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-en_US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-en_US.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-en_US.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_CL.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_CL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_CL.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_CL.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_ES.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-es_ES.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-et_EE.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-et_EE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-et_EE.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-et_EE.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-eu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-eu.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fa_IR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fa_IR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fa_IR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fa_IR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fi_FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fi_FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fi_FI.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fi_FI.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fr_FR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fr_FR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fr_FR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-fr_FR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-hu_HU.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-hu_HU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-hu_HU.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-hu_HU.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-id_ID.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-id_ID.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-id_ID.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-id_ID.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-it_IT.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-it_IT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-it_IT.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-it_IT.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ja_JP.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ja_JP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ja_JP.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ja_JP.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-kh_KM.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-kh_KM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-kh_KM.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-kh_KM.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ko_KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ko_KR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ko_KR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ko_KR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-lt_LT.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-lt_LT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-lt_LT.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-lt_LT.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nb_NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nb_NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nb_NO.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nb_NO.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nl_NL.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nl_NL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nl_NL.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-nl_NL.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pl_PL.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pl_PL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pl_PL.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pl_PL.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_BR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_BR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_PT.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-pt_PT.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ro_RO.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ro_RO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ro_RO.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ro_RO.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ru_RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ru_RU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ru_RU.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ru_RU.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sk_SK.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sk_SK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sk_SK.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sk_SK.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sl_SI.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sl_SI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sl_SI.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sl_SI.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sv_SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sv_SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sv_SE.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-sv_SE.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-tr_TR.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-tr_TR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-tr_TR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-tr_TR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ua_UA.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ua_UA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ua_UA.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-ua_UA.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-vi_VN.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-vi_VN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-vi_VN.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-vi_VN.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_CN.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_CN.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_TW.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/bootstrap-select/js/i18n/defaults-zh_TW.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/hamburgers.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/hamburgers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/hamburgers.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/hamburgers/hamburgers.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/hs-admin-icons/hs-admin-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/hs-admin-icons/hs-admin-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/hs-admin-icons/hs-admin-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/hs-admin-icons/hs-admin-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/Read_Me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/Read_Me.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/et-line.dev.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/et-line.dev.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/fonts/et-line.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/fonts/et-line.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/lte-ie7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/lte-ie7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/style-source.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/style-source.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-etlinefont/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-hs/fonts/hs-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-hs/fonts/hs-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-hs/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-hs/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/SVG - Font/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/SVG - Font/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/SVG - Font/icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/SVG - Font/icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/fonts/cristmas.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/fonts/cristmas.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/christmas/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/fonts/clothes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/fonts/clothes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/clothes/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/fonts/communication-48-x-48.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/fonts/communication-48-x-48.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/communication/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/fonts/education-48.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/fonts/education-48.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/education/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/fonts/electronics.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/fonts/electronics.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/electronics/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/fonts/finance.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/fonts/finance.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/finance/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/fonts/food-48.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/fonts/food-48.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/food/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/fonts/furniture.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/fonts/furniture.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/furniture/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/fonts/hotel-restaurant.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/fonts/hotel-restaurant.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/hotel-restaurant/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/fonts/media.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/fonts/media.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/media/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/fonts/medical-and-health.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/fonts/medical-and-health.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/medical/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/fonts/music.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/fonts/music.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/music/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/fonts/real-estate.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/fonts/real-estate.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/real-estate/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/fonts/science.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/fonts/science.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/science/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/fonts/sports-48-x-48.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/fonts/sports-48-x-48.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/sports/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/fonts/transport.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/fonts/transport.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/transport/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/fonts/travel.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/fonts/travel.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/travel/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/fonts/weather.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/fonts/weather.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line-pro/weather/webfont/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line/css/simple-line-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line/css/simple-line-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/vendor/icon-line/fonts/Simple-Line-Icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/vendor/icon-line/fonts/Simple-Line-Icons.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +350,7 @@
     <session id="254734441">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="57" />
+          <entry key="project.closed" value="58" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="3" />
@@ -173,20 +370,20 @@
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.9" value="9" />
-          <entry key="project.opened" value="62" />
+          <entry key="project.open.time.9" value="10" />
+          <entry key="project.opened" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="329" />
-          <entry key="Blade" value="31116" />
-          <entry key="CSS" value="849" />
+          <entry key="Blade" value="31387" />
+          <entry key="CSS" value="879" />
           <entry key="Git file" value="51" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19705" />
-          <entry key="PHP" value="35757" />
+          <entry key="PHP" value="36145" />
           <entry key="PLAIN_TEXT" value="3501" />
           <entry key="SQL" value="22" />
           <entry key="Scratch" value="422" />
@@ -205,16 +402,16 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="32" />
-          <entry key="Blade" value="213" />
-          <entry key="CSS" value="38" />
-          <entry key="Database Element" value="173" />
+          <entry key="Blade" value="224" />
+          <entry key="CSS" value="39" />
+          <entry key="Database Element" value="175" />
           <entry key="Git file" value="12" />
           <entry key="Image" value="37" />
           <entry key="JSON" value="24" />
           <entry key="JavaScript" value="34" />
-          <entry key="PHP" value="398" />
+          <entry key="PHP" value="403" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Scratch" value="14" />
+          <entry key="Scratch" value="15" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
@@ -257,98 +454,245 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.23272036">
+    <splitter split-orientation="horizontal" split-proportion="0.4676429">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="59" selection-start-line="59" selection-end-line="59" />
+                <state relative-caret-position="221">
+                  <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="1191" column="74" selection-start-line="1191" selection-start-column="74" selection-end-line="1191" selection-end-column="74" />
+                <state relative-caret-position="289">
+                  <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/VerifiesEmails.php">
+            <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile2.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="697">
-                  <caret line="265" column="50" selection-start-line="265" selection-start-column="50" selection-end-line="265" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="587">
-                  <caret line="183" column="181" selection-start-line="183" selection-start-column="83" selection-end-line="183" selection-end-column="183" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_13_211355_add_user_fields_to_discordbot_table.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
-                  <caret line="128" selection-start-line="128" selection-end-line="128" />
-                  <folding>
-                    <element signature="e#40#63#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="748">
+                  <caret line="218" column="59" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/laravel/.env">
+            <entry file="file://$PROJECT_DIR$/laravel/config/seotools.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="22" />
+                <state relative-caret-position="799">
+                  <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="629">
+                  <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="242" column="55" selection-start-line="242" selection-start-column="55" selection-end-line="242" selection-end-column="55" />
+                  <folding>
+                    <element signature="e#51799#55416#0#HTML" />
+                    <element signature="e#52624#55221#0#HTML" />
+                    <element signature="e#55442#59050#0#HTML" />
+                    <element signature="e#56262#58855#0#HTML" />
+                    <element signature="e#59076#62681#0#HTML" />
+                    <element signature="e#62707#66314#0#HTML" />
+                    <element signature="e#67355#67378#0#HTML" expanded="true" />
+                    <element signature="e#67656#67709#0#HTML" expanded="true" />
+                    <element signature="e#67774#67797#0#HTML" expanded="true" />
+                    <element signature="e#68365#68388#0#HTML" expanded="true" />
+                    <element signature="e#79556#79596#0#HTML" expanded="true" />
+                    <element signature="e#79711#79746#0#HTML" expanded="true" />
+                    <element signature="e#88277#88303#0#HTML" expanded="true" />
+                    <element signature="e#88439#88474#0#HTML" expanded="true" />
+                    <element signature="e#88516#88542#0#HTML" expanded="true" />
+                    <element signature="e#88693#88728#0#HTML" expanded="true" />
+                    <element signature="e#88770#88796#0#HTML" expanded="true" />
+                    <element signature="e#88947#88982#0#HTML" expanded="true" />
+                    <element signature="e#89024#89050#0#HTML" expanded="true" />
+                    <element signature="e#89202#89237#0#HTML" expanded="true" />
+                    <element signature="e#89279#89305#0#HTML" expanded="true" />
+                    <element signature="e#89457#89492#0#HTML" expanded="true" />
+                    <element signature="e#89534#89560#0#HTML" expanded="true" />
+                    <element signature="e#89711#89746#0#HTML" expanded="true" />
+                    <element signature="e#89788#89814#0#HTML" expanded="true" />
+                    <element signature="e#89966#90001#0#HTML" expanded="true" />
+                    <element signature="e#90043#90069#0#HTML" expanded="true" />
+                    <element signature="e#90222#90257#0#HTML" expanded="true" />
+                    <element signature="e#90299#90325#0#HTML" expanded="true" />
+                    <element signature="e#90478#90513#0#HTML" expanded="true" />
+                    <element signature="e#90555#90581#0#HTML" expanded="true" />
+                    <element signature="e#90734#90769#0#HTML" expanded="true" />
+                    <element signature="e#90811#90837#0#HTML" expanded="true" />
+                    <element signature="e#90989#91024#0#HTML" expanded="true" />
+                    <element signature="e#91066#91092#0#HTML" expanded="true" />
+                    <element signature="e#91222#91256#0#HTML" expanded="true" />
+                    <element signature="e#91295#91321#0#HTML" expanded="true" />
+                    <element signature="e#91441#91475#0#HTML" expanded="true" />
+                    <element signature="e#91517#91543#0#HTML" expanded="true" />
+                    <element signature="e#91663#91697#0#HTML" expanded="true" />
+                    <element signature="e#91741#91767#0#HTML" expanded="true" />
+                    <element signature="e#91887#91921#0#HTML" expanded="true" />
+                    <element signature="e#91963#91989#0#HTML" expanded="true" />
+                    <element signature="e#92109#92143#0#HTML" expanded="true" />
+                    <element signature="e#92187#92213#0#HTML" expanded="true" />
+                    <element signature="e#92333#92367#0#HTML" expanded="true" />
+                    <element signature="e#92409#92435#0#HTML" expanded="true" />
+                    <element signature="e#92555#92589#0#HTML" expanded="true" />
+                    <element signature="e#92633#92659#0#HTML" expanded="true" />
+                    <element signature="e#92778#92812#0#HTML" expanded="true" />
+                    <element signature="e#92854#92880#0#HTML" expanded="true" />
+                    <element signature="e#92999#93033#0#HTML" expanded="true" />
+                    <element signature="e#93077#93103#0#HTML" expanded="true" />
+                    <element signature="e#93222#93256#0#HTML" expanded="true" />
+                    <element signature="e#93298#93324#0#HTML" expanded="true" />
+                    <element signature="e#93442#93476#0#HTML" expanded="true" />
+                    <element signature="e#93520#93546#0#HTML" expanded="true" />
+                    <element signature="e#93666#93700#0#HTML" expanded="true" />
+                    <element signature="e#95639#95662#0#HTML" expanded="true" />
+                    <element signature="e#95930#95983#0#HTML" expanded="true" />
+                    <element signature="e#96048#96071#0#HTML" expanded="true" />
+                    <element signature="e#96639#96662#0#HTML" expanded="true" />
+                    <element signature="e#103535#103581#0#HTML" expanded="true" />
+                    <element signature="e#103681#103707#0#HTML" expanded="true" />
+                    <element signature="e#103758#103799#0#HTML" expanded="true" />
+                    <element signature="e#118421#118444#0#HTML" expanded="true" />
+                    <element signature="e#118535#118640#0#HTML" expanded="true" />
+                    <element signature="e#118671#118697#0#HTML" expanded="true" />
+                    <element signature="e#120485#120519#0#HTML" expanded="true" />
+                    <element signature="e#121642#121668#0#HTML" expanded="true" />
+                    <element signature="e#121794#121828#0#HTML" expanded="true" />
+                    <element signature="e#121871#121897#0#HTML" expanded="true" />
+                    <element signature="e#122032#122066#0#HTML" expanded="true" />
+                    <element signature="e#122109#122135#0#HTML" expanded="true" />
+                    <element signature="e#122269#122303#0#HTML" expanded="true" />
+                    <element signature="e#122346#122372#0#HTML" expanded="true" />
+                    <element signature="e#122507#122541#0#HTML" expanded="true" />
+                    <element signature="e#122584#122610#0#HTML" expanded="true" />
+                    <element signature="e#122743#122777#0#HTML" expanded="true" />
+                    <element signature="e#122820#122846#0#HTML" expanded="true" />
+                    <element signature="e#122974#123007#0#HTML" expanded="true" />
+                    <element signature="e#123046#123072#0#HTML" expanded="true" />
+                    <element signature="e#123221#123254#0#HTML" expanded="true" />
+                    <element signature="e#123296#123322#0#HTML" expanded="true" />
+                    <element signature="e#123471#123504#0#HTML" expanded="true" />
+                    <element signature="e#123550#123576#0#HTML" expanded="true" />
+                    <element signature="e#123709#123742#0#HTML" expanded="true" />
+                    <element signature="e#123788#123814#0#HTML" expanded="true" />
+                    <element signature="e#123933#123966#0#HTML" expanded="true" />
+                    <element signature="e#125036#125106#0#HTML" expanded="true" />
+                    <element signature="e#126150#126173#0#HTML" expanded="true" />
+                    <element signature="e#126791#126797#1#HTML" expanded="true" />
+                    <element signature="e#135303#135326#0#HTML" expanded="true" />
+                    <element signature="e#135597#135650#0#HTML" expanded="true" />
+                    <element signature="e#135715#135738#0#HTML" expanded="true" />
+                    <element signature="e#136306#136329#0#HTML" expanded="true" />
+                    <element signature="e#141235#141281#0#HTML" expanded="true" />
+                    <element signature="e#141381#141407#0#HTML" expanded="true" />
+                    <element signature="e#141458#141499#0#HTML" expanded="true" />
+                    <element signature="e#145124#145130#0#HTML" expanded="true" />
+                    <element signature="e#147790#147796#0#HTML" expanded="true" />
+                    <element signature="e#150324#150330#0#HTML" expanded="true" />
+                    <element signature="e#154276#154299#0#HTML" expanded="true" />
+                    <element signature="e#154390#154495#0#HTML" expanded="true" />
+                    <element signature="e#154526#154552#0#HTML" expanded="true" />
+                    <element signature="e#155415#155461#0#HTML" expanded="true" />
+                    <element signature="e#155561#155587#0#HTML" expanded="true" />
+                    <element signature="e#155638#155679#0#HTML" expanded="true" />
+                    <element signature="e#162003#162026#0#HTML" expanded="true" />
+                    <element signature="e#162117#162222#0#HTML" expanded="true" />
+                    <element signature="e#162253#162279#0#HTML" expanded="true" />
+                    <element signature="e#163148#163194#0#HTML" expanded="true" />
+                    <element signature="e#163294#163320#0#HTML" expanded="true" />
+                    <element signature="e#163371#163412#0#HTML" expanded="true" />
+                    <element signature="e#164071#164077#0#HTML" expanded="true" />
+                    <element signature="e#166334#166340#0#HTML" expanded="true" />
+                    <element signature="e#168597#168603#0#HTML" expanded="true" />
+                    <element signature="e#170897#170903#0#HTML" expanded="true" />
+                    <element signature="e#172583#172606#0#HTML" expanded="true" />
+                    <element signature="e#172697#172802#0#HTML" expanded="true" />
+                    <element signature="e#172833#172859#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/views/summary.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="850">
+                  <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#2818#2823#0#HTML" expanded="true" />
+                    <element signature="e#3558#3563#0#HTML" expanded="true" />
+                    <element signature="e#4301#4306#0#HTML" expanded="true" />
+                    <element signature="e#11400#11405#0#HTML" expanded="true" />
+                    <element signature="e#21912#21917#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+                  <folding>
+                    <element signature="n#style#0;n#form#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/topSquarePanel.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -356,12 +700,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+                <state relative-caret-position="425">
+                  <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
                   <folding>
                     <element signature="e#40#54#0#PHP" expanded="true" />
                   </folding>
@@ -370,74 +714,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#40#54#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="44" selection-start-line="44" selection-end-line="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="613">
-                  <caret line="47" column="53" lean-forward="true" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="81" column="95" selection-start-line="81" selection-start-column="95" selection-end-line="81" selection-end-column="95" />
-                  <folding>
-                    <element signature="e#40#61#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="398" column="35" selection-start-line="398" selection-start-column="35" selection-end-line="398" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#40#63#0#PHP" expanded="true" />
-                    <element signature="e#14893#17008#0#PHP" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
+                <state relative-caret-position="187">
+                  <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -457,8 +737,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$sorted</find>
-      <find>redirectto</find>
       <find>verify</find>
       <find>.g-bg-white-gradient-v1--after::after</find>
       <find>/* Dark Gray v1 */</find>
@@ -487,6 +765,8 @@
       <find>email/verify</find>
       <find>pushtobot</find>
       <find>discordapp</find>
+      <find>g-bg-white-gradient-v1--af</find>
+      <find>..</find>
     </findStrings>
     <replaceStrings>
       <replace>/../</replace>
@@ -542,11 +822,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public_html/assets/css/custom.css" />
-        <option value="$PROJECT_DIR$/laravel/app/User.php" />
-        <option value="$PROJECT_DIR$/laravel/app/RecentActivity.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/css/unify-admin.css" />
-        <option value="$PROJECT_DIR$/public_html/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
@@ -560,10 +835,8 @@
         <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/shared/nav.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/css/unify-globals.css" />
         <option value="$PROJECT_DIR$/laravel/.gitignore" />
         <option value="$PROJECT_DIR$/public_html/.gitignore" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/layout.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/503.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/500.blade.php" />
@@ -573,26 +846,33 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/403.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/401.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/errors/400.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_12_215537_create_sessions_table.php" />
         <option value="$PROJECT_DIR$/laravel/config/session.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9311c420-6003-4b7a-af69-ed34032eb1b6/console.sql" />
         <option value="$PROJECT_DIR$/laravel/.env" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
-        <option value="$PROJECT_DIR$/laravel/config/app.php" />
         <option value="$PROJECT_DIR$/laravel/config/timezones.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/createEvent.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/editEvent.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/profile2.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_13_211355_add_user_fields_to_discordbot_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2018_12_29_192708_add_timezone_field_to_discordbot_table.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php" />
+        <option value="$PROJECT_DIR$/public_html/assets/css/unify-globals.css" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/profile2.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/config/app.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/config/seotools.php" />
       </list>
     </option>
   </component>
@@ -633,6 +913,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -655,31 +936,64 @@
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="MEC" type="462c0819:PsiDirectoryNode" />
               <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEC" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value=".env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/home.blade.php&#10;editEve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile2&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile2.blade.php&#10;profilecontroller&#9;null&#9;null&#10;profilecon&#9;null&#9;null&#10;attend&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/AttendanceController.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;homecontrol&#9;null&#9;null&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php&#10;vieweve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;reg&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/Auth/RegisterController.php" />
+    <property name="SearchEverywhereHistoryKey" value="master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;admincon&#9;null&#9;null&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile2.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;editEve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile2&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile2.blade.php&#10;profilecontroller&#9;null&#9;null&#10;profilecon&#9;null&#9;null&#10;attend&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/AttendanceController.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;homecontrol&#9;null&#9;null&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;organiza&#9;FILE&#9;file://D:/Work/MEC/laravel/app/OrganizationRequests.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -698,15 +1012,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\MEC\public_html\assets\vendor" />
-      <recent name="D:\Work\MEC\public_html\vendor" />
-      <recent name="D:\Work Projects\Event\laravel\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\MEC\laravel" />
       <recent name="D:\Work Projects\Event\public_html\assets\images" />
       <recent name="D:\Work Projects\Event\public_html\assets\css" />
+      <recent name="D:\Work Projects\Event\laravel\resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\MEC\public_html\assets\vendor" />
+      <recent name="D:\Work\MEC\public_html\vendor" />
       <recent name="D:\Work Projects\Event\laravel\resources\views" />
     </key>
   </component>
@@ -853,14 +1167,8 @@
       <workItem from="1547087582052" duration="49000" />
       <workItem from="1547128968456" duration="33917000" />
       <workItem from="1547252823557" duration="2799000" />
-      <workItem from="1547319104503" duration="26632000" />
-    </task>
-    <task id="LOCAL-00196" summary="updated background image again.">
-      <created>1545762277505</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1545762277506</updated>
+      <workItem from="1547319104503" duration="28810000" />
+      <workItem from="1547475919248" duration="7506000" />
     </task>
     <task id="LOCAL-00197" summary="Added attendance to events, as well as a new bot command to set the TZ of the notifications.">
       <created>1546270222047</created>
@@ -1198,17 +1506,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547413591381</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="Changes:updated the push to bot function now everyone with a public url will get single user events. will have to change this later!">
+      <created>1547427880083</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1547427880083</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1035553000" />
+    <option name="totallyTimeSpent" value="1045237000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="320" y="62" width="1294" height="1057" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15884861" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15858506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1229,7 +1544,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.3298887" />
-      <window_info anchor="right" id="Database" order="4" weight="0.21002132" />
+      <window_info anchor="right" id="Database" order="4" weight="0.20985691" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13831478" />
@@ -1297,43 +1612,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes:updated the push to bot function now everyone with a public url will get single user events. will have to change this later!" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/organizationProfile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="144" column="44" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/css/unify-globals.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="1977" column="22" selection-start-line="1977" selection-start-column="22" selection-end-line="1977" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/layout.blade.php" />
-    <entry file="file://$PROJECT_DIR$/laravel/storage/framework/views/05f7100dfb4e8d7df2d3c21f08c4671c013a47bf.php" />
-    <entry file="file://$PROJECT_DIR$/public_html/storage/framework/views/05f7100dfb4e8d7df2d3c21f08c4671c013a47bf.php" />
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/400.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/401.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/403.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/404.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1367,9 +1645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1462">
           <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,37 +1652,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="e#110#2429#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6409">
-          <caret line="382" column="67" selection-start-line="382" selection-start-column="67" selection-end-line="382" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#5#0#PHP" />
-            <element signature="e#6#741#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_12_215537_create_sessions_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_12_215537_create_sessions_table.php" />
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_12_215702_create_sessions_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1439,27 +1687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/timezones.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#117#27446#1#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1477,78 +1708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/VerifiesEmails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="81" column="95" selection-start-line="81" selection-start-column="95" selection-end-line="81" selection-end-column="95" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9311c420-6003-4b7a-af69-ed34032eb1b6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2015_03_07_311088_create_tracker_sql_queries_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -1563,55 +1722,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9311c420-6003-4b7a-af69-ed34032eb1b6/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="265" column="50" selection-start-line="265" selection-start-column="50" selection-end-line="265" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="183" column="181" selection-start-line="183" selection-start-column="83" selection-end-line="183" selection-end-column="183" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="19924">
           <caret line="1191" column="74" selection-start-line="1191" selection-start-column="74" selection-end-line="1191" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/VerifiesEmails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2019_01_13_211355_add_user_fields_to_discordbot_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ReferenceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="47" column="53" lean-forward="true" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+        <state relative-caret-position="680">
+          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="81" column="95" selection-start-line="81" selection-start-column="95" selection-end-line="81" selection-end-column="95" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1625,7 +1808,299 @@
     <entry file="file://$PROJECT_DIR$/laravel/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="22" />
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="330" column="34" selection-start-line="330" selection-start-column="34" selection-end-line="330" selection-end-column="34" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="183" column="181" selection-start-line="183" selection-start-column="83" selection-end-line="183" selection-end-column="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/css/unify-globals.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="242" column="113" selection-start-line="242" selection-start-column="113" selection-end-line="242" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="382" column="50" lean-forward="true" selection-start-line="382" selection-start-column="50" selection-end-line="382" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/topSquarePanel.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/views/summary.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
+          <folding>
+            <element signature="e#2818#2823#0#HTML" expanded="true" />
+            <element signature="e#3558#3563#0#HTML" expanded="true" />
+            <element signature="e#4301#4306#0#HTML" expanded="true" />
+            <element signature="e#11400#11405#0#HTML" expanded="true" />
+            <element signature="e#21912#21917#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="218" column="59" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="e#33#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="242" column="55" selection-start-line="242" selection-start-column="55" selection-end-line="242" selection-end-column="55" />
+          <folding>
+            <element signature="e#51799#55416#0#HTML" />
+            <element signature="e#52624#55221#0#HTML" />
+            <element signature="e#55442#59050#0#HTML" />
+            <element signature="e#56262#58855#0#HTML" />
+            <element signature="e#59076#62681#0#HTML" />
+            <element signature="e#62707#66314#0#HTML" />
+            <element signature="e#67355#67378#0#HTML" expanded="true" />
+            <element signature="e#67656#67709#0#HTML" expanded="true" />
+            <element signature="e#67774#67797#0#HTML" expanded="true" />
+            <element signature="e#68365#68388#0#HTML" expanded="true" />
+            <element signature="e#79556#79596#0#HTML" expanded="true" />
+            <element signature="e#79711#79746#0#HTML" expanded="true" />
+            <element signature="e#88277#88303#0#HTML" expanded="true" />
+            <element signature="e#88439#88474#0#HTML" expanded="true" />
+            <element signature="e#88516#88542#0#HTML" expanded="true" />
+            <element signature="e#88693#88728#0#HTML" expanded="true" />
+            <element signature="e#88770#88796#0#HTML" expanded="true" />
+            <element signature="e#88947#88982#0#HTML" expanded="true" />
+            <element signature="e#89024#89050#0#HTML" expanded="true" />
+            <element signature="e#89202#89237#0#HTML" expanded="true" />
+            <element signature="e#89279#89305#0#HTML" expanded="true" />
+            <element signature="e#89457#89492#0#HTML" expanded="true" />
+            <element signature="e#89534#89560#0#HTML" expanded="true" />
+            <element signature="e#89711#89746#0#HTML" expanded="true" />
+            <element signature="e#89788#89814#0#HTML" expanded="true" />
+            <element signature="e#89966#90001#0#HTML" expanded="true" />
+            <element signature="e#90043#90069#0#HTML" expanded="true" />
+            <element signature="e#90222#90257#0#HTML" expanded="true" />
+            <element signature="e#90299#90325#0#HTML" expanded="true" />
+            <element signature="e#90478#90513#0#HTML" expanded="true" />
+            <element signature="e#90555#90581#0#HTML" expanded="true" />
+            <element signature="e#90734#90769#0#HTML" expanded="true" />
+            <element signature="e#90811#90837#0#HTML" expanded="true" />
+            <element signature="e#90989#91024#0#HTML" expanded="true" />
+            <element signature="e#91066#91092#0#HTML" expanded="true" />
+            <element signature="e#91222#91256#0#HTML" expanded="true" />
+            <element signature="e#91295#91321#0#HTML" expanded="true" />
+            <element signature="e#91441#91475#0#HTML" expanded="true" />
+            <element signature="e#91517#91543#0#HTML" expanded="true" />
+            <element signature="e#91663#91697#0#HTML" expanded="true" />
+            <element signature="e#91741#91767#0#HTML" expanded="true" />
+            <element signature="e#91887#91921#0#HTML" expanded="true" />
+            <element signature="e#91963#91989#0#HTML" expanded="true" />
+            <element signature="e#92109#92143#0#HTML" expanded="true" />
+            <element signature="e#92187#92213#0#HTML" expanded="true" />
+            <element signature="e#92333#92367#0#HTML" expanded="true" />
+            <element signature="e#92409#92435#0#HTML" expanded="true" />
+            <element signature="e#92555#92589#0#HTML" expanded="true" />
+            <element signature="e#92633#92659#0#HTML" expanded="true" />
+            <element signature="e#92778#92812#0#HTML" expanded="true" />
+            <element signature="e#92854#92880#0#HTML" expanded="true" />
+            <element signature="e#92999#93033#0#HTML" expanded="true" />
+            <element signature="e#93077#93103#0#HTML" expanded="true" />
+            <element signature="e#93222#93256#0#HTML" expanded="true" />
+            <element signature="e#93298#93324#0#HTML" expanded="true" />
+            <element signature="e#93442#93476#0#HTML" expanded="true" />
+            <element signature="e#93520#93546#0#HTML" expanded="true" />
+            <element signature="e#93666#93700#0#HTML" expanded="true" />
+            <element signature="e#95639#95662#0#HTML" expanded="true" />
+            <element signature="e#95930#95983#0#HTML" expanded="true" />
+            <element signature="e#96048#96071#0#HTML" expanded="true" />
+            <element signature="e#96639#96662#0#HTML" expanded="true" />
+            <element signature="e#103535#103581#0#HTML" expanded="true" />
+            <element signature="e#103681#103707#0#HTML" expanded="true" />
+            <element signature="e#103758#103799#0#HTML" expanded="true" />
+            <element signature="e#118421#118444#0#HTML" expanded="true" />
+            <element signature="e#118535#118640#0#HTML" expanded="true" />
+            <element signature="e#118671#118697#0#HTML" expanded="true" />
+            <element signature="e#120485#120519#0#HTML" expanded="true" />
+            <element signature="e#121642#121668#0#HTML" expanded="true" />
+            <element signature="e#121794#121828#0#HTML" expanded="true" />
+            <element signature="e#121871#121897#0#HTML" expanded="true" />
+            <element signature="e#122032#122066#0#HTML" expanded="true" />
+            <element signature="e#122109#122135#0#HTML" expanded="true" />
+            <element signature="e#122269#122303#0#HTML" expanded="true" />
+            <element signature="e#122346#122372#0#HTML" expanded="true" />
+            <element signature="e#122507#122541#0#HTML" expanded="true" />
+            <element signature="e#122584#122610#0#HTML" expanded="true" />
+            <element signature="e#122743#122777#0#HTML" expanded="true" />
+            <element signature="e#122820#122846#0#HTML" expanded="true" />
+            <element signature="e#122974#123007#0#HTML" expanded="true" />
+            <element signature="e#123046#123072#0#HTML" expanded="true" />
+            <element signature="e#123221#123254#0#HTML" expanded="true" />
+            <element signature="e#123296#123322#0#HTML" expanded="true" />
+            <element signature="e#123471#123504#0#HTML" expanded="true" />
+            <element signature="e#123550#123576#0#HTML" expanded="true" />
+            <element signature="e#123709#123742#0#HTML" expanded="true" />
+            <element signature="e#123788#123814#0#HTML" expanded="true" />
+            <element signature="e#123933#123966#0#HTML" expanded="true" />
+            <element signature="e#125036#125106#0#HTML" expanded="true" />
+            <element signature="e#126150#126173#0#HTML" expanded="true" />
+            <element signature="e#126791#126797#1#HTML" expanded="true" />
+            <element signature="e#135303#135326#0#HTML" expanded="true" />
+            <element signature="e#135597#135650#0#HTML" expanded="true" />
+            <element signature="e#135715#135738#0#HTML" expanded="true" />
+            <element signature="e#136306#136329#0#HTML" expanded="true" />
+            <element signature="e#141235#141281#0#HTML" expanded="true" />
+            <element signature="e#141381#141407#0#HTML" expanded="true" />
+            <element signature="e#141458#141499#0#HTML" expanded="true" />
+            <element signature="e#145124#145130#0#HTML" expanded="true" />
+            <element signature="e#147790#147796#0#HTML" expanded="true" />
+            <element signature="e#150324#150330#0#HTML" expanded="true" />
+            <element signature="e#154276#154299#0#HTML" expanded="true" />
+            <element signature="e#154390#154495#0#HTML" expanded="true" />
+            <element signature="e#154526#154552#0#HTML" expanded="true" />
+            <element signature="e#155415#155461#0#HTML" expanded="true" />
+            <element signature="e#155561#155587#0#HTML" expanded="true" />
+            <element signature="e#155638#155679#0#HTML" expanded="true" />
+            <element signature="e#162003#162026#0#HTML" expanded="true" />
+            <element signature="e#162117#162222#0#HTML" expanded="true" />
+            <element signature="e#162253#162279#0#HTML" expanded="true" />
+            <element signature="e#163148#163194#0#HTML" expanded="true" />
+            <element signature="e#163294#163320#0#HTML" expanded="true" />
+            <element signature="e#163371#163412#0#HTML" expanded="true" />
+            <element signature="e#164071#164077#0#HTML" expanded="true" />
+            <element signature="e#166334#166340#0#HTML" expanded="true" />
+            <element signature="e#168597#168603#0#HTML" expanded="true" />
+            <element signature="e#170897#170903#0#HTML" expanded="true" />
+            <element signature="e#172583#172606#0#HTML" expanded="true" />
+            <element signature="e#172697#172802#0#HTML" expanded="true" />
+            <element signature="e#172833#172859#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/seotools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
         </state>
       </provider>
     </entry>

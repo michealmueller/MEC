@@ -164,7 +164,8 @@ return [
         dg\rssphp\src\FeedServiceProvider::class,
 
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
-    ],
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -215,6 +216,7 @@ return [
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
         'Feed' => dg\rssphp\src\FeedFacade::class,
         'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
     ],
     'debug_blacklist' => [
         '_ENV' => [

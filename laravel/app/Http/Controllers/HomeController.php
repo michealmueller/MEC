@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use SEO;
 class HomeController extends Controller
 {
     /**
@@ -24,6 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        SEO::setTitle('Home');
+        SEO::setCanonical('https://citizenwarfare.com');
+
+
         $sorted = [];
         $pubEvents = Event::where('private', 0)->with('organization')->get();
 

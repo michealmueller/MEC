@@ -70,9 +70,9 @@ if ($two_letter_country_code == "US")
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The premier event site for Star Citizen, We are trting to bring players and
-    organizations together to create Co-operation and fun!">
     <meta name="author" content="Micheal Mueller - MuellerTek">
+
+    {!! SEO::generate(true) !!}
 
     @if(\Route::current()->getName() == 'calendar')
         <meta name="robots" content="noindex, nofollow" />

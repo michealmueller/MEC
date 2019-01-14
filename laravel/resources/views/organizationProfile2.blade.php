@@ -387,13 +387,13 @@
                         <!-- Edit -->
                         @if($user->lead == 1)
                         <a href="" data-target="#members" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
-                            <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Members </span>
+                            <span><i class="fa fa-users g-pos-rel g-top-1 g-mr-8"></i> Members </span>
                         </a>
                         <a href="" data-target="#edit" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
-                            <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Edit </span>
+                            <span><i class="fa fa-pencil g-pos-rel g-top-1 g-mr-8"></i> Edit </span>
                         </a>
                         <a href="" data-target="#sharing" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
-                            <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Sharing </span>
+                            <span><i class="fa fa-share g-pos-rel g-top-1 g-mr-8"></i> Sharing </span>
                         </a>
                         <a href="" data-target="#requests" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
                             <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Requests </span>
@@ -401,8 +401,11 @@
                                 <span class="u-label g-font-size-11 g-bg-primary g-rounded-20 g-px-10">{{count($requests)}}</span>
                             @endif
                         </a>
+                        <a href="" data-target="#discord" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
+                            <span><i class="fa fa-android g-pos-rel g-top-1 g-mr-8"></i>Discord Bot</span>
+                        </a>
                         <a href="" data-target="#refcode" data-toggle="tab" class="nav-link list-group-item g-bg-gray-dark-v1 list-group-item-action justify-content-between">
-                            <span><i class="icon-notebook g-pos-rel g-top-1 g-mr-8"></i> Generate Ref. Code </span>
+                            <span><i class="fa fa-code g-pos-rel g-top-1 g-mr-8"></i> Generate Ref. Code </span>
                         </a>
                         @endif
                         <!-- End Edit -->

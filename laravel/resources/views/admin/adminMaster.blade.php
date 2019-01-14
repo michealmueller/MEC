@@ -24,12 +24,14 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css">
     <!-- CSS Global Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-etlinefont/style.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-line-pro/style.css">
+    <link rel="stylesheet" href="/assets/vendor/icon-hs/style.css">
 
     <link rel="stylesheet" href="/assets/vendor/hs-admin-icons/hs-admin-icons.css">
 
@@ -50,26 +52,20 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="/assets/css/custom.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
 
 <body>
 <main>
-    <div class="col g-ml-45 g-ml-0--lg g-pb-65--md">
-        <div class="g-pa-20">
-            <div class="row">
-                <div class="col-sm-6 col-lg-6 col-xl-3 g-mb-30">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('admin.adminheader')
+    @yield('content')
 </main>
 
 <!-- JS Global Compulsory -->
 <script src="/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
 
-<script src="/assets/vendor/popper.min.js"></script>
+<script src="/assets/vendor/popper.js/popper.min.js"></script>
 <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
 <script src="/assets/vendor/cookiejs/jquery.cookie.js"></script>
@@ -178,6 +174,10 @@
         });
     });
 </script>
+
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
 </body>
 
 </html>
