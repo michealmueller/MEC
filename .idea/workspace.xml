@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="Changes:updated SEO rules to hopefully get us higher on the SE listings">
+    <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +154,7 @@
     <session id="254734441">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="58" />
+          <entry key="project.closed" value="59" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="3" />
@@ -163,8 +165,8 @@
           <entry key="project.open.time.22" value="8" />
           <entry key="project.open.time.23" value="5" />
           <entry key="project.open.time.24" value="3" />
-          <entry key="project.open.time.26" value="3" />
-          <entry key="project.open.time.27" value="3" />
+          <entry key="project.open.time.26" value="4" />
+          <entry key="project.open.time.27" value="4" />
           <entry key="project.open.time.28" value="6" />
           <entry key="project.open.time.29" value="4" />
           <entry key="project.open.time.32" value="1" />
@@ -173,7 +175,7 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.9" value="10" />
-          <entry key="project.opened" value="63" />
+          <entry key="project.opened" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -185,7 +187,7 @@
           <entry key="HTML" value="15" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19705" />
-          <entry key="PHP" value="36154" />
+          <entry key="PHP" value="36295" />
           <entry key="PLAIN_TEXT" value="3567" />
           <entry key="SQL" value="22" />
           <entry key="Scratch" value="422" />
@@ -206,12 +208,12 @@
           <entry key=".env file" value="32" />
           <entry key="Blade" value="224" />
           <entry key="CSS" value="39" />
-          <entry key="Database Element" value="175" />
+          <entry key="Database Element" value="179" />
           <entry key="Git file" value="12" />
           <entry key="Image" value="37" />
           <entry key="JSON" value="24" />
           <entry key="JavaScript" value="34" />
-          <entry key="PHP" value="404" />
+          <entry key="PHP" value="407" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="15" />
           <entry key="tsconfig" value="1" />
@@ -256,41 +258,32 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4676429">
+    <splitter split-orientation="horizontal" split-proportion="0.44156665">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="748">
-                  <caret line="218" column="59" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/config/seotools.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/events">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -298,7 +291,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="629">
+                <state relative-caret-position="680">
                   <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
                 </state>
               </provider>
@@ -307,131 +300,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
+                <state relative-caret-position="4029">
                   <caret line="242" column="55" selection-start-line="242" selection-start-column="55" selection-end-line="242" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#51799#55416#0#HTML" />
-                    <element signature="e#52624#55221#0#HTML" />
-                    <element signature="e#55442#59050#0#HTML" />
-                    <element signature="e#56262#58855#0#HTML" />
-                    <element signature="e#59076#62681#0#HTML" />
-                    <element signature="e#62707#66314#0#HTML" />
-                    <element signature="e#67355#67378#0#HTML" expanded="true" />
-                    <element signature="e#67656#67709#0#HTML" expanded="true" />
-                    <element signature="e#67774#67797#0#HTML" expanded="true" />
-                    <element signature="e#68365#68388#0#HTML" expanded="true" />
-                    <element signature="e#79556#79596#0#HTML" expanded="true" />
-                    <element signature="e#79711#79746#0#HTML" expanded="true" />
-                    <element signature="e#88277#88303#0#HTML" expanded="true" />
-                    <element signature="e#88439#88474#0#HTML" expanded="true" />
-                    <element signature="e#88516#88542#0#HTML" expanded="true" />
-                    <element signature="e#88693#88728#0#HTML" expanded="true" />
-                    <element signature="e#88770#88796#0#HTML" expanded="true" />
-                    <element signature="e#88947#88982#0#HTML" expanded="true" />
-                    <element signature="e#89024#89050#0#HTML" expanded="true" />
-                    <element signature="e#89202#89237#0#HTML" expanded="true" />
-                    <element signature="e#89279#89305#0#HTML" expanded="true" />
-                    <element signature="e#89457#89492#0#HTML" expanded="true" />
-                    <element signature="e#89534#89560#0#HTML" expanded="true" />
-                    <element signature="e#89711#89746#0#HTML" expanded="true" />
-                    <element signature="e#89788#89814#0#HTML" expanded="true" />
-                    <element signature="e#89966#90001#0#HTML" expanded="true" />
-                    <element signature="e#90043#90069#0#HTML" expanded="true" />
-                    <element signature="e#90222#90257#0#HTML" expanded="true" />
-                    <element signature="e#90299#90325#0#HTML" expanded="true" />
-                    <element signature="e#90478#90513#0#HTML" expanded="true" />
-                    <element signature="e#90555#90581#0#HTML" expanded="true" />
-                    <element signature="e#90734#90769#0#HTML" expanded="true" />
-                    <element signature="e#90811#90837#0#HTML" expanded="true" />
-                    <element signature="e#90989#91024#0#HTML" expanded="true" />
-                    <element signature="e#91066#91092#0#HTML" expanded="true" />
-                    <element signature="e#91222#91256#0#HTML" expanded="true" />
-                    <element signature="e#91295#91321#0#HTML" expanded="true" />
-                    <element signature="e#91441#91475#0#HTML" expanded="true" />
-                    <element signature="e#91517#91543#0#HTML" expanded="true" />
-                    <element signature="e#91663#91697#0#HTML" expanded="true" />
-                    <element signature="e#91741#91767#0#HTML" expanded="true" />
-                    <element signature="e#91887#91921#0#HTML" expanded="true" />
-                    <element signature="e#91963#91989#0#HTML" expanded="true" />
-                    <element signature="e#92109#92143#0#HTML" expanded="true" />
-                    <element signature="e#92187#92213#0#HTML" expanded="true" />
-                    <element signature="e#92333#92367#0#HTML" expanded="true" />
-                    <element signature="e#92409#92435#0#HTML" expanded="true" />
-                    <element signature="e#92555#92589#0#HTML" expanded="true" />
-                    <element signature="e#92633#92659#0#HTML" expanded="true" />
-                    <element signature="e#92778#92812#0#HTML" expanded="true" />
-                    <element signature="e#92854#92880#0#HTML" expanded="true" />
-                    <element signature="e#92999#93033#0#HTML" expanded="true" />
-                    <element signature="e#93077#93103#0#HTML" expanded="true" />
-                    <element signature="e#93222#93256#0#HTML" expanded="true" />
-                    <element signature="e#93298#93324#0#HTML" expanded="true" />
-                    <element signature="e#93442#93476#0#HTML" expanded="true" />
-                    <element signature="e#93520#93546#0#HTML" expanded="true" />
-                    <element signature="e#93666#93700#0#HTML" expanded="true" />
-                    <element signature="e#95639#95662#0#HTML" expanded="true" />
-                    <element signature="e#95930#95983#0#HTML" expanded="true" />
-                    <element signature="e#96048#96071#0#HTML" expanded="true" />
-                    <element signature="e#96639#96662#0#HTML" expanded="true" />
-                    <element signature="e#103535#103581#0#HTML" expanded="true" />
-                    <element signature="e#103681#103707#0#HTML" expanded="true" />
-                    <element signature="e#103758#103799#0#HTML" expanded="true" />
-                    <element signature="e#118421#118444#0#HTML" expanded="true" />
-                    <element signature="e#118535#118640#0#HTML" expanded="true" />
-                    <element signature="e#118671#118697#0#HTML" expanded="true" />
-                    <element signature="e#120485#120519#0#HTML" expanded="true" />
-                    <element signature="e#121642#121668#0#HTML" expanded="true" />
-                    <element signature="e#121794#121828#0#HTML" expanded="true" />
-                    <element signature="e#121871#121897#0#HTML" expanded="true" />
-                    <element signature="e#122032#122066#0#HTML" expanded="true" />
-                    <element signature="e#122109#122135#0#HTML" expanded="true" />
-                    <element signature="e#122269#122303#0#HTML" expanded="true" />
-                    <element signature="e#122346#122372#0#HTML" expanded="true" />
-                    <element signature="e#122507#122541#0#HTML" expanded="true" />
-                    <element signature="e#122584#122610#0#HTML" expanded="true" />
-                    <element signature="e#122743#122777#0#HTML" expanded="true" />
-                    <element signature="e#122820#122846#0#HTML" expanded="true" />
-                    <element signature="e#122974#123007#0#HTML" expanded="true" />
-                    <element signature="e#123046#123072#0#HTML" expanded="true" />
-                    <element signature="e#123221#123254#0#HTML" expanded="true" />
-                    <element signature="e#123296#123322#0#HTML" expanded="true" />
-                    <element signature="e#123471#123504#0#HTML" expanded="true" />
-                    <element signature="e#123550#123576#0#HTML" expanded="true" />
-                    <element signature="e#123709#123742#0#HTML" expanded="true" />
-                    <element signature="e#123788#123814#0#HTML" expanded="true" />
-                    <element signature="e#123933#123966#0#HTML" expanded="true" />
-                    <element signature="e#125036#125106#0#HTML" expanded="true" />
-                    <element signature="e#126150#126173#0#HTML" expanded="true" />
-                    <element signature="e#126791#126797#1#HTML" expanded="true" />
-                    <element signature="e#135303#135326#0#HTML" expanded="true" />
-                    <element signature="e#135597#135650#0#HTML" expanded="true" />
-                    <element signature="e#135715#135738#0#HTML" expanded="true" />
-                    <element signature="e#136306#136329#0#HTML" expanded="true" />
-                    <element signature="e#141235#141281#0#HTML" expanded="true" />
-                    <element signature="e#141381#141407#0#HTML" expanded="true" />
-                    <element signature="e#141458#141499#0#HTML" expanded="true" />
-                    <element signature="e#145124#145130#0#HTML" expanded="true" />
-                    <element signature="e#147790#147796#0#HTML" expanded="true" />
-                    <element signature="e#150324#150330#0#HTML" expanded="true" />
-                    <element signature="e#154276#154299#0#HTML" expanded="true" />
-                    <element signature="e#154390#154495#0#HTML" expanded="true" />
-                    <element signature="e#154526#154552#0#HTML" expanded="true" />
-                    <element signature="e#155415#155461#0#HTML" expanded="true" />
-                    <element signature="e#155561#155587#0#HTML" expanded="true" />
-                    <element signature="e#155638#155679#0#HTML" expanded="true" />
-                    <element signature="e#162003#162026#0#HTML" expanded="true" />
-                    <element signature="e#162117#162222#0#HTML" expanded="true" />
-                    <element signature="e#162253#162279#0#HTML" expanded="true" />
-                    <element signature="e#163148#163194#0#HTML" expanded="true" />
-                    <element signature="e#163294#163320#0#HTML" expanded="true" />
-                    <element signature="e#163371#163412#0#HTML" expanded="true" />
-                    <element signature="e#164071#164077#0#HTML" expanded="true" />
-                    <element signature="e#166334#166340#0#HTML" expanded="true" />
-                    <element signature="e#168597#168603#0#HTML" expanded="true" />
-                    <element signature="e#170897#170903#0#HTML" expanded="true" />
-                    <element signature="e#172583#172606#0#HTML" expanded="true" />
-                    <element signature="e#172697#172802#0#HTML" expanded="true" />
-                    <element signature="e#172833#172859#0#HTML" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -439,7 +309,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/views/summary.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="782">
                   <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
                 </state>
               </provider>
@@ -448,15 +318,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="850">
+                <state relative-caret-position="12971">
                   <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#2818#2823#0#HTML" expanded="true" />
-                    <element signature="e#3558#3563#0#HTML" expanded="true" />
-                    <element signature="e#4301#4306#0#HTML" expanded="true" />
-                    <element signature="e#11400#11405#0#HTML" expanded="true" />
-                    <element signature="e#21912#21917#0#HTML" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -466,26 +329,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="136">
                   <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-                  <folding>
-                    <element signature="n#style#0;n#form#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -499,6 +342,18 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="71">
+                  <caret line="148" column="49" lean-forward="true" selection-start-line="148" selection-start-column="49" selection-end-line="148" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#40#63#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -506,8 +361,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+                <state relative-caret-position="187">
+                  <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
                   <folding>
                     <element signature="e#40#54#0#PHP" expanded="true" />
                   </folding>
@@ -515,11 +370,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Events/newUser.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+                <state relative-caret-position="51">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
                   <folding>
                     <element signature="e#30#43#0#PHP" expanded="true" />
                   </folding>
@@ -530,8 +385,22 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+                <state relative-caret-position="68">
+                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="295" column="12" selection-start-line="295" selection-start-column="12" selection-end-line="295" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#40#63#0#PHP" expanded="true" />
+                    <element signature="e#12073#14549#0#PHP" />
+                    <element signature="e#14997#17112#0#PHP" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -671,7 +540,6 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_13_211355_add_user_fields_to_discordbot_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2018_12_29_192708_add_timezone_field_to_discordbot_table.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/organizationProfile2.blade.php" />
@@ -687,6 +555,7 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Events/newUser.php" />
         <option value="$PROJECT_DIR$/laravel/config/seotools.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
       </list>
     </option>
   </component>
@@ -727,7 +596,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -763,51 +631,17 @@
               <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="NewUser&#9;null&#9;null&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;admincon&#9;null&#9;null&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile2.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;editEve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile2&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile2.blade.php&#10;profilecontroller&#9;null&#9;null&#10;profilecon&#9;null&#9;null&#10;attend&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/AttendanceController.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;homecontrol&#9;null&#9;null&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css" />
+    <property name="SearchEverywhereHistoryKey" value="eventcontrol&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;NewUser&#9;null&#9;null&#10;master&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/layouts/master.blade.php&#10;home&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/HomeController.php&#10;view&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;admincon&#9;null&#9;null&#10;organ&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile2.blade.php&#10;.env&#9;FILE&#9;file://D:/Work/MEC/laravel/.env&#10;editEve&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/editEvent.blade.php&#10;profile2&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile2.blade.php&#10;profilecontroller&#9;null&#9;null&#10;profilecon&#9;null&#9;null&#10;attend&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/AttendanceController.php&#10;create&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;welcom&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/welcome.blade.php&#10;web&#9;FILE&#9;file://D:/Work/MEC/laravel/routes/web.php&#10;refer&#9;null&#9;null&#10;homecontrol&#9;null&#9;null&#10;login&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;views&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Providers/ViewServiceProvider.php&#10;organization&#9;null&#9;null&#10;nav&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/shared/nav.blade.php&#10;eventcon&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/EventController.php&#10;organiz&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/organizationProfile.blade.php&#10;createorg&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createOrganization.blade.php&#10;viewev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/viewEvent.blade.php&#10;prof&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;createev&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/createEvent.blade.php&#10;logincontrol&#9;null&#9;null&#10;login.&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/auth/login.blade.php&#10;ViewSer&#9;null&#9;null&#10;custom.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.css&#10;pr&#9;FILE&#9;file://D:/Work/MEC/laravel/app/Http/Controllers/ProfileController.php&#10;routeser&#9;null&#9;null&#10;Router&#9;null&#9;null&#10;profil&#9;FILE&#9;file://D:/Work/MEC/laravel/resources/views/profile.blade.php&#10;tracker&#9;FILE&#9;file://D:/Work/MEC/laravel/config/tracker.php&#10;composer&#9;FILE&#9;file://D:/Work/MEC/laravel/composer.json&#10;user&#9;FILE&#9;file://D:/Work/MEC/laravel/app/User.php&#10;app/http/kern&#9;null&#9;null&#10;app.php&#9;FILE&#9;file://D:/Work/MEC/laravel/bootstrap/app.php&#10;composer.json&#9;FILE&#9;file://D:/Work/MEC/composer.json&#10;homecon&#9;null&#9;null&#10;mo&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;moder&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/modern-business.css&#10;bootstrap.c&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/bootstrap.css&#10;unify&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-admin.css&#10;unif&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/unify-core.css&#10;custom&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css&#10;custom.min.&#9;FILE&#9;file://D:/Work/MEC/public_html/assets/css/custom.min.css" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -982,14 +816,9 @@
       <workItem from="1547128968456" duration="33917000" />
       <workItem from="1547252823557" duration="2799000" />
       <workItem from="1547319104503" duration="28810000" />
-      <workItem from="1547475919248" duration="8134000" />
-    </task>
-    <task id="LOCAL-00198" summary="updated error when going to no existant event.">
-      <created>1546270843660</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1546270843660</updated>
+      <workItem from="1547475919248" duration="9492000" />
+      <workItem from="1547567253914" duration="591000" />
+      <workItem from="1547650804468" duration="2153000" />
     </task>
     <task id="LOCAL-00199" summary="updated error when going to no existant event.">
       <created>1546281529975</created>
@@ -1327,17 +1156,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547489401032</updated>
     </task>
-    <option name="localTasksCounter" value="247" />
+    <task id="LOCAL-00247" summary="Changes:updated SEO rules to hopefully get us higher on the SE listings">
+      <created>1547489979552</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1547489979553</updated>
+    </task>
+    <option name="localTasksCounter" value="248" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1045865000" />
+    <option name="totallyTimeSpent" value="1049967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15858506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1609698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1426,9 +1262,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Changes:updated SEO rules to hopefully get us higher on the SE listings" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/405.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/errors/408.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1575,9 +1408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1599,16 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="81" column="95" selection-start-line="81" selection-start-column="95" selection-end-line="81" selection-end-column="95" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1623,16 +1443,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="330" column="34" selection-start-line="330" selection-start-column="34" selection-end-line="330" selection-end-column="34" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1664,10 +1474,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        <state relative-caret-position="697">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3706">
+          <caret line="218" column="59" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="242" column="55" selection-start-line="242" selection-start-column="55" selection-end-line="242" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/views/summary.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12971">
+          <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1678,226 +1544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminheader.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#2;n#div#1;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/pragmarx/tracker/src/views/summary.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminnav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
-          <folding>
-            <element signature="e#2818#2823#0#HTML" expanded="true" />
-            <element signature="e#3558#3563#0#HTML" expanded="true" />
-            <element signature="e#4301#4306#0#HTML" expanded="true" />
-            <element signature="e#11400#11405#0#HTML" expanded="true" />
-            <element signature="e#21912#21917#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/adminMaster.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="218" column="59" selection-start-line="218" selection-start-column="59" selection-end-line="218" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/ViewServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding>
-            <element signature="e#33#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/admin/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="242" column="55" selection-start-line="242" selection-start-column="55" selection-end-line="242" selection-end-column="55" />
-          <folding>
-            <element signature="e#51799#55416#0#HTML" />
-            <element signature="e#52624#55221#0#HTML" />
-            <element signature="e#55442#59050#0#HTML" />
-            <element signature="e#56262#58855#0#HTML" />
-            <element signature="e#59076#62681#0#HTML" />
-            <element signature="e#62707#66314#0#HTML" />
-            <element signature="e#67355#67378#0#HTML" expanded="true" />
-            <element signature="e#67656#67709#0#HTML" expanded="true" />
-            <element signature="e#67774#67797#0#HTML" expanded="true" />
-            <element signature="e#68365#68388#0#HTML" expanded="true" />
-            <element signature="e#79556#79596#0#HTML" expanded="true" />
-            <element signature="e#79711#79746#0#HTML" expanded="true" />
-            <element signature="e#88277#88303#0#HTML" expanded="true" />
-            <element signature="e#88439#88474#0#HTML" expanded="true" />
-            <element signature="e#88516#88542#0#HTML" expanded="true" />
-            <element signature="e#88693#88728#0#HTML" expanded="true" />
-            <element signature="e#88770#88796#0#HTML" expanded="true" />
-            <element signature="e#88947#88982#0#HTML" expanded="true" />
-            <element signature="e#89024#89050#0#HTML" expanded="true" />
-            <element signature="e#89202#89237#0#HTML" expanded="true" />
-            <element signature="e#89279#89305#0#HTML" expanded="true" />
-            <element signature="e#89457#89492#0#HTML" expanded="true" />
-            <element signature="e#89534#89560#0#HTML" expanded="true" />
-            <element signature="e#89711#89746#0#HTML" expanded="true" />
-            <element signature="e#89788#89814#0#HTML" expanded="true" />
-            <element signature="e#89966#90001#0#HTML" expanded="true" />
-            <element signature="e#90043#90069#0#HTML" expanded="true" />
-            <element signature="e#90222#90257#0#HTML" expanded="true" />
-            <element signature="e#90299#90325#0#HTML" expanded="true" />
-            <element signature="e#90478#90513#0#HTML" expanded="true" />
-            <element signature="e#90555#90581#0#HTML" expanded="true" />
-            <element signature="e#90734#90769#0#HTML" expanded="true" />
-            <element signature="e#90811#90837#0#HTML" expanded="true" />
-            <element signature="e#90989#91024#0#HTML" expanded="true" />
-            <element signature="e#91066#91092#0#HTML" expanded="true" />
-            <element signature="e#91222#91256#0#HTML" expanded="true" />
-            <element signature="e#91295#91321#0#HTML" expanded="true" />
-            <element signature="e#91441#91475#0#HTML" expanded="true" />
-            <element signature="e#91517#91543#0#HTML" expanded="true" />
-            <element signature="e#91663#91697#0#HTML" expanded="true" />
-            <element signature="e#91741#91767#0#HTML" expanded="true" />
-            <element signature="e#91887#91921#0#HTML" expanded="true" />
-            <element signature="e#91963#91989#0#HTML" expanded="true" />
-            <element signature="e#92109#92143#0#HTML" expanded="true" />
-            <element signature="e#92187#92213#0#HTML" expanded="true" />
-            <element signature="e#92333#92367#0#HTML" expanded="true" />
-            <element signature="e#92409#92435#0#HTML" expanded="true" />
-            <element signature="e#92555#92589#0#HTML" expanded="true" />
-            <element signature="e#92633#92659#0#HTML" expanded="true" />
-            <element signature="e#92778#92812#0#HTML" expanded="true" />
-            <element signature="e#92854#92880#0#HTML" expanded="true" />
-            <element signature="e#92999#93033#0#HTML" expanded="true" />
-            <element signature="e#93077#93103#0#HTML" expanded="true" />
-            <element signature="e#93222#93256#0#HTML" expanded="true" />
-            <element signature="e#93298#93324#0#HTML" expanded="true" />
-            <element signature="e#93442#93476#0#HTML" expanded="true" />
-            <element signature="e#93520#93546#0#HTML" expanded="true" />
-            <element signature="e#93666#93700#0#HTML" expanded="true" />
-            <element signature="e#95639#95662#0#HTML" expanded="true" />
-            <element signature="e#95930#95983#0#HTML" expanded="true" />
-            <element signature="e#96048#96071#0#HTML" expanded="true" />
-            <element signature="e#96639#96662#0#HTML" expanded="true" />
-            <element signature="e#103535#103581#0#HTML" expanded="true" />
-            <element signature="e#103681#103707#0#HTML" expanded="true" />
-            <element signature="e#103758#103799#0#HTML" expanded="true" />
-            <element signature="e#118421#118444#0#HTML" expanded="true" />
-            <element signature="e#118535#118640#0#HTML" expanded="true" />
-            <element signature="e#118671#118697#0#HTML" expanded="true" />
-            <element signature="e#120485#120519#0#HTML" expanded="true" />
-            <element signature="e#121642#121668#0#HTML" expanded="true" />
-            <element signature="e#121794#121828#0#HTML" expanded="true" />
-            <element signature="e#121871#121897#0#HTML" expanded="true" />
-            <element signature="e#122032#122066#0#HTML" expanded="true" />
-            <element signature="e#122109#122135#0#HTML" expanded="true" />
-            <element signature="e#122269#122303#0#HTML" expanded="true" />
-            <element signature="e#122346#122372#0#HTML" expanded="true" />
-            <element signature="e#122507#122541#0#HTML" expanded="true" />
-            <element signature="e#122584#122610#0#HTML" expanded="true" />
-            <element signature="e#122743#122777#0#HTML" expanded="true" />
-            <element signature="e#122820#122846#0#HTML" expanded="true" />
-            <element signature="e#122974#123007#0#HTML" expanded="true" />
-            <element signature="e#123046#123072#0#HTML" expanded="true" />
-            <element signature="e#123221#123254#0#HTML" expanded="true" />
-            <element signature="e#123296#123322#0#HTML" expanded="true" />
-            <element signature="e#123471#123504#0#HTML" expanded="true" />
-            <element signature="e#123550#123576#0#HTML" expanded="true" />
-            <element signature="e#123709#123742#0#HTML" expanded="true" />
-            <element signature="e#123788#123814#0#HTML" expanded="true" />
-            <element signature="e#123933#123966#0#HTML" expanded="true" />
-            <element signature="e#125036#125106#0#HTML" expanded="true" />
-            <element signature="e#126150#126173#0#HTML" expanded="true" />
-            <element signature="e#126791#126797#1#HTML" expanded="true" />
-            <element signature="e#135303#135326#0#HTML" expanded="true" />
-            <element signature="e#135597#135650#0#HTML" expanded="true" />
-            <element signature="e#135715#135738#0#HTML" expanded="true" />
-            <element signature="e#136306#136329#0#HTML" expanded="true" />
-            <element signature="e#141235#141281#0#HTML" expanded="true" />
-            <element signature="e#141381#141407#0#HTML" expanded="true" />
-            <element signature="e#141458#141499#0#HTML" expanded="true" />
-            <element signature="e#145124#145130#0#HTML" expanded="true" />
-            <element signature="e#147790#147796#0#HTML" expanded="true" />
-            <element signature="e#150324#150330#0#HTML" expanded="true" />
-            <element signature="e#154276#154299#0#HTML" expanded="true" />
-            <element signature="e#154390#154495#0#HTML" expanded="true" />
-            <element signature="e#154526#154552#0#HTML" expanded="true" />
-            <element signature="e#155415#155461#0#HTML" expanded="true" />
-            <element signature="e#155561#155587#0#HTML" expanded="true" />
-            <element signature="e#155638#155679#0#HTML" expanded="true" />
-            <element signature="e#162003#162026#0#HTML" expanded="true" />
-            <element signature="e#162117#162222#0#HTML" expanded="true" />
-            <element signature="e#162253#162279#0#HTML" expanded="true" />
-            <element signature="e#163148#163194#0#HTML" expanded="true" />
-            <element signature="e#163294#163320#0#HTML" expanded="true" />
-            <element signature="e#163371#163412#0#HTML" expanded="true" />
-            <element signature="e#164071#164077#0#HTML" expanded="true" />
-            <element signature="e#166334#166340#0#HTML" expanded="true" />
-            <element signature="e#168597#168603#0#HTML" expanded="true" />
-            <element signature="e#170897#170903#0#HTML" expanded="true" />
-            <element signature="e#172583#172606#0#HTML" expanded="true" />
-            <element signature="e#172697#172802#0#HTML" expanded="true" />
-            <element signature="e#172833#172859#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="187">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
@@ -1906,18 +1556,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Events/newUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#30#43#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/config/seotools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/discordbot">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/events">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="295" column="12" selection-start-line="295" selection-start-column="12" selection-end-line="295" selection-end-column="12" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <element signature="e#12073#14549#0#PHP" />
+            <element signature="e#14997#17112#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -264,6 +264,7 @@ class EventController extends Controller
         $orgSetTZ = '';
         //get the orgs that have been shared
         if(Auth::user()->organization) {
+//Organization event Setup
             $share = DB::table('shared')->where('organization_id', Auth::user()->organization_id)->get();
 
             foreach ($share as $orgID) {
@@ -292,7 +293,7 @@ class EventController extends Controller
 
             //add self to hooks list
 
-            //dd($share, $ids, $hooks);
+
             $data = [
                 'username' => 'CitizenWarfare-New Event',
                 'avatar_url' => 'https://i.imgur.com/4M34hi2.png',
@@ -340,8 +341,9 @@ class EventController extends Controller
                 ],
             ];
         }else {
-            $hooks = DB::table('discordbot')->where('public_webhook_url', '!=', 'null')->get()->all();
-            //dd($hooks);
+//single user event setup.
+            $hooks = DB::table('discordbot')->whereNotNull('public_webhook_url')->get();
+            dd($hooks);
             $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
             //check org set timezone for null and set to UTC if null
 
@@ -394,14 +396,15 @@ class EventController extends Controller
                 ],
             ];
         }
+//actual push to bot!
         $data = json_encode($data);
         $result = null;
         foreach($hooks as $k=>$v) {
-
-            if ($v->public_webhook_url == '' || $v->public_webhook_url == null || $v->public_webhook_url == 'undefined') {
+            if ($v == '' || $v == null || $v== 'undefined') {
                 unset($hooks[$k]);
             }else{
-                $ch = curl_init($v->public_webhook_url);
+                //dd($hooks, $k, $v);
+                $ch = curl_init($v);
 
                 if (isset($ch)) {
                     curl_setopt($ch, CURLOPT_POST, 1);
@@ -413,7 +416,7 @@ class EventController extends Controller
                     $result[$k] = curl_exec($ch);
                 }
                 if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
-                    dd($result, $hooks, $k, $v->public_webhook_url);
+                    dd($result, $hooks, $k, $v);
                     if(curl_error($ch)) {
                         $result[$k]['error'] = curl_error($ch);
                     }
