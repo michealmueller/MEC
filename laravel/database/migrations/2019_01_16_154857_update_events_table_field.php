@@ -15,7 +15,7 @@ class UpdateEventsTableField extends Migration
     {
         //
         Schema::table('events', function(Blueprint $table){
-            $table->binary('comments')->change();
+            $table->longText('comments')->change();
         });
     }
 
