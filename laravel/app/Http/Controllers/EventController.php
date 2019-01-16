@@ -304,10 +304,10 @@ class EventController extends Controller
                         'author' => [
                             'name' => $this->org->findorfail(Auth::user()->organization_id)->org_name,
                             'url' => $this->org->findorfail(Auth::user()->organization_id)->org_rsi_site,
-                            'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                            'icon_url' => 'https://citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
                         ],
                         'title' => $request->title,
-                        'url' => 'https://events.citizenwarfare.com/view/event/' . $eventId,
+                        'url' => 'https://citizenwarfare.com/view/event/' . $eventId,
                         'description' => '',
                         'color' => hexdec($request->borderColor),
                         'fields' => [
@@ -328,7 +328,7 @@ class EventController extends Controller
                         ],
                         'thumbnail' =>
                             [
-                                'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
+                                'url' => 'https://citizenwarfare.com/storage/app/org_logos/' . $this->org->findorfail(Auth::user()->organization_id)->org_logo,
                             ],
                         'image' =>
                             [
@@ -359,10 +359,10 @@ class EventController extends Controller
                     'author' => [
                         'name' => Auth::user()->username,
                         'url' => '',
-                        'icon_url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
+                        'icon_url' => 'https://citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
                     ],
                     'title' => $request->title,
-                    'url' => 'https://events.citizenwarfare.com/view/event/' . $eventId,
+                    'url' => 'https://citizenwarfare.com/view/event/' . $eventId,
                     'description' => '',
                     'color' => hexdec($request->borderColor),
                     'fields' => [
@@ -383,7 +383,7 @@ class EventController extends Controller
                     ],
                     'thumbnail' =>
                         [
-                            'url' => 'https://events.citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
+                            'url' => 'https://citizenwarfare.com/storage/app/org_logos/' . Auth::user()->avatar,
                         ],
                     'image' =>
                         [

@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label style="display: none" id="copyMe">https://events.citizenwarfare.com/view/event/{{ $eventData->id }}</label>
+                                        <label style="display: none" id="copyMe">https://citizenwarfare.com/view/event/{{ $eventData->id }}</label>
                                         <button class="btn btn-primary" onclick="copyToClipboard('#copyMe')">Share</button>
                                     </div>
                                 </div>

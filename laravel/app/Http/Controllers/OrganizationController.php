@@ -320,7 +320,7 @@ class OrganizationController extends Controller
                 'selector2' => 'refHash2',
                 'notificationType' => 'info',
                 'notificationMsg' => 'Successfully created your new reference code',
-                'replaceText' => '<a href="https://events.citizenwarfare.com/join/ref/'.$refHash.'">'.$refHash.'</a>',
+                'replaceText' => '<a href="https://citizenwarfare.com/join/ref/'.$refHash.'">'.$refHash.'</a>',
                 'errorMsg' =>'Error While generating your new reference code'
             ]);
 

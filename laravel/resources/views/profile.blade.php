@@ -58,9 +58,9 @@
                     <div class="tab-pane active" id="profile">
                         <h5 class="mb-3">{{$user->username}}'s Profile</h5>
                         @if(isset($user->organization->org_name))
-                            <h6 class="g-pa-15--md">Calendar Link: <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
+                            <h6 class="g-pa-15--md">Calendar Link: <a href="https://citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a></h6>
                             @if(isset($user->organization->refHash) && $user->organization->refHash != '')
-                                <h6 class="g-pa-15--md">Reference Code Link: <span id="refHash2"><a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">/join/ref/{{ $user->organization->refHash }}</a></span></h6>
+                                <h6 class="g-pa-15--md">Reference Code Link: <span id="refHash2"><a href="https://citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">/join/ref/{{ $user->organization->refHash }}</a></span></h6>
                             @endif
                         @endif
                         <div class="row">

@@ -114,7 +114,7 @@
                         <div class="g-mb-20">
                             <h6 class="g-mb-10">Calendar Link <span class="float-right g-ml-10">
                                     <small>
-                                        <a href="https://events.citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a>
+                                        <a href="https://citizenwarfare.com/{{ $user->organization->org_name }}/calendar">/{{ $user->organization->org_name }}/calendar</a>
                                     </small>
                                 </span>
                             </h6>
@@ -123,7 +123,7 @@
                             <div class="g-mb-20">
                                 <h6 class="g-mb-10">Calendar Link <span class="float-right g-ml-10">
                                 <small>
-                                    <a href="https://events.citizenwarfare.com/{{ $user->id }}/calendar">View My Calendar</a>
+                                    <a href="https://citizenwarfare.com/{{ $user->id }}/calendar">View My Calendar</a>
                                 </small>
                             </span>
                                 </h6>
@@ -137,7 +137,7 @@
 
                                 <small>
                                     <span id="refHash2">
-                                        <a href="https://events.citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">{{ $user->organization->refHash }}</a>
+                                        <a href="https://citizenwarfare.com/join/ref/{{ $user->organization->refHash}}">{{ $user->organization->refHash }}</a>
                                     </span>
                                 </small>
                             </h6>

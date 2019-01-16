@@ -39,7 +39,7 @@ if ($two_letter_country_code == "US")
 <html lang="en">
 
 <head>
-    <!-- Hotjar Tracking Code for https://events.citizenwarfare.com -->
+    <!-- Hotjar Tracking Code for https://citizenwarfare.com -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -59,6 +59,7 @@ if ($two_letter_country_code == "US")
 
         gtag('config', 'UA-98254273-3');
     </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
