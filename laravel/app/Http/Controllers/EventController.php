@@ -78,11 +78,12 @@ class EventController extends Controller
                     'status' => $attendee->status,
             ];
             };
-            //dd($attendees);
+            //dd($eventSingle);
             return view('viewEvent')
                 ->with( 'eventData',$eventSingle)
                 ->with('attenData', json_encode($attenData))
                 ->with('attendees', $attendees);
+
         }
         return view('viewEvent')
             ->with( 'eventData',$eventSingle)
