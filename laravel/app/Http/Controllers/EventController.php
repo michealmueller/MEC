@@ -344,7 +344,7 @@ class EventController extends Controller
         }else {
 //single user event setup.
             $hooks = DB::table('discordbot')->whereNotNull('public_webhook_url')->get();
-            dd($hooks);
+            //dd($hooks);
             $orgSetTZ = DB::table('discordbot')->where('organization_id', Auth::user()->organization_id)->value('timezone');
             //check org set timezone for null and set to UTC if null
 
@@ -417,7 +417,7 @@ class EventController extends Controller
                     $result[$k] = curl_exec($ch);
                 }
                 if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
-                    dd($result, $hooks, $k, $v);
+                    dd('If you see this please screen shot it and send it to Arthmael in discord or email it to support@citizenwarfare.com, Thank You.', $result, $hooks, $k, $v);
                     if(curl_error($ch)) {
                         $result[$k]['error'] = curl_error($ch);
                     }
