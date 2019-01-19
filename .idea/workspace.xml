@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9311c420-6003-4b7a-af69-ed34032eb1b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/firebase/citizenwarfare-firebase-adminsdk-5ng1m-55e47bc951.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Logo_Xmas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/app/logos/Citizen_Warfare_Profile_Pic_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/storage/logs/.gitignore" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,8 +182,8 @@
           <entry key="HTML" value="15" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19705" />
-          <entry key="PHP" value="36508" />
-          <entry key="PLAIN_TEXT" value="3759" />
+          <entry key="PHP" value="36670" />
+          <entry key="PLAIN_TEXT" value="3775" />
           <entry key="SQL" value="34" />
           <entry key="Scratch" value="422" />
         </counts>
@@ -399,8 +385,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="419" column="153" selection-start-line="419" selection-start-column="153" selection-end-line="419" selection-end-column="153" />
+                <state relative-caret-position="255">
+                  <caret line="410" column="14" selection-start-line="410" selection-start-column="14" selection-end-line="410" selection-end-column="14" />
                   <folding>
                     <element signature="e#40#63#0#PHP" expanded="true" />
                   </folding>
@@ -658,7 +644,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.14.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/IP2LOCATION-LITE-DB11.CSV/IP2LOCATION-LITE-DB11.CSV" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/admin_events.sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -666,15 +652,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\MEC\public_html\assets\vendor" />
+      <recent name="D:\Work\MEC\public_html\vendor" />
+      <recent name="D:\Work Projects\Event\laravel\resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\MEC\laravel" />
       <recent name="D:\Work Projects\Event\public_html\assets\images" />
       <recent name="D:\Work Projects\Event\public_html\assets\css" />
-      <recent name="D:\Work Projects\Event\laravel\resources\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\MEC\public_html\assets\vendor" />
-      <recent name="D:\Work\MEC\public_html\vendor" />
       <recent name="D:\Work Projects\Event\laravel\resources\views" />
     </key>
   </component>
@@ -827,14 +813,7 @@
       <workItem from="1547650804468" duration="3531000" />
       <workItem from="1547660764479" duration="2640000" />
       <workItem from="1547731055828" duration="628000" />
-      <workItem from="1547937634848" duration="1322000" />
-    </task>
-    <task id="LOCAL-00203" summary="fixed bug with time not converting to 12h">
-      <created>1546395476166</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1546395476167</updated>
+      <workItem from="1547937634848" duration="2048000" />
     </task>
     <task id="LOCAL-00204" summary="possible fix for ajax">
       <created>1546440948716</created>
@@ -1172,11 +1151,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547661680473</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="Changes:fix for bot push">
+      <created>1547939060333</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1547939060333</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1055935000" />
+    <option name="totallyTimeSpent" value="1056661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1187,7 +1173,7 @@
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29828325" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29828325" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1203,7 +1189,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.3298887" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.12678856" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.12678856" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13831478" />
@@ -1243,7 +1229,6 @@
       <path value="$PROJECT_DIR$/public_html/vendor/crumbleJS" />
       <path value="$PROJECT_DIR$/public_html/vendor/introjs" />
     </ignored-roots>
-    <MESSAGE value="removed getting shared private hook urls, will never need to get shared hook urls when the event is private." />
     <MESSAGE value="updateing before running make:auth so i can revert" />
     <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;seperated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!" />
     <MESSAGE value="almost ready for deployment, testing webhook push to discord :D&#10;Changes:&#10;separated user registration and organization creation&#10;&#10;updated code base, new laravel version&#10;&#10;added email verification, login and CLICK RESEND!!&#10;&#10;other small QOL improvements" />
@@ -1268,7 +1253,8 @@
     <MESSAGE value="Changes:fixed description length issues" />
     <MESSAGE value="Changes:fixed links going to events. instead of main domain." />
     <MESSAGE value="Changes:redirects are correctly working and adsense is now on" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:redirects are correctly working and adsense is now on" />
+    <MESSAGE value="Changes:fix for bot push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:fix for bot push" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/OrganizationController.php">
@@ -1613,8 +1599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="419" column="153" selection-start-line="419" selection-start-column="153" selection-end-line="419" selection-end-column="153" />
+        <state relative-caret-position="255">
+          <caret line="410" column="14" selection-start-line="410" selection-start-column="14" selection-end-line="410" selection-end-column="14" />
           <folding>
             <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>

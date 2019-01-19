@@ -400,30 +400,33 @@ class EventController extends Controller
 //actual push to bot!
         $data = json_encode($data);
         $result = null;
-        foreach($hooks as $k=>$v) {
-            if ($v == '' || $v == null || $v== 'undefined') {
+//clean object of null / undefined / empty strings.
+        foreach ($hooks as $k=>$v){
+            if ($v == '' || $v == null || $v == 'undefined') {
                 unset($hooks[$k]);
-            }else{
-                //dd($hooks, $k, $v);
-                $ch = curl_init($v);
+            }
+        }
+//continue on with push
+        foreach($hooks as $k=>$v) {
+            //dd($hooks, $k, $v);
+            $ch = curl_init($v);
 
-                if (isset($ch)) {
-                    curl_setopt($ch, CURLOPT_POST, 1);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                    curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json Content-Length: '.strlen($data)));
+            if (isset($ch)) {
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_HEADER, array('Content-Type: application/json Content-Length: '.strlen($data)));
 
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    $result[$k] = curl_exec($ch);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $result[$k] = curl_exec($ch);
+            }
+            if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
+                //dd('If you see this please screen shot it and send it to Arthmael in discord or email it to support@citizenwarfare.com, Thank You.', $result, $hooks, $k, $v);
+                if(curl_error($ch)) {
+                    $result[$k]['error'] = curl_error($ch);
                 }
-                if(curl_getinfo($ch, CURLINFO_HTTP_CODE) != 204){
-                    dd('If you see this please screen shot it and send it to Arthmael in discord or email it to support@citizenwarfare.com, Thank You.', $result, $hooks, $k, $v);
-                    if(curl_error($ch)) {
-                        $result[$k]['error'] = curl_error($ch);
-                    }
-                    abort('404','There was an issue with Curl, I could not send the data to Discord, please contact support at support@citizenwarfare.com');
-                    die;
-                }
+                abort('404','There was an issue with Curl, I could not send the data to Discord, please contact support at support@citizenwarfare.com');
+                die;
             }
         }
         if ($result != null) {
