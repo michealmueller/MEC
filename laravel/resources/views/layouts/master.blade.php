@@ -39,14 +39,14 @@ if ($two_letter_country_code == "US")
 <html lang="en">
 
 <head>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-5239741921578341",
             enable_page_level_ads: true
         });
     </script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,8 +68,8 @@ if ($two_letter_country_code == "US")
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- CSS Global Icons -->
-    <link rel="stylesheet" href="/vendor/animate.css">
-    <link rel="stylesheet" href="/vendor/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="/assets/vendor/animate.css">
+    <link rel="stylesheet" href="/assets/vendor/hamburgers/hamburgers.min.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
@@ -77,9 +77,7 @@ if ($two_letter_country_code == "US")
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/assets/css/calendar/fullcalendar.min.css"/>
-    <link rel="stylesheet" href="/assets/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap-notify/css/bootstrap-notify.min.css">
-    <link rel="stylesheet" href="/assets/vendor/animate.css">
     <link rel="stylesheet" href="/assets/vendor/icon-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/vendor/icon-line/css/simple-line-icons.css">
     <link rel="stylesheet" href="/assets/vendor/icon-etlinefont/style.css">
@@ -90,27 +88,26 @@ if ($two_letter_country_code == "US")
     <link rel="stylesheet" href="/assets/css/unify-core.min.css">
     <link rel="stylesheet" href="/assets/css/unify-components.css">
     <link rel="stylesheet" href="/assets/css/unify-globals.css">
-    <link rel="stylesheet" href="/assets/css/select2.min.css"/>
     <link rel="stylesheet" href="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.min.css">
 
     <!-- Custom CSS -->
     <link href="/assets/css/modern-business.min.css" rel="stylesheet">
     <link href="/assets/css/custom.min.css" rel="stylesheet">
 
-    <script src="/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+   <script src="/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-    <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+   <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+   <script src="/assets/js/bootstrap.min.js"></script>
+   <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/assets/js/moment.js"></script>
-    <script src="/assets/js/fullcalendar.js"></script>
+   <script src="/assets/js/moment.js"></script>
+   <script src="/assets/js/fullcalendar.js"></script>
 
-    <script src="/assets/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
+   <script src="/assets/vendor/bootstrap-notify/js/bootstrap-notify.min.js"></script>
 
-    <script src="/assets/js/jstz.min.js"></script>
+   <script src="/assets/js/jstz.min.js"></script>
     <script language="javascript">
         $(document).on('ready', function(){
             var timezone = jstz.determine();
@@ -134,7 +131,6 @@ if ($two_letter_country_code == "US")
             });
         });
     </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
 <body>
 <main>
@@ -169,22 +165,22 @@ if ($two_letter_country_code == "US")
         endif-->
     </main>
     <!-- JS Implementing Plugins -->
-    <script src="/assets/vendor/appear.js"></script>
-    <script src="/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-    <script src="/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
-    <script src="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="/assets/vendor/appear.min.js"></script>
+   <script src="/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+   <script src="/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+   <script src="/assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- JS Unify -->
-    <script src="/assets/js/hs.core.min.js"></script>
-    <script src="/assets/js/components/hs.header.min.js"></script>
-    <script src="/assets/js/helpers/hs.hamburgers.min.js"></script>
-    <script src="/assets/js/components/hs.tabs.min.js"></script>
-    <script src="/assets/js/components/hs.dropdown.min.js"></script>
-    <script src="/assets/js/components/hs.scrollbar.min.js"></script>
+   <script src="/assets/js/hs.core.min.js"></script>
+   <script src="/assets/js/components/hs.header.min.js"></script>
+   <script src="/assets/js/helpers/hs.hamburgers.min.js"></script>
+   <script src="/assets/js/components/hs.tabs.min.js"></script>
+   <script src="/assets/js/components/hs.dropdown.min.js"></script>
+   <script src="/assets/js/components/hs.scrollbar.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     <!-- JS Customization -->
-    <script src="/assets/js/custom.js"></script>
+   <script src="/assets/js/custom.js"></script>
     <!-- JS Plugins Init. -->
     <script>
         $(document).on('ready', function () {
@@ -283,8 +279,6 @@ if ($two_letter_country_code == "US")
     <script>
         function ajaxRequest(url, element='', type, status='', inputData='')
         {
-            /*console.log(status);
-            console.log(inputData);*/
             let myData ='';
             switch(type){
                 case 'ref':
@@ -332,12 +326,13 @@ if ($two_letter_country_code == "US")
                             $(`#${response.selector}2`).html(`${response.replaceText2}`);
                             break;
                         case 'attendance':
-                            console.log(response.selector);
-                            $(`#${response.selector}`).html(response.replaceText2);
+
+                            $('#'+element).html('');
+                            $(`#${response.selector2}`).html(response.replaceText2);
                             getAttendance(myData.event_id);
                             break;
                         case 'save':
-                            $(`#${response.selector}`).html(response.replaceText);
+                            $(`#${response.selector2}`).html(response.replaceText);
                             break;
                         case 'request':
                             $(`#${response.selector}`).html(response.replaceText);
