@@ -53,7 +53,11 @@ class OrgCalendarController extends Controller
         }
         $events = [];
 
+        //get organization events and user events and combine them together.
         $data = self::getEventsAndSharedOrgEvents();
+        $userEvents = self::getAllUserEvents();
+
+        $data = $data->concat($userEvents);
 
         if($data->count()){
 
@@ -101,7 +105,6 @@ class OrgCalendarController extends Controller
 
     public function userCal(User $user)
     {
-
         /*//todo::put this into middleware
         if(Auth::user()->organization->id != Organization::whereOrgName($organization)->value('id')){
             session()->put('error', 'Sorry but you do not have permission to view this Organizations Private Calendar');
@@ -160,6 +163,27 @@ class OrgCalendarController extends Controller
     public function getUserEvents($user)
     {
         $userEvents = Event::where('user_id', $user->id)->get();
+        //get events that have been shared to us.
+        /*$sharedOrgs = DB::table('shared')->where('shared_id', Auth::user()->organization->id)->get()->toArray();
+
+        foreach($sharedOrgs as $k=>$v){
+            $sharedOrgsArray[] = $sharedOrgs[$k]->organization_id;
+        }
+        foreach($sharedOrgsArray as $k=>$v){
+            $event = Event::where('organization_id', $v)->where('private', 0)->get();
+
+            if(count($event)) {
+                foreach($event as $key=>$val){
+                    $data->push($val);
+                }
+            }
+        }*/
+        return $userEvents;
+    }
+
+    public function getAllUserEvents()
+    {
+        $userEvents = Event::whereNotNull('user_id')->get();
         //get events that have been shared to us.
         /*$sharedOrgs = DB::table('shared')->where('shared_id', Auth::user()->organization->id)->get()->toArray();
 
