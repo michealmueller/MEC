@@ -60,7 +60,7 @@ class AttendanceController extends Controller
 
             $response = collect(
                 (object)[
-                    'selector' => 'status',
+                    'selector' => 'divStatus',
                     'selector2' => 'attend',
                     'notificationType' => 'info',
                     'notificationMsg' => 'Attendance for this event has been saved',

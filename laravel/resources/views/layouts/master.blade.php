@@ -332,8 +332,8 @@ if ($two_letter_country_code == "US")
                             $(`#${response.selector}2`).html(`${response.replaceText2}`);
                             break;
                         case 'attendance':
-                            console.log(response.selector2);
-                            $(`#${response.selector2}`).html(response.replaceText2);
+                            console.log(response.selector);
+                            $(`#${response.selector}`).html(response.replaceText2);
                             getAttendance(myData.event_id);
                             break;
                         case 'save':
