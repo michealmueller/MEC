@@ -116,6 +116,17 @@ class OrgCalendarController extends Controller
         $events = [];
 
         $data = self::getUserEvents($user);
+        $userEvents = self::getAllUserEvents();
+//check for duplicate events, and self created events.
+        foreach($userEvents as $k=>$item){
+            $eventID = $item->id;
+            foreach ($data as $event){
+                if($eventID === $event->id){
+                    unset($userEvents[$k]);
+                }
+            }
+        }
+        $data = $data->concat($userEvents);
 
         if($data->count()){
 
