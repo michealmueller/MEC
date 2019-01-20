@@ -72,9 +72,9 @@ class AttendanceController extends Controller
 
                 //check for organization and user logo instead of avatar
                 if($attendee->organization){
-                    $avatar = $attendee->org_logo;
+                    $avatar = $img = '<img class="g-width-50 g-height-50 rounded" src = "/storage/app/org_logos/'.$attendee->org_logo.'" alt = "'.$attendee->org_name.' Logo" >';
                 }else{
-                    $avatar = $attendee->avatar;
+                    $avatar = '<img class="g-width-50 g-height-50 rounded" src = "/storage/app/avatars/'.$attendee->avatar.'" alt = "'.$attendee->username .'Avatar Image" >';
                 }
                $replaceTextAll .= '<li class="d-flex justify-content-start g-bg-gray-dark-v1 g-brd-around g-brd-gray-light-v4 g-pa-5 g-mb-5">
                                         <div class="g-pos-rel g-mr-5">
