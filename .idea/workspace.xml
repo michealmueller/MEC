@@ -4,6 +4,7 @@
     <list default="true" id="b481cac9-cffd-485a-906c-7a43dfa8e72f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Events/NewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,14 +182,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="329" />
-          <entry key="Blade" value="31463" />
+          <entry key="Blade" value="31466" />
           <entry key="CSS" value="879" />
           <entry key="Git file" value="51" />
           <entry key="HTML" value="15" />
           <entry key="JSON" value="311" />
           <entry key="JavaScript" value="19705" />
           <entry key="PHP" value="39073" />
-          <entry key="PLAIN_TEXT" value="4138" />
+          <entry key="PLAIN_TEXT" value="4172" />
           <entry key="SQL" value="34" />
           <entry key="Scratch" value="440" />
         </counts>
@@ -273,8 +274,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="309" column="48" lean-forward="true" selection-start-line="309" selection-start-column="48" selection-end-line="309" selection-end-column="48" />
+                <state relative-caret-position="408">
+                  <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
+                  <folding>
+                    <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -570,8 +574,8 @@
         <option value="$PROJECT_DIR$/laravel/database/migrations/2019_01_16_154857_update_events_table_field.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/OrgCalendarController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" />
       </list>
     </option>
   </component>
@@ -844,14 +848,7 @@
       <workItem from="1547650804468" duration="3531000" />
       <workItem from="1547660764479" duration="2640000" />
       <workItem from="1547731055828" duration="628000" />
-      <workItem from="1547937634848" duration="16328000" />
-    </task>
-    <task id="LOCAL-00212" summary="removed getting shared private hook urls, will never need to get shared hook urls when the event is private.">
-      <created>1546608724411</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1546608724411</updated>
+      <workItem from="1547937634848" duration="17530000" />
     </task>
     <task id="LOCAL-00213" summary="updateing before running make:auth so i can revert">
       <created>1546702362560</created>
@@ -1189,17 +1186,24 @@
       <option name="project" value="LOCAL" />
       <updated>1548011133137</updated>
     </task>
-    <option name="localTasksCounter" value="261" />
+    <task id="LOCAL-00261" summary="Changes:google site verification added.">
+      <created>1548011412256</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1548011412256</updated>
+    </task>
+    <option name="localTasksCounter" value="262" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1070941000" />
+    <option name="totallyTimeSpent" value="1072143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1645469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1645469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1236,7 +1240,6 @@
       <path value="$PROJECT_DIR$/public_html/vendor/crumbleJS" />
       <path value="$PROJECT_DIR$/public_html/vendor/introjs" />
     </ignored-roots>
-    <MESSAGE value="Changes:visual overhaul, and some suttle changes, single users can now create and share events, fixed organization calendar not working." />
     <MESSAGE value="Changes:visual overhaul, and some suttle changes, single users can now create and share events, fixed organization calendar not working, removed un-needed libraries to lighten up the code base." />
     <MESSAGE value="Changes:nav buttons fix" />
     <MESSAGE value="Changes:nav removed references to backpack_user()" />
@@ -1261,7 +1264,8 @@
     <MESSAGE value="Changes:attempting to get google adsense to work!" />
     <MESSAGE value="Changes:updated attendance to reflect correctly and not remove all other attendee's when updated." />
     <MESSAGE value="Changes:logo / avatar was not showing up on update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:logo / avatar was not showing up on update." />
+    <MESSAGE value="Changes:google site verification added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:google site verification added." />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://9311c420-6003-4b7a-af69-ed34032eb1b6/schema/admin_events/table/ip2location_db11">
@@ -1622,19 +1626,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="309" column="48" lean-forward="true" selection-start-line="309" selection-start-column="48" selection-end-line="309" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AttendanceController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="69" column="61" lean-forward="true" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
           <folding>
             <element signature="e#40#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

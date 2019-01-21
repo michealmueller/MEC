@@ -46,11 +46,28 @@ if ($two_letter_country_code == "US")
             enable_page_level_ads: true
         });
     </script>
-   <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98254273-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-98254273-3');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M4HZZ5D');</script>
+    <!-- End Google Tag Manager -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Micheal Mueller - MuellerTek">
+    <meta name="google-site-verification" content="kpzBQo2juF1x7l8ohtQdEi3SsJ1dwcx4w-VvsOuqUi0" />
 
     {!! SEO::generate(true) !!}
 
@@ -133,8 +150,11 @@ if ($two_letter_country_code == "US")
     </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4HZZ5D"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <main>
-
         @include('shared.nav')
         @include('notification')
         @include('shared.header')
