@@ -74,7 +74,7 @@
                                                 @if($item->user_id)
                                                     <li><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> - <a href="/view/event/{{ $item->id }}"> {{ $item->title }} </a></li>
                                                 @else
-                                                    <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                                    <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - <a href="/view/event/{{ $item->id }}">{{ $item->title }}</a></li>
                                                 @endif
                                             @endforeach
                                         </ul>
@@ -100,7 +100,7 @@
                                             @if($item->user_id)
                                                 <li><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> - <a href="/view/event/{{ $item->id }}"> {{ $item->title }} </a></li>
                                             @else
-                                                <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                                <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - <a href="/view/event/{{ $item->id }}">{{ $item->title }}</a> </li>
                                             @endif
                                         @endforeach
                                     </ul>
@@ -125,7 +125,7 @@
                                         @if($item->user_id)
                                             <li><b class="g-color-primary">{{ \App\User::findorfail($item->user_id)->username }}</b> - <a href="/view/event/{{ $item->id }}">{{ $item->title }}</a> </li>
                                         @else
-                                            <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - {{ $item->title }} </li>
+                                            <li><b class="g-color-primary">{{ $item->organization->org_name }}</b> - <a href="/view/event/{{ $item->id }}">{{ $item->title }}</a> </li>
                                         @endif
                                     @endforeach
                                 </ul>
@@ -205,7 +205,7 @@
                                     <hr class="g-brd-gray-light-v4 g-my-10">
 
                                     <div class="g-color-primary g-my-20">
-                                        <strong class="d-block g-font-size-30 g-line-height-1_2">$0.00</strong> per month
+                                        <strong class="d-block g-font-size-30 g-line-height-1_2">Free!
                                     </div>
 
                                     <hr class="g-brd-gray-light-v4 g-mt-10 mb-0">
