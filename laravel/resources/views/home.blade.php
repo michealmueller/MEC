@@ -90,7 +90,7 @@
 
                 <div class="col-md-4 media g-mb-15">
                     <div class="media-body">
-                        <h3 class="h5 g-color-white g-font-weight-600 mb-20">Events This Week</h3>
+                        <h3 class="h5 g-color-white g-font-weight-600 mb-20">Events This Week</h3>git pu
                         <p class="g-color-gray-dark-v4">
 
                             @if(isset($sorted['thisWeek']))
@@ -205,7 +205,7 @@
                                     <hr class="g-brd-gray-light-v4 g-my-10">
 
                                     <div class="g-color-primary g-my-20">
-                                        <strong class="d-block g-font-size-30 g-line-height-1_2">Free!
+                                        <strong class="d-block g-font-size-30 g-line-height-1_2">Free!</strong>
                                     </div>
 
                                     <hr class="g-brd-gray-light-v4 g-mt-10 mb-0">
