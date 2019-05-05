@@ -11,4 +11,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
-/storage/app/org_logos
+/storage/framework/sessions/*
+/storage/app/firebase/citizenwarfare-firebase-adminsdk-5ng1m-55e47bc951.json
