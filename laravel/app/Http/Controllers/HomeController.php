@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use SEO;
+use Artesaos\SEOTools\SEOTools;
 class HomeController extends Controller
 {
     /**
@@ -25,8 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        SEO::setTitle('Home');
-        SEO::setCanonical('https://citizenwarfare.com');
+        $seo = new SEOTools();
+
+        $seo->setTitle('Home');
+        $seo->setCanonical('https://citizenwarfare.com');
 
 
         $sorted = [];
@@ -35,6 +37,7 @@ class HomeController extends Controller
         $events = new EventController();
         $timezonedata = $events->getTimeZone();
         session()->put('timezone', $timezonedata->time_zone->name);
+
 
         //remove outdated public events
         if(!$today = Carbon::now()->setTimezone(session()->get('timezone'))->format('Y-m-d')){

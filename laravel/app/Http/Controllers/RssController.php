@@ -58,33 +58,33 @@ class RssController extends Controller implements ShouldQueue
     public function store()
     {
         $feeds = [
-            'rsi' => 'https://robertsspaceindustries.com/comm-link/rss',
+            'rsi' => 'https://leonick.se/rsi-feed/',
             //'relay' => 'https://relay.sc/feed/rss',
         ];
 
         //TODO::move this to Laravel cron later.
         $Feed = new Feed;
-//dd($Feed->load($feeds['relay']));
+
         foreach($feeds as $rss) {
-                $feedData = $Feed->load($rss)->toArray();
+                $feedData = $Feed->load($rss);
             if (isset($feedData) && $feedData != null) {
-                foreach ($feedData['item'] as $post) {
+                foreach ($feedData->entry as $post) {
                     if (DB::table('rsses')->where('rss_title', $post['link'])->get()->count() <= 0) {
                         //if the title does not exist add to DB
                         //fix date first then add
-                        if($rss === 'https://robertsspaceindustries.com/comm-link/rss') {
-                            $postDate = Carbon::parse($post['pubDate']);
+                        if($rss === 'https://leonick.se/rsi-feed/') {
+                            $postDate = Carbon::parse($post['published']);
 
                             //adjust content
-                            $post['contentExerpt'] = self::getExerpt($post['content:encoded']);
+                            $post['contentExerpt'] = self::getExerpt($post->content);
 
                             $feed[] = DB::table('rsses')->insert([
-                                'rss_feed' => $feedData['title'],
-                                'rss_feedImage' => $feedData['image']['url'],
-                                'rss_title' => $post['title'],
-                                'rss_link' => $post['link'],
+                                'rss_feed' => $feedData->title,
+                                'rss_feedImage' => 'https://robertsspaceindustries.com/rsi/static/images/rsilogo.png',
+                                'rss_title' => $post->title,
+                                'rss_link' => $post->link['href'],
                                 'rss_pubDate' => $postDate,
-                                'rss_content' => $post['content:encoded'],
+                                'rss_content' => $post->content,
                                 'rss_contentExerpt' => $post['contentExerpt'],
                                 'created_at' => Carbon::now(),
                             ]);

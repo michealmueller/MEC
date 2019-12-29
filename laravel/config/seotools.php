@@ -9,7 +9,7 @@ return [
             'title'        => "CitizenWarfare", // set false to total remove
             'description'  => 'The premier event site for Star Citizen, We are trying to bring players and organizations together to create Co-operation and fun!', // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => ['Star Citizen', 'Events', 'Event Manager', 'Organizations', 'Around the Verse', 'Citizenwarfare', 'Community'],
+            'keywords'     => ['Star Citizen', 'Events', 'Event Manager', 'Organizations', 'Around the Verse', 'Citizenwarfare', 'Community', 'Robert Space Industries'],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
         ],
 

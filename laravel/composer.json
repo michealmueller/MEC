@@ -14,7 +14,7 @@
         "fideloper/proxy": "^4.0",
         "geoip2/geoip2": "^2.9",
         "laravel/cashier": "^9",
-        "laravel/framework": "5.7.*",
+        "laravel/framework": "^5.8.0",
         "laravel/tinker": "^1.0",
         "maddhatter/laravel-fullcalendar": "^1.3",
         "nicolaslopezj/searchable": "^1.10"
