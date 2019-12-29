@@ -41,6 +41,14 @@ class AdminController extends Controller
         return view('admin.dashboard')->with('adminData', $this->adminData);
     }
 
+
+    public function addedBot($params)
+    {
+        dd($params);
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *

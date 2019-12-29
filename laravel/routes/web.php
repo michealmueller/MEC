@@ -71,4 +71,7 @@ Route::group(['middleware'=>['auth', 'verified']], function() {
     Route::group(['prefix'=>'/admin', 'middleware'=>'isAdmin'], function(){
         Route::get('dashboard', 'AdminController@index');
     });
+
+//discord
+    Route::get('/discordbot/added/{params}','AdminController@addedBot');
 });
